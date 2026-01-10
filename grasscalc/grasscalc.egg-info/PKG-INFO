@@ -1,0 +1,139 @@
+Metadata-Version: 2.4
+Name: grasscalc
+Version: 0.1.0
+Summary: Grassmannian Calculus - A Python package for calculus on Grassmannian manifolds
+Author-email: "A. Y. Al Yaquob" <amin@alyaquob.com>
+License: MIT
+Project-URL: Homepage, https://github.com/alyaquob/physica
+Project-URL: Documentation, https://github.com/alyaquob/physica/tree/main/grasscalc
+Project-URL: Repository, https://github.com/alyaquob/physica
+Keywords: grassmannian,manifold,calculus,differential geometry,physics,optimization
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.20.0
+Requires-Dist: scipy>=1.7.0
+Provides-Extra: viz
+Requires-Dist: matplotlib>=3.5.0; extra == "viz"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=3.0.0; extra == "dev"
+Provides-Extra: full
+Requires-Dist: matplotlib>=3.5.0; extra == "full"
+Requires-Dist: geomstats>=2.5.0; extra == "full"
+Requires-Dist: pymanopt>=2.0.0; extra == "full"
+Requires-Dist: torch>=2.0.0; extra == "full"
+
+# Grassmannian Calculus (grasscalc)
+
+A Python package for calculus on Grassmannian manifolds, implementing the mathematical framework from:
+
+> Al Yaquob, A. (2026). *Grassmannian Calculus and Transition Operators: A Comprehensive Introduction*
+
+## Installation
+
+```bash
+pip install -e .
+```
+
+Or with all optional dependencies:
+```bash
+pip install -e ".[full]"
+```
+
+## Features
+
+### Core (grasscalc.core)
+- **Linear algebra**: QR retraction, SVD, Gram-Schmidt
+- **Representations**: Basis, projector, stabilization
+- **Distances**: Chordal, geodesic, principal angles
+- **Tangent space**: Projection, exponential/logarithm maps
+- **Calculus**:
+  - Differentiation: Riemannian gradient, Hessian, covariant derivatives
+  - Integration: Line integrals, surface integrals, volume forms
+  - Differential forms: Exterior derivative, wedge product, pullback/pushforward
+
+### Layer 1 (grasscalc.layer1)
+Within-manifold operations:
+- Gradient flows
+- Optimization (CG, trust-region)
+- Geodesic interpolation
+
+### Layer 2 (grasscalc.layer2)
+Between-manifold operations:
+- **Correspondences**: Raise-k (incidence), raise-n (stabilization)
+- **Sharp Bound Theorem**: d²(V,W) ≥ |k - k'|
+- **Transition actions**: J = (s-τ)² + μ·d²
+- **Hybrid evolution**: Compose flows and transitions
+
+### GCT Module (grasscalc.gct)
+Grassmannian Cosmological Theory:
+- Seven-manifold chain: Gr(2,5) → ... → Gr(10,34)
+- Total dimension: 508 = 496 + 12
+- **Weinberg angle**: sin²θ_W = 3/13 = 0.23077 (0.19% error)
+
+## Quick Start
+
+```python
+import numpy as np
+from grasscalc.core import sample_grassmann, chordal_distance_sq, principal_angles
+from grasscalc.gct import weinberg_angle, verify_gct_dimensions
+
+# Sample from Gr(3,7)
+U = sample_grassmann(k=3, n=7)
+V = sample_grassmann(k=3, n=7)
+
+# Compute distance and angles
+d2 = chordal_distance_sq(U, V)
+theta = principal_angles(U, V)
+
+print(f"Distance²: {d2:.4f}")
+print(f"Principal angles: {np.rad2deg(theta)}")
+
+# GCT Weinberg angle
+sin2_theta_W = weinberg_angle(k=3, n=16)
+print(f"sin²θ_W = 3/13 = {sin2_theta_W:.6f}")
+
+# Verify GCT dimensions
+result = verify_gct_dimensions()
+print(f"Total: {result['total']} = {result['gauge']} + {result['gravity']}")
+```
+
+## GCT Chain
+
+| Stage | Manifold | Dimension | Role |
+|-------|----------|-----------|------|
+| 0 | Gr(2,5) | 6 | Takens-minimal seed |
+| 1 | Gr(3,5) | 6 | Grassmannian dual |
+| 2 | Gr(3,7) | 12 | Quaternionic |
+| 3 | Gr(3,16) | 39 | Electroweak (Weinberg) |
+| 4 | Gr(7,18) | 77 | Octonionic bridge |
+| 5 | Gr(8,24) | 128 | E₈ half-spinor |
+| 6 | Gr(10,34) | 240 | E₈ roots |
+| **Total** | | **508** | 496 (gauge) + 12 (gravity) |
+
+## Sharp Bound Theorem
+
+For V ∈ Gr(k,n) and W ∈ Gr(k',n'):
+
+$$d^2(V, W) \geq |k - k'|$$
+
+with equality iff V ⊂ W or W ⊂ V (containment).
+
+## References
+
+- Al Yaquob, A. (2026). *Grassmannian Calculus and Transition Operators*
+- Al Yaquob, A. (2026). *Grassmannian Dynamics: Unconditional Uniqueness from Four Theorems*
+
+## License
+
+MIT License
