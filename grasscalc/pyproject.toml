@@ -57,9 +57,17 @@ Homepage = "https://github.com/alyaquob/physica"
 Documentation = "https://github.com/alyaquob/physica/tree/main/grasscalc"
 Repository = "https://github.com/alyaquob/physica"
 
-[tool.setuptools.packages.find]
-where = ["."]
-include = ["grasscalc*"]
+[tool.setuptools]
+packages = ["grasscalc", "grasscalc.core", "grasscalc.layer1", "grasscalc.layer2", "grasscalc.gct", "grasscalc.backends", "grasscalc.visualization"]
+
+[tool.setuptools.package-dir]
+"grasscalc" = "."
+"grasscalc.core" = "core"
+"grasscalc.layer1" = "layer1"
+"grasscalc.layer2" = "layer2"
+"grasscalc.gct" = "gct"
+"grasscalc.backends" = "backends"
+"grasscalc.visualization" = "visualization"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
