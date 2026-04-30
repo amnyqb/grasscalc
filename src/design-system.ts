@@ -30,10 +30,10 @@ export const DesignSystemSchema = z.object({
   layout: z.object({
     padding: z
       .object({
-        top: z.number().default(32),
-        right: z.number().default(24),
-        bottom: z.number().default(48),
-        left: z.number().default(56),
+        top: z.number().default(56),
+        right: z.number().default(28),
+        bottom: z.number().default(56),
+        left: z.number().default(64),
       })
       .default({}),
     cornerRadius: z.number().default(2),
@@ -58,7 +58,7 @@ export type DesignSystem = z.infer<typeof DesignSystemSchema>;
 
 const baseDefaults = {
   layout: {
-    padding: { top: 32, right: 24, bottom: 48, left: 56 },
+    padding: { top: 56, right: 28, bottom: 56, left: 64 },
     cornerRadius: 2,
   },
   axes: { showGridX: false, showGridY: true, axisLineWidth: 1, tickLength: 4 },

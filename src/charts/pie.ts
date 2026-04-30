@@ -7,6 +7,8 @@ import { ChartFrame, createFrame, drawLegend } from "./common.js";
 export const PieChartSchema = z.object({
   type: z.literal("pie"),
   title: z.string().optional(),
+  subtitle: z.string().optional(),
+  source: z.string().optional(),
   description: z.string().optional(),
   widthPt: z.number().int().positive().default(520),
   heightPt: z.number().int().positive().default(420),
@@ -32,6 +34,8 @@ export function renderPie(
 ): RenderResult {
   const frame = createFrame(ds, input.widthPt, input.heightPt, {
     title: input.title,
+    subtitle: input.subtitle,
+    source: input.source,
     description: input.description,
     background: input.background,
   });

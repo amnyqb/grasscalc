@@ -12,6 +12,8 @@ import {
 export const WaterfallChartSchema = z.object({
   type: z.literal("waterfall"),
   title: z.string().optional(),
+  subtitle: z.string().optional(),
+  source: z.string().optional(),
   description: z.string().optional(),
   widthPt: z.number().int().positive().default(720),
   heightPt: z.number().int().positive().default(420),
@@ -66,6 +68,8 @@ export function renderWaterfall(
 
   const frame = createFrame(ds, input.widthPt, input.heightPt, {
     title: input.title,
+    subtitle: input.subtitle,
+    source: input.source,
     description: input.description,
     background: input.background,
   });
@@ -99,7 +103,7 @@ export function renderWaterfall(
   // Reserve ~12% domain headroom for above-placement annotations so brackets
   // and CAGR arcs don't crash through bar tops/value labels.
   if (hasAboveAnnotation((input as any).annotations)) {
-    yMax = yMax * 1.12;
+    yMax = yMax * 1.20;
   }
 
   const xScale = d3

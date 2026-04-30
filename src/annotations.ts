@@ -153,7 +153,9 @@ function peakYStrictlyBetween(
   return Number.isFinite(peak) ? peak : null;
 }
 
-const VALUE_LABEL_CLEARANCE = 18;
+/** Generous clearance above bar tops + value labels — BCG-style charts
+ *  give annotations real breathing room rather than crowding the bars. */
+const VALUE_LABEL_CLEARANCE = 28;
 /** Minimum y (inner coords) for any annotation element so it stays inside the plot. */
 const PLOT_TOP_MARGIN = 8;
 
@@ -413,10 +415,11 @@ function drawCallout(
     return;
   }
   const color = a.color ?? ctx.frame.ds.palette.foreground;
+  // Longer leader line so the text lands clear of bar/value-label clutter.
   const dx =
-    a.placement === "left" ? -36 : a.placement === "right" ? 36 : 0;
+    a.placement === "left" ? -56 : a.placement === "right" ? 56 : 0;
   const dy =
-    a.placement === "top" ? -28 : a.placement === "bottom" ? 28 : 0;
+    a.placement === "top" ? -44 : a.placement === "bottom" ? 44 : 0;
   const tx = anchor.x + dx;
   const ty = anchor.y + dy;
 

@@ -7,6 +7,7 @@ import {
   DesignSystemSchema,
 } from "./design-system.js";
 import { ChartInputSchema, composeChart, type ChartInput } from "./render.js";
+import { AnnotationSchema } from "./types.js";
 import {
   designSystemFromPptxThemeXml,
   designSystemFromTokens,
@@ -362,7 +363,7 @@ export function buildServer(opts: BuildOptions = {}): {
     "render_bar",
     "bar",
     BarChartSchema.extend({
-      annotations: z.array(z.unknown()).optional(),
+      annotations: z.array(AnnotationSchema).optional(),
     }),
     "Render a bar chart",
     "Vertical/horizontal bar; grouped or stacked (set stacked: true). Returns the standard chart envelope.",
@@ -371,7 +372,7 @@ export function buildServer(opts: BuildOptions = {}): {
     "render_waterfall",
     "waterfall",
     WaterfallChartSchema.extend({
-      annotations: z.array(z.unknown()).optional(),
+      annotations: z.array(AnnotationSchema).optional(),
     }),
     "Render a waterfall chart",
     "Waterfall (think-cell signature). Use subtotalIndices to anchor bars to zero (totals/subtotals).",
@@ -379,28 +380,28 @@ export function buildServer(opts: BuildOptions = {}): {
   registerTypedChartTool(
     "render_line",
     "line",
-    LineChartSchema.extend({ annotations: z.array(z.unknown()).optional() }),
+    LineChartSchema.extend({ annotations: z.array(AnnotationSchema).optional() }),
     "Render a line chart",
     "Single/multi-series line. Supports smoothing, point markers, endpoint labels.",
   );
   registerTypedChartTool(
     "render_scatter",
     "scatter",
-    ScatterChartSchema.extend({ annotations: z.array(z.unknown()).optional() }),
+    ScatterChartSchema.extend({ annotations: z.array(AnnotationSchema).optional() }),
     "Render a scatter / bubble chart",
     "Points in (x, y); per-point 'size' produces a bubble chart.",
   );
   registerTypedChartTool(
     "render_area",
     "area",
-    AreaChartSchema.extend({ annotations: z.array(z.unknown()).optional() }),
+    AreaChartSchema.extend({ annotations: z.array(AnnotationSchema).optional() }),
     "Render an area chart",
     "Stacked or overlapping area; smoothing options.",
   );
   registerTypedChartTool(
     "render_pie",
     "pie",
-    PieChartSchema.extend({ annotations: z.array(z.unknown()).optional() }),
+    PieChartSchema.extend({ annotations: z.array(AnnotationSchema).optional() }),
     "Render a pie / donut chart",
     "Pie or donut (donut: true); auto-labeled slices >= 5%.",
   );

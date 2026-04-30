@@ -13,6 +13,8 @@ import {
 export const AreaChartSchema = z.object({
   type: z.literal("area"),
   title: z.string().optional(),
+  subtitle: z.string().optional(),
+  source: z.string().optional(),
   description: z.string().optional(),
   widthPt: z.number().int().positive().default(720),
   heightPt: z.number().int().positive().default(420),
@@ -46,6 +48,8 @@ export function renderArea(
 ): RenderResult {
   const frame = createFrame(ds, input.widthPt, input.heightPt, {
     title: input.title,
+    subtitle: input.subtitle,
+    source: input.source,
     description: input.description,
     background: input.background,
   });

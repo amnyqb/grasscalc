@@ -16,13 +16,23 @@ export interface ChartFrame {
   plot: Rect;
   ds: DesignSystem;
   warnings: string[];
+  hasSource: boolean;
 }
 
 export interface FrameOptions {
   title?: string;
+  subtitle?: string;
+  source?: string;
   description?: string;
   background?: "default" | "transparent";
 }
+
+/** Vertical baseline for the title text — pinned near the top of the SVG so
+ *  annotation padding bumps don't drag the title down. BCG-ish spacing:
+ *  ~24pt of empty above title, then title, then subtitle, then plot. */
+const TITLE_TOP_MARGIN = 22;
+const SUBTITLE_GAP = 6;
+const SOURCE_BOTTOM_MARGIN = 14;
 
 export function createFrame(
   ds: DesignSystem,
@@ -64,21 +74,54 @@ export function createFrame(
       .attr("fill", ds.palette.background);
   }
 
+  // Title (pinned at TITLE_TOP_MARGIN + titleSize from svg top, regardless
+  // of how much padding annotations needed). Subtitle sits just below.
   if (options.title) {
+    const titleY = TITLE_TOP_MARGIN + ds.typography.titleSize;
     svg
       .append("text")
+      .attr("class", "chart-title")
       .attr("x", ds.layout.padding.left)
-      .attr("y", ds.layout.padding.top - 14)
+      .attr("y", titleY)
       .attr("font-size", ds.typography.titleSize)
       .attr("font-weight", ds.typography.titleWeight)
       .attr("fill", ds.palette.foreground)
       .text(options.title);
+
+    if (options.subtitle) {
+      svg
+        .append("text")
+        .attr("class", "chart-subtitle")
+        .attr("x", ds.layout.padding.left)
+        .attr("y", titleY + ds.typography.labelSize + SUBTITLE_GAP)
+        .attr("font-size", ds.typography.labelSize)
+        .attr("font-weight", 400)
+        .attr("fill", ds.palette.muted)
+        .text(options.subtitle);
+    }
   }
+
+  // Source / footnote anchored to the bottom-left.
+  if (options.source) {
+    svg
+      .append("text")
+      .attr("class", "chart-source")
+      .attr("x", ds.layout.padding.left)
+      .attr("y", heightPt - SOURCE_BOTTOM_MARGIN)
+      .attr("font-size", ds.typography.tickSize)
+      .attr("font-weight", 400)
+      .attr("fill", ds.palette.muted)
+      .text(options.source);
+  }
+
+  // Effective bottom padding: reserve room for source line (if any) so the
+  // legend and x-axis tick labels don't crash through it.
+  const sourceReserve = options.source ? ds.typography.tickSize + 18 : 0;
+  const effectiveBottom = ds.layout.padding.bottom + sourceReserve;
 
   const innerWidth =
     widthPt - ds.layout.padding.left - ds.layout.padding.right;
-  const innerHeight =
-    heightPt - ds.layout.padding.top - ds.layout.padding.bottom;
+  const innerHeight = heightPt - ds.layout.padding.top - effectiveBottom;
 
   const inner = svg
     .append("g")
@@ -115,6 +158,7 @@ export function createFrame(
     plot,
     ds,
     warnings: [],
+    hasSource: Boolean(options.source),
   };
 }
 
@@ -221,14 +265,12 @@ export function drawLegend(
   frame: ChartFrame,
   entries: { label: string; color: string }[],
 ): void {
-  const { svg, ds, widthPt } = frame;
+  const { svg, ds, widthPt, hasSource } = frame;
+  const legendY = hasSource ? frame.heightPt - 36 : frame.heightPt - 14;
   const g = svg
     .append("g")
     .attr("class", "legend")
-    .attr(
-      "transform",
-      `translate(${ds.layout.padding.left}, ${frame.heightPt - 14})`,
-    );
+    .attr("transform", `translate(${ds.layout.padding.left}, ${legendY})`);
   let cursor = 0;
   for (const e of entries) {
     const item = g.append("g").attr("transform", `translate(${cursor},0)`);
