@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chartsmith</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="taskpane.css" />
+    <!-- Office.js (loaded by the host; CDN here for sideload). -->
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  </head>
+  <body>
+    <header class="cs-header">
+      <h1>Chartsmith</h1>
+      <span id="status-pill" class="cs-pill cs-pill--idle">idle</span>
+    </header>
+
+    <!-- ============== Settings ============== -->
+    <details class="cs-section" id="settings-section">
+      <summary>Server &amp; design system</summary>
+      <div class="cs-row">
+        <label>MCP endpoint
+          <input id="mcp-url" type="url" placeholder="http://localhost:3333/mcp" />
+        </label>
+      </div>
+      <div class="cs-row">
+        <label>Design system
+          <select id="design-system">
+            <option value="default">default</option>
+            <option value="thinkcell">thinkcell</option>
+            <option value="minimal">minimal</option>
+          </select>
+        </label>
+        <button id="refresh-ds">Refresh</button>
+      </div>
+    </details>
+
+    <!-- ============== Chart type picker ============== -->
+    <section class="cs-section">
+      <h2>1. Chart type</h2>
+      <div id="type-picker" class="cs-thumbs"><!-- thumbs injected by JS --></div>
+    </section>
+
+    <!-- ============== Data grid ============== -->
+    <section class="cs-section">
+      <h2>2. Data</h2>
+      <div class="cs-row">
+        <label>Title
+          <input id="chart-title" type="text" placeholder="Chart title" />
+        </label>
+      </div>
+      <div id="grid-host"></div>
+      <div class="cs-row cs-row--tight">
+        <button id="add-row">+ row</button>
+        <button id="add-col">+ column</button>
+        <button id="del-row">− row</button>
+        <button id="del-col">− column</button>
+      </div>
+    </section>
+
+    <!-- ============== Annotations ============== -->
+    <section class="cs-section">
+      <h2>3. Annotations</h2>
+      <div class="cs-row cs-row--tight">
+        <label class="cs-toggle">
+          <input id="ann-cagr" type="checkbox" />
+          <span>CAGR arrow</span>
+        </label>
+        <label class="cs-toggle">
+          <input id="ann-totals" type="checkbox" />
+          <span>Total labels</span>
+        </label>
+      </div>
+    </section>
+
+    <!-- ============== Live preview ============== -->
+    <section class="cs-section">
+      <h2>4. Preview</h2>
+      <div id="preview-host" class="cs-preview"></div>
+      <div id="warnings" class="cs-warnings"></div>
+    </section>
+
+    <!-- ============== Actions ============== -->
+    <section class="cs-section cs-actions">
+      <button id="btn-insert" class="cs-primary">Insert into slide</button>
+      <button id="btn-update" disabled>Update selected</button>
+    </section>
+
+    <script type="module" src="taskpane.js"></script>
+  </body>
+</html>
