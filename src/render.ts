@@ -47,12 +47,14 @@ function expandPaddingForAnnotations(
   annotations: { type: string; placement?: string }[] | undefined,
 ): DesignSystem {
   if (!annotations || annotations.length === 0) return ds;
+  const tiers = ds.spacing.annotationTier;
   let above = 0;
   let below = 0;
   for (const a of annotations) {
     const tier =
-      a.type === "cagr_arrow" || a.type === "bracket" ? 28 :
-      a.type === "delta" ? 24 : 0;
+      a.type === "cagr_arrow" ? tiers.cagrArrow :
+      a.type === "bracket" ? tiers.bracket :
+      a.type === "delta" ? tiers.delta : 0;
     if (!tier) continue;
     if (a.placement === "below") below += tier;
     else above += tier;

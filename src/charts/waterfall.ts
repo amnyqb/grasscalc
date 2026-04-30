@@ -103,7 +103,7 @@ export function renderWaterfall(
   // Reserve ~12% domain headroom for above-placement annotations so brackets
   // and CAGR arcs don't crash through bar tops/value labels.
   if (hasAboveAnnotation((input as any).annotations)) {
-    yMax = yMax * 1.20;
+    yMax = yMax * ds.spacing.domainHeadroom;
   }
 
   const xScale = d3
@@ -153,7 +153,8 @@ export function renderWaterfall(
 
     let valueLabelY: number | undefined;
     if (input.showValues) {
-      const labelY = seg.value >= 0 || seg.isTotal ? top - 6 : bottom + 16;
+      const lo = ds.spacing.valueLabelOffset;
+      const labelY = seg.value >= 0 || seg.isTotal ? top - lo : bottom + 16;
       inner
         .append("text")
         .attr("x", bx + bw / 2)

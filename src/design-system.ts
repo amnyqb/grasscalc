@@ -39,6 +39,106 @@ export const DesignSystemSchema = z.object({
     cornerRadius: z.number().default(2),
   }),
 
+  /**
+   * The complete spacing language of the chart. Every layout decision the
+   * renderer makes — title position, source position, legend offset,
+   * annotation clearance, callout leader length, etc. — is parameterized
+   * here. Picking a design system therefore picks a complete visual style;
+   * no magic numbers leak into the renderer.
+   */
+  spacing: z
+    .object({
+      // ---------- Header zone (title + subtitle) ----------
+      /** SVG-top → title baseline (additive: actual y = this + titleSize). */
+      titleTopMargin: z.number().default(22),
+      /** Gap between title baseline and subtitle baseline. */
+      subtitleGap: z.number().default(6),
+
+      // ---------- Footer zone (legend + source) ----------
+      /** SVG-bottom → source line baseline. */
+      sourceBottomMargin: z.number().default(14),
+      /** SVG-bottom → legend baseline when no source is present. */
+      legendBottomMargin: z.number().default(14),
+      /** SVG-bottom → legend baseline when source IS present (legend sits above source). */
+      legendBottomMarginWithSource: z.number().default(36),
+
+      // ---------- Plot internals ----------
+      /** Minimum y (in inner coords) any annotation may occupy. */
+      plotTopMargin: z.number().default(8),
+      /** Bar top → value-label baseline gap (positive bars; the label sits above). */
+      valueLabelOffset: z.number().default(6),
+
+      // ---------- Annotation behavior ----------
+      /** Vertical clearance above bar tops + value labels for brackets/CAGR arcs. */
+      annotationValueClearance: z.number().default(28),
+      /** Gap between stacked annotations (one above the other). */
+      annotationLabelGap: z.number().default(6),
+      /** Approximate label height for stacking math (≈ font size + descenders). */
+      annotationLabelHeight: z.number().default(16),
+      /** Per-tier vertical reservation when expanding padding for annotations. */
+      annotationTier: z
+        .object({
+          cagrArrow: z.number().default(28),
+          delta: z.number().default(24),
+          bracket: z.number().default(28),
+        })
+        .default({}),
+      /** Multiplier applied to yMax when above-annotations are present so
+       *  bars don't reach the plot top. e.g. 1.20 = 20% headroom. */
+      domainHeadroom: z.number().default(1.2),
+
+      // ---------- Callout placement ----------
+      /** Horizontal leader length for left/right callouts. */
+      calloutDx: z.number().default(56),
+      /** Vertical leader length for top/bottom callouts. */
+      calloutDy: z.number().default(44),
+      /** Reference-line label offset from the line. */
+      referenceLineLabelGap: z.number().default(4),
+    })
+    .default({}),
+
+  /**
+   * Stroke widths and visual weights for annotation primitives. Bumping
+   * these in a brand DS makes annotations more or less prominent without
+   * touching renderer code.
+   */
+  annotations: z
+    .object({
+      arrow: z
+        .object({
+          strokeWidth: z.number().default(1.75),
+          markerSize: z.number().default(9),
+        })
+        .default({}),
+      bracket: z
+        .object({
+          strokeWidth: z.number().default(1.25),
+          tickHeight: z.number().default(6),
+        })
+        .default({}),
+      delta: z
+        .object({
+          strokeWidth: z.number().default(1.25),
+          tickHeight: z.number().default(6),
+        })
+        .default({}),
+      callout: z
+        .object({
+          dotRadius: z.number().default(3),
+          strokeWidth: z.number().default(1),
+        })
+        .default({}),
+      referenceLine: z
+        .object({
+          strokeWidth: z.number().default(1.25),
+          defaultStyle: z
+            .enum(["solid", "dashed", "dotted"])
+            .default("dashed"),
+        })
+        .default({}),
+    })
+    .default({}),
+
   axes: z.object({
     showGridX: z.boolean().default(false),
     showGridY: z.boolean().default(true),
@@ -99,6 +199,10 @@ export const BUILTIN_DESIGN_SYSTEMS: Record<string, DesignSystem> = {
     ...baseDefaults,
   }),
 
+  /**
+   * Think-cell-inspired: bolder title, tighter callouts (think-cell
+   * traditionally fits a lot of detail close to bars), thicker arrows.
+   */
   thinkcell: DesignSystemSchema.parse({
     id: "thinkcell",
     name: "Think-cell inspired",
@@ -125,9 +229,24 @@ export const BUILTIN_DESIGN_SYSTEMS: Record<string, DesignSystem> = {
       labelWeight: 400,
       tickSize: 14,
     },
+    spacing: {
+      annotationValueClearance: 22, // tighter — closer to the data
+      calloutDx: 48,
+      calloutDy: 36,
+      domainHeadroom: 1.18,
+    },
+    annotations: {
+      arrow: { strokeWidth: 2, markerSize: 10 },
+      bracket: { strokeWidth: 1.5, tickHeight: 7 },
+    },
     ...baseDefaults,
   }),
 
+  /**
+   * Minimal Mono / BCG-style: airier, more whitespace, thinner strokes,
+   * higher headroom, subtle annotations. Designed to look at home in
+   * consultancy decks.
+   */
   minimal: DesignSystemSchema.parse({
     id: "minimal",
     name: "Minimal Mono",
@@ -145,6 +264,21 @@ export const BUILTIN_DESIGN_SYSTEMS: Record<string, DesignSystem> = {
       labelSize: 14,
       labelWeight: 400,
       tickSize: 14,
+    },
+    spacing: {
+      titleTopMargin: 28,
+      subtitleGap: 8,
+      annotationValueClearance: 36, // generous breathing room
+      annotationLabelGap: 10,
+      calloutDx: 64,
+      calloutDy: 52,
+      domainHeadroom: 1.25,
+    },
+    annotations: {
+      arrow: { strokeWidth: 1.25, markerSize: 8 },
+      bracket: { strokeWidth: 1, tickHeight: 5 },
+      delta: { strokeWidth: 1, tickHeight: 5 },
+      referenceLine: { strokeWidth: 1, defaultStyle: "dotted" },
     },
     ...baseDefaults,
     axes: { ...baseDefaults.axes, showGridY: false },

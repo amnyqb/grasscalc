@@ -99,7 +99,7 @@ export function renderBar(
     );
 
     let yMax = d3.max(stack[stack.length - 1] ?? [], (d) => d[1]) ?? 0;
-    if (hasAboveAnnotation((input as any).annotations)) yMax = yMax * 1.20;
+    if (hasAboveAnnotation((input as any).annotations)) yMax = yMax * ds.spacing.domainHeadroom;
     const yScale = d3
       .scaleLinear()
       .domain([0, yMax])
@@ -178,7 +178,7 @@ export function renderBar(
 
     const allValues = input.series.flatMap((s) => s.values);
     let yMax = d3.max(allValues) ?? 0;
-    if (hasAboveAnnotation((input as any).annotations)) yMax = yMax * 1.20;
+    if (hasAboveAnnotation((input as any).annotations)) yMax = yMax * ds.spacing.domainHeadroom;
     const yMin = Math.min(0, d3.min(allValues) ?? 0);
     const yScale = d3
       .scaleLinear()
@@ -228,7 +228,9 @@ export function renderBar(
         let valueLabelY: number | undefined;
         if (input.showValues) {
           const ly =
-            input.orientation === "vertical" ? by - 6 : by + bh / 2 + 5;
+            input.orientation === "vertical"
+              ? by - ds.spacing.valueLabelOffset
+              : by + bh / 2 + 5;
           inner
             .append("text")
             .attr("x", bx + bw / 2)

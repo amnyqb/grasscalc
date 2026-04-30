@@ -27,12 +27,8 @@ export interface FrameOptions {
   background?: "default" | "transparent";
 }
 
-/** Vertical baseline for the title text — pinned near the top of the SVG so
- *  annotation padding bumps don't drag the title down. BCG-ish spacing:
- *  ~24pt of empty above title, then title, then subtitle, then plot. */
-const TITLE_TOP_MARGIN = 22;
-const SUBTITLE_GAP = 6;
-const SOURCE_BOTTOM_MARGIN = 14;
+// All header/footer/legend spacing now reads from ds.spacing — no magic
+// numbers in this file.
 
 export function createFrame(
   ds: DesignSystem,
@@ -74,10 +70,10 @@ export function createFrame(
       .attr("fill", ds.palette.background);
   }
 
-  // Title (pinned at TITLE_TOP_MARGIN + titleSize from svg top, regardless
-  // of how much padding annotations needed). Subtitle sits just below.
+  // Title (pinned per the design system, regardless of annotation-driven
+  // padding bumps). Subtitle sits just below using ds.spacing.subtitleGap.
   if (options.title) {
-    const titleY = TITLE_TOP_MARGIN + ds.typography.titleSize;
+    const titleY = ds.spacing.titleTopMargin + ds.typography.titleSize;
     svg
       .append("text")
       .attr("class", "chart-title")
@@ -93,7 +89,7 @@ export function createFrame(
         .append("text")
         .attr("class", "chart-subtitle")
         .attr("x", ds.layout.padding.left)
-        .attr("y", titleY + ds.typography.labelSize + SUBTITLE_GAP)
+        .attr("y", titleY + ds.typography.labelSize + ds.spacing.subtitleGap)
         .attr("font-size", ds.typography.labelSize)
         .attr("font-weight", 400)
         .attr("fill", ds.palette.muted)
@@ -107,7 +103,7 @@ export function createFrame(
       .append("text")
       .attr("class", "chart-source")
       .attr("x", ds.layout.padding.left)
-      .attr("y", heightPt - SOURCE_BOTTOM_MARGIN)
+      .attr("y", heightPt - ds.spacing.sourceBottomMargin)
       .attr("font-size", ds.typography.tickSize)
       .attr("font-weight", 400)
       .attr("fill", ds.palette.muted)
@@ -115,8 +111,11 @@ export function createFrame(
   }
 
   // Effective bottom padding: reserve room for source line (if any) so the
-  // legend and x-axis tick labels don't crash through it.
-  const sourceReserve = options.source ? ds.typography.tickSize + 18 : 0;
+  // legend and x-axis tick labels don't crash through it. The reserve is
+  // governed by the design system's source/legend offsets.
+  const sourceReserve = options.source
+    ? ds.spacing.legendBottomMarginWithSource - ds.spacing.legendBottomMargin
+    : 0;
   const effectiveBottom = ds.layout.padding.bottom + sourceReserve;
 
   const innerWidth =
@@ -266,7 +265,9 @@ export function drawLegend(
   entries: { label: string; color: string }[],
 ): void {
   const { svg, ds, widthPt, hasSource } = frame;
-  const legendY = hasSource ? frame.heightPt - 36 : frame.heightPt - 14;
+  const legendY = hasSource
+    ? frame.heightPt - ds.spacing.legendBottomMarginWithSource
+    : frame.heightPt - ds.spacing.legendBottomMargin;
   const g = svg
     .append("g")
     .attr("class", "legend")

@@ -90,10 +90,12 @@ function colorSlug(color: string): string {
 
 /**
  * Deterministic per-color marker id. Idempotent — repeated calls with the
- * same color reuse the existing <marker> definition.
+ * same color reuse the existing <marker> definition. Marker size pulled
+ * from the design system.
  */
 function ensureArrowMarker(frame: ChartFrame, color: string): string {
-  const id = `cs-arrow-${colorSlug(color)}`;
+  const size = frame.ds.annotations.arrow.markerSize;
+  const id = `cs-arrow-${colorSlug(color)}-${size}`;
   const root = frame.svg;
   const existing = root.select(`defs marker#${id}`);
   if (!existing.empty()) return id;
@@ -107,8 +109,8 @@ function ensureArrowMarker(frame: ChartFrame, color: string): string {
     .attr("viewBox", "0 0 10 10")
     .attr("refX", 9)
     .attr("refY", 5)
-    .attr("markerWidth", 9)
-    .attr("markerHeight", 9)
+    .attr("markerWidth", size)
+    .attr("markerHeight", size)
     .attr("markerUnits", "userSpaceOnUse")
     .attr("orient", "auto-start-reverse")
     .append("path")
@@ -153,28 +155,20 @@ function peakYStrictlyBetween(
   return Number.isFinite(peak) ? peak : null;
 }
 
-/** Generous clearance above bar tops + value labels — BCG-style charts
- *  give annotations real breathing room rather than crowding the bars. */
-const VALUE_LABEL_CLEARANCE = 28;
-/** Minimum y (inner coords) for any annotation element so it stays inside the plot. */
-const PLOT_TOP_MARGIN = 8;
+// All annotation spacing now reads from ds.spacing — no magic numbers
+// in this file.
 
 interface ApplyContext {
   frame: ChartFrame;
   layout: ChartLayout;
   /**
-   * Smallest y reserved by previously-placed "above" annotations
-   * (label tops). Subsequent above-annotations lift themselves so
-   * their label top sits at most `topReserved - LABEL_GAP`.
+   * Smallest y reserved by previously-placed "above" annotations.
+   * Subsequent above-annotations lift themselves so their label top sits
+   * at most `topReserved - ds.spacing.annotationLabelGap`.
    */
   topReserved: number;
   bottomReserved: number;
 }
-
-/** Vertical gap between stacked annotations. */
-const LABEL_GAP = 6;
-/** Approximate label height, in svg units (≈ font size + descenders). */
-const LABEL_HEIGHT = 16;
 
 export function applyAnnotations(
   partial: { frame: ChartFrame; layout: ChartLayout },
@@ -255,15 +249,15 @@ function drawCagrArrow(
   if (a.placement === "below") {
     let baseline = Math.max(fromY, toY);
     if (Number.isFinite(ctx.bottomReserved))
-      baseline = Math.max(baseline, ctx.bottomReserved + LABEL_GAP);
-    apexY = Math.min(baseline + 22, plotBottom - PLOT_TOP_MARGIN);
+      baseline = Math.max(baseline, ctx.bottomReserved + ctx.frame.ds.spacing.annotationLabelGap);
+    apexY = Math.min(baseline + 22, plotBottom - ctx.frame.ds.spacing.plotTopMargin);
   } else {
     let baseline = Math.min(fromY, toY);
-    if (peak != null) baseline = Math.min(baseline, peak - VALUE_LABEL_CLEARANCE);
+    if (peak != null) baseline = Math.min(baseline, peak - ctx.frame.ds.spacing.annotationValueClearance);
     if (Number.isFinite(ctx.topReserved))
-      baseline = Math.min(baseline, ctx.topReserved - LABEL_GAP);
+      baseline = Math.min(baseline, ctx.topReserved - ctx.frame.ds.spacing.annotationLabelGap);
     // Clamp inside plot so label stays visible. Reserve room for label above apex.
-    apexY = Math.max(baseline - 22, PLOT_TOP_MARGIN + 14);
+    apexY = Math.max(baseline - 22, ctx.frame.ds.spacing.plotTopMargin + 14);
   }
 
   const midX = (from.x + to.x) / 2;
@@ -275,7 +269,7 @@ function drawCagrArrow(
     .attr("d", path)
     .attr("fill", "none")
     .attr("stroke", color)
-    .attr("stroke-width", 1.75)
+    .attr("stroke-width", ctx.frame.ds.annotations.arrow.strokeWidth)
     .attr("stroke-linecap", "round")
     .attr("marker-end", `url(#${markerId})`);
 
@@ -292,7 +286,7 @@ function drawCagrArrow(
   if (a.placement === "below") {
     ctx.bottomReserved = Math.max(ctx.bottomReserved, labelY);
   } else {
-    ctx.topReserved = Math.min(ctx.topReserved, labelY - LABEL_HEIGHT);
+    ctx.topReserved = Math.min(ctx.topReserved, labelY - ctx.frame.ds.spacing.annotationLabelHeight);
   }
 }
 
@@ -315,16 +309,17 @@ function drawDelta(
   if (a.placement === "below") {
     let bottom = Math.max(from.y, to.y) + 28;
     if (Number.isFinite(ctx.bottomReserved))
-      bottom = Math.max(bottom, ctx.bottomReserved + LABEL_GAP + 14);
-    baseY = Math.min(bottom, ctx.layout.plot.height - PLOT_TOP_MARGIN);
+      bottom = Math.max(bottom, ctx.bottomReserved + ctx.frame.ds.spacing.annotationLabelGap + 14);
+    baseY = Math.min(bottom, ctx.layout.plot.height - ctx.frame.ds.spacing.plotTopMargin);
   } else {
     let top = Math.min(from.y, to.y);
-    if (peak != null) top = Math.min(top, peak - VALUE_LABEL_CLEARANCE);
+    if (peak != null) top = Math.min(top, peak - ctx.frame.ds.spacing.annotationValueClearance);
     if (Number.isFinite(ctx.topReserved))
-      top = Math.min(top, ctx.topReserved - LABEL_GAP);
-    baseY = Math.max(top - 14, PLOT_TOP_MARGIN + 14);
+      top = Math.min(top, ctx.topReserved - ctx.frame.ds.spacing.annotationLabelGap);
+    baseY = Math.max(top - 14, ctx.frame.ds.spacing.plotTopMargin + 14);
   }
-  const tickDir = a.placement === "below" ? 6 : -6;
+  const tickH = ctx.frame.ds.annotations.delta.tickHeight;
+  const tickDir = a.placement === "below" ? tickH : -tickH;
   const tickY = baseY + tickDir;
 
   const g = ctx.frame.overlay.append("g").attr("class", "annotation-delta");
@@ -335,7 +330,7 @@ function drawDelta(
     )
     .attr("fill", "none")
     .attr("stroke", color)
-    .attr("stroke-width", 1.25);
+    .attr("stroke-width", ctx.frame.ds.annotations.delta.strokeWidth);
   const labelY = a.placement === "below" ? tickY + 16 : tickY - 6;
   g.append("text")
     .attr("x", (from.x + to.x) / 2)
@@ -348,7 +343,7 @@ function drawDelta(
   if (a.placement === "below") {
     ctx.bottomReserved = Math.max(ctx.bottomReserved, labelY);
   } else {
-    ctx.topReserved = Math.min(ctx.topReserved, labelY - LABEL_HEIGHT);
+    ctx.topReserved = Math.min(ctx.topReserved, labelY - ctx.frame.ds.spacing.annotationLabelHeight);
   }
 }
 
@@ -369,16 +364,17 @@ function drawBracket(
   if (a.placement === "below") {
     let bottom = Math.max(from.y, to.y) + 32;
     if (Number.isFinite(ctx.bottomReserved))
-      bottom = Math.max(bottom, ctx.bottomReserved + LABEL_GAP + 14);
-    baseY = Math.min(bottom, ctx.layout.plot.height - PLOT_TOP_MARGIN);
+      bottom = Math.max(bottom, ctx.bottomReserved + ctx.frame.ds.spacing.annotationLabelGap + 14);
+    baseY = Math.min(bottom, ctx.layout.plot.height - ctx.frame.ds.spacing.plotTopMargin);
   } else {
     let top = Math.min(from.y, to.y);
-    if (peak != null) top = Math.min(top, peak - VALUE_LABEL_CLEARANCE);
+    if (peak != null) top = Math.min(top, peak - ctx.frame.ds.spacing.annotationValueClearance);
     if (Number.isFinite(ctx.topReserved))
-      top = Math.min(top, ctx.topReserved - LABEL_GAP);
-    baseY = Math.max(top - 18, PLOT_TOP_MARGIN + 14);
+      top = Math.min(top, ctx.topReserved - ctx.frame.ds.spacing.annotationLabelGap);
+    baseY = Math.max(top - 18, ctx.frame.ds.spacing.plotTopMargin + 14);
   }
-  const tickDir = a.placement === "below" ? -6 : 6;
+  const tickH = ctx.frame.ds.annotations.bracket.tickHeight;
+  const tickDir = a.placement === "below" ? -tickH : tickH;
 
   const g = ctx.frame.overlay.append("g").attr("class", "annotation-bracket");
   g.append("path")
@@ -388,7 +384,7 @@ function drawBracket(
     )
     .attr("fill", "none")
     .attr("stroke", color)
-    .attr("stroke-width", 1.25);
+    .attr("stroke-width", ctx.frame.ds.annotations.bracket.strokeWidth);
   const labelY = a.placement === "below" ? baseY + 18 : baseY - 6;
   g.append("text")
     .attr("x", (from.x + to.x) / 2)
@@ -401,7 +397,7 @@ function drawBracket(
   if (a.placement === "below") {
     ctx.bottomReserved = Math.max(ctx.bottomReserved, labelY);
   } else {
-    ctx.topReserved = Math.min(ctx.topReserved, labelY - LABEL_HEIGHT);
+    ctx.topReserved = Math.min(ctx.topReserved, labelY - ctx.frame.ds.spacing.annotationLabelHeight);
   }
 }
 
@@ -415,11 +411,13 @@ function drawCallout(
     return;
   }
   const color = a.color ?? ctx.frame.ds.palette.foreground;
-  // Longer leader line so the text lands clear of bar/value-label clutter.
+  // Leader-line lengths governed by the design system.
+  const dxBase = ctx.frame.ds.spacing.calloutDx;
+  const dyBase = ctx.frame.ds.spacing.calloutDy;
   const dx =
-    a.placement === "left" ? -56 : a.placement === "right" ? 56 : 0;
+    a.placement === "left" ? -dxBase : a.placement === "right" ? dxBase : 0;
   const dy =
-    a.placement === "top" ? -44 : a.placement === "bottom" ? 44 : 0;
+    a.placement === "top" ? -dyBase : a.placement === "bottom" ? dyBase : 0;
   const tx = anchor.x + dx;
   const ty = anchor.y + dy;
 
@@ -430,11 +428,11 @@ function drawCallout(
     .attr("x2", tx)
     .attr("y2", ty)
     .attr("stroke", color)
-    .attr("stroke-width", 1);
+    .attr("stroke-width", ctx.frame.ds.annotations.callout.strokeWidth);
   g.append("circle")
     .attr("cx", anchor.x)
     .attr("cy", anchor.y)
-    .attr("r", 3)
+    .attr("r", ctx.frame.ds.annotations.callout.dotRadius)
     .attr("fill", color);
   g.append("text")
     .attr("x", tx)
@@ -472,8 +470,13 @@ function drawReferenceLine(
     return;
   }
   const color = a.color ?? ctx.frame.ds.palette.muted;
+  // Style: caller's a.style wins; otherwise the design system's default.
+  const style = a.style ?? ctx.frame.ds.annotations.referenceLine.defaultStyle;
   const dash =
-    a.style === "dotted" ? "1,3" : a.style === "solid" ? null : "5,4";
+    style === "dotted" ? "1,3" : style === "solid" ? null : "5,4";
+  const labelGap = ctx.frame.ds.spacing.referenceLineLabelGap;
+  const stroke = ctx.frame.ds.annotations.referenceLine.strokeWidth;
+
   const g = ctx.frame.overlay.append("g").attr("class", "annotation-refline");
   if (a.axis === "y") {
     g.append("line")
@@ -482,12 +485,12 @@ function drawReferenceLine(
       .attr("y1", pos)
       .attr("y2", pos)
       .attr("stroke", color)
-      .attr("stroke-width", 1.25)
+      .attr("stroke-width", stroke)
       .attr("stroke-dasharray", dash);
     if (a.label) {
       g.append("text")
-        .attr("x", layout.plot.width - 4)
-        .attr("y", pos - 4)
+        .attr("x", layout.plot.width - labelGap)
+        .attr("y", pos - labelGap)
         .attr("text-anchor", "end")
         .attr("font-size", ctx.frame.ds.typography.labelSize)
         .attr("fill", color)
@@ -500,12 +503,12 @@ function drawReferenceLine(
       .attr("x1", pos)
       .attr("x2", pos)
       .attr("stroke", color)
-      .attr("stroke-width", 1.25)
+      .attr("stroke-width", stroke)
       .attr("stroke-dasharray", dash);
     if (a.label) {
       g.append("text")
-        .attr("x", pos + 4)
-        .attr("y", 14)
+        .attr("x", pos + labelGap)
+        .attr("y", ctx.frame.ds.typography.labelSize)
         .attr("font-size", ctx.frame.ds.typography.labelSize)
         .attr("fill", color)
         .text(a.label);
