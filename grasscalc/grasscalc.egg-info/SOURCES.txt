@@ -1,9 +1,0 @@
-README.md
-pyproject.toml
-grasscalc.egg-info/PKG-INFO
-grasscalc.egg-info/SOURCES.txt
-grasscalc.egg-info/dependency_links.txt
-grasscalc.egg-info/requires.txt
-grasscalc.egg-info/top_level.txt
-tests/test_core.py
-tests/test_gct.py
