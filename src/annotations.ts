@@ -84,14 +84,19 @@ function fmtPct(p: number, spec: string): string {
   return d3.format(spec)(p);
 }
 
-function ensureArrowMarker(
-  frame: ChartFrame,
-  id: string,
-  color: string,
-): void {
+function colorSlug(color: string): string {
+  return color.replace(/[^a-zA-Z0-9]/g, "");
+}
+
+/**
+ * Deterministic per-color marker id. Idempotent — repeated calls with the
+ * same color reuse the existing <marker> definition.
+ */
+function ensureArrowMarker(frame: ChartFrame, color: string): string {
+  const id = `cs-arrow-${colorSlug(color)}`;
   const root = frame.svg;
   const existing = root.select(`defs marker#${id}`);
-  if (!existing.empty()) return;
+  if (!existing.empty()) return id;
   let defs: any = root.select("defs");
   if ((defs as any).empty()) {
     defs = root.append("defs");
@@ -100,25 +105,85 @@ function ensureArrowMarker(
     .append("marker")
     .attr("id", id)
     .attr("viewBox", "0 0 10 10")
-    .attr("refX", 8)
+    .attr("refX", 9)
     .attr("refY", 5)
-    .attr("markerWidth", 6)
-    .attr("markerHeight", 6)
+    .attr("markerWidth", 9)
+    .attr("markerHeight", 9)
+    .attr("markerUnits", "userSpaceOnUse")
     .attr("orient", "auto-start-reverse")
     .append("path")
     .attr("d", "M 0 0 L 10 5 L 0 10 z")
     .attr("fill", color);
+  return id;
 }
+
+/**
+ * Peak (smallest y, i.e. visually highest) among bars whose category
+ * lies STRICTLY between `from` and `to`. Endpoints are excluded so the
+ * caller's own lifted-endpoint clearance isn't double-counted. Returns
+ * null if not a bar layout, refs don't resolve, or there are no
+ * intermediate bars.
+ */
+function peakYStrictlyBetween(
+  layout: ChartLayout,
+  from: Ref,
+  to: Ref,
+): number | null {
+  if (
+    layout.kind !== "bar" &&
+    layout.kind !== "stacked_bar" &&
+    layout.kind !== "waterfall"
+  ) {
+    return null;
+  }
+  const cats = layout.axes.x.domain.map(String);
+  const fi = cats.indexOf(String(from.x));
+  const ti = cats.indexOf(String(to.x));
+  if (fi < 0 || ti < 0) return null;
+  const lo = Math.min(fi, ti) + 1;
+  const hi = Math.max(fi, ti) - 1;
+  if (hi < lo) return null;
+  let peak = Infinity;
+  for (const b of layout.bars) {
+    const i = cats.indexOf(String(b.category));
+    if (i < lo || i > hi) continue;
+    const top = b.valueLabelY != null ? Math.min(b.y, b.valueLabelY) : b.y;
+    if (top < peak) peak = top;
+  }
+  return Number.isFinite(peak) ? peak : null;
+}
+
+const VALUE_LABEL_CLEARANCE = 18;
+/** Minimum y (inner coords) for any annotation element so it stays inside the plot. */
+const PLOT_TOP_MARGIN = 8;
 
 interface ApplyContext {
   frame: ChartFrame;
   layout: ChartLayout;
+  /**
+   * Smallest y reserved by previously-placed "above" annotations
+   * (label tops). Subsequent above-annotations lift themselves so
+   * their label top sits at most `topReserved - LABEL_GAP`.
+   */
+  topReserved: number;
+  bottomReserved: number;
 }
 
+/** Vertical gap between stacked annotations. */
+const LABEL_GAP = 6;
+/** Approximate label height, in svg units (≈ font size + descenders). */
+const LABEL_HEIGHT = 16;
+
 export function applyAnnotations(
-  ctx: ApplyContext,
+  partial: { frame: ChartFrame; layout: ChartLayout },
   annotations: Annotation[],
 ): void {
+  const ctx: ApplyContext = {
+    frame: partial.frame,
+    layout: partial.layout,
+    topReserved: Infinity,
+    bottomReserved: -Infinity,
+  };
   for (const a of annotations) {
     try {
       switch (a.type) {
@@ -168,35 +233,65 @@ function drawCagrArrow(
     ctx.frame.warnings.push("cagr_arrow: missing or zero base value.");
     return;
   }
-  // Period count: for bar/line layouts, use category-index distance if available.
   const periods = inferPeriods(ctx.layout, a.from, a.to) ?? 1;
   const cagr = Math.pow(to.value / from.value, 1 / periods) - 1;
   const label = a.label ?? `CAGR ${fmtPct(cagr, a.format)}`;
   const color = a.color ?? ctx.frame.ds.palette.foreground;
 
-  const offset =
-    a.placement === "below" ? 24 : a.placement === "inline" ? 0 : -22;
-  const y = Math.min(from.y, to.y) + offset;
+  // Per-endpoint lift. For "above" we lift each endpoint slightly off the
+  // bar top; for "below" we drop them. For "inline" we leave them on.
+  const baseLift = a.placement === "inline" ? 0 : 14;
+  const sign = a.placement === "below" ? 1 : -1;
+  const fromY = from.y + sign * baseLift;
+  const toY = to.y + sign * baseLift;
 
-  const markerId = `cagr-arrow-${Math.random().toString(36).slice(2, 8)}`;
-  ensureArrowMarker(ctx.frame, markerId, color);
+  // Apex of the curve: pulled past the higher endpoint so the bow is visible.
+  // For bar layouts, also clear any intermediate bars + their value labels.
+  const peak = peakYStrictlyBetween(ctx.layout, a.from, a.to);
+  const plotBottom = ctx.layout.plot.height;
+  let apexY: number;
+  if (a.placement === "below") {
+    let baseline = Math.max(fromY, toY);
+    if (Number.isFinite(ctx.bottomReserved))
+      baseline = Math.max(baseline, ctx.bottomReserved + LABEL_GAP);
+    apexY = Math.min(baseline + 22, plotBottom - PLOT_TOP_MARGIN);
+  } else {
+    let baseline = Math.min(fromY, toY);
+    if (peak != null) baseline = Math.min(baseline, peak - VALUE_LABEL_CLEARANCE);
+    if (Number.isFinite(ctx.topReserved))
+      baseline = Math.min(baseline, ctx.topReserved - LABEL_GAP);
+    // Clamp inside plot so label stays visible. Reserve room for label above apex.
+    apexY = Math.max(baseline - 22, PLOT_TOP_MARGIN + 14);
+  }
 
-  const path = `M ${from.x} ${y} Q ${(from.x + to.x) / 2} ${y - 18}, ${to.x} ${y}`;
+  const midX = (from.x + to.x) / 2;
+  const markerId = ensureArrowMarker(ctx.frame, color);
+
+  const path = `M ${from.x} ${fromY} Q ${midX} ${apexY}, ${to.x} ${toY}`;
   const g = ctx.frame.overlay.append("g").attr("class", "annotation-cagr");
   g.append("path")
     .attr("d", path)
     .attr("fill", "none")
     .attr("stroke", color)
-    .attr("stroke-width", 1.5)
+    .attr("stroke-width", 1.75)
+    .attr("stroke-linecap", "round")
     .attr("marker-end", `url(#${markerId})`);
+
+  const labelY = a.placement === "below" ? apexY + 16 : apexY - 6;
   g.append("text")
-    .attr("x", (from.x + to.x) / 2)
-    .attr("y", y - 22)
+    .attr("x", midX)
+    .attr("y", labelY)
     .attr("text-anchor", "middle")
     .attr("font-size", ctx.frame.ds.typography.labelSize)
     .attr("font-weight", 600)
     .attr("fill", color)
     .text(label);
+
+  if (a.placement === "below") {
+    ctx.bottomReserved = Math.max(ctx.bottomReserved, labelY);
+  } else {
+    ctx.topReserved = Math.min(ctx.topReserved, labelY - LABEL_HEIGHT);
+  }
 }
 
 function drawDelta(
@@ -213,11 +308,24 @@ function drawDelta(
   const label = d3.format(a.format)(delta);
   const color = a.color ?? ctx.frame.ds.palette.foreground;
 
-  const baseY = Math.min(from.y, to.y) - (a.placement === "below" ? -24 : 14);
-  const tickY = baseY - 6;
+  const peak = peakYStrictlyBetween(ctx.layout, a.from, a.to);
+  let baseY: number;
+  if (a.placement === "below") {
+    let bottom = Math.max(from.y, to.y) + 28;
+    if (Number.isFinite(ctx.bottomReserved))
+      bottom = Math.max(bottom, ctx.bottomReserved + LABEL_GAP + 14);
+    baseY = Math.min(bottom, ctx.layout.plot.height - PLOT_TOP_MARGIN);
+  } else {
+    let top = Math.min(from.y, to.y);
+    if (peak != null) top = Math.min(top, peak - VALUE_LABEL_CLEARANCE);
+    if (Number.isFinite(ctx.topReserved))
+      top = Math.min(top, ctx.topReserved - LABEL_GAP);
+    baseY = Math.max(top - 14, PLOT_TOP_MARGIN + 14);
+  }
+  const tickDir = a.placement === "below" ? 6 : -6;
+  const tickY = baseY + tickDir;
 
   const g = ctx.frame.overlay.append("g").attr("class", "annotation-delta");
-  // Bracket: ⌐ ¬ shape with label centered above.
   g.append("path")
     .attr(
       "d",
@@ -226,14 +334,20 @@ function drawDelta(
     .attr("fill", "none")
     .attr("stroke", color)
     .attr("stroke-width", 1.25);
+  const labelY = a.placement === "below" ? tickY + 16 : tickY - 6;
   g.append("text")
     .attr("x", (from.x + to.x) / 2)
-    .attr("y", tickY - 6)
+    .attr("y", labelY)
     .attr("text-anchor", "middle")
     .attr("font-size", ctx.frame.ds.typography.labelSize)
     .attr("font-weight", 600)
     .attr("fill", color)
     .text(label);
+  if (a.placement === "below") {
+    ctx.bottomReserved = Math.max(ctx.bottomReserved, labelY);
+  } else {
+    ctx.topReserved = Math.min(ctx.topReserved, labelY - LABEL_HEIGHT);
+  }
 }
 
 function drawBracket(
@@ -247,24 +361,46 @@ function drawBracket(
     return;
   }
   const color = a.color ?? ctx.frame.ds.palette.foreground;
-  const baseY = Math.min(from.y, to.y) - (a.placement === "below" ? -28 : 18);
+  const peak = peakYStrictlyBetween(ctx.layout, a.from, a.to);
+
+  let baseY: number;
+  if (a.placement === "below") {
+    let bottom = Math.max(from.y, to.y) + 32;
+    if (Number.isFinite(ctx.bottomReserved))
+      bottom = Math.max(bottom, ctx.bottomReserved + LABEL_GAP + 14);
+    baseY = Math.min(bottom, ctx.layout.plot.height - PLOT_TOP_MARGIN);
+  } else {
+    let top = Math.min(from.y, to.y);
+    if (peak != null) top = Math.min(top, peak - VALUE_LABEL_CLEARANCE);
+    if (Number.isFinite(ctx.topReserved))
+      top = Math.min(top, ctx.topReserved - LABEL_GAP);
+    baseY = Math.max(top - 18, PLOT_TOP_MARGIN + 14);
+  }
+  const tickDir = a.placement === "below" ? -6 : 6;
+
   const g = ctx.frame.overlay.append("g").attr("class", "annotation-bracket");
   g.append("path")
     .attr(
       "d",
-      `M ${from.x} ${baseY + 6} L ${from.x} ${baseY} L ${to.x} ${baseY} L ${to.x} ${baseY + 6}`,
+      `M ${from.x} ${baseY + tickDir} L ${from.x} ${baseY} L ${to.x} ${baseY} L ${to.x} ${baseY + tickDir}`,
     )
     .attr("fill", "none")
     .attr("stroke", color)
     .attr("stroke-width", 1.25);
+  const labelY = a.placement === "below" ? baseY + 18 : baseY - 6;
   g.append("text")
     .attr("x", (from.x + to.x) / 2)
-    .attr("y", baseY - 6)
+    .attr("y", labelY)
     .attr("text-anchor", "middle")
     .attr("font-size", ctx.frame.ds.typography.labelSize)
     .attr("font-weight", 600)
     .attr("fill", color)
     .text(a.label);
+  if (a.placement === "below") {
+    ctx.bottomReserved = Math.max(ctx.bottomReserved, labelY);
+  } else {
+    ctx.topReserved = Math.min(ctx.topReserved, labelY - LABEL_HEIGHT);
+  }
 }
 
 function drawCallout(

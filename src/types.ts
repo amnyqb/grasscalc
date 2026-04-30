@@ -26,6 +26,9 @@ export interface BarRef {
   value: number;
   /** Center of the bar's top edge — convenient anchor for labels/arrows. */
   top: { x: number; y: number };
+  /** y of any value label drawn above the bar (smaller than `y`); annotations
+   *  use this for clearance so they don't crash through value labels. */
+  valueLabelY?: number;
   isTotal?: boolean;
   sign?: 1 | -1;
 }

@@ -36,6 +36,18 @@ export const BarChartSchema = z.object({
 
 export type BarChartInput = z.infer<typeof BarChartSchema>;
 
+function hasAboveAnnotation(arr: unknown): boolean {
+  if (!Array.isArray(arr)) return false;
+  return arr.some(
+    (a: any) =>
+      a &&
+      (a.type === "cagr_arrow" ||
+        a.type === "delta" ||
+        a.type === "bracket") &&
+      (a.placement === undefined || a.placement === "above"),
+  );
+}
+
 export interface RenderResult {
   frame: ChartFrame;
   layout: BarLayout;
@@ -82,7 +94,8 @@ export function renderBar(
       }),
     );
 
-    const yMax = d3.max(stack[stack.length - 1] ?? [], (d) => d[1]) ?? 0;
+    let yMax = d3.max(stack[stack.length - 1] ?? [], (d) => d[1]) ?? 0;
+    if (hasAboveAnnotation((input as any).annotations)) yMax = yMax * 1.12;
     const yScale = d3
       .scaleLinear()
       .domain([0, yMax])
@@ -160,7 +173,8 @@ export function renderBar(
       .padding(0.05);
 
     const allValues = input.series.flatMap((s) => s.values);
-    const yMax = d3.max(allValues) ?? 0;
+    let yMax = d3.max(allValues) ?? 0;
+    if (hasAboveAnnotation((input as any).annotations)) yMax = yMax * 1.12;
     const yMin = Math.min(0, d3.min(allValues) ?? 0);
     const yScale = d3
       .scaleLinear()
@@ -207,18 +221,21 @@ export function renderBar(
           .attr("y", by)
           .attr("width", bw)
           .attr("height", bh);
+        let valueLabelY: number | undefined;
         if (input.showValues) {
+          const ly =
+            input.orientation === "vertical" ? by - 6 : by + bh / 2 + 5;
           inner
             .append("text")
             .attr("x", bx + bw / 2)
-            .attr(
-              "y",
-              input.orientation === "vertical" ? by - 6 : by + bh / 2 + 5,
-            )
+            .attr("y", ly)
             .attr("text-anchor", "middle")
             .attr("font-size", ds.typography.labelSize)
             .attr("fill", ds.palette.foreground)
             .text(fmt(v));
+          if (input.orientation === "vertical") {
+            valueLabelY = ly - ds.typography.labelSize;
+          }
         }
         bars.push({
           series: s.name,
@@ -229,6 +246,7 @@ export function renderBar(
           height: bh,
           value: v,
           top: { x: bx + bw / 2, y: by },
+          valueLabelY,
           sign: v >= 0 ? 1 : -1,
         });
       });

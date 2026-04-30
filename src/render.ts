@@ -1,5 +1,8 @@
 import { z } from "zod";
-import type { DesignSystem } from "./design-system.js";
+import {
+  type DesignSystem,
+  DesignSystemSchema,
+} from "./design-system.js";
 import { BarChartSchema, renderBar } from "./charts/bar.js";
 import { LineChartSchema, renderLine } from "./charts/line.js";
 import { ScatterChartSchema, renderScatter } from "./charts/scatter.js";
@@ -33,38 +36,78 @@ export interface ComposeOptions {
   chartId: string;
 }
 
+/**
+ * Bump top/bottom padding when annotations need vertical headroom for
+ * brackets, arrow apexes and labels. Each above-annotation reserves
+ * ~22px stacked; below-annotations the same. Title still gets its own
+ * 14px.
+ */
+function expandPaddingForAnnotations(
+  ds: DesignSystem,
+  annotations: { type: string; placement?: string }[] | undefined,
+): DesignSystem {
+  if (!annotations || annotations.length === 0) return ds;
+  let above = 0;
+  let below = 0;
+  for (const a of annotations) {
+    const tier =
+      a.type === "cagr_arrow" || a.type === "bracket" ? 28 :
+      a.type === "delta" ? 24 : 0;
+    if (!tier) continue;
+    if (a.placement === "below") below += tier;
+    else above += tier;
+  }
+  if (!above && !below) return ds;
+  return DesignSystemSchema.parse({
+    ...ds,
+    layout: {
+      ...ds.layout,
+      padding: {
+        ...ds.layout.padding,
+        top: ds.layout.padding.top + above,
+        bottom: ds.layout.padding.bottom + below,
+      },
+    },
+  });
+}
+
 export function composeChart(
   input: ChartInput,
   ds: DesignSystem,
   opts: ComposeOptions,
 ): ChartResponse {
-  let result: { frame: any; layout: any };
-  switch (input.type) {
-    case "bar":
-      result = renderBar(input, ds);
-      break;
-    case "line":
-      result = renderLine(input, ds);
-      break;
-    case "scatter":
-      result = renderScatter(input, ds);
-      break;
-    case "area":
-      result = renderArea(input, ds);
-      break;
-    case "pie":
-      result = renderPie(input, ds);
-      break;
-    case "waterfall":
-      result = renderWaterfall(input, ds);
-      break;
-  }
-
   const annotations = (input as any).annotations as
     | z.infer<typeof AnnotationSchema>[]
     | undefined;
+  const effectiveDs = expandPaddingForAnnotations(ds, annotations);
+
+  let result: { frame: any; layout: any };
+  switch (input.type) {
+    case "bar":
+      result = renderBar(input, effectiveDs);
+      break;
+    case "line":
+      result = renderLine(input, effectiveDs);
+      break;
+    case "scatter":
+      result = renderScatter(input, effectiveDs);
+      break;
+    case "area":
+      result = renderArea(input, effectiveDs);
+      break;
+    case "pie":
+      result = renderPie(input, effectiveDs);
+      break;
+    case "waterfall":
+      result = renderWaterfall(input, effectiveDs);
+      break;
+  }
+
   if (annotations && annotations.length) {
-    applyAnnotations({ frame: result.frame, layout: result.layout }, annotations);
+    applyAnnotations(
+      { frame: result.frame, layout: result.layout },
+      annotations,
+    );
   }
 
   const svg = serialize(result.frame);

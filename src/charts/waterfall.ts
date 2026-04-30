@@ -37,6 +37,18 @@ export const WaterfallChartSchema = z.object({
 
 export type WaterfallChartInput = z.infer<typeof WaterfallChartSchema>;
 
+function hasAboveAnnotation(arr: unknown): boolean {
+  if (!Array.isArray(arr)) return false;
+  return arr.some(
+    (a: any) =>
+      a &&
+      (a.type === "cagr_arrow" ||
+        a.type === "delta" ||
+        a.type === "bracket") &&
+      (a.placement === undefined || a.placement === "above"),
+  );
+}
+
 export interface RenderResult {
   frame: ChartFrame;
   layout: BarLayout;
@@ -83,7 +95,12 @@ export function renderWaterfall(
   });
 
   const yMin = Math.min(0, d3.min(segments.flatMap((s) => [s.start, s.end]))!);
-  const yMax = Math.max(0, d3.max(segments.flatMap((s) => [s.start, s.end]))!);
+  let yMax = Math.max(0, d3.max(segments.flatMap((s) => [s.start, s.end]))!);
+  // Reserve ~12% domain headroom for above-placement annotations so brackets
+  // and CAGR arcs don't crash through bar tops/value labels.
+  if (hasAboveAnnotation((input as any).annotations)) {
+    yMax = yMax * 1.12;
+  }
 
   const xScale = d3
     .scaleBand<string>()
@@ -130,6 +147,7 @@ export function renderWaterfall(
       .attr("rx", ds.layout.cornerRadius)
       .attr("fill", fill);
 
+    let valueLabelY: number | undefined;
     if (input.showValues) {
       const labelY = seg.value >= 0 || seg.isTotal ? top - 6 : bottom + 16;
       inner
@@ -140,6 +158,11 @@ export function renderWaterfall(
         .attr("font-size", ds.typography.labelSize)
         .attr("fill", ds.palette.foreground)
         .text(seg.isTotal ? d3.format(",.0f")(seg.value) : fmt(seg.value));
+      // Only positive/total labels are above the bar — those are what
+      // annotation peak detection needs to clear.
+      if (seg.value >= 0 || seg.isTotal) {
+        valueLabelY = labelY - ds.typography.labelSize;
+      }
     }
 
     if (input.showConnectors && i > 0) {
@@ -166,8 +189,9 @@ export function renderWaterfall(
       y: top,
       width: bw,
       height: bh,
-      value: seg.isTotal ? seg.value : seg.value,
+      value: seg.value,
       top: { x: bx + bw / 2, y: top },
+      valueLabelY,
       isTotal: seg.isTotal,
       sign: seg.value >= 0 ? 1 : -1,
     });
