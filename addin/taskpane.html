@@ -88,9 +88,22 @@
     </section>
 
     <!-- ============== Actions ============== -->
-    <section class="cs-section cs-actions">
-      <button id="btn-insert" class="cs-primary">Insert into slide</button>
-      <button id="btn-update" disabled>Update selected</button>
+    <section class="cs-section cs-actions-section">
+      <div class="cs-row cs-row--tight cs-mode-row">
+        <span class="cs-mode-label">Insert as</span>
+        <label class="cs-toggle">
+          <input type="radio" name="insert-mode" value="image" id="mode-image" checked />
+          <span>Image (with annotations)</span>
+        </label>
+        <label class="cs-toggle">
+          <input type="radio" name="insert-mode" value="native" id="mode-native" />
+          <span>Native chart (editable)</span>
+        </label>
+      </div>
+      <div class="cs-actions">
+        <button id="btn-insert" class="cs-primary">Insert into slide</button>
+        <button id="btn-update" disabled>Update selected</button>
+      </div>
     </section>
 
     <script type="module" src="taskpane.js"></script>

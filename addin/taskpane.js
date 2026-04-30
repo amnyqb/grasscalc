@@ -2,6 +2,7 @@ import { TYPES, buildChartInput, buildAnnotations } from "./chart-types.js";
 import { mountGridForType } from "./grids.js";
 import { McpClient, parseChartEnvelope } from "./mcp-client.js";
 import { readDeckTheme } from "./deck-theme.js";
+import { insertNativeChart } from "./native-chart.js";
 
 const CHART_TAG_KEY = "CHARTSMITH_ID";
 
@@ -25,7 +26,11 @@ const els = {
   warnings: document.getElementById("warnings"),
   insert: document.getElementById("btn-insert"),
   update: document.getElementById("btn-update"),
+  modeImage: document.getElementById("mode-image"),
+  modeNative: document.getElementById("mode-native"),
 };
+
+const NATIVE_MODE_KEY = "CHARTSMITH_NATIVE";
 
 const state = {
   type: "bar",
@@ -52,10 +57,14 @@ function loadSettings() {
   els.url.value = localStorage.getItem("cs.mcpUrl") ?? "http://localhost:3333/mcp";
   const ds = localStorage.getItem("cs.designSystem") ?? "default";
   els.ds.value = ds;
+  const mode = localStorage.getItem("cs.insertMode") ?? "image";
+  if (mode === "native" && els.modeNative) els.modeNative.checked = true;
+  else if (els.modeImage) els.modeImage.checked = true;
 }
 function saveSettings() {
   localStorage.setItem("cs.mcpUrl", els.url.value);
   localStorage.setItem("cs.designSystem", els.ds.value);
+  localStorage.setItem("cs.insertMode", nativeModeOn() ? "native" : "image");
 }
 
 async function ensureClient() {
@@ -221,16 +230,30 @@ async function rasterizeSvgToPng(svg, widthPt, heightPt) {
   }
 }
 
+function nativeModeOn() {
+  return els.modeNative?.checked === true;
+}
+
 async function insertChart() {
   if (!state.lastEnvelope) return;
-  const env = state.lastEnvelope;
-  const pngBase64 = await rasterizeSvgToPng(env.svg, env.widthPt, env.heightPt);
-
   if (typeof PowerPoint === "undefined") {
-    // Office.js not loaded (running outside PowerPoint, e.g. dev preview)
     alert("Insert is only available inside PowerPoint. Preview works fine here.");
     return;
   }
+
+  if (nativeModeOn()) {
+    return insertChartNative();
+  }
+  return insertChartImage();
+}
+
+/**
+ * SVG/PNG path: preserves chartsmith annotation overlays and design-system
+ * spacing exactly as the preview shows. Inserts as a picture.
+ */
+async function insertChartImage() {
+  const env = state.lastEnvelope;
+  const pngBase64 = await rasterizeSvgToPng(env.svg, env.widthPt, env.heightPt);
 
   await PowerPoint.run(async (context) => {
     const slide = context.presentation.slides.getItemAt(
@@ -238,16 +261,60 @@ async function insertChart() {
         ? (await context.presentation.getSelectedSlides()).items[0].id
         : 0,
     );
-    // Insert as image; size in points.
     const shape = slide.shapes.addImage(pngBase64, {
       width: env.widthPt,
       height: env.heightPt,
     });
     shape.tags.add(CHART_TAG_KEY, env.chartId);
+    shape.tags.add(NATIVE_MODE_KEY, "0");
     shape.altTextDescription = els.title.value || "Chartsmith chart";
     await context.sync();
   });
-  status("inserted", "ok");
+  status("inserted (image)", "ok");
+}
+
+/**
+ * Native path: drops annotations (warned in UI), inserts a real PowerPoint
+ * chart shape via slide.shapes.addChart. Editable, animatable, theme-linked.
+ */
+async function insertChartNative() {
+  // Build a fresh spec from the grid (don't reuse the SVG envelope's
+  // implicit annotations — they don't translate to native PPT charts).
+  const grid = els.gridHost.__grid.getState();
+  const spec = buildChartInput(state.type, grid, { title: els.title.value }, []);
+
+  // Warn the user if they had annotations toggled on.
+  const hadAnnotations = els.cagr.checked || els.totals.checked;
+  if (hadAnnotations) {
+    showWarnings([
+      "native chart: chartsmith annotations (CAGR arrow, totals) are not preserved in native PowerPoint charts. Switch to Image mode to keep them.",
+    ]);
+  } else {
+    showWarnings([]);
+  }
+
+  // Pull the active design system's categorical palette to color series.
+  let palette = [];
+  try {
+    const dsResult = await state.client.callTool("get_design_system", { id: els.ds.value });
+    const ds = JSON.parse(dsResult.content[0].text);
+    palette = ds.palette?.categorical ?? [];
+  } catch {
+    /* fall back to PPT theme defaults */
+  }
+
+  const env = state.lastEnvelope;
+  const chartId = env?.chartId ?? "native-" + Date.now();
+
+  status("inserting native chart…", "working");
+  await insertNativeChart(spec, palette, {
+    widthPt: env?.widthPt ?? 480,
+    heightPt: env?.heightPt ?? 270,
+    title: spec.title,
+    altText: spec.title || "Chartsmith chart",
+    tags: { [CHART_TAG_KEY]: chartId, [NATIVE_MODE_KEY]: "1" },
+  });
+  status("inserted (native)", "ok");
 }
 
 async function updateSelectedChart() {
@@ -257,6 +324,14 @@ async function updateSelectedChart() {
   }
   if (!state.selectedShapeChartId) {
     alert("Select a chartsmith-inserted shape on the slide first.");
+    return;
+  }
+  if (state.selectedShapeIsNative) {
+    alert(
+      "The selected shape is a native PowerPoint chart. Edit its data " +
+        "directly in PowerPoint (double-click), or delete it and re-insert " +
+        "from chartsmith.",
+    );
     return;
   }
   const env = state.lastEnvelope;
@@ -308,14 +383,19 @@ async function checkSelection() {
       await context.sync();
       if (sel.items.length === 0) {
         state.selectedShapeChartId = null;
+        state.selectedShapeIsNative = false;
       } else {
         const sh = sel.items[0];
         sh.load("tags");
         await context.sync();
         const tag = sh.tags.getItemOrNullObject(CHART_TAG_KEY);
+        const nativeTag = sh.tags.getItemOrNullObject(NATIVE_MODE_KEY);
         tag.load("value");
+        nativeTag.load("value");
         await context.sync();
         state.selectedShapeChartId = tag.isNullObject ? null : tag.value;
+        state.selectedShapeIsNative =
+          !nativeTag.isNullObject && nativeTag.value === "1";
       }
       els.update.disabled = !state.selectedShapeChartId;
       // If the selected shape has a chartId, hydrate the form from server spec.
@@ -367,6 +447,8 @@ function wire() {
   els.delCol.addEventListener("click", () => els.gridHost.__grid?.delCol());
   els.insert.addEventListener("click", insertChart);
   els.update.addEventListener("click", updateSelectedChart);
+  els.modeImage?.addEventListener("change", saveSettings);
+  els.modeNative?.addEventListener("change", saveSettings);
 }
 
 function bootstrapPreviewOnly() {

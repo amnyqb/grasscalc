@@ -121,11 +121,57 @@ Verified end-to-end with a synthetic .pptx in
 theme, hit a real chartsmith server, and render charts in deck colors
 without any PowerPoint involvement.
 
-## Known gaps / next iterations
+## Insert mode: image vs native
 
-- **Native editable charts.** Today the addon inserts a PNG. The
-  think-cell-grade version emits an OOXML `<c:chart>` part so PowerPoint
-  treats it as a real chart shape. Server tool not yet implemented.
+The action area has a radio toggle:
+
+- **Image (with annotations)** — default. Renders SVG via chartsmith
+  (with all annotation overlays — CAGR arrow, totals, brackets, etc.),
+  rasterizes to PNG @2× DPI, inserts via `slide.shapes.addImage`. The
+  picture is tagged with `CHARTSMITH_ID` so Update can replace it in
+  place; selecting the picture later hydrates the form via
+  `get_chart_spec`.
+
+- **Native chart (editable)** — inserts a real PowerPoint chart shape
+  via `slide.shapes.addChart`. Double-click in PowerPoint to edit the
+  data; respects animations; theme-linked. Trade-offs:
+    - chartsmith annotations (CAGR, totals, brackets, callouts,
+      reference lines, range bands) are dropped — they live in our
+      SVG overlay layer, not in the OOXML chart part. The UI surfaces
+      a warning when annotations were toggled on.
+    - chart visuals are PowerPoint's defaults, not chartsmith's
+      design-system spacing — but we apply the design system's
+      categorical palette to the series fills via
+      `series.format.fill.setSolidColor`, best-effort.
+    - Update flow is a no-op in native mode: edit the chart's data
+      directly in PowerPoint, or delete + re-insert from chartsmith.
+
+The chartsmith → PowerPoint chart-type mapping (see `native-chart.js`):
+
+| chartsmith | PowerPoint.ChartType |
+|---|---|
+| bar (grouped/stacked, vertical/horizontal) | columnClustered / columnStacked / barClustered / barStacked |
+| line | line |
+| scatter | xyscatter |
+| area (stacked/unstacked) | areaStacked / area |
+| pie / donut | pie / doughnut |
+| waterfall | waterfall (PowerPoint 2016+) |
+
+Pure transforms (`mapChartType`, `shapeData`) are tested in
+`addin/__tests__/native-chart.test.mjs` (20 cases, runs with plain
+`node` — no PowerPoint or browser needed).
+
+## Why not full hand-rolled OOXML?
+
+We intentionally use Office.js `addChart` instead of emitting an OOXML
+`<c:chart>` part by hand. PowerPoint generates the OOXML internally
+when we hand it data + a chart type, which gives us native editability
+without a multi-day schema-tracking effort. Hand-rolled OOXML is still
+on the table for things `addChart` doesn't expose (custom fill
+patterns, exotic chart subtypes), but for 95% of decks the Office.js
+path is the right call.
+
+## Known gaps / next iterations
 - **Auth / non-localhost MCP.** Dev mode assumes the server is on
   `localhost`. Real deployment needs auth (bearer token at minimum) and
   a non-`*` CORS allowlist.

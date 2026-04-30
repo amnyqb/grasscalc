@@ -221,12 +221,23 @@ button.cs-primary:hover { background: var(--accent-hover); border-color: var(--a
   font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
 }
 
-.cs-actions {
-  display: flex;
-  gap: 8px;
+.cs-actions-section {
   position: sticky;
   bottom: 0;
   background: var(--bg);
   border-top: 1px solid var(--border);
+  padding: 8px 16px 12px;
+}
+.cs-actions {
+  display: flex;
+  gap: 8px;
 }
 .cs-actions button { flex: 1; padding: 10px; font-size: 13px; }
+.cs-mode-row { margin-bottom: 8px; }
+.cs-mode-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin-right: 4px;
+}
