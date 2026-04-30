@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="taskpane.css" />
     <!-- Office.js (loaded by the host; CDN here for sideload). -->
     <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <!-- JSZip — used to crack open the .pptx and pull theme1.xml. -->
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
   </head>
   <body>
     <header class="cs-header">
@@ -31,6 +33,12 @@
           </select>
         </label>
         <button id="refresh-ds">Refresh</button>
+      </div>
+      <div class="cs-row">
+        <button id="use-deck-theme" title="Read theme1.xml from the active deck and register it as a design system">
+          Use deck theme
+        </button>
+        <span id="deck-theme-status" class="cs-muted"></span>
       </div>
     </details>
 

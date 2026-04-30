@@ -100,13 +100,29 @@ Office.js degrades gracefully: chart picker, grid, and live preview all
 work; the Insert/Update buttons just alert ("Insert is only available
 inside PowerPoint").
 
+## Deck-theme bridge ("Use deck theme" button)
+
+In the Server section, the **Use deck theme** button:
+
+1. Calls `Office.context.document.getFileAsync(Office.FileType.Compressed)`
+   and assembles the .pptx bytes from slices.
+2. Loads them with [JSZip](https://stuk.github.io/jszip/) (CDN-loaded in
+   `taskpane.html`) and pulls `ppt/theme/theme1.xml` (with fallback to
+   any `ppt/theme/themeN.xml`).
+3. Posts the XML to chartsmith's `theme_to_design_system` tool with
+   `id: "deck"`. The server parses `a:clrScheme` (accent1–6 → categorical
+   palette, `lt1`/`dk1` → bg/fg, `lt2`/`dk2` → grid/muted) and
+   `a:fontScheme` (major/minor Latin → font stack), registers the result.
+4. Selects "deck" in the design-system dropdown and triggers a re-render.
+
+Implementation: `addin/deck-theme.js` (extractor, transport-agnostic).
+Verified end-to-end with a synthetic .pptx in
+`/tmp/deck-theme-smoke.mjs` — the addin's exact JS modules pull the
+theme, hit a real chartsmith server, and render charts in deck colors
+without any PowerPoint involvement.
+
 ## Known gaps / next iterations
 
-- **Theme auto-extraction.** The pane currently uses chartsmith's
-  built-in design systems. To inherit the deck's theme automatically
-  we'd `Office.context.document.getFileAsync(Office.FileType.Compressed)`,
-  unzip in-browser, parse `theme1.xml`, and call `theme_to_design_system`.
-  Plumbing exists server-side; UI not wired.
 - **Native editable charts.** Today the addon inserts a PNG. The
   think-cell-grade version emits an OOXML `<c:chart>` part so PowerPoint
   treats it as a real chart shape. Server tool not yet implemented.

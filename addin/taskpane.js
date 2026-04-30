@@ -1,6 +1,7 @@
 import { TYPES, buildChartInput, buildAnnotations } from "./chart-types.js";
 import { mountGridForType } from "./grids.js";
 import { McpClient, parseChartEnvelope } from "./mcp-client.js";
+import { readDeckTheme } from "./deck-theme.js";
 
 const CHART_TAG_KEY = "CHARTSMITH_ID";
 
@@ -9,6 +10,8 @@ const els = {
   url: document.getElementById("mcp-url"),
   ds: document.getElementById("design-system"),
   refresh: document.getElementById("refresh-ds"),
+  useDeckTheme: document.getElementById("use-deck-theme"),
+  deckThemeStatus: document.getElementById("deck-theme-status"),
   picker: document.getElementById("type-picker"),
   title: document.getElementById("chart-title"),
   gridHost: document.getElementById("grid-host"),
@@ -81,6 +84,39 @@ async function refreshDesignSystems() {
     if (list.find((d) => d.id === keep)) els.ds.value = keep;
   } catch (e) {
     console.warn("list_design_systems failed:", e);
+  }
+}
+
+// ----------------------------------------------------------------- deck theme
+
+async function pullDeckTheme() {
+  els.useDeckTheme.disabled = true;
+  els.deckThemeStatus.textContent = "reading deck…";
+  try {
+    await ensureClient();
+    const xml = await readDeckTheme();
+    const result = await state.client.callTool("theme_to_design_system", {
+      source: "xml",
+      payload: xml,
+      id: "deck",
+      name: "Active deck",
+    });
+    const text = result.content?.[0]?.text ?? "";
+    // Surface the categorical palette summary back to the user.
+    const m = text.match(/Categorical palette: \[([^\]]+)\]/);
+    els.deckThemeStatus.textContent = m
+      ? `loaded — ${m[1].split(",").length} accents`
+      : "loaded";
+    await refreshDesignSystems();
+    els.ds.value = "deck";
+    saveSettings();
+    scheduleRender();
+  } catch (e) {
+    els.deckThemeStatus.textContent = "";
+    status("error", "err");
+    showWarnings([`deck theme: ${e.message ?? e}`]);
+  } finally {
+    els.useDeckTheme.disabled = false;
   }
 }
 
@@ -320,6 +356,7 @@ function wire() {
   els.url.addEventListener("change", () => { saveSettings(); state.client = null; ensureClient(); });
   els.ds.addEventListener("change", () => { saveSettings(); scheduleRender(); });
   els.refresh.addEventListener("click", refreshDesignSystems);
+  els.useDeckTheme.addEventListener("click", pullDeckTheme);
   els.title.addEventListener("input", scheduleRender);
   els.cagr.addEventListener("change", scheduleRender);
   els.totals.addEventListener("change", scheduleRender);

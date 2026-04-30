@@ -215,6 +215,12 @@ button.cs-primary:hover { background: var(--accent-hover); border-color: var(--a
 }
 .cs-warnings:empty { display: none; }
 
+.cs-muted {
+  font-size: 11px;
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
 .cs-actions {
   display: flex;
   gap: 8px;
