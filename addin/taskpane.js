@@ -9,6 +9,7 @@ const CHART_TAG_KEY = "CHARTSMITH_ID";
 const els = {
   status: document.getElementById("status-pill"),
   url: document.getElementById("mcp-url"),
+  token: document.getElementById("mcp-token"),
   ds: document.getElementById("design-system"),
   refresh: document.getElementById("refresh-ds"),
   useDeckTheme: document.getElementById("use-deck-theme"),
@@ -22,6 +23,11 @@ const els = {
   delCol: document.getElementById("del-col"),
   cagr: document.getElementById("ann-cagr"),
   totals: document.getElementById("ann-totals"),
+  delta: document.getElementById("ann-delta"),
+  refLine: document.getElementById("ann-refline"),
+  refLineConfig: document.getElementById("refline-config"),
+  refLineValue: document.getElementById("ann-refline-value"),
+  refLineLabel: document.getElementById("ann-refline-label"),
   preview: document.getElementById("preview-host"),
   warnings: document.getElementById("warnings"),
   insert: document.getElementById("btn-insert"),
@@ -55,6 +61,7 @@ function showWarnings(arr) {
 
 function loadSettings() {
   els.url.value = localStorage.getItem("cs.mcpUrl") ?? "http://localhost:3333/mcp";
+  els.token.value = localStorage.getItem("cs.mcpToken") ?? "";
   const ds = localStorage.getItem("cs.designSystem") ?? "default";
   els.ds.value = ds;
   const mode = localStorage.getItem("cs.insertMode") ?? "image";
@@ -63,13 +70,23 @@ function loadSettings() {
 }
 function saveSettings() {
   localStorage.setItem("cs.mcpUrl", els.url.value);
+  // Token persists in localStorage for dev convenience; not encrypted —
+  // treat it as a low-trust storage location and rotate if leaked.
+  localStorage.setItem("cs.mcpToken", els.token.value);
   localStorage.setItem("cs.designSystem", els.ds.value);
   localStorage.setItem("cs.insertMode", nativeModeOn() ? "native" : "image");
 }
 
 async function ensureClient() {
-  if (state.client && state.client.url === els.url.value) return state.client;
-  state.client = new McpClient(els.url.value);
+  const token = els.token.value || null;
+  if (
+    state.client &&
+    state.client.url === els.url.value &&
+    state.client.token === token
+  ) {
+    return state.client;
+  }
+  state.client = new McpClient(els.url.value, { token });
   status("connecting…", "working");
   await state.client.initialize();
   status("ready", "ok");
@@ -154,8 +171,15 @@ function setType(t) {
   const caps = TYPES[t].annotations;
   els.cagr.disabled = !caps.cagr;
   els.totals.disabled = !caps.totals;
+  els.delta.disabled = !caps.delta;
+  els.refLine.disabled = !caps.refLine;
   if (!caps.cagr) els.cagr.checked = false;
   if (!caps.totals) els.totals.checked = false;
+  if (!caps.delta) els.delta.checked = false;
+  if (!caps.refLine) {
+    els.refLine.checked = false;
+    els.refLineConfig.hidden = true;
+  }
   // Mount grid with type defaults.
   mountGridForType(els.gridHost, t, TYPES[t].defaults());
   scheduleRender();
@@ -174,10 +198,20 @@ async function renderPreview() {
     const grid = els.gridHost.__grid;
     if (!grid) return;
     const gridState = grid.getState();
-    const annotations = buildAnnotations(state.type, {
-      cagr: els.cagr.checked,
-      totals: els.totals.checked,
-    }, gridState);
+    const annotations = buildAnnotations(
+      state.type,
+      {
+        cagr: els.cagr.checked,
+        totals: els.totals.checked,
+        delta: els.delta.checked,
+        refLine: {
+          enabled: els.refLine.checked,
+          value: els.refLineValue.value,
+          label: els.refLineLabel.value,
+        },
+      },
+      gridState,
+    );
     const chart = buildChartInput(
       state.type,
       gridState,
@@ -434,12 +468,20 @@ async function hydrateFromChartId(id) {
 
 function wire() {
   els.url.addEventListener("change", () => { saveSettings(); state.client = null; ensureClient(); });
+  els.token.addEventListener("change", () => { saveSettings(); state.client = null; ensureClient(); });
   els.ds.addEventListener("change", () => { saveSettings(); scheduleRender(); });
   els.refresh.addEventListener("click", refreshDesignSystems);
   els.useDeckTheme.addEventListener("click", pullDeckTheme);
   els.title.addEventListener("input", scheduleRender);
   els.cagr.addEventListener("change", scheduleRender);
   els.totals.addEventListener("change", scheduleRender);
+  els.delta.addEventListener("change", scheduleRender);
+  els.refLine.addEventListener("change", () => {
+    els.refLineConfig.hidden = !els.refLine.checked;
+    scheduleRender();
+  });
+  els.refLineValue.addEventListener("input", scheduleRender);
+  els.refLineLabel.addEventListener("input", scheduleRender);
   els.gridHost.addEventListener("change", scheduleRender);
   els.addRow.addEventListener("click", () => els.gridHost.__grid?.addRow());
   els.delRow.addEventListener("click", () => els.gridHost.__grid?.delRow());

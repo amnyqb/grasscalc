@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <rect width="80" height="80" rx="14" fill="#1f3a68"/>
+  <!-- a small bar chart, like the addin's identity -->
+  <g fill="#9ec5fe">
+    <rect x="14" y="44" width="10" height="22" rx="1"/>
+    <rect x="28" y="34" width="10" height="32" rx="1"/>
+    <rect x="42" y="22" width="10" height="44" rx="1"/>
+    <rect x="56" y="14" width="10" height="52" rx="1"/>
+  </g>
+  <!-- subtle CAGR-style arc over the bars -->
+  <path d="M 19 44 Q 40 12 61 14" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 58 11 L 64 14 L 60 18 Z" fill="#ffffff"/>
+</svg>

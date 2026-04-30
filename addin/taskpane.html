@@ -25,6 +25,11 @@
         </label>
       </div>
       <div class="cs-row">
+        <label>Bearer token (optional)
+          <input id="mcp-token" type="password" placeholder="if the server requires --auth-token" autocomplete="off" />
+        </label>
+      </div>
+      <div class="cs-row">
         <label>Design system
           <select id="design-system">
             <option value="default">default</option>
@@ -76,6 +81,22 @@
         <label class="cs-toggle">
           <input id="ann-totals" type="checkbox" />
           <span>Total labels</span>
+        </label>
+        <label class="cs-toggle">
+          <input id="ann-delta" type="checkbox" />
+          <span>Delta</span>
+        </label>
+        <label class="cs-toggle">
+          <input id="ann-refline" type="checkbox" />
+          <span>Reference line</span>
+        </label>
+      </div>
+      <div class="cs-row cs-row--tight" id="refline-config" hidden>
+        <label>Value
+          <input id="ann-refline-value" type="number" step="any" placeholder="e.g. 100" />
+        </label>
+        <label>Label
+          <input id="ann-refline-label" type="text" placeholder="Target" />
         </label>
       </div>
     </section>

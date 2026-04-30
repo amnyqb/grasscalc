@@ -11,7 +11,7 @@ export const TYPES = {
   bar: {
     label: "Bar",
     grid: "rowsByCategory",
-    annotations: { cagr: true, totals: true },
+    annotations: { cagr: true, totals: true, delta: true, refLine: true },
     defaults: () => ({
       categories: ["Q1", "Q2", "Q3", "Q4"],
       series: [
@@ -32,7 +32,7 @@ export const TYPES = {
   waterfall: {
     label: "Waterfall",
     grid: "waterfall",
-    annotations: { cagr: false, totals: false },
+    annotations: { cagr: false, totals: false, delta: false, refLine: true },
     defaults: () => ({
       categories: ["FY24", "Volume", "Price", "Cost", "FY25"],
       values: [120, 18, 12, -8, 142],
@@ -54,7 +54,7 @@ export const TYPES = {
   line: {
     label: "Line",
     grid: "pointsBySeries",
-    annotations: { cagr: true, totals: false },
+    annotations: { cagr: true, totals: false, delta: true, refLine: true },
     defaults: () => ({
       series: [
         {
@@ -85,7 +85,7 @@ export const TYPES = {
   scatter: {
     label: "Scatter",
     grid: "pointsBySeries",
-    annotations: { cagr: false, totals: false },
+    annotations: { cagr: false, totals: false, delta: false, refLine: true },
     defaults: () => ({
       series: [
         {
@@ -113,7 +113,7 @@ export const TYPES = {
   area: {
     label: "Area",
     grid: "rowsByCategory",
-    annotations: { cagr: true, totals: false },
+    annotations: { cagr: true, totals: false, delta: true, refLine: true },
     defaults: () => ({
       categories: ["Jan", "Feb", "Mar", "Apr", "May"],
       series: [
@@ -132,7 +132,7 @@ export const TYPES = {
   pie: {
     label: "Pie",
     grid: "slices",
-    annotations: { cagr: false, totals: false },
+    annotations: { cagr: false, totals: false, delta: false, refLine: false },
     defaults: () => ({
       slices: [
         { label: "Direct", value: 38 },
@@ -209,26 +209,77 @@ export function buildChartInput(type, gridState, form, annotations) {
 export function buildAnnotations(type, toggles, gridState) {
   const result = [];
   const caps = TYPES[type].annotations;
-  if (toggles.cagr && caps.cagr) {
-    // Pick first/last category in first series.
-    let from, to, seriesName;
-    if (gridState.series && gridState.series.length) {
-      seriesName = gridState.series[0].name;
-      if (gridState.categories) {
-        from = { x: gridState.categories[0], series: seriesName };
-        to = { x: gridState.categories[gridState.categories.length - 1], series: seriesName };
-      } else if (gridState.series[0].points && gridState.series[0].points.length >= 2) {
-        const pts = gridState.series[0].points;
-        from = { x: pts[0].x, series: seriesName };
-        to = { x: pts[pts.length - 1].x, series: seriesName };
-      }
+
+  // For stacked bar/area, anchor refs to the *top* series (last in array).
+  // For non-stacked, anchor to the *first* series. This matches "the line
+  // a reader's eye lands on" in either layout.
+  const isStacked = type === "bar" ? !!gridState.stacked : type === "area";
+  const seriesForRef =
+    gridState.series && gridState.series.length
+      ? isStacked
+        ? gridState.series[gridState.series.length - 1]
+        : gridState.series[0]
+      : null;
+
+  function endpointRefs() {
+    if (!seriesForRef) return null;
+    if (gridState.categories) {
+      return {
+        from: { x: gridState.categories[0], series: seriesForRef.name },
+        to: {
+          x: gridState.categories[gridState.categories.length - 1],
+          series: seriesForRef.name,
+        },
+      };
     }
-    if (from && to) {
-      result.push({ type: "cagr_arrow", from, to, format: ".1%", placement: "above" });
+    if (seriesForRef.points && seriesForRef.points.length >= 2) {
+      const pts = seriesForRef.points;
+      return {
+        from: { x: pts[0].x, series: seriesForRef.name },
+        to: { x: pts[pts.length - 1].x, series: seriesForRef.name },
+      };
+    }
+    return null;
+  }
+
+  if (toggles.cagr && caps.cagr) {
+    const refs = endpointRefs();
+    if (refs) {
+      result.push({
+        type: "cagr_arrow",
+        from: refs.from,
+        to: refs.to,
+        format: ".1%",
+        placement: "above",
+      });
     }
   }
   if (toggles.totals && caps.totals) {
     result.push({ type: "total_labels", format: ",.0f" });
+  }
+  if (toggles.delta && caps.delta) {
+    const refs = endpointRefs();
+    if (refs) {
+      result.push({
+        type: "delta",
+        from: refs.from,
+        to: refs.to,
+        format: "+,.0f",
+        placement: "above",
+      });
+    }
+  }
+  if (toggles.refLine?.enabled && caps.refLine) {
+    const v = Number(toggles.refLine.value);
+    if (Number.isFinite(v)) {
+      result.push({
+        type: "reference_line",
+        axis: "y",
+        value: v,
+        label: toggles.refLine.label || `Target ${v}`,
+        style: "dashed",
+      });
+    }
   }
   return result;
 }

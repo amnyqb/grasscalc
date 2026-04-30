@@ -3,21 +3,28 @@
  * Handles initialize / tools/call with session-id round-tripping.
  */
 export class McpClient {
-  constructor(url) {
+  constructor(url, opts = {}) {
     this.url = url;
+    this.token = opts.token ?? null;
     this.sessionId = null;
     this.nextId = 0;
     this.initialized = false;
   }
 
+  setToken(token) {
+    this.token = token || null;
+  }
+
   async initialize() {
     const id = ++this.nextId;
+    const initHeaders = {
+      "Content-Type": "application/json",
+      Accept: "application/json, text/event-stream",
+    };
+    if (this.token) initHeaders.Authorization = `Bearer ${this.token}`;
     const res = await fetch(this.url, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json, text/event-stream",
-      },
+      headers: initHeaders,
       body: JSON.stringify({
         jsonrpc: "2.0",
         id,
@@ -73,11 +80,13 @@ export class McpClient {
   }
 
   _headers() {
-    return {
+    const h = {
       "Content-Type": "application/json",
       Accept: "application/json, text/event-stream",
       "Mcp-Session-Id": this.sessionId,
     };
+    if (this.token) h.Authorization = `Bearer ${this.token}`;
+    return h;
   }
 
   /**

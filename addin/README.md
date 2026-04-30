@@ -171,13 +171,29 @@ on the table for things `addChart` doesn't expose (custom fill
 patterns, exotic chart subtypes), but for 95% of decks the Office.js
 path is the right call.
 
+## Authentication
+
+The Server section has a **Bearer token** field. If the chartsmith
+server is started with `--auth-token <secret>` (or `$CHARTSMITH_AUTH_TOKEN`),
+every request from the addin must carry `Authorization: Bearer <secret>` —
+the token field plumbs that header. The token is persisted in
+`localStorage` for dev convenience (not encrypted) — treat as low-trust
+storage and rotate if it leaks.
+
+Verified end-to-end: rejected with 401 + `WWW-Authenticate: Bearer` when
+the token is missing or wrong; 200 + session-id when correct. Tested
+via curl and the addin's `McpClient`.
+
 ## Known gaps / next iterations
-- **Auth / non-localhost MCP.** Dev mode assumes the server is on
-  `localhost`. Real deployment needs auth (bearer token at minimum) and
-  a non-`*` CORS allowlist.
-- **Manifest icons.** The 16/32/80 icons are referenced but not yet
-  shipped. Add PNGs to `addin/assets/` before publishing.
-- **Annotation surface area.** Only CAGR + totals are exposed as
-  toggles. Delta, bracket, callout, reference_line, range_band are all
-  supported by the engine — they need UI affordances (drag-to-anchor,
-  label inputs).
+- **Native-mode Update path.** Updating a native-inserted chart is
+  blocked today with a clear message ("edit in PowerPoint or delete +
+  re-insert"). Office.js's PowerPoint chart-data API surface is
+  evolving; once `setData` lands here we can patch values into the
+  existing shape.
+- **More annotation types.** Delta, totals, CAGR, and reference line
+  are toggleable. Engine also supports bracket, callout, and
+  range_band — those need richer UI affordances (anchor pickers, label
+  text inputs).
+- **Annotation collision avoidance.** Engine emits warnings the addin
+  surfaces; auto-nudging is still rough when multiple annotations
+  stack near the same bar tops.

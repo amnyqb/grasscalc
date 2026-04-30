@@ -11,6 +11,12 @@ export interface HttpOptions {
   path?: string;
   /** CORS origins to allow. '*' allows any (dev only). */
   corsOrigins?: string[];
+  /**
+   * If set, every request must carry `Authorization: Bearer <token>` matching
+   * this value. Recommended for any non-localhost deployment. Keep undefined
+   * to disable auth (localhost dev only).
+   */
+  authToken?: string;
 }
 
 interface Session {
@@ -70,10 +76,33 @@ export async function startHttp(options: HttpOptions): Promise<http.Server> {
     });
   }
 
+  function checkAuth(
+    req: http.IncomingMessage,
+    res: http.ServerResponse,
+  ): boolean {
+    if (!options.authToken) return true;
+    const auth = req.headers.authorization;
+    const value = Array.isArray(auth) ? auth[0] : auth;
+    const expected = `Bearer ${options.authToken}`;
+    if (value === expected) return true;
+    res.statusCode = 401;
+    res.setHeader("Content-Type", "application/json");
+    res.setHeader("WWW-Authenticate", 'Bearer realm="chartsmith-mcp"');
+    res.end(
+      JSON.stringify({
+        jsonrpc: "2.0",
+        error: { code: -32001, message: "unauthorized" },
+        id: null,
+      }),
+    );
+    return false;
+  }
+
   async function handleMcp(
     req: http.IncomingMessage,
     res: http.ServerResponse,
   ): Promise<void> {
+    if (!checkAuth(req, res)) return;
     const sessionHeader = req.headers["mcp-session-id"];
     const sessionId = Array.isArray(sessionHeader)
       ? sessionHeader[0]

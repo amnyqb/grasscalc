@@ -142,6 +142,11 @@ node dist/index.js --http --port 3333 --cors '*'
 --host <h>             bind host (default 127.0.0.1)
 --path <p>             endpoint path (default /mcp)
 --cors <a,b,c>         allowed origins (default *)
+--auth-token <secret>  require Authorization: Bearer <secret> on every request
+                       (also reads $CHARTSMITH_AUTH_TOKEN). Strongly
+                       recommended for any non-localhost binding —
+                       requests without (or with the wrong) token get
+                       a 401 with WWW-Authenticate: Bearer.
 ```
 
 The HTTP server is **stateful**: each client gets a session via the

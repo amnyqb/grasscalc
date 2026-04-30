@@ -8,6 +8,7 @@ interface CliOptions {
   host: string;
   path: string;
   corsOrigins?: string[];
+  authToken?: string;
 }
 
 function parseArgs(argv: string[]): CliOptions {
@@ -37,6 +38,9 @@ function parseArgs(argv: string[]): CliOptions {
         break;
       case "--cors":
         opts.corsOrigins = String(argv[++i]).split(",").map((s) => s.trim());
+        break;
+      case "--auth-token":
+        opts.authToken = String(argv[++i]);
         break;
       case "--help":
       case "-h":
@@ -69,6 +73,8 @@ function printHelp(): void {
       "  --host <h>              Host to bind (default 127.0.0.1)",
       "  --path <p>              Endpoint path (default /mcp)",
       "  --cors <a,b,c>          Comma-separated allowed origins (default *)",
+      "  --auth-token <secret>   Require Authorization: Bearer <secret> on every request",
+      "                          (or set CHARTSMITH_AUTH_TOKEN). Strongly recommended for non-localhost.",
       "",
     ].join("\n"),
   );
@@ -79,11 +85,24 @@ async function main(): Promise<void> {
   if (opts.transport === "stdio") {
     await startStdio();
   } else {
+    // Env-var fallback so secrets stay out of shell history.
+    const authToken = opts.authToken ?? process.env.CHARTSMITH_AUTH_TOKEN;
+    if (
+      !authToken &&
+      opts.host !== "127.0.0.1" &&
+      opts.host !== "localhost"
+    ) {
+      process.stderr.write(
+        "warning: --http bound to a non-localhost host without --auth-token. " +
+          "Set --auth-token or $CHARTSMITH_AUTH_TOKEN before exposing this server.\n",
+      );
+    }
     await startHttp({
       port: opts.port,
       host: opts.host,
       path: opts.path,
       corsOrigins: opts.corsOrigins,
+      authToken,
     });
   }
 }
