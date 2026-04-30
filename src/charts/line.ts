@@ -1,17 +1,29 @@
 import * as d3 from "d3";
 import { z } from "zod";
 import type { DesignSystem } from "../design-system.js";
-import { createFrame, drawAxes, drawLegend, serialize } from "./common.js";
+import type { LineLayout, LinePointRef } from "../types.js";
+import {
+  ChartFrame,
+  buildAxisDescriptor,
+  createFrame,
+  drawAxes,
+  drawLegend,
+} from "./common.js";
 
 export const LineChartSchema = z.object({
   type: z.literal("line"),
   title: z.string().optional(),
-  width: z.number().int().positive().default(720),
-  height: z.number().int().positive().default(420),
+  description: z.string().optional(),
+  widthPt: z.number().int().positive().default(720),
+  heightPt: z.number().int().positive().default(420),
+  background: z.enum(["default", "transparent"]).default("default"),
   xLabel: z.string().optional(),
   yLabel: z.string().optional(),
   showPoints: z.boolean().default(false),
-  smooth: z.boolean().default(false),
+  smoothing: z.enum(["linear", "monotone", "step"]).default("linear"),
+  showEndpointLabels: z.boolean().default(false),
+  showLastValueOnly: z.boolean().default(false),
+  valueFormat: z.string().default(",.0f"),
   series: z
     .array(
       z.object({
@@ -31,30 +43,43 @@ export const LineChartSchema = z.object({
 
 export type LineChartInput = z.infer<typeof LineChartSchema>;
 
-export function renderLine(input: LineChartInput, ds: DesignSystem): string {
-  const frame = createFrame(ds, input.width, input.height, input.title);
+export interface RenderResult {
+  frame: ChartFrame;
+  layout: LineLayout;
+}
+
+export function renderLine(
+  input: LineChartInput,
+  ds: DesignSystem,
+): RenderResult {
+  const frame = createFrame(ds, input.widthPt, input.heightPt, {
+    title: input.title,
+    description: input.description,
+    background: input.background,
+  });
   const { inner, innerWidth, innerHeight } = frame;
   const colors = ds.palette.categorical;
+  const fmt = d3.format(input.valueFormat);
 
   const allPoints = input.series.flatMap((s) => s.points);
   const xValues = allPoints.map((p) => p.x);
   const xIsNumeric = xValues.every((v) => typeof v === "number");
 
-  let xScale: d3.AxisScale<d3.AxisDomain>;
+  let xScale: any;
   if (xIsNumeric) {
     const xs = xValues as number[];
     xScale = d3
       .scaleLinear()
       .domain([d3.min(xs)!, d3.max(xs)!])
       .nice()
-      .range([0, innerWidth]) as unknown as d3.AxisScale<d3.AxisDomain>;
+      .range([0, innerWidth]);
   } else {
     const cats = Array.from(new Set(xValues.map(String)));
     xScale = d3
       .scalePoint<string>()
       .domain(cats)
       .range([0, innerWidth])
-      .padding(0.5) as unknown as d3.AxisScale<d3.AxisDomain>;
+      .padding(0.5);
   }
 
   const ys = allPoints.map((p) => p.y);
@@ -68,13 +93,23 @@ export function renderLine(input: LineChartInput, ds: DesignSystem): string {
   drawAxes(frame, xScale, yScale, {
     xLabel: input.xLabel,
     yLabel: input.yLabel,
+    yTickFormat: fmt as any,
   });
+
+  const curve =
+    input.smoothing === "monotone"
+      ? d3.curveMonotoneX
+      : input.smoothing === "step"
+        ? d3.curveStepAfter
+        : d3.curveLinear;
 
   const lineGen = d3
     .line<{ x: number | string; y: number }>()
-    .x((d) => (xScale as any)(xIsNumeric ? d.x : String(d.x)) as number)
+    .x((d) => xScale(xIsNumeric ? d.x : String(d.x)) as number)
     .y((d) => yScale(d.y) as number)
-    .curve(input.smooth ? d3.curveMonotoneX : d3.curveLinear);
+    .curve(curve);
+
+  const layoutSeries: LineLayout["series"] = [];
 
   input.series.forEach((s, i) => {
     const color = colors[i % colors.length]!;
@@ -88,21 +123,48 @@ export function renderLine(input: LineChartInput, ds: DesignSystem): string {
       .attr("stroke-linecap", "round")
       .attr("d", lineGen as any);
 
+    const points: LinePointRef[] = s.points.map((p) => ({
+      xValue: p.x,
+      yValue: p.y,
+      x: xScale(xIsNumeric ? p.x : String(p.x)) as number,
+      y: yScale(p.y) as number,
+    }));
+
     if (input.showPoints) {
       inner
         .append("g")
         .attr("fill", color)
         .selectAll("circle")
-        .data(s.points)
+        .data(points)
         .enter()
         .append("circle")
-        .attr(
-          "cx",
-          (d) => (xScale as any)(xIsNumeric ? d.x : String(d.x)) as number,
-        )
-        .attr("cy", (d) => yScale(d.y) as number)
+        .attr("cx", (d) => d.x)
+        .attr("cy", (d) => d.y)
         .attr("r", ds.series.pointRadius);
     }
+
+    if (input.showEndpointLabels && points.length > 0) {
+      const last = points[points.length - 1]!;
+      inner
+        .append("text")
+        .attr("x", last.x + 6)
+        .attr("y", last.y + 5)
+        .attr("font-size", ds.typography.labelSize)
+        .attr("fill", color)
+        .attr("font-weight", 600)
+        .text(`${s.name}: ${fmt(last.yValue)}`);
+    } else if (input.showLastValueOnly && points.length > 0) {
+      const last = points[points.length - 1]!;
+      inner
+        .append("text")
+        .attr("x", last.x + 6)
+        .attr("y", last.y + 5)
+        .attr("font-size", ds.typography.labelSize)
+        .attr("fill", color)
+        .text(fmt(last.yValue));
+    }
+
+    layoutSeries.push({ name: s.name, points, color });
   });
 
   if (input.series.length > 1) {
@@ -115,5 +177,15 @@ export function renderLine(input: LineChartInput, ds: DesignSystem): string {
     );
   }
 
-  return serialize(frame);
+  const layout: LineLayout = {
+    kind: "line",
+    plot: frame.plot,
+    series: layoutSeries,
+    axes: {
+      x: buildAxisDescriptor(xScale, [0, innerWidth]),
+      y: buildAxisDescriptor(yScale, [innerHeight, 0], fmt as any),
+    },
+  };
+
+  return { frame, layout };
 }

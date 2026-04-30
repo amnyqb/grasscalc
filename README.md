@@ -23,20 +23,87 @@ PDF, or web page.
 
 ## Tools exposed
 
+**Design system**
+
 | Tool | Purpose |
 |---|---|
 | `list_design_systems` | List built-in and user-registered systems. |
 | `register_design_system` | Add or overwrite a design system by id. |
 | `get_design_system` | Inspect a registered system's tokens. |
-| `theme_to_design_system` | Convert a PowerPoint deck's theme (tokens or theme1.xml) into a registered design system — for the Office add-in flow. |
-| `create_chart` | Render a chart as SVG (and optionally save to disk). |
+| `theme_to_design_system` | Convert a PowerPoint deck's theme (tokens or theme1.xml) into a registered design system. |
+
+**Charting**
+
+| Tool | Purpose |
+|---|---|
+| `list_chart_types` | Runtime introspection: chart types, annotation types, sizing/output contract. |
+| `create_chart` | Generic, type-discriminated render (`{ type, ... }`). |
+| `render_bar` | Bar (grouped/stacked, vertical/horizontal). |
+| `render_waterfall` | Waterfall with subtotals + connectors (think-cell signature). |
+| `render_line` | Line (smoothing, points, endpoint labels). |
+| `render_scatter` | Scatter / bubble. |
+| `render_area` | Stacked or overlapping area. |
+| `render_pie` | Pie / donut. |
+| `update_chart` | Re-render a stored chart with patched data — linked-Excel flow. |
+| `get_chart_spec` | Round-trip the original spec by `chartId`. |
 
 Built-in design systems: `default`, `thinkcell`, `minimal`.
+
+## Response envelope
+
+Every render returns a structured envelope:
+
+```jsonc
+{
+  "chartId": "uuid",            // stable id for update_chart
+  "format": "svg",
+  "widthPt": 720, "heightPt": 420,   // round-trip in points
+  "viewBox": "0 0 720 420",     // px == pt; trivial PowerPoint sizing
+  "engine": "chartsmith-mcp@0.3.0",
+  "warnings": [],               // soft warnings (label collisions, missing refs)
+  "layout": {                   // computed positions in plot-local coordinates
+    "kind": "waterfall",
+    "plot": { "x": 56, "y": 32, "width": 640, "height": 340 },
+    "bars": [
+      { "series": "waterfall", "category": "FY24", "x": 78, "y": 110,
+        "width": 60, "height": 230, "value": 120, "top": {"x":108,"y":110}, "isTotal": true }
+    ],
+    "axes": { "x": {...}, "y": {...} }
+  },
+  "content": "<?xml ...><svg ...>...</svg>"
+}
+```
+
+The `layout` block is the killer feature for an Office add-in: every
+bar/point/slice's pixel position is exposed, so the host can layer
+native PowerPoint shapes (callouts, CAGR arrows, leader lines) on top
+of the SVG image with zero pixel-hunting.
+
+## Annotations
+
+Pass an `annotations: [...]` array on any chart. Each annotation
+references data via `{ x, series }` (or `{ axis, value }`) — chartsmith
+resolves to coordinates using the chart's layout.
+
+| Type | Refs | Purpose |
+|---|---|---|
+| `cagr_arrow` | `from`, `to` | Curved arrow + auto-computed CAGR % between two data points. |
+| `delta` | `from`, `to` | Bracket showing `(end − start)`. |
+| `bracket` | `from`, `to` | Bracket with custom label (e.g. `+18%`). |
+| `callout` | `anchor` | Leader line + text box pointing at a data point. |
+| `reference_line` | `axis`, `value` | Horizontal/vertical target/threshold line. |
+| `range_band` | `axis`, `from`, `to` | Shaded recession/forecast band. |
+| `total_labels` | — | Sum-per-category labels above stacked bars. |
+
+Soft failures (a ref that didn't resolve, a callout that collided)
+appear in `warnings[]` rather than throwing — your add-in can surface
+them to the user.
 
 ## Chart types
 
 - **bar** — vertical/horizontal, grouped or stacked
-- **line** — single/multi-series, optional smoothing and point markers
+- **waterfall** — with `subtotalIndices`, connectors, +/−/total colors
+- **line** — single/multi-series, smoothing (`linear`/`monotone`/`step`), endpoint labels
 - **scatter** — optional bubble sizing
 - **area** — stacked or overlapping, optional smoothing
 - **pie** — with donut option
