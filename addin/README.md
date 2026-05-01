@@ -50,32 +50,37 @@ PowerPoint  ──►  Chartsmith task pane  ──HTTP──►  chartsmith-mcp
 
 ## Running it
 
-### 1. Start the MCP server in HTTP mode
-
-From the repo root:
+### 1. One-time setup
 
 ```bash
 npm install
 npm run build
-node dist/index.js --http --port 3333 --cors '*'
+npm run addin:certs       # installs office-addin-dev-certs into ~/.office-addin-dev-certs
 ```
 
-### 2. Serve the add-in over HTTPS
-
-PowerPoint requires HTTPS for the task-pane source. Quickest path:
+### 2. Boot the add-in stack
 
 ```bash
-# Install once
-npm install -g office-addin-dev-certs
-npx office-addin-dev-certs install
-
-# Serve the addin/ directory on https://localhost:3000
-npx http-server addin -p 3000 -S \
-  -C ~/.office-addin-dev-certs/localhost.crt \
-  -K ~/.office-addin-dev-certs/localhost.key
+npm run addin:up
 ```
 
-(or use `npx office-addin-debugging start manifest.xml desktop`)
+This runs `bin/addin-up.mjs`, which spawns both servers in the foreground:
+
+- chartsmith MCP HTTP server on `http://127.0.0.1:3333/mcp`
+- HTTPS static host serving `addin/` on `https://localhost:3000/taskpane.html`
+
+Output is colored per-process (`[mcp]` cyan, `[addin]` magenta).
+Ctrl+C cleanly stops both.
+
+Override ports if needed:
+
+```bash
+CHARTSMITH_MCP_PORT=4000 CHARTSMITH_ADDIN_PORT=4001 npm run addin:up
+```
+
+You only need this stack when you're actively using the PowerPoint
+task pane. For Claude Code stdio usage, the MCP auto-spawns per
+session — no servers needed.
 
 ### 3. Sideload the manifest
 

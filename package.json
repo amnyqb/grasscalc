@@ -15,7 +15,10 @@
     "dev": "tsc --watch",
     "start": "node dist/index.js",
     "typecheck": "tsc --noEmit",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "addin:up": "node bin/addin-up.mjs",
+    "addin:certs": "office-addin-dev-certs install",
+    "gallery": "node docs/gallery/build.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.4",
