@@ -126,6 +126,114 @@ function ensureArrowMarker(frame: ChartFrame, color: string): string {
  * null if not a bar layout, refs don't resolve, or there are no
  * intermediate bars.
  */
+/**
+ * Topmost (smallest y, "above") or bottommost (largest y, "below") rendered
+ * point at a single category — the bar tops, value labels above bars, and
+ * the synthetic total label (if total_labels was requested) at that
+ * category. Used to anchor vertical legs of CAGR/delta brackets so they
+ * start above the data label, not behind it.
+ */
+function dataTopAtCategory(
+  ctx: ApplyContext,
+  category: string | number,
+  placement: "above" | "below",
+): number | null {
+  const layout = ctx.layout;
+  if (
+    layout.kind !== "bar" &&
+    layout.kind !== "stacked_bar" &&
+    layout.kind !== "waterfall"
+  ) {
+    // Line/area: caller handles via the point's own y.
+    return null;
+  }
+  const bars = layout.bars.filter(
+    (b) => String(b.category) === String(category),
+  );
+  if (bars.length === 0) return null;
+  const totalsPresent = ctx.annotations.some(
+    (a) => a.type === "total_labels",
+  );
+  const labelSize = ctx.frame.ds.typography.labelSize;
+  if (placement === "above") {
+    let top = Math.min(
+      ...bars.map((b) => (b.valueLabelY != null ? Math.min(b.y, b.valueLabelY) : b.y)),
+    );
+    if (totalsPresent) {
+      // total_labels baseline = stackTop - 6; glyph top ≈ baseline - labelSize.
+      const stackTop = Math.min(...bars.map((b) => b.y));
+      top = Math.min(top, stackTop - 6 - labelSize);
+    }
+    return top;
+  } else {
+    return Math.max(...bars.map((b) => b.y + b.height));
+  }
+}
+
+/**
+ * Visual extreme-y across the inclusive [from..to] span. For an "above"
+ * placement, returns the smallest y (highest visual point) across all bars
+ * + their value labels + all line/area/scatter points in the span. For
+ * "below" placement, returns the largest y (lowest visual point).
+ *
+ * Used by the angular CAGR/delta drawers so the rail clears every data
+ * label in its span — including the endpoints themselves — not just the
+ * intermediate points.
+ */
+function spanExtremeY(
+  layout: ChartLayout,
+  from: Ref,
+  to: Ref,
+  placement: "above" | "below",
+): number | null {
+  const cmp = (a: number, b: number): number =>
+    placement === "above" ? Math.min(a, b) : Math.max(a, b);
+  let extreme = placement === "above" ? Infinity : -Infinity;
+
+  if (
+    layout.kind === "bar" ||
+    layout.kind === "stacked_bar" ||
+    layout.kind === "waterfall"
+  ) {
+    const cats = layout.axes.x.domain.map(String);
+    const fi = cats.indexOf(String(from.x));
+    const ti = cats.indexOf(String(to.x));
+    if (fi < 0 || ti < 0) return null;
+    const lo = Math.min(fi, ti);
+    const hi = Math.max(fi, ti);
+    for (const b of layout.bars) {
+      const i = cats.indexOf(String(b.category));
+      if (i < lo || i > hi) continue;
+      const candidate =
+        placement === "above"
+          ? b.valueLabelY != null
+            ? Math.min(b.y, b.valueLabelY)
+            : b.y
+          : b.y + b.height;
+      extreme = cmp(extreme, candidate);
+    }
+  } else if (layout.kind === "line" || layout.kind === "area") {
+    const fxRaw = (from as any).x;
+    const txRaw = (to as any).x;
+    const numericSpan =
+      typeof fxRaw === "number" && typeof txRaw === "number";
+    const lo = numericSpan ? Math.min(fxRaw, txRaw) : -Infinity;
+    const hi = numericSpan ? Math.max(fxRaw, txRaw) : Infinity;
+    for (const s of layout.series) {
+      for (const p of s.points) {
+        if (numericSpan && typeof p.xValue === "number") {
+          if (p.xValue < lo || p.xValue > hi) continue;
+        }
+        extreme = cmp(extreme, p.y);
+      }
+    }
+  } else {
+    return null;
+  }
+
+  return Number.isFinite(extreme) ? extreme : null;
+}
+
 function peakYStrictlyBetween(
   layout: ChartLayout,
   from: Ref,
@@ -168,6 +276,10 @@ interface ApplyContext {
    */
   topReserved: number;
   bottomReserved: number;
+  /** Full annotation list — drawers can introspect to know e.g. whether
+   *  total_labels was requested, so they can clear the totals' y zone
+   *  at endpoint columns even when topReserved is the global min. */
+  annotations: Annotation[];
 }
 
 export function applyAnnotations(
@@ -179,8 +291,20 @@ export function applyAnnotations(
     layout: partial.layout,
     topReserved: Infinity,
     bottomReserved: -Infinity,
+    annotations,
   };
-  for (const a of annotations) {
+  // Two-phase: place "background" annotations first (range bands, totals,
+  // reference lines) so above/below-rail annotations (CAGR, delta, bracket,
+  // callout) can reserve space against them. Otherwise CAGR draws first
+  // and crashes through later total labels.
+  const phase1: Annotation[] = annotations.filter(
+    (a) =>
+      a.type === "range_band" ||
+      a.type === "total_labels" ||
+      a.type === "reference_line",
+  );
+  const phase2: Annotation[] = annotations.filter((a) => !phase1.includes(a));
+  for (const a of [...phase1, ...phase2]) {
     try {
       switch (a.type) {
         case "cagr_arrow":
@@ -231,62 +355,121 @@ function drawCagrArrow(
   }
   const periods = inferPeriods(ctx.layout, a.from, a.to) ?? 1;
   const cagr = Math.pow(to.value / from.value, 1 / periods) - 1;
+  const trendUp = to.value >= from.value; // arrow head direction is implicit in stairstep
   const label = a.label ?? `CAGR ${fmtPct(cagr, a.format)}`;
   const color = a.color ?? ctx.frame.ds.palette.foreground;
+  const labelSize = ctx.frame.ds.typography.labelSize;
 
-  // Per-endpoint lift. For "above" we lift each endpoint slightly off the
-  // bar top; for "below" we drop them. For "inline" we leave them on.
-  const baseLift = a.placement === "inline" ? 0 : 14;
-  const sign = a.placement === "below" ? 1 : -1;
-  const fromY = from.y + sign * baseLift;
-  const toY = to.y + sign * baseLift;
+  // User-spec clearances: 10pt between data labels and the CAGR rail,
+  // and 6pt between rail and CAGR % label baseline.
+  const DATA_LABEL_GAP = 10;
+  const LABEL_TO_RAIL_GAP = 6;
+  // Tiny lift off the bar top so the vertical leg doesn't kiss the label.
+  const ENDPOINT_GAP = 4;
 
-  // Apex of the curve: pulled past the higher endpoint so the bow is visible.
-  // For bar layouts, also clear any intermediate bars + their value labels.
-  const peak = peakYStrictlyBetween(ctx.layout, a.from, a.to);
-  const plotBottom = ctx.layout.plot.height;
-  let apexY: number;
-  if (a.placement === "below") {
-    let baseline = Math.max(fromY, toY);
-    if (Number.isFinite(ctx.bottomReserved))
-      baseline = Math.max(baseline, ctx.bottomReserved + ctx.frame.ds.spacing.annotationLabelGap);
-    apexY = Math.min(baseline + 22, plotBottom - ctx.frame.ds.spacing.plotTopMargin);
+  const placement: "above" | "below" =
+    a.placement === "below" ? "below" : "above";
+
+  // Compute the visual extreme across the entire span (from .. to inclusive),
+  // including each bar's value label (valueLabelY) when present, and stack
+  // tops at intermediate categories. For line/area, walks all in-span points.
+  const extreme = spanExtremeY(ctx.layout, a.from, a.to, placement);
+
+  let railY: number;
+  if (placement === "above") {
+    let baseline = Math.min(from.y, to.y);
+    if (extreme != null) baseline = Math.min(baseline, extreme);
+    if (Number.isFinite(ctx.topReserved)) {
+      baseline = Math.min(
+        baseline,
+        ctx.topReserved - ctx.frame.ds.spacing.annotationLabelGap,
+      );
+    }
+    railY = baseline - DATA_LABEL_GAP;
+    // Clamp inside plot so the label above stays visible.
+    railY = Math.max(
+      railY,
+      ctx.frame.ds.spacing.plotTopMargin + labelSize + LABEL_TO_RAIL_GAP,
+    );
   } else {
-    let baseline = Math.min(fromY, toY);
-    if (peak != null) baseline = Math.min(baseline, peak - ctx.frame.ds.spacing.annotationValueClearance);
-    if (Number.isFinite(ctx.topReserved))
-      baseline = Math.min(baseline, ctx.topReserved - ctx.frame.ds.spacing.annotationLabelGap);
-    // Clamp inside plot so label stays visible. Reserve room for label above apex.
-    apexY = Math.max(baseline - 22, ctx.frame.ds.spacing.plotTopMargin + 14);
+    let baseline = Math.max(from.y, to.y);
+    if (extreme != null) baseline = Math.max(baseline, extreme);
+    if (Number.isFinite(ctx.bottomReserved)) {
+      baseline = Math.max(
+        baseline,
+        ctx.bottomReserved + ctx.frame.ds.spacing.annotationLabelGap,
+      );
+    }
+    railY = baseline + DATA_LABEL_GAP;
+    railY = Math.min(
+      railY,
+      ctx.layout.plot.height -
+        ctx.frame.ds.spacing.plotTopMargin -
+        labelSize -
+        LABEL_TO_RAIL_GAP,
+    );
   }
 
-  const midX = (from.x + to.x) / 2;
-  const markerId = ensureArrowMarker(ctx.frame, color);
+  // Start the verticals above (or below) any data label at the endpoint
+  // category — value label, stack-top, or total label. Falls back to the
+  // resolved anchor y for line/area layouts.
+  const fromTop =
+    a.from.x != null ? dataTopAtCategory(ctx, a.from.x, placement) : null;
+  const toTop =
+    a.to.x != null ? dataTopAtCategory(ctx, a.to.x, placement) : null;
+  const fromAnchor = fromTop ?? from.y;
+  const toAnchor = toTop ?? to.y;
+  const fromY =
+    placement === "above" ? fromAnchor - ENDPOINT_GAP : fromAnchor + ENDPOINT_GAP;
+  const toY =
+    placement === "above" ? toAnchor - ENDPOINT_GAP : toAnchor + ENDPOINT_GAP;
 
-  const path = `M ${from.x} ${fromY} Q ${midX} ${apexY}, ${to.x} ${toY}`;
+  // Angular stairstep: vertical → horizontal rail → vertical down to to.y.
+  // Marker-end orientation is determined by the last segment, which always
+  // ends running toward to.y → arrow visually "lands" on the to anchor.
+  const path =
+    `M ${from.x} ${fromY} ` +
+    `L ${from.x} ${railY} ` +
+    `L ${to.x} ${railY} ` +
+    `L ${to.x} ${toY}`;
+
+  const markerId = ensureArrowMarker(ctx.frame, color);
   const g = ctx.frame.overlay.append("g").attr("class", "annotation-cagr");
   g.append("path")
     .attr("d", path)
     .attr("fill", "none")
     .attr("stroke", color)
     .attr("stroke-width", ctx.frame.ds.annotations.arrow.strokeWidth)
-    .attr("stroke-linecap", "round")
+    .attr("stroke-linejoin", "miter")
+    .attr("stroke-linecap", "butt")
     .attr("marker-end", `url(#${markerId})`);
 
-  const labelY = a.placement === "below" ? apexY + 16 : apexY - 6;
+  // CAGR % label centered on the horizontal rail, 6pt above (or below).
+  const midX = (from.x + to.x) / 2;
+  const labelY =
+    placement === "above"
+      ? railY - LABEL_TO_RAIL_GAP
+      : railY + LABEL_TO_RAIL_GAP + labelSize;
+
   g.append("text")
     .attr("x", midX)
     .attr("y", labelY)
     .attr("text-anchor", "middle")
-    .attr("font-size", ctx.frame.ds.typography.labelSize)
+    .attr("font-size", labelSize)
     .attr("font-weight", 600)
     .attr("fill", color)
     .text(label);
 
-  if (a.placement === "below") {
-    ctx.bottomReserved = Math.max(ctx.bottomReserved, labelY);
-  } else {
-    ctx.topReserved = Math.min(ctx.topReserved, labelY - ctx.frame.ds.spacing.annotationLabelHeight);
+  // Tiny visual hint: when the trend is down, paint a small caret at the rail
+  // start so a glance still reveals direction. (No-op if trendUp.)
+  if (!trendUp) {
+    g.append("title").text(`Down trend (${label})`);
+  }
+
+  // Reserve so subsequent annotations (e.g. another CAGR or a delta) stack
+  // above us rather than colliding.
+  if (placement === "above") {
+    ctx.topReserved = Math.min(ctx.topReserved, labelY - labelSize);
   }
 }
 
@@ -611,16 +794,28 @@ function drawTotalLabels(
   const layer = ctx.frame.overlay
     .append("g")
     .attr("class", "annotation-totals");
+  let topmostLabelTop = Infinity;
   for (const [, g] of groups) {
+    const labelBaselineY = g.topY - 6;
     layer
       .append("text")
       .attr("x", g.topX)
-      .attr("y", g.topY - 6)
+      .attr("y", labelBaselineY)
       .attr("text-anchor", "middle")
       .attr("font-size", ctx.frame.ds.typography.labelSize)
       .attr("font-weight", 600)
       .attr("fill", color)
       .text(fmt(g.total));
+    // Top of the rendered label glyphs ≈ baseline - labelSize.
+    topmostLabelTop = Math.min(
+      topmostLabelTop,
+      labelBaselineY - ctx.frame.ds.typography.labelSize,
+    );
+  }
+  // Reserve so subsequent annotations (CAGR, delta, bracket) clear the
+  // total labels rather than crashing through them.
+  if (Number.isFinite(topmostLabelTop)) {
+    ctx.topReserved = Math.min(ctx.topReserved, topmostLabelTop);
   }
 }
 
