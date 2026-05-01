@@ -360,12 +360,13 @@ function drawCagrArrow(
   const color = a.color ?? ctx.frame.ds.palette.foreground;
   const labelSize = ctx.frame.ds.typography.labelSize;
 
-  // User-spec clearances: 10pt between data labels and the CAGR rail,
-  // and 6pt between rail and CAGR % label baseline.
+  // User-spec clearances:
+  //   * 10pt between any data label (incl. endpoint columns) and the CAGR
+  //     geometry — applies equally to the horizontal rail AND to where the
+  //     verticals start/end (i.e. where the arrow head lands).
+  //   * 6pt between the rail and the "CAGR x.x%" label baseline.
   const DATA_LABEL_GAP = 10;
   const LABEL_TO_RAIL_GAP = 6;
-  // Tiny lift off the bar top so the vertical leg doesn't kiss the label.
-  const ENDPOINT_GAP = 4;
 
   const placement: "above" | "below" =
     a.placement === "below" ? "below" : "above";
@@ -375,6 +376,10 @@ function drawCagrArrow(
   // tops at intermediate categories. For line/area, walks all in-span points.
   const extreme = spanExtremeY(ctx.layout, a.from, a.to, placement);
 
+  // Compute the rail before the verticals so we can also force a minimum
+  // separation between the verticals' top/bottom and the rail (otherwise a
+  // very tall in-span peak could pull the rail down to the same y as the
+  // endpoints, collapsing the stairstep into a flat segment with arrow).
   let railY: number;
   if (placement === "above") {
     let baseline = Math.min(from.y, to.y);
@@ -386,7 +391,6 @@ function drawCagrArrow(
       );
     }
     railY = baseline - DATA_LABEL_GAP;
-    // Clamp inside plot so the label above stays visible.
     railY = Math.max(
       railY,
       ctx.frame.ds.spacing.plotTopMargin + labelSize + LABEL_TO_RAIL_GAP,
@@ -420,9 +424,13 @@ function drawCagrArrow(
   const fromAnchor = fromTop ?? from.y;
   const toAnchor = toTop ?? to.y;
   const fromY =
-    placement === "above" ? fromAnchor - ENDPOINT_GAP : fromAnchor + ENDPOINT_GAP;
+    placement === "above"
+      ? fromAnchor - DATA_LABEL_GAP
+      : fromAnchor + DATA_LABEL_GAP;
   const toY =
-    placement === "above" ? toAnchor - ENDPOINT_GAP : toAnchor + ENDPOINT_GAP;
+    placement === "above"
+      ? toAnchor - DATA_LABEL_GAP
+      : toAnchor + DATA_LABEL_GAP;
 
   // Angular stairstep: vertical → horizontal rail → vertical down to to.y.
   // Marker-end orientation is determined by the last segment, which always
