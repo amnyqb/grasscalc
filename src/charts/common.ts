@@ -25,6 +25,11 @@ export interface FrameOptions {
   source?: string;
   description?: string;
   background?: "default" | "transparent";
+  /** Extra padding ADDED to ds.layout.padding (per side, in pt). Used by
+   *  renderers that need to reserve room for content sized at runtime —
+   *  e.g. line charts with `showEndpointLabels` need extra right padding
+   *  big enough to fit the longest series label. */
+  paddingExtra?: { top?: number; right?: number; bottom?: number; left?: number };
 }
 
 // All header/footer/legend spacing now reads from ds.spacing — no magic
@@ -110,37 +115,44 @@ export function createFrame(
       .text(options.source);
   }
 
-  // Effective bottom padding: reserve room for source line (if any) so the
-  // legend and x-axis tick labels don't crash through it. The reserve is
-  // governed by the design system's source/legend offsets.
+  // Effective padding: ds.layout.padding + per-side runtime overrides
+  // (paddingExtra) + the source-line reserve at the bottom.
+  const extra = options.paddingExtra ?? {};
+  const padTop = ds.layout.padding.top + (extra.top ?? 0);
+  const padRight = ds.layout.padding.right + (extra.right ?? 0);
+  const padBottom = ds.layout.padding.bottom + (extra.bottom ?? 0);
+  const padLeft = ds.layout.padding.left + (extra.left ?? 0);
   const sourceReserve = options.source
     ? ds.spacing.legendBottomMarginWithSource - ds.spacing.legendBottomMargin
     : 0;
-  const effectiveBottom = ds.layout.padding.bottom + sourceReserve;
+  const effectiveBottom = padBottom + sourceReserve;
 
-  const innerWidth =
-    widthPt - ds.layout.padding.left - ds.layout.padding.right;
-  const innerHeight = heightPt - ds.layout.padding.top - effectiveBottom;
+  const innerWidth = widthPt - padLeft - padRight;
+  const innerHeight = heightPt - padTop - effectiveBottom;
 
   const inner = svg
     .append("g")
     .attr("class", "chart-inner")
-    .attr(
-      "transform",
-      `translate(${ds.layout.padding.left},${ds.layout.padding.top})`,
-    ) as unknown as d3.Selection<SVGGElement, unknown, null, undefined>;
+    .attr("transform", `translate(${padLeft},${padTop})`) as unknown as d3.Selection<
+    SVGGElement,
+    unknown,
+    null,
+    undefined
+  >;
 
   const overlay = svg
     .append("g")
     .attr("class", "chart-overlay")
-    .attr(
-      "transform",
-      `translate(${ds.layout.padding.left},${ds.layout.padding.top})`,
-    ) as unknown as d3.Selection<SVGGElement, unknown, null, undefined>;
+    .attr("transform", `translate(${padLeft},${padTop})`) as unknown as d3.Selection<
+    SVGGElement,
+    unknown,
+    null,
+    undefined
+  >;
 
   const plot: Rect = {
-    x: ds.layout.padding.left,
-    y: ds.layout.padding.top,
+    x: padLeft,
+    y: padTop,
     width: innerWidth,
     height: innerHeight,
   };

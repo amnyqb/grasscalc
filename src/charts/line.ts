@@ -50,16 +50,45 @@ export interface RenderResult {
   layout: LineLayout;
 }
 
+/** Heuristic glyph width for proportional sans-serif at the given font size.
+ *  Avoids needing a real DOM measureText (jsdom's is unreliable). Matches
+ *  Inter/Calibri/Segoe UI well enough for layout reserves. */
+function approxTextWidth(text: string, fontSize: number): number {
+  return Math.ceil(text.length * fontSize * 0.55);
+}
+
+/** Right-padding reserve so endpoint labels don't fall off the SVG.
+ *  Returns 0 when no endpoint labels are requested. */
+function endpointLabelReserve(input: LineChartInput, ds: DesignSystem): number {
+  if (!input.showEndpointLabels && !input.showLastValueOnly) return 0;
+  const fmt = d3.format(input.valueFormat);
+  let max = 0;
+  for (const s of input.series) {
+    if (!s.points.length) continue;
+    const last = s.points[s.points.length - 1]!;
+    const text = input.showEndpointLabels
+      ? `${s.name}: ${fmt(last.y)}`
+      : fmt(last.y);
+    const w = approxTextWidth(text, ds.typography.labelSize);
+    if (w > max) max = w;
+  }
+  // 6pt of breathing room between the last point and the start of the label,
+  // plus a 4pt safety buffer on the right edge.
+  return max ? max + 10 : 0;
+}
+
 export function renderLine(
   input: LineChartInput,
   ds: DesignSystem,
 ): RenderResult {
+  const rightExtra = endpointLabelReserve(input, ds);
   const frame = createFrame(ds, input.widthPt, input.heightPt, {
     title: input.title,
     subtitle: input.subtitle,
     source: input.source,
     description: input.description,
     background: input.background,
+    paddingExtra: rightExtra > 0 ? { right: rightExtra } : undefined,
   });
   const { inner, innerWidth, innerHeight } = frame;
   const colors = ds.palette.categorical;
