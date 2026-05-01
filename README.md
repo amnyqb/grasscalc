@@ -7,6 +7,36 @@ publication-quality charts via [d3](https://d3js.org/), styled by a
 Think of it as **think-cell for AI**: the LLM decides *what* to chart;
 chartsmith decides *how* it looks, consistently, every time.
 
+> The repository is currently named `grasscalc` for legacy reasons.
+> The project is **chartsmith** and that's the package name. All work
+> lives on branch `claude/mcp-charting-tool-1Qh4v`.
+
+## Quick start (Claude Code in your terminal)
+
+```bash
+git clone https://github.com/amnyqb/grasscalc.git chartsmith
+cd chartsmith
+git checkout claude/mcp-charting-tool-1Qh4v
+npm install
+npm run build
+
+# Register with Claude Code (one-liner)
+claude mcp add chartsmith node "$(pwd)/dist/index.js"
+```
+
+Restart Claude Code. Then `/mcp` should list `chartsmith` with 14
+tools. Talk to Claude:
+
+> *"Make an EBITDA bridge waterfall: FY24 starts at 120, +18 volume,
+> +12 price, −5 mix, −8 cost, +3 FX, ending at FY25 of 140. Use the
+> thinkcell design system. Save to /tmp/bridge.svg."*
+
+You'll get an SVG you can drag into PowerPoint, Keynote, Google
+Slides, Notion, or Figma.
+
+For HTTP / Office add-in / programmatic use, see [§Install / run](#install--run)
+below.
+
 ## Why
 
 LLMs are great at picking the right chart and shaping the data, but bad at
@@ -211,12 +241,15 @@ node dist/index.js --http --port 3333 --cors '*'
 
 ### Claude Code / Claude Desktop config (stdio)
 
+The Quick Start above wires this up via `claude mcp add`. The
+equivalent JSON (for Claude Desktop or hand-edited config) is:
+
 ```jsonc
 {
   "mcpServers": {
     "chartsmith": {
       "command": "node",
-      "args": ["/absolute/path/to/chartsmith-mcp/dist/index.js"]
+      "args": ["/absolute/path/to/chartsmith/dist/index.js"]
     }
   }
 }
