@@ -234,35 +234,6 @@ function spanExtremeY(
   return Number.isFinite(extreme) ? extreme : null;
 }
 
-function peakYStrictlyBetween(
-  layout: ChartLayout,
-  from: Ref,
-  to: Ref,
-): number | null {
-  if (
-    layout.kind !== "bar" &&
-    layout.kind !== "stacked_bar" &&
-    layout.kind !== "waterfall"
-  ) {
-    return null;
-  }
-  const cats = layout.axes.x.domain.map(String);
-  const fi = cats.indexOf(String(from.x));
-  const ti = cats.indexOf(String(to.x));
-  if (fi < 0 || ti < 0) return null;
-  const lo = Math.min(fi, ti) + 1;
-  const hi = Math.max(fi, ti) - 1;
-  if (hi < lo) return null;
-  let peak = Infinity;
-  for (const b of layout.bars) {
-    const i = cats.indexOf(String(b.category));
-    if (i < lo || i > hi) continue;
-    const top = b.valueLabelY != null ? Math.min(b.y, b.valueLabelY) : b.y;
-    if (top < peak) peak = top;
-  }
-  return Number.isFinite(peak) ? peak : null;
-}
-
 // All annotation spacing now reads from ds.spacing — no magic numbers
 // in this file.
 
@@ -339,47 +310,44 @@ export function applyAnnotations(
   }
 }
 
-function drawCagrArrow(
+/**
+ * Shared geometry for span-spanning annotations (cagr_arrow, delta, bracket).
+ * Computes a horizontal "rail" y above (or below) all in-span data labels
+ * with the user-spec clearances: 10pt between data labels and the rail,
+ * and 10pt between the endpoint columns' data labels and where the
+ * verticals start/end. Also computes the y for the annotation's text label
+ * (6pt above the rail).
+ *
+ * Returns null if either ref doesn't resolve.
+ */
+interface RailGeometry {
+  fromX: number;
+  toX: number;
+  fromY: number;
+  toY: number;
+  railY: number;
+  midX: number;
+  labelY: number;
+  labelSize: number;
+  placement: "above" | "below";
+}
+
+const DATA_LABEL_GAP = 10;
+const LABEL_TO_RAIL_GAP = 6;
+
+function computeRailGeometry(
   ctx: ApplyContext,
-  a: Extract<Annotation, { type: "cagr_arrow" }>,
-): void {
-  const from = locateRef(ctx.layout, a.from);
-  const to = locateRef(ctx.layout, a.to);
-  if (!from || !to) {
-    ctx.frame.warnings.push("cagr_arrow: could not resolve from/to refs.");
-    return;
-  }
-  if (from.value == null || to.value == null || from.value === 0) {
-    ctx.frame.warnings.push("cagr_arrow: missing or zero base value.");
-    return;
-  }
-  const periods = inferPeriods(ctx.layout, a.from, a.to) ?? 1;
-  const cagr = Math.pow(to.value / from.value, 1 / periods) - 1;
-  const trendUp = to.value >= from.value; // arrow head direction is implicit in stairstep
-  const label = a.label ?? `CAGR ${fmtPct(cagr, a.format)}`;
-  const color = a.color ?? ctx.frame.ds.palette.foreground;
+  fromRef: Ref,
+  toRef: Ref,
+  placement: "above" | "below",
+): RailGeometry | null {
+  const from = locateRef(ctx.layout, fromRef);
+  const to = locateRef(ctx.layout, toRef);
+  if (!from || !to) return null;
   const labelSize = ctx.frame.ds.typography.labelSize;
 
-  // User-spec clearances:
-  //   * 10pt between any data label (incl. endpoint columns) and the CAGR
-  //     geometry — applies equally to the horizontal rail AND to where the
-  //     verticals start/end (i.e. where the arrow head lands).
-  //   * 6pt between the rail and the "CAGR x.x%" label baseline.
-  const DATA_LABEL_GAP = 10;
-  const LABEL_TO_RAIL_GAP = 6;
+  const extreme = spanExtremeY(ctx.layout, fromRef, toRef, placement);
 
-  const placement: "above" | "below" =
-    a.placement === "below" ? "below" : "above";
-
-  // Compute the visual extreme across the entire span (from .. to inclusive),
-  // including each bar's value label (valueLabelY) when present, and stack
-  // tops at intermediate categories. For line/area, walks all in-span points.
-  const extreme = spanExtremeY(ctx.layout, a.from, a.to, placement);
-
-  // Compute the rail before the verticals so we can also force a minimum
-  // separation between the verticals' top/bottom and the rail (otherwise a
-  // very tall in-span peak could pull the rail down to the same y as the
-  // endpoints, collapsing the stairstep into a flat segment with arrow).
   let railY: number;
   if (placement === "above") {
     let baseline = Math.min(from.y, to.y);
@@ -414,13 +382,10 @@ function drawCagrArrow(
     );
   }
 
-  // Start the verticals above (or below) any data label at the endpoint
-  // category — value label, stack-top, or total label. Falls back to the
-  // resolved anchor y for line/area layouts.
   const fromTop =
-    a.from.x != null ? dataTopAtCategory(ctx, a.from.x, placement) : null;
+    fromRef.x != null ? dataTopAtCategory(ctx, fromRef.x, placement) : null;
   const toTop =
-    a.to.x != null ? dataTopAtCategory(ctx, a.to.x, placement) : null;
+    toRef.x != null ? dataTopAtCategory(ctx, toRef.x, placement) : null;
   const fromAnchor = fromTop ?? from.y;
   const toAnchor = toTop ?? to.y;
   const fromY =
@@ -432,14 +397,68 @@ function drawCagrArrow(
       ? toAnchor - DATA_LABEL_GAP
       : toAnchor + DATA_LABEL_GAP;
 
+  const labelY =
+    placement === "above"
+      ? railY - LABEL_TO_RAIL_GAP
+      : railY + LABEL_TO_RAIL_GAP + labelSize;
+
+  return {
+    fromX: from.x,
+    toX: to.x,
+    fromY,
+    toY,
+    railY,
+    midX: (from.x + to.x) / 2,
+    labelY,
+    labelSize,
+    placement,
+  };
+}
+
+function reserveAfterRail(ctx: ApplyContext, g: RailGeometry): void {
+  if (g.placement === "above") {
+    ctx.topReserved = Math.min(ctx.topReserved, g.labelY - g.labelSize);
+  } else {
+    ctx.bottomReserved = Math.max(ctx.bottomReserved, g.labelY);
+  }
+}
+
+function drawCagrArrow(
+  ctx: ApplyContext,
+  a: Extract<Annotation, { type: "cagr_arrow" }>,
+): void {
+  const from = locateRef(ctx.layout, a.from);
+  const to = locateRef(ctx.layout, a.to);
+  if (!from || !to) {
+    ctx.frame.warnings.push("cagr_arrow: could not resolve from/to refs.");
+    return;
+  }
+  if (from.value == null || to.value == null || from.value === 0) {
+    ctx.frame.warnings.push("cagr_arrow: missing or zero base value.");
+    return;
+  }
+  const periods = inferPeriods(ctx.layout, a.from, a.to) ?? 1;
+  const cagr = Math.pow(to.value / from.value, 1 / periods) - 1;
+  const trendUp = to.value >= from.value;
+  const label = a.label ?? `CAGR ${fmtPct(cagr, a.format)}`;
+  const color = a.color ?? ctx.frame.ds.palette.foreground;
+  const placement: "above" | "below" =
+    a.placement === "below" ? "below" : "above";
+
+  const geo = computeRailGeometry(ctx, a.from, a.to, placement);
+  if (!geo) {
+    ctx.frame.warnings.push("cagr_arrow: could not compute geometry.");
+    return;
+  }
+
   // Angular stairstep: vertical → horizontal rail → vertical down to to.y.
   // Marker-end orientation is determined by the last segment, which always
   // ends running toward to.y → arrow visually "lands" on the to anchor.
   const path =
-    `M ${from.x} ${fromY} ` +
-    `L ${from.x} ${railY} ` +
-    `L ${to.x} ${railY} ` +
-    `L ${to.x} ${toY}`;
+    `M ${geo.fromX} ${geo.fromY} ` +
+    `L ${geo.fromX} ${geo.railY} ` +
+    `L ${geo.toX} ${geo.railY} ` +
+    `L ${geo.toX} ${geo.toY}`;
 
   const markerId = ensureArrowMarker(ctx.frame, color);
   const g = ctx.frame.overlay.append("g").attr("class", "annotation-cagr");
@@ -452,33 +471,18 @@ function drawCagrArrow(
     .attr("stroke-linecap", "butt")
     .attr("marker-end", `url(#${markerId})`);
 
-  // CAGR % label centered on the horizontal rail, 6pt above (or below).
-  const midX = (from.x + to.x) / 2;
-  const labelY =
-    placement === "above"
-      ? railY - LABEL_TO_RAIL_GAP
-      : railY + LABEL_TO_RAIL_GAP + labelSize;
-
   g.append("text")
-    .attr("x", midX)
-    .attr("y", labelY)
+    .attr("x", geo.midX)
+    .attr("y", geo.labelY)
     .attr("text-anchor", "middle")
-    .attr("font-size", labelSize)
+    .attr("font-size", geo.labelSize)
     .attr("font-weight", 600)
     .attr("fill", color)
     .text(label);
 
-  // Tiny visual hint: when the trend is down, paint a small caret at the rail
-  // start so a glance still reveals direction. (No-op if trendUp.)
-  if (!trendUp) {
-    g.append("title").text(`Down trend (${label})`);
-  }
+  if (!trendUp) g.append("title").text(`Down trend (${label})`);
 
-  // Reserve so subsequent annotations (e.g. another CAGR or a delta) stack
-  // above us rather than colliding.
-  if (placement === "above") {
-    ctx.topReserved = Math.min(ctx.topReserved, labelY - labelSize);
-  }
+  reserveAfterRail(ctx, geo);
 }
 
 function drawDelta(
@@ -494,47 +498,56 @@ function drawDelta(
   const delta = to.value - from.value;
   const label = d3.format(a.format)(delta);
   const color = a.color ?? ctx.frame.ds.palette.foreground;
+  const placement: "above" | "below" =
+    a.placement === "below" ? "below" : "above";
 
-  const peak = peakYStrictlyBetween(ctx.layout, a.from, a.to);
-  let baseY: number;
-  if (a.placement === "below") {
-    let bottom = Math.max(from.y, to.y) + 28;
-    if (Number.isFinite(ctx.bottomReserved))
-      bottom = Math.max(bottom, ctx.bottomReserved + ctx.frame.ds.spacing.annotationLabelGap + 14);
-    baseY = Math.min(bottom, ctx.layout.plot.height - ctx.frame.ds.spacing.plotTopMargin);
-  } else {
-    let top = Math.min(from.y, to.y);
-    if (peak != null) top = Math.min(top, peak - ctx.frame.ds.spacing.annotationValueClearance);
-    if (Number.isFinite(ctx.topReserved))
-      top = Math.min(top, ctx.topReserved - ctx.frame.ds.spacing.annotationLabelGap);
-    baseY = Math.max(top - 14, ctx.frame.ds.spacing.plotTopMargin + 14);
+  const geo = computeRailGeometry(ctx, a.from, a.to, placement);
+  if (!geo) {
+    ctx.frame.warnings.push("delta: could not compute geometry.");
+    return;
   }
+
+  // Bracket shape: tiny tick at each end pointing TOWARD the data, with the
+  // rail running between them. The 10pt data-label gap must apply to the
+  // outermost geometry — i.e. the tick TIPS, not the rail. So we lift the
+  // rail by tickH above the geometry baseline; tickEndY then lands exactly
+  // at the user-spec 10pt clearance.
   const tickH = ctx.frame.ds.annotations.delta.tickHeight;
-  const tickDir = a.placement === "below" ? tickH : -tickH;
-  const tickY = baseY + tickDir;
+  const tickDir = placement === "above" ? tickH : -tickH;
+  const railY = geo.railY - tickDir; // bump away from data
+  const tickEndY = geo.railY; // tip at the original rail = 10pt off labels
+  const labelY =
+    placement === "above"
+      ? railY - LABEL_TO_RAIL_GAP
+      : railY + LABEL_TO_RAIL_GAP + geo.labelSize;
 
   const g = ctx.frame.overlay.append("g").attr("class", "annotation-delta");
   g.append("path")
     .attr(
       "d",
-      `M ${from.x} ${baseY} L ${from.x} ${tickY} L ${to.x} ${tickY} L ${to.x} ${baseY}`,
+      `M ${geo.fromX} ${tickEndY} L ${geo.fromX} ${railY} ` +
+        `L ${geo.toX} ${railY} L ${geo.toX} ${tickEndY}`,
     )
     .attr("fill", "none")
     .attr("stroke", color)
-    .attr("stroke-width", ctx.frame.ds.annotations.delta.strokeWidth);
-  const labelY = a.placement === "below" ? tickY + 16 : tickY - 6;
+    .attr("stroke-width", ctx.frame.ds.annotations.delta.strokeWidth)
+    .attr("stroke-linejoin", "miter")
+    .attr("stroke-linecap", "butt");
+
   g.append("text")
-    .attr("x", (from.x + to.x) / 2)
+    .attr("x", geo.midX)
     .attr("y", labelY)
     .attr("text-anchor", "middle")
-    .attr("font-size", ctx.frame.ds.typography.labelSize)
+    .attr("font-size", geo.labelSize)
     .attr("font-weight", 600)
     .attr("fill", color)
     .text(label);
-  if (a.placement === "below") {
-    ctx.bottomReserved = Math.max(ctx.bottomReserved, labelY);
+
+  // Reserve up through the label, accounting for the bumped rail.
+  if (placement === "above") {
+    ctx.topReserved = Math.min(ctx.topReserved, labelY - geo.labelSize);
   } else {
-    ctx.topReserved = Math.min(ctx.topReserved, labelY - ctx.frame.ds.spacing.annotationLabelHeight);
+    ctx.bottomReserved = Math.max(ctx.bottomReserved, labelY);
   }
 }
 
@@ -549,46 +562,52 @@ function drawBracket(
     return;
   }
   const color = a.color ?? ctx.frame.ds.palette.foreground;
-  const peak = peakYStrictlyBetween(ctx.layout, a.from, a.to);
+  const placement: "above" | "below" =
+    a.placement === "below" ? "below" : "above";
 
-  let baseY: number;
-  if (a.placement === "below") {
-    let bottom = Math.max(from.y, to.y) + 32;
-    if (Number.isFinite(ctx.bottomReserved))
-      bottom = Math.max(bottom, ctx.bottomReserved + ctx.frame.ds.spacing.annotationLabelGap + 14);
-    baseY = Math.min(bottom, ctx.layout.plot.height - ctx.frame.ds.spacing.plotTopMargin);
-  } else {
-    let top = Math.min(from.y, to.y);
-    if (peak != null) top = Math.min(top, peak - ctx.frame.ds.spacing.annotationValueClearance);
-    if (Number.isFinite(ctx.topReserved))
-      top = Math.min(top, ctx.topReserved - ctx.frame.ds.spacing.annotationLabelGap);
-    baseY = Math.max(top - 18, ctx.frame.ds.spacing.plotTopMargin + 14);
+  const geo = computeRailGeometry(ctx, a.from, a.to, placement);
+  if (!geo) {
+    ctx.frame.warnings.push("bracket: could not compute geometry.");
+    return;
   }
+
+  // Same shape as drawDelta. The 10pt data-label gap applies to the tick
+  // tips (outermost geometry), so the rail is bumped tickH away.
   const tickH = ctx.frame.ds.annotations.bracket.tickHeight;
-  const tickDir = a.placement === "below" ? -tickH : tickH;
+  const tickDir = placement === "above" ? tickH : -tickH;
+  const railY = geo.railY - tickDir;
+  const tickEndY = geo.railY;
+  const labelY =
+    placement === "above"
+      ? railY - LABEL_TO_RAIL_GAP
+      : railY + LABEL_TO_RAIL_GAP + geo.labelSize;
 
   const g = ctx.frame.overlay.append("g").attr("class", "annotation-bracket");
   g.append("path")
     .attr(
       "d",
-      `M ${from.x} ${baseY + tickDir} L ${from.x} ${baseY} L ${to.x} ${baseY} L ${to.x} ${baseY + tickDir}`,
+      `M ${geo.fromX} ${tickEndY} L ${geo.fromX} ${railY} ` +
+        `L ${geo.toX} ${railY} L ${geo.toX} ${tickEndY}`,
     )
     .attr("fill", "none")
     .attr("stroke", color)
-    .attr("stroke-width", ctx.frame.ds.annotations.bracket.strokeWidth);
-  const labelY = a.placement === "below" ? baseY + 18 : baseY - 6;
+    .attr("stroke-width", ctx.frame.ds.annotations.bracket.strokeWidth)
+    .attr("stroke-linejoin", "miter")
+    .attr("stroke-linecap", "butt");
+
   g.append("text")
-    .attr("x", (from.x + to.x) / 2)
+    .attr("x", geo.midX)
     .attr("y", labelY)
     .attr("text-anchor", "middle")
-    .attr("font-size", ctx.frame.ds.typography.labelSize)
+    .attr("font-size", geo.labelSize)
     .attr("font-weight", 600)
     .attr("fill", color)
     .text(a.label);
-  if (a.placement === "below") {
-    ctx.bottomReserved = Math.max(ctx.bottomReserved, labelY);
+
+  if (placement === "above") {
+    ctx.topReserved = Math.min(ctx.topReserved, labelY - geo.labelSize);
   } else {
-    ctx.topReserved = Math.min(ctx.topReserved, labelY - ctx.frame.ds.spacing.annotationLabelHeight);
+    ctx.bottomReserved = Math.max(ctx.bottomReserved, labelY);
   }
 }
 
