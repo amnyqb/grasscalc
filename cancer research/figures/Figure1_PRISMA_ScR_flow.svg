@@ -1,0 +1,80 @@
+<svg viewBox="0 80 900 630" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <rect width="900" height="710" fill="#FCFBF7"/>
+
+  <!-- Phase rail -->
+  <g font-size="12" font-weight="700" fill="#FFFFFF">
+    <rect x="40" y="100" width="150" height="34" rx="4" fill="#1B4D52"/>
+    <text x="115" y="122" text-anchor="middle">IDENTIFICATION</text>
+    <rect x="40" y="322" width="150" height="34" rx="4" fill="#2E6B72"/>
+    <text x="115" y="344" text-anchor="middle">SCREENING</text>
+    <rect x="40" y="432" width="150" height="34" rx="4" fill="#2E6B72"/>
+    <text x="115" y="454" text-anchor="middle">ELIGIBILITY</text>
+    <rect x="40" y="596" width="150" height="34" rx="4" fill="#1B4D52"/>
+    <text x="115" y="618" text-anchor="middle">INCLUDED</text>
+  </g>
+
+  <defs>
+    <marker id="ah" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0 0 L9 4.5 L0 9 z" fill="#7C8A86"/>
+    </marker>
+  </defs>
+
+  <g font-size="13" fill="#1C2B36">
+    <!-- Identification: two source boxes (3 lines each) -->
+    <rect x="230" y="96" width="330" height="72" rx="5" fill="#FFFFFF" stroke="#C9CFC9"/>
+    <text x="246" y="116">Records from databases</text>
+    <text x="246" y="134">(MEDLINE, Embase, Scopus, WoS)</text>
+    <text x="246" y="158" font-weight="700" fill="#1B4D52">n = [ __ ]</text>
+
+    <rect x="600" y="96" width="270" height="72" rx="5" fill="#FFFFFF" stroke="#C9CFC9"/>
+    <text x="616" y="116">Records from grey literature</text>
+    <text x="616" y="134">(ATSDR, NASEM, UNSCEAR…)</text>
+    <text x="616" y="158" font-weight="700" fill="#1B4D52">n = [ __ ]</text>
+
+    <!-- After duplicates (merge) -->
+    <rect x="230" y="230" width="330" height="50" rx="5" fill="#FFFFFF" stroke="#C9CFC9"/>
+    <text x="246" y="250">Records after duplicates removed</text>
+    <text x="246" y="270" font-weight="700" fill="#2E6B72">n = [ __ ]</text>
+
+    <rect x="600" y="235" width="270" height="40" rx="5" fill="#F2F0E9" stroke="#C9CFC9"/>
+    <text x="616" y="260">Duplicates removed  <tspan font-weight="700" fill="#BE7B45">n = [ __ ]</tspan></text>
+
+    <!-- Screening -->
+    <rect x="230" y="320" width="330" height="50" rx="5" fill="#FFFFFF" stroke="#C9CFC9"/>
+    <text x="246" y="340">Records screened (title / abstract)</text>
+    <text x="246" y="360" font-weight="700" fill="#2E6B72">n = [ __ ]</text>
+
+    <rect x="600" y="325" width="270" height="40" rx="5" fill="#F2F0E9" stroke="#C9CFC9"/>
+    <text x="616" y="350">Records excluded  <tspan font-weight="700" fill="#BE7B45">n = [ __ ]</tspan></text>
+
+    <!-- Eligibility -->
+    <rect x="230" y="430" width="330" height="50" rx="5" fill="#FFFFFF" stroke="#C9CFC9"/>
+    <text x="246" y="450">Full-text reports assessed</text>
+    <text x="246" y="470" font-weight="700" fill="#2E6B72">n = [ __ ]</text>
+
+    <rect x="600" y="418" width="270" height="74" rx="5" fill="#F2F0E9" stroke="#C9CFC9"/>
+    <text x="616" y="438">Full-text excluded, with reasons:</text>
+    <text x="616" y="456" font-size="12" fill="#5A6B73">non-cancer outcome; undocumented</text>
+    <text x="616" y="471" font-size="12" fill="#5A6B73">exposure; duplicate cohort; opinion</text>
+    <text x="616" y="486" font-size="12" fill="#5A6B73">without data  <tspan font-weight="700" fill="#BE7B45">n = [ __ ]</tspan></text>
+
+    <!-- Included -->
+    <rect x="230" y="584" width="330" height="74" rx="5" fill="#EAF1F0" stroke="#1B4D52" stroke-width="1.5"/>
+    <text x="246" y="608">Sources charted into evidence matrix</text>
+    <text x="246" y="630" font-weight="700" fill="#1B4D52">n ≈ 60 charted to date</text>
+    <text x="246" y="648" font-size="12" fill="#37606A">(12 comparator settings + Saudi case)</text>
+  </g>
+
+  <!-- Arrows -->
+  <g stroke="#7C8A86" stroke-width="1.6" fill="none">
+    <path d="M735 168 L735 190 L397 190"/>
+    <path d="M395 168 L395 190"/>
+    <path d="M395 190 L395 230" marker-end="url(#ah)"/>
+    <path d="M560 255 L600 255" marker-end="url(#ah)"/>
+    <path d="M395 280 L395 320" marker-end="url(#ah)"/>
+    <path d="M560 345 L600 345" marker-end="url(#ah)"/>
+    <path d="M395 370 L395 430" marker-end="url(#ah)"/>
+    <path d="M560 455 L600 455" marker-end="url(#ah)"/>
+    <path d="M395 480 L395 584" marker-end="url(#ah)"/>
+  </g>
+</svg>

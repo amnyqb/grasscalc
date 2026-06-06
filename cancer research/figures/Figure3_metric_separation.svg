@@ -1,0 +1,68 @@
+<svg viewBox="0 80 900 480" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <rect width="900" height="560" fill="#FCFBF7"/>
+
+  <!-- Seven separated bins -->
+  <g font-size="12.5">
+    <!-- Bin template -->
+    <!-- 1 -->
+    <rect x="40" y="100" width="180" height="118" rx="6" fill="#FFFFFF" stroke="#1B4D52" stroke-width="1.4"/>
+    <text x="56" y="124" font-weight="700" fill="#1B4D52">ERR / Gy</text>
+    <text x="56" y="146" fill="#5A6B73">Excess relative risk</text>
+    <text x="56" y="162" fill="#5A6B73">per gray (acute radiation)</text>
+    <text x="56" y="196" fill="#1C2B36" font-size="12">Life Span Study</text>
+
+    <!-- 2 -->
+    <rect x="232" y="100" width="180" height="118" rx="6" fill="#FFFFFF" stroke="#1B4D52" stroke-width="1.4"/>
+    <text x="248" y="124" font-weight="700" fill="#1B4D52">ERR / Sv</text>
+    <text x="248" y="146" fill="#5A6B73">Excess relative risk</text>
+    <text x="248" y="162" fill="#5A6B73">per sievert (fallout dose)</text>
+    <text x="248" y="196" fill="#1C2B36" font-size="12">Semipalatinsk</text>
+
+    <!-- 3 -->
+    <rect x="424" y="100" width="180" height="118" rx="6" fill="#FFFFFF" stroke="#2E6B72" stroke-width="1.4"/>
+    <text x="440" y="124" font-weight="700" fill="#2E6B72">Incidence ratio</text>
+    <text x="440" y="146" fill="#5A6B73">Observed new cases vs</text>
+    <text x="440" y="162" fill="#5A6B73">comparison population</text>
+    <text x="440" y="196" fill="#1C2B36" font-size="12">U.K. Gulf War (IRR 0.99)</text>
+
+    <!-- 4 -->
+    <rect x="616" y="100" width="180" height="118" rx="6" fill="#FFFFFF" stroke="#2E6B72" stroke-width="1.4"/>
+    <text x="632" y="124" font-weight="700" fill="#2E6B72">Mortality ratio</text>
+    <text x="632" y="146" fill="#5A6B73">Observed deaths vs</text>
+    <text x="632" y="162" fill="#5A6B73">comparison population</text>
+    <text x="632" y="196" fill="#1C2B36" font-size="12">Khamisiyah brain cancer</text>
+
+    <!-- 5 -->
+    <rect x="136" y="300" width="180" height="118" rx="6" fill="#FFFFFF" stroke="#C2A878" stroke-width="1.4"/>
+    <text x="152" y="324" font-weight="700" fill="#A8842F">Modeled risk</text>
+    <text x="152" y="346" fill="#5A6B73">Lifetime air-toxics cancer</text>
+    <text x="152" y="362" fill="#5A6B73">risk (not observed cases)</text>
+    <text x="152" y="396" fill="#1C2B36" font-size="12">"Cancer Alley" VOC models</text>
+
+    <!-- 6 -->
+    <rect x="328" y="300" width="180" height="118" rx="6" fill="#FFFFFF" stroke="#C98A5E" stroke-width="1.4"/>
+    <text x="344" y="324" font-weight="700" fill="#BE7B45">Policy presumption</text>
+    <text x="344" y="346" fill="#5A6B73">Disease list recognized</text>
+    <text x="344" y="362" fill="#5A6B73">for compensation</text>
+    <text x="344" y="396" fill="#1C2B36" font-size="12">PACT Act conditions</text>
+
+    <!-- 7 -->
+    <rect x="520" y="300" width="180" height="118" rx="6" fill="#FFFFFF" stroke="#7C8A86" stroke-width="1.4"/>
+    <text x="536" y="324" font-weight="700" fill="#4F5E63">Ecological ASIR ratio</text>
+    <text x="536" y="346" fill="#5A6B73">Region-level age-standardized</text>
+    <text x="536" y="362" fill="#5A6B73">incidence contrast</text>
+    <text x="536" y="396" fill="#1C2B36" font-size="12">Saudi Eastern Prov. (5.7×)</text>
+  </g>
+
+  <!-- "No pooling" barrier motif -->
+  <g>
+    <line x1="40" y1="248" x2="796" y2="248" stroke="#BE7B45" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round"/>
+    <rect x="350" y="236" width="156" height="24" rx="12" fill="#BE7B45"/>
+    <text x="428" y="252" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">DO NOT POOL</text>
+  </g>
+
+  <text x="40" y="468" font-size="13" fill="#1C2B36" font-weight="700">Why this matters:</text>
+  <text x="40" y="488" font-size="12.5" fill="#5A6B73">A modeled lifetime-risk estimate, a dose-response slope, an observed incidence ratio, and a policy list are different quantities with</text>
+  <text x="40" y="506" font-size="12.5" fill="#5A6B73">different units and assumptions. Combining them into a single benchmark number would be a reviewer-identified flaw. They are</text>
+  <text x="40" y="524" font-size="12.5" fill="#5A6B73">therefore compared only by direction and evidence grade, never by magnitude.</text>
+</svg>

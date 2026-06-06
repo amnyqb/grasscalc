@@ -1,0 +1,14 @@
+comparator_population,exposure_category,evidence_grade,best_supported_signal,reported_metric_native_units,synthesis_role
+Life Span Study (Hiroshima/Nagasaki),Ionizing radiation,A,Dose-responsive solid-cancer risk; significant in never-smokers,ERR/Gy,Primary causal anchor
+Semipalatinsk historical cohort,Nuclear-test fallout,A/B,Positive solid-cancer mortality dose-response,ERR/Sv 1.77 (full cohort),Independent radiation anchor
+Camp Lejeune,Solvent contamination (military base),A/B,"Kidney, bladder, leukaemia, NHL, male breast excess",Dose-response RR/HR,Strong military-associated comparator
+Khamisiyah / Kuwait oil-fire veterans,Wartime combustion + nerve agent,B,Elevated brain-cancer mortality in modeled plume subsets,Mortality ratio 2-3x,Supportive wartime signal
+U.K. Gulf War cohort,Mixed deployment,B,No overall cancer excess in early follow-up,IRR 0.99,Negative comparator (latency constraint)
+Agent Orange / TCDD,Chemical agent (dioxin),B/C,Stronger associations with serum-TCDD measurement,RR 1.6 (biomarker) vs 1.01 (proxy),Exposure-ascertainment lesson
+Post-9/11 burn pits / PACT Act,Wartime combustion,D (contextual),Presumptive cancers incl. non-tobacco sites,Policy-presumptive list,Institutional recognition only
+Bhopal,Acute industrial chemical release,F (C cytogenetics),Community site ratios; chromosome instability,Community-survey ratios,Hypothesis-generating; verify ratios
+Fallujah,Civilian conflict-associated exposure,F/B,Pediatric cancer & birth-sex-ratio anomalies,RR 12.6 (pediatric),"High-specificity, lower-certainty"
+Kuwaiti civilians,Wartime combustion,B/F,Breast-cancer inflection ~1999 (screening-caveated),ASIR change,Supporting; screening-confounded
+Beirut Port,Warehouse oxidizer release,F/E,Acute air-quality disruption; PAH risk,Immature latency,Contextual exposure case
+Louisiana Cancer Alley,Chronic petrochemical pollution,E (contextual),Measured VOC cancer-RISK exceeds modeled,Modeled lifetime risk,"Chronic-exposure plausibility, not incidence"
+Saudi Eastern Province (TEST CASE),Oil-fire plume + petrochemical baseline,Ecological hypothesis,Lung crude-rate regional contrast; non-tobacco clusters,Crude-rate ratio 5.7x,Main hypothesis to be tested

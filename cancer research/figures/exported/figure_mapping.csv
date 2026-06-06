@@ -1,0 +1,8 @@
+elsevier_label,source_basename,description,pdf_file,png_file,canvas_width_units,min_font_units,min_font_pt_at_190mm,font_check
+Fig1,Figure2_evidence_grade_hierarchy,Evidence-grade hierarchy,Fig1.pdf,Fig1.png,900,12.0,7.18,OK
+Fig2,Figure3_metric_separation,Metric-separation rule,Fig2.pdf,Fig2.png,900,12.0,7.18,OK
+Fig3,Figure4_cross_cohort_benchmark,Cross-cohort qualitative benchmark,Fig3.pdf,Fig3.png,900,12.0,7.18,OK
+Fig4,Figure7_proposed_DAG,DAG for proposed SCR analysis,Fig4.pdf,Fig4.png,900,12.0,7.18,OK
+FigS1,Figure1_PRISMA_ScR_flow,Planned PRISMA-ScR flow,FigS1.pdf,FigS1.png,900,12.0,7.18,OK
+FigS2,Figure6_marker_site_framework,Marker-site framework,FigS2.pdf,FigS2.png,900,12.0,7.18,OK
+FigS3,Figure5_saudi_timeline,Saudi natural-experiment timeline,FigS3.pdf,FigS3.png,900,12.0,7.18,OK

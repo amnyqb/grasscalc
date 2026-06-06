@@ -1,0 +1,545 @@
+%% Non-Tobacco Environmental Carcinogenesis — evidence-map + protocol
+%% Elsevier elsarticle, single-column 3p model.
+\documentclass[3p,times]{elsarticle}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage{array}
+\usepackage{rotating}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\graphicspath{{./figures/exported/}{./figures/}}
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\journal{Cancer Epidemiology}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Non-Tobacco Environmental Carcinogenesis in Exposed Populations: Evidence Grading, Metric Separation, and a Saudi Eastern Province Registry-Analysis Protocol}
+
+\author{Amin Al Yaquob}
+\affiliation{organization={Al Yaquob Advisory}, city={Riyadh}, country={Saudi Arabia}}
+%% Corresponding-author email (provided by author):
+\ead{amin@alyaquob.com}
+\ead[orcid]{0009-0006-1590-3378}
+
+\begin{abstract}
+Tobacco dominates lung-cancer causation at the global aggregate level, but that fact does not resolve attribution in populations exposed to ionizing radiation, wartime combustion products, industrial solvents, dioxins, or chronic petrochemical air toxics, where exposures overlap and smoking, screening, migration, and registry maturation confound simple comparisons. This evidence-mapping review assembles and grades the principal exposed-population cohorts using two methodological devices: an explicit A--F evidence hierarchy and a metric-separation rule that forbids pooling excess relative risk per unit dose, observed incidence and mortality ratios, modeled lifetime risk, and policy-presumptive lists. High-grade individual-level cohort evidence (atomic-bomb survivors; Soviet nuclear-test-fallout populations) establishes that ionizing radiation causes dose-responsive cancer independently of tobacco, including in never-smokers; solvent-contamination cohort evidence (Camp Lejeune) establishes the same for industrial solvents. Evidence for wartime combustion and petrochemical pollution is more heterogeneous and is graded accordingly, with one prior exposure-ascertainment error corrected. After excluding screening-sensitive female breast cancer as a primary marker, exposure-relevant cancers concentrate in aggressive, poor-survival sites. The review then specifies, but does not execute, a pre-registered quasi-experimental analysis of Saudi Cancer Registry (SCR) microdata to test whether the Eastern Province cancer pattern --- anchored by a regional lung-cancer crude-rate contrast (3.36 vs 0.59 per 100,000; $\approx$5.7-fold) --- reflects sustained environmental exposure. A transparent smoking-prevalence sensitivity analysis shows that realistic regional smoking differences cannot reproduce the observed contrast. The Eastern Province pattern is a latency-compatible ecological signal, not causal evidence; the proposed latency-stratified regional event-study, with negative controls and a never-smoker lung-cancer sub-analysis, would convert it into a testable epidemiologic estimand. The contribution is the disciplined framework and pre-specified protocol, not a causal claim.
+\end{abstract}
+
+\begin{keyword}
+evidence-mapping review \sep environmental carcinogenesis \sep Saudi Cancer Registry \sep Eastern Province \sep Kuwait oil fires \sep Camp Lejeune \sep evidence grading \sep metric separation \sep study protocol \sep event-study
+\end{keyword}
+
+\end{frontmatter}
+
+%% ====================================================================
+\section{Introduction}
+
+\subsection{Rationale}
+Tobacco smoking accounts for approximately 80\% of global lung cancer cases and a smaller fraction of cancers at other sites. This statistic, defensible at the global aggregate level, has shaped clinical, epidemiological, and regulatory thinking as though tobacco were the default explanation for cancer causation in any population, with other exposures relegated to the role of accelerant. The framing can be incomplete when applied to specific populations exposed to defined environmental insults --- atomic-bomb survivors, oil-fire-exposed troops, civilian populations in post-conflict environments with documented or plausible contamination, residents adjacent to petrochemical complexes, personnel and dependents at military installations with documented environmental contamination, and populations affected by industrial chemical releases.
+
+In each such case the relevant question is not ``what fraction of global cancer is tobacco-attributable?'' but ``in this population, with this exposure history, what is the evidence that the exposure contributed to cancer beyond what tobacco can explain?'' Answering this requires comparing across heterogeneous exposed populations, and that comparison is methodologically challenging, because the available evidence ranges from dose-reconstructed individual-level cohorts to ecological registry contrasts, legal presumptions, community surveys, and modeled environmental-risk estimates. Treating these as equivalent requires explicit safeguards against overinterpretation.
+
+An evidence-mapping review, conducted according to scoping-review principles, is the appropriate instrument for this evidence landscape. The literature is broad, methodologically heterogeneous, and not amenable to a pooled meta-analytic effect estimate. The value here is to map the evidence, grade it transparently, separate incompatible metrics, and specify the primary study that should fill the identified gap. This article is explicit about its scope (Section~\ref{sec:scope}): it is a graded evidence map plus a pre-specified protocol, not a completed multi-database systematic search.
+
+\subsection{The specific gap: the Saudi Eastern Province}
+The Saudi Eastern Province occupies a notable gap in this literature. It was directly downwind of the 1991 Kuwait oil fires for approximately eight months, with documented elevated concentrations of sulfur dioxide, particulate matter, and other pollutants at multiple monitoring sites \citep{amin1994}. It has a continuous population-based cancer registry from 1994 onward, with cancer a notifiable disease by royal decree \citep{scr2020}. The registry infrastructure appears capable of supporting a formal quasi-experimental analysis testing the registry data against the 1991 exposure event; no such study was identified in the reviewed literature. This review maps the comparator evidence that would contextualize such an analysis and specifies the analysis itself.
+
+\subsection{Objectives and review questions}
+This review addresses five questions.
+
+\textbf{RQ1.} What exposed-population evidence most strongly establishes that non-tobacco environmental agents can produce cancer independently of smoking, and at what evidence grade?
+
+\textbf{RQ2.} Which comparator cohorts provide valid benchmark signals, and which should be treated only as supporting or hypothesis-generating evidence?
+
+\textbf{RQ3.} Which cancer sites are useful exposure markers in registry data, and which are too screening-sensitive or behaviourally confounded to anchor inference?
+
+\textbf{RQ4.} Is the Saudi Eastern Province cancer pattern compatible with a moderate sustained environmental-exposure hypothesis after accounting for smoking, registry maturation, screening, urbanization, and petrochemical baseline?
+
+\textbf{RQ5.} What pre-specified quasi-experimental analysis would convert the Saudi hypothesis into a causal epidemiologic test?
+
+Two further descriptive questions are addressed within the synthesis: the temporal-trend and spatial-cluster signatures of exposure in registry data (informing RQ3--RQ4), and the survival profile of exposure-associated cancers (informing the public-health interpretation).
+
+\subsection{Analytical neutrality and scope}
+This review is an epidemiologic and public-health analysis. It does not assign legal responsibility, institutional fault, or political blame to any government, military, company, or public agency. References to governmental, military, or corporate settings identify exposure contexts, data sources, or comparator populations only. The manuscript evaluates whether observed cancer patterns are compatible with specified exposure hypotheses, and it reserves causal attribution for settings where the evidence grade supports it.
+
+%% ====================================================================
+\section{Methods}
+
+\subsection{Approach and registration}
+This review follows the Arksey \& O'Malley \citep{arksey2005} five-stage scoping-review framework as refined by Levac et al.\ \citep{levac2010} and the JBI scoping-review guidance, and reports against the applicable items of the PRISMA-ScR checklist \citep{tricco2018}; the checklist mapping (Appendix B) marks which items are completed here and which belong to the registered protocol. As PROSPERO does not register scoping reviews, the protocol --- including the four-database search, de-duplication, dual screening, and the populated selection flow --- is to be deposited on the Open Science Framework (OSF) prior to its execution.
+
+\subsection{Eligibility criteria}
+\textbf{Inclusion.} A source was eligible if it met all three of: (i) a study population with exposure to one of the seven target categories (ionizing radiation; wartime combustion products; wartime chemical agents; industrial solvents / military-associated contaminants; acute industrial chemical release; civilian conflict-associated exposure; chronic petrochemical / industrial pollution), where exposure was established by at least one of \emph{direct measurement, modeled plume or dose reconstruction, residence or employment in a defined contaminated setting, a registry-defined exposure area, validated biomarker evidence, or official technical documentation}; (ii) a reported cancer-related outcome (incidence, mortality, standardized incidence/mortality ratio, excess relative risk per unit dose, validated carcinogen-exposure biomarker, or modeled cancer-risk estimate); and (iii) sufficient latency for the relevant tumour type, or explicit acknowledgement of immature latency where follow-up was short.
+
+\textbf{Exclusion.} Sources were excluded if they reported only non-cancer outcomes; if exposure did not meet any of the operational criteria above; if they were non-systematic opinion pieces without primary or secondary data; or if they duplicated a more complete analysis of the same cohort (the most recent or most complete analysis was retained).
+
+\textbf{Limits.} Inception to 6 June 2026. English language for the formal database search; Arabic-language Saudi Ministry of Health and SCR sources were hand-searched to mitigate language bias relevant to the Saudi-specific question.
+
+\subsection{Information sources}
+Four bibliographic databases are specified for the registered search: MEDLINE (via PubMed), Embase, Scopus, and Web of Science Core Collection. Grey-literature sources: the Agency for Toxic Substances and Disease Registry (ATSDR); the National Academies / Institute of Medicine \emph{Gulf War and Health} and \emph{Veterans and Agent Orange} series; UNSCEAR; IARC monographs; the Radiation Effects Research Foundation; the U.S. Department of Veterans Affairs; the U.S. Government Accountability Office; and the Saudi Cancer Registry annual reports. Reference lists of included sources were screened (backward citation searching).
+
+\subsection{Search strategy}
+The search combines three concept blocks (outcome AND exposure AND epidemiologic-metric) using controlled vocabulary and free-text terms. The full MEDLINE/PubMed strategy is reproduced below; equivalent translations for Embase, Scopus, and Web of Science are given in Appendix A.
+
+{\footnotesize
+\begin{verbatim}
+( "neoplasms"[MeSH] OR cancer*[tiab] OR carcinoma*[tiab]
+  OR neoplas*[tiab] OR tumour*[tiab] OR tumor*[tiab]
+  OR malignan*[tiab] OR leukaemia*[tiab]
+  OR leukemia*[tiab] OR lymphoma*[tiab] )
+AND
+( "radiation, ionizing"[MeSH] OR "radioactive fallout"[MeSH]
+  OR radiation[tiab] OR fallout[tiab]
+  OR "nuclear test*"[tiab] OR "atomic bomb"[tiab]
+  OR "depleted uranium"[tiab] OR "oil fire*"[tiab]
+  OR "oil well fire*"[tiab] OR "burn pit*"[tiab]
+  OR "combustion product*"[tiab]
+  OR "polycyclic aromatic"[tiab] OR dioxin*[tiab]
+  OR "Agent Orange"[tiab] OR TCDD[tiab]
+  OR trichloroethylene[tiab]
+  OR tetrachloroethylene[tiab]
+  OR "methyl isocyanate"[tiab]
+  OR "ammonium nitrate"[tiab]
+  OR petrochemical*[tiab] OR "air toxics"[tiab]
+  OR "volatile organic compound*"[tiab]
+  OR "Gulf War"[tiab] OR "war exposure"[tiab]
+  OR "military personnel"[MeSH] )
+AND
+( incidence[tiab] OR mortality[tiab]
+  OR "standardized incidence"[tiab]
+  OR "standardised incidence"[tiab]
+  OR cohort[tiab] OR registry[tiab]
+  OR epidemiolog*[tiab] OR "relative risk"[tiab]
+  OR "excess relative risk"[tiab]
+  OR "standardized mortality"[tiab] )
+\end{verbatim}
+}
+
+No methodological filters were applied, consistent with scoping breadth. Grey-literature sources were searched by institution name and exposure keyword.
+
+\subsection{Selection and charting}
+The curated sources mapped here were de-duplicated and screened against the eligibility criteria. The registered protocol step (Section~\ref{sec:scope}) is the formal four-database search with de-duplication, dual independent screening of titles/abstracts and full texts with adjudication, recorded full-text exclusion reasons, and a fully populated selection flow (planned format in Supplementary Figure~S1). A structured charting form captured, for each source: exposure category; population and setting; study design; exposure-ascertainment method; outcome-ascertainment method; reported effect metric and value; latency adequacy; smoking-control capacity; and assigned evidence grade. A source-level extraction table is provided as Supplementary Table~S1.
+
+\subsection{Evidence grading and synthesis rules}\label{sec:rules}
+Three rules govern the synthesis and are the central methodological contribution of this review.
+
+\textbf{Rule 1 --- Evidence grade (A--C, F) and contextual evidence (D--E).} Sources carrying internal-validity weight are graded A--C and F by design strength, exposure ascertainment, outcome ascertainment, and confounder control (Table~\ref{tab:grade}). Two categories --- legal/policy presumption (D) and modeled environmental cancer-risk estimates (E) --- are deliberately held \emph{outside} the internal-validity ladder as \emph{contextual evidence}: they are not weaker cohort studies but different objects (institutional recognition; exposure-risk modeling) and are never compared as if they were effect estimates. The resulting hierarchy is shown in Figure~\ref{fig:pyramid}.
+
+\begin{table}[tbp]
+\centering
+\caption{Evidence-grade scheme. Grades A--C and F carry internal-validity weight; D and E are contextual categories, not points on the validity ladder.}
+\label{tab:grade}
+\footnotesize
+\begin{tabular}{@{}cL{0.50\columnwidth}L{0.30\columnwidth}@{}}
+\toprule
+Grade & Evidence type & Role in synthesis \\
+\midrule
+A & Individual-level cohort with cancer outcomes, dose/exposure reconstruction, adequate latency, confounder control & Primary causal benchmark \\
+B & Cohort or registry study with defined exposed and comparison groups but incomplete smoking or exposure data & Secondary benchmark \\
+C & Biomarker, cytogenetic, or mechanistic evidence linked to an exposed population & Mechanistic support; not standalone \\
+F & Community survey, thesis, early-disaster follow-up, or immature-latency cohort & Hypothesis-generating support only \\
+\midrule
+D & Legal or policy presumption based on evidence review & \emph{Contextual}: institutional recognition \\
+E & Modeled or measured environmental cancer-risk estimate without observed incidence & \emph{Contextual}: exposure-risk plausibility \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\columnwidth]{Fig1.pdf}
+\caption{Evidence-grade hierarchy of charted sources. Higher grades anchor causal inference; lower grades and the contextual categories provide supporting or hypothesis-generating signal only. The Saudi Eastern Province registry contrast is charted separately as an ecological signal.}
+\label{fig:pyramid}
+\end{figure}
+
+\textbf{Rule 2 --- Metric separation.} Observed incidence ratios, mortality ratios, excess relative risk per unit dose (ERR/Sv, ERR/Gy), modeled lifetime air-toxics cancer risk, policy-presumptive disease lists, and ecological crude- or age-standardized incidence-rate ratios are \emph{not} treated as interchangeable numerical units. They are discussed together qualitatively but never pooled or directly numerically compared. Figure~\ref{fig:metric} makes this separation explicit.
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\columnwidth]{Fig2.pdf}
+\caption{Metric-separation rule. Seven effect-metric families are discussed qualitatively but never pooled or numerically compared as if interchangeable.}
+\label{fig:metric}
+\end{figure}
+
+\textbf{Rule 3 --- Causal-language discipline.} Four claim levels are used consistently: \textbf{Established} (Grade A evidence plus biological plausibility); \textbf{Associated} (Grade B cohort/registry association with incomplete control); \textbf{Compatible} (pattern consistent with a hypothesis but insufficient for causation --- the Saudi Eastern Province conclusion sits here); and \textbf{Hypothesis-generating} (interesting signal not yet suitable for attribution).
+
+\textbf{Marker-site logic.} A ``low-smoking-confounding marker'' is a cancer site or stratum in which excess is less readily explained by regional smoking gradients than excess lung cancer alone: pediatric cancers, some haematologic malignancies, brain/CNS cancers, kidney cancer in solvent-exposed cohorts, male breast cancer in solvent-exposed military populations, and never-smoker cancers. This is a claim about relative confounding resistance, not a claim that tobacco never contributes to these sites.
+
+\textbf{Screening-sensitive sites.} Female breast cancer is excluded as a \emph{primary} marker for the Saudi combustion-exposure analysis because its incidence is strongly affected by screening rollout (an apparent $\sim$37\% incidence increase from lead-time bias alone over a 20-year window, with true overdiagnosis only 1--10\% after correction \citep{duffy2005,gotzsche2009,paci2006}), reproductive/hormonal transition, stage migration, and diagnostic access. It is retained in radiation-cohort analyses, where breast tissue is a known radiation-sensitive site with dose-response data.
+
+\subsection{Scope of this version}\label{sec:scope}
+This article locks the protocol, eligibility criteria, full search strategy, charting form, and synthesis rules, and presents a graded map of curated primary sources. It does \emph{not} present a completed four-database PRISMA-ScR search: exact screened/assessed/included counts and the populated selection flow are the registered next step (Supplementary Figure~S1 shows the planned format). This scope is stated plainly rather than substituting placeholder database yields, and it defines the manuscript category: a graded evidence map with a pre-specified confirmatory protocol.
+
+%% ====================================================================
+\section{Results: the evidence map}
+
+\subsection{Source selection}
+The registered selection flow (Supplementary Figure~S1) will report counts at each stage on formal execution. The curated evidence base mapped here spans seven exposure categories and twelve comparator populations plus the Saudi test case (Section~\ref{sec:matrix}).
+
+\subsection{Characteristics of sources --- the evidence matrix}\label{sec:matrix}
+The charted comparator populations and their assigned grades are given in Table~\ref{tab:matrix}; full source-level extraction is in Supplementary Table~S1. Their relative positions --- by evidence grade and by how specific each cancer signal is to the exposure --- are mapped qualitatively in Figure~\ref{fig:benchmark}. This is a positional benchmark, not a pooled meta-analysis.
+
+\begin{table*}[tbp]
+\centering
+\caption{Evidence matrix of charted comparator populations. Reported metrics are retained in their native units per the metric-separation rule (Rule~2, Figure~\ref{fig:metric}) and are not pooled.}
+\label{tab:matrix}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}L{0.15\textwidth}L{0.14\textwidth}L{0.07\textwidth}L{0.21\textwidth}L{0.14\textwidth}L{0.14\textwidth}@{}}
+\toprule
+Comparator population & Exposure category & Evidence grade & Best-supported signal & Reported metric (kept separate) & Synthesis role \\
+\midrule
+Life Span Study (Hiroshima/Nagasaki) & Ionizing radiation & A & Dose-responsive solid-cancer risk; significant in never-smokers & ERR/Gy & Primary causal anchor \\
+Semipalatinsk historical cohort & Nuclear-test fallout & A/B & Positive solid-cancer mortality dose-response & ERR/Sv 1.77 (full cohort) & Independent radiation anchor \\
+Camp Lejeune & Solvent contamination (military base) & A/B & Kidney, bladder, leukaemia, NHL, male breast excess & Dose-response RR/HR & Strong military-associated comparator \\
+Khamisiyah / Kuwait oil-fire veterans & Wartime combustion + nerve agent & B & Elevated brain-cancer mortality in modeled plume subsets & Mortality ratio 2--3$\times$ & Supportive wartime signal \\
+U.K. Gulf War cohort & Mixed deployment & B & No overall cancer excess in early follow-up & IRR 0.99 & Negative comparator (latency constraint) \\
+Agent Orange / TCDD & Chemical agent (dioxin) & B/C & Stronger associations with serum-TCDD measurement & RR 1.6 (biomarker) vs 1.01 (proxy) & Exposure-ascertainment lesson \\
+Post-9/11 burn pits / PACT Act & Wartime combustion & D (contextual) & Presumptive cancers incl.\ non-tobacco sites & Policy-presumptive list & Institutional recognition only \\
+Bhopal & Acute industrial chemical release & F (C cytogenetics) & Community-reported site ratios; chromosome instability & Community-survey ratios & Hypothesis-generating; verify ratios \\
+Fallujah & Civilian conflict-associated exposure & F/B & Pediatric cancer \& birth-sex-ratio anomalies & RR 12.6 (pediatric) & High-specificity, lower-certainty \\
+Kuwaiti civilians & Wartime combustion & B/F & Breast-cancer inflection $\sim$1999 (screening-caveated) & ASIR change & Supporting; screening-confounded \\
+Beirut Port & Warehouse oxidizer release & F/E & Acute air-quality disruption; PAH risk & Immature latency & Contextual exposure case \\
+Louisiana ``Cancer Alley'' & Chronic petrochemical pollution & E (contextual) & Measured VOC cancer-\emph{risk} exceeds modeled & Modeled lifetime risk & Chronic-exposure plausibility, not incidence \\
+\textbf{Saudi Eastern Province} & Oil-fire plume + petrochemical baseline & Ecological hypothesis & Lung crude-rate regional contrast; non-tobacco clusters & Crude-rate ratio 5.7$\times$ & Main hypothesis to be tested \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\columnwidth]{Fig3.pdf}
+\caption{Cross-cohort qualitative benchmark. Vertical position $=$ exposure-specificity of the signal; horizontal position $=$ evidence grade. The Saudi Eastern Province marker is dashed to denote that it is an ecological, hypothesis-generating signal, not a graded cohort estimate.}
+\label{fig:benchmark}
+\end{figure}
+
+\subsection{Synthesis by exposure category}
+
+\subsubsection{Ionizing radiation --- strongest benchmark (Grade A)}
+The Life Span Study (LSS) of 105,444 atomic-bomb survivors, with individual DS02R1 dose reconstruction \citep{cullings2017} and individual smoking histories, identified 22,538 solid-cancer cases over 1958--2009 \citep{grant2017}, with significant excess relative risk persisting more than six decades after exposure and reconfirmed in a 2025 residual-radiation analysis \citep{ohtaki2025,brenner2025}. \textbf{The radiation ERR/Gy for solid cancer is statistically significantly positive in never-smokers} --- the foundational result establishing that a non-tobacco environmental exposure causes cancer independently of smoking. For lung cancer, the smoking $\times$ radiation joint effect is best described by a generalized sub-multiplicative model \citep{furukawa2010,egawa2012}: the radiation ERR/Gy rises with smoking intensity to $\sim$10 cigarettes/day then declines toward zero in heavy smokers, reflecting baseline-risk saturation rather than radiation becoming harmless.
+
+The Semipalatinsk historical cohort (19,545 residents near the Soviet test site; 582,750 person-years) provides an independent radiation anchor \citep{bauer2005}. The full-cohort ERR/Sv for all solid cancers was \textbf{1.77 (95\% CI 1.35--2.27)}, with a conservative exposed-group-only estimate of 0.81 (0.46--1.33); significant dose-response was observed for lung, stomach, female breast, and (in women) oesophageal cancer. Two independent atomic-weapons exposure cohorts thus produce consistent dose-responsive results.
+
+\emph{Claim level: Established.} Ionizing radiation is an independent, dose-responsive carcinogen acting in the absence of tobacco. Its relevance to the Saudi combustion hypothesis is epistemic, not mechanistic: it establishes the \emph{principle} that a sufficiently carcinogenic, well-measured non-tobacco exposure produces detectable population excess even amid background smoking.
+
+\subsubsection{Industrial solvents / military-associated environmental contamination (Grade A/B)}
+Camp Lejeune is the strongest non-radiation comparator. Drinking water at the base was contaminated with trichloroethylene (TCE), tetrachloroethylene (PCE), benzene, and vinyl chloride from 1953 to 1987. The 2024 ATSDR cohort study --- comparing Camp Lejeune personnel, civilian workers, and dependents against the demographically similar but uncontaminated Camp Pendleton --- found dose-responsive increased risk for \textbf{kidney cancer, bladder cancer, non-Hodgkin lymphoma, leukaemia, and (in a case-control analysis) male breast cancer} \citep{atsdr2024,ruckart2015}. Several of these are low-smoking-confounding sites.
+
+Two distinct institutional frameworks should not be conflated. In 2017, following National Academies review \citep{nrc2009}, the U.S. Department of Veterans Affairs established presumptive service-connection for eight conditions (adult leukaemia, aplastic anaemia/myelodysplastic syndromes, bladder, kidney, and liver cancer, multiple myeloma, non-Hodgkin lymphoma, and Parkinson's disease) for the purpose of disability compensation \citep{va2017}. Separately, the Camp Lejeune Justice Act of 2022 (within the PACT Act) created a civil-claim pathway allowing affected individuals to sue for damages; it did not itself create the VA presumptive list \citep{clja2022}. Per Rule~1, the epidemiologic association (Grade A/B) is charted separately from these legal frameworks (contextual) and from the solvents' mechanistic plausibility (Grade C).
+
+\emph{Claim level: Established} (for solvent contamination as an independent carcinogenic exposure).
+
+\subsubsection{Wartime combustion --- supportive but heterogeneous (Grade B)}
+The Khamisiyah/oil-fire subset of U.S. Gulf War veterans showed elevated brain-cancer mortality in modelled plume zones: $\sim$2$\times$ \citep{bullman2005} rising to $\sim$3$\times$ \citep{barth2009}. Brain cancer is a low-smoking-confounding site, which gives the signal specificity. However, exposure-modelling uncertainty, small case numbers, and overlapping Gulf War exposures constrain inference \citep{gao2004,haley2013}. \emph{Claim level: Associated}, not Established.
+
+The U.K. Gulf War cohort (51,721 deployed vs 50,755 controls) was essentially null for overall cancer incidence in early follow-up (IRR 0.99, 95\% CI 0.83--1.17) \citep{macfarlane2003}. This negative result is retained and made visible: it constrains broad claims about short-latency or brief-deployment cancer excess and underscores the need for latency-aware follow-up.
+
+\textbf{Correction to prior drafts (exposure ascertainment).} The Poirier et al.\ \citep{poirier1998} Kuwait biomonitoring study of 61 deployed soldiers is \emph{not} evidence of elevated PAH exposure. It found low ambient PAH in the soldiers' Kuwait working areas, with PAH--DNA adduct levels \emph{lowest} during Kuwait deployment and \emph{rising} after return to Germany; the authors concluded the group was not exposed to elevated PAH while deployed. It is therefore charted as a cautionary exposure-ascertainment example --- proximity to the oil fires did not guarantee high personal dose for all subgroups --- and is explicitly \emph{not} used as mechanistic support. This parallels the dioxin measurement lesson (Section~\ref{sec:dioxin}).
+
+Post-9/11 burn-pit exposure ($\approx$3.5 million service members) is represented by the PACT Act presumptive list of 30+ conditions, including non-tobacco sites \citep{pact2022,nasem2020}. This is contextual (Grade D) --- institutional recognition of toxic-exposure plausibility, \emph{not} a quantitative effect estimate.
+
+\subsubsection{Chemical agents / dioxins --- an exposure-ascertainment lesson (Grade B/C)}\label{sec:dioxin}
+The Agent Orange / TCDD literature illustrates a methodological rule rather than a simple causal claim. Studies using direct serum-TCDD measurement \citep{akhtar2004,steenland1999} show stronger, more consistent associations (all-sites cancer RR 1.6, 95\% CI 1.2--2.2) than studies relying on external service proxies (pooled RR $\approx$1.01). The submission-grade statement: \textbf{biomarker-defined dioxin exposure supports carcinogenic plausibility and selected associations; broad service proxies are less consistent because exposure misclassification biases toward the null} \citep{iomvao,pesatori2009}. Vietnamese civilians in sprayed areas show elevated sister-chromatid-exchange frequencies (Grade C cytogenetic support).
+
+\subsubsection{Acute industrial release --- Bhopal (Grade F; C for cytogenetics)}
+The 1984 Union Carbide methyl isocyanate release exposed $\approx$500,000 residents. Community-survey materials report striking site-specific ratios in exposed versus unexposed populations of similar income and education \citep{sambhavna,dhara2002}. Per Rule~1, \textbf{these community-survey ratios are charted as hypothesis-generating (Grade F) and are not used as registry-grade benchmark estimates} unless independently adjudicated. The persistent chromosome instability documented in survivors \citep{mishra2009,senthilkumar2012} supports long-term genotoxic harm (Grade C). Bhopal is a biologically plausible, socially important comparator whose largest reported ratios require independent verification before benchmark use.
+
+\subsubsection{Civilian conflict-associated exposure --- Fallujah and Kuwait (Grade F/B)}
+Fallujah \citep{busby2010}: age-standardized cancer RR 4.22 (95\% CI 2.8--6.6); pediatric cancer RR 12.6 (4.9--32); perturbed birth sex ratio \citep{alaani2011}. The pediatric and sex-ratio signals are low-smoking-confounding by construction. The design has been contested and the sample is modest; it is charted as a \textbf{high-specificity, lower-certainty} signal. Kuwaiti civilians show a breast-cancer inflection $\sim$1999 \citep{cange2013,alawadhi2023}, explicitly caveated as partly screening-driven.
+
+\subsubsection{Chronic petrochemical pollution --- Cancer Alley (Grade E, contextual)}
+The Louisiana industrial corridor is an excellent chronic-petrochemical analogue, but the metric matters decisively. Direct VOC measurements indicate air-toxics cancer \emph{risks} up to 11$\times$ higher than regulatory models, centred on ethylene oxide, chloroprene, and formaldehyde \citep{robinson2025,terrell2024,kweon}. These are modeled or measured lifetime \emph{risk}, not observed \emph{incidence}, and per Rule~2 are charted as contextual exposure-risk plausibility, not as incidence ratios.
+
+\subsection{Marker sites and the breast-cancer exclusion (RQ3)}\label{sec:markers}
+Candidate registry-based exposure markers are the \emph{non-screening-dominated} sites: lung, brain/CNS, leukaemia and lymphoma, oesophageal, kidney, bladder, pancreatic, and pediatric cancers. Among these, behavioural confounding still varies sharply: \textbf{lung cancer is exposure-relevant but strongly smoking-confounded and must be analysed with explicit smoking control}, whereas pediatric, brain/CNS, haematologic, and (in solvent contexts) kidney cancers are the cleaner low-smoking-confounding candidates. Female breast cancer is excluded as a \emph{primary} Saudi combustion-exposure marker because mammographic screening rollout produces a large apparent incidence increase ($\sim$37\% from lead-time bias alone over 20 years; Italian service-screening data: 36.2\% raw excess $\rightarrow$ 4.6\% corrected \citep{paci2006}), compounded by reproductive-transition and access effects, and because Gulf-region screening expanded unevenly across regions after $\sim$2010, generating artificial regional gradients that mimic exposure gradients. Breast cancer is retained only in radiation cohorts. The full marker-site framework is given in Supplementary Figure~S2.
+
+\subsection{Temporal trends and spatial clusters (RQ3--RQ4 support)}
+Three registry signatures are more discriminating than raw counts: latency-consistent temporal spikes, formally tested spatial clusters, and age-stratum anomalies. Latency-consistent temporal patterns appear across cohorts: LSS leukaemia peaking 5--10 years post-1945; Semipalatinsk solid-cancer mortality rising through the 1970s--1990s; Chernobyl pediatric thyroid cancer spiking $\sim$4--5 years post-1986. In Saudi data, lung and colorectal incidence accumulated most heavily in 2010--2020, a 20--25-year lag from 1991 consistent with combustion-induced solid-tumour latency.
+
+Formal spatial autocorrelation \citep{alahmadi2013} found significant high-high clusters in the Eastern Province for lung, prostate, and Hodgkin's (males) and thyroid (females). These clusters identify priority sites for formal modeling, but their interpretation differs sharply by site: lung requires explicit smoking control; prostate and thyroid are detection/screening-sensitive and require diagnostic-intensity control; Hodgkin's is the cleaner low-smoking-confounding signal but still requires age, diagnostic, and registry-completeness adjustment. Clustering is therefore charted as hypothesis-locating, not attribution-confirming.
+
+\subsection{Public-health relevance: survival profile}
+Incidence and survival together are more informative than incidence alone, though survival speaks to the \emph{importance} of a signal rather than to causal attribution. In Saudi 5-year observed survival, the two sites most associated with combustion/chemical exposure --- lung and oesophageal --- have the poorest survival, and lung-cancer survival has plateaued even as overall Saudi cancer survival has risen toward Western levels \citep{ksasurv2022,concord3}. A 2010--2024 analysis ($n=26{,}487$) found 5-year survival varying by region (45.2--68.7\%; adjusted HR 0.68, 95\% CI 0.62--0.74, highest vs lowest region), with specialized-centre access predicting survival \citep{ksaregional2024}. Because the Eastern Province has comparatively strong healthcare infrastructure, a regional incidence elevation there would be \emph{less} readily explained by under-ascertainment than an elevation in an under-served region --- which is why access-to-care variables must enter any confirmatory analysis. Several exposure-plausible sites (lung, oesophageal, pancreatic, glioblastoma) fall toward the low-treatment-efficacy end; this compounds the public-health stakes but does not, by itself, strengthen causal attribution.
+
+\subsection{The Saudi Eastern Province hypothesis (RQ4)}\label{sec:saudi}
+The natural-experiment structure --- dated exposure event, registry onset, latency window, observed contrast, and proposed analysis --- is summarized in Supplementary Figure~S3.
+
+\textbf{What can be said now.} The hypothesis is plausible and important: the region had documented exposure potential from the 1991 plume (elevated SO$_2$, CO, H$_2$S, NO$_x$, and PM at Dhahran, Abqaiq, Rahimah, Jubail, and Tanajib, peaking May 1991 \citep{amin1994}), a long-standing petrochemical baseline \citep{alidrissi1987,altamimi1996}, and a registry-reported lung-cancer regional contrast. That contrast --- 3.36 per 100,000 in the Eastern Province versus 0.59 in Jazan, an $\approx$5.7-fold ratio \citep{scrlung2025} --- is a \emph{crude} (not age-standardized) incidence-rate contrast; the source reports it among crude regional rates, so regional age structure is not adjusted and must be addressed in any formal analysis.
+
+\textbf{Two exposures, not one.} Because the Eastern Province had both acute 1991 plume exposure and a chronic petrochemical baseline, the primary analysis estimates a \emph{combined} environmental-exposure signal; secondary analyses should attempt separation using plume-intensity estimates, distance from petrochemical facilities, and residence history.
+
+\textbf{Smoking-prevalence sensitivity.} Could regional smoking differences alone produce a 5.7-fold contrast? Under a simple two-category model in which the population lung-cancer rate is proportional to $p \cdot \mathrm{RR} + (1-p)$ (with $p$ the current-smoking prevalence and RR the current-versus-never relative risk), the answer is no for realistic differences (Table~\ref{tab:sens}). National active-smoking prevalence is $\approx$27.5\% in men and 3.7\% in women, with the Eastern Province not markedly above national \citep{gats2019}. A realistic regional gap (20\% vs 10\%) yields a rate ratio near 1.5; even a large gap (30\% vs 8\%) reaches only $\approx$2.5; only an implausible 45--50\% vs 4--5\% gap with RR $=20$ approaches the observed value. This is a transparent bias analysis, not a fitted model, and it does not address the crude-rate age-structure issue --- but it shows that a smoking-only explanation is implausible as the sole driver.
+
+\begin{table}[tbp]
+\centering
+\caption{Smoking-prevalence sensitivity analysis. Implied population lung-cancer rate ratio between a higher- and a lower-prevalence region from differences in current-smoking prevalence \emph{alone}, under rate $\propto p\cdot\mathrm{RR}+(1-p)$. Observed crude-rate contrast $\approx$5.7. Realistic regional gaps cannot reproduce it.}
+\label{tab:sens}
+\footnotesize
+\begin{tabular}{@{}L{0.34\columnwidth}cccc@{}}
+\toprule
+Scenario & $p_{\text{high}}$ & $p_{\text{low}}$ & \multicolumn{1}{c}{RR=10} & RR=15 / 20 \\
+\midrule
+Realistic regional gap & 0.20 & 0.10 & 1.47 & 1.58 / 1.66 \\
+Large gap & 0.30 & 0.08 & 2.15 & 2.45 / 2.66 \\
+Implausible extreme & 0.45 & 0.05 & 3.48 & 4.29 / 4.90 \\
+Required to reach 5.7 & 0.50 & 0.04 & 4.04 & 5.13 / 5.97 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{What cannot be said now.} The current evidence is ecological. It cannot, by itself, distinguish 1991 oil-fire exposure from chronic petrochemical emissions, smoking, occupational exposure, urbanization, healthcare access, diagnostic intensity, migration, or registry completeness. ``Unlikely to be fully explained by a smoking-only model'' is not equivalent to ``demonstrated environmental causation.''
+
+\textbf{Defensible claim (Compatible level).} \emph{The Eastern Province cancer pattern is compatible with a moderate sustained environmental-exposure hypothesis and requires definitive evaluation through a pre-specified, region-by-year, site-specific analysis of SCR microdata.} Jazan is not the ideal sole comparator; a proper analysis compares the Eastern Province against all regions, with negative-control and screening-sensitive cancers analysed separately.
+
+%% ====================================================================
+\section{Discussion}
+
+\subsection{Summary of evidence}
+This review maps a heterogeneous evidence base onto a transparent grade-and-metric framework. The highest-grade evidence (radiation and solvent-contamination cohorts) establishes that non-tobacco environmental exposures independently cause cancer, including in never-smokers and at low-smoking-confounding sites. Mid-grade evidence (wartime combustion, biomarker-defined dioxin) supports site-specific excess with strength conditional on exposure ascertainment. Lower-grade and contextual evidence provides supporting or hypothesis-generating signal only and is never numerically pooled with cohort evidence. The recurring discriminator is the low-smoking-confounding marker.
+
+\subsection{Etiologic synthesis --- integrated burden, stated carefully}
+Many carcinogenic exposures increase cancer risk by adding to tissue-specific mutational, epigenetic, inflammatory, or proliferative burden over time; tobacco and non-tobacco environmental exposures therefore act as co-contributors whose relative contribution varies by tissue, dose, age at exposure, inherited susceptibility, and latency. These exposures are \emph{not} biologically interchangeable --- radiation, PAHs, benzene, dioxins, and TCE/PCE produce distinct mutational signatures and target organs --- so the unifying claim is epidemiologic and probabilistic, not one of molecular identity. (Quantitative decompositions of cancer-driving mutations into replicative, environmental, and hereditary fractions remain contested and are not relied upon here \citep{tlv2017,wu2016}.) This reframes the smoking-versus-environment contrast as co-contribution rather than competition, without overstating mechanistic equivalence, and it explains why exposure-associated cancers concentrate in aggressive, poor-survival sites.
+
+\subsection{Policy and surveillance implications}
+The practical implications follow from testability rather than from completed attribution, and are therefore robust to the review's limitations. For Saudi Arabia, possible next steps include the SCR microdata analysis specified in Section~\ref{sec:study}; a never-smoker lung-cancer sub-study; geocoding of cases against petrochemical corridors and 1991 plume-intensity estimates; separate reporting of screening-sensitive and exposure-marker cancers; enhanced environmental monitoring around petrochemical and military-supporting infrastructure; and secure, ethics-approved registry-data access for collaborative analysis.
+
+\subsection{Strengths and limitations}\label{sec:limits}
+\textbf{Strengths.} Transparent evidence grading; strict metric separation; disciplined causal language; an explicit, reproducible search strategy; visible inclusion of a negative comparator; correction of a prior exposure-ascertainment error; a quantitative smoking-confounding sensitivity analysis; and a fully specified confirmatory-study protocol.
+
+\textbf{Limitations.} This is a graded evidence map plus protocol, not a completed systematic review or meta-analysis; it does not pool effect sizes, and the formal four-database search with dual screening and populated flow counts is a registered next step (Section~\ref{sec:scope}). Comparator populations differ in exposure type, dose, latency, outcome ascertainment, and smoking measurement. Some signals are mortality- rather than incidence-based; some are modeled; some cohorts have immature latency. The Saudi signal is ecological, rests on a crude (non-age-standardized) rate contrast, and is vulnerable to the ecological fallacy, migration, confounding, and registry maturation. These limitations define the manuscript category and do not undermine the graded core finding.
+
+%% ====================================================================
+\section{Proposed confirmatory study: SCR microdata analysis (RQ5)}\label{sec:study}
+The key next step is a pre-registered quasi-experimental study using SCR microdata from 1994 to the most recent available year. The causal structure to be estimated --- the exposure-to-incidence path and the confounders to be adjusted --- is shown as a directed acyclic graph in Figure~\ref{fig:dag}, and the specification is summarized in Table~\ref{tab:study}.
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\columnwidth]{Fig4.pdf}
+\caption{Causal diagram (DAG) for the proposed SCR analysis. The teal path is the estimand; each covariate is a separate edge entered as a covariate, fixed effect, or negative-control comparison. Smoking is modelled as the key dual-path confounder.}
+\label{fig:dag}
+\end{figure}
+
+\textbf{Design.} Because the registry begins in 1994 --- after the 1991 event --- a classical difference-in-differences with a pre-event parallel-trends test is not available. The design is therefore a \emph{latency-stratified regional event-study}: a region-by-year panel of incidence with calendar-year and region fixed effects and latency-aware event-time coefficients indexed to 1991, estimating divergence of the Eastern Province from other regions across plausible latency windows rather than a clean pre/post contrast.
+
+\textbf{Estimand.} The excess post-latency incidence rate in the Eastern Province relative to other Saudi regions, net of national secular trends, age, sex, site, and region-specific baseline differences.
+
+\textbf{Exposure.} Primary: Eastern-Province residence during the post-1991 latency window. Stronger: an exposure gradient from 1991 plume-intensity estimates, distance from petrochemical facilities, and residence history; this gradient also supports the attempted separation of acute-plume from chronic-petrochemical signal (Section~\ref{sec:saudi}). Where 1991 residence is unavailable, current residence is interpreted cautiously (migration dilution).
+
+\textbf{Primary outcomes (pre-specified).} Lung (analysed with explicit smoking control), oesophageal, brain/CNS, leukaemia, non-Hodgkin lymphoma, kidney, bladder, and pediatric cancers. Colorectal is secondary. Female breast, thyroid, and prostate are analysed separately as detection-sensitive outcomes, never as primary markers.
+
+\textbf{Model.} Negative-binomial or Poisson regression with population offset, stratified by age, sex, site, region, and calendar year; region and year fixed effects; an Eastern-Province $\times$ post-latency interaction; event-time coefficients testing divergence in plausible windows (5--10 years haematologic; 15--30 years solid tumours).
+
+\textbf{Controls and sensitivity.} Negative controls: cancers not expected to respond to combustion exposure and screening-dominated sites. Positive controls: lung and (if exposure sufficient) haematologic malignancies. Sensitivity analyses span smoking and passive-smoking prevalence, petrochemical employment, urbanization, socioeconomic status, healthcare access, registry completeness, nationality, migration, age-standardization method, stage, histology, and regional screening intensity. A never-smoker lung-cancer subcohort, if oncology-record smoking status is available, would block the smoking path directly.
+
+\textbf{Minimal publishable version.} Even without individual smoking data, an honest ecological analysis using region-year-age-sex-site counts and denominators, with pre-specified non-breast primary outcomes and event-study models, is feasible --- provided it is presented at the Compatible claim level.
+
+\begin{table}[tbp]
+\centering
+\caption{Specification of the proposed SCR microdata analysis.}
+\label{tab:study}
+\footnotesize
+\begin{tabular}{@{}L{0.28\columnwidth}L{0.64\columnwidth}@{}}
+\toprule
+Element & Specification \\
+\midrule
+Estimand & Excess post-latency incidence rate, Eastern Province vs other regions, net of secular trend \\
+Design & Latency-stratified regional event-study (region $\times$ year panel), 1991 as event; no pre-event period (registry from 1994) \\
+Data & SCR microdata 1994--present: region, year, age, sex, site, morphology, stage \\
+Exposure & Eastern-Province residence post-1991; gradient via plume intensity / facility distance (preferred); acute vs chronic separation as secondary \\
+Primary outcomes & Lung (smoking-controlled), oesophageal, brain/CNS, leukaemia, NHL, kidney, bladder, pediatric \\
+Secondary & Colorectal (registry-stable, less specific) \\
+Analysed separately & Female breast, thyroid, prostate (detection-sensitive) \\
+Model & Negative-binomial / Poisson, population offset; region $+$ year fixed effects; EP $\times$ post-latency interaction \\
+Latency windows & 5--10 yr (haematologic); 15--30 yr (solid tumours) \\
+Controls & Negative (non-responsive, screening-dominated) and positive (lung, haematologic) controls \\
+Key sensitivity & Age-standardization; smoking/passive-smoking; petrochemical employment; urbanization; SES; access; registry completeness; migration \\
+Highest-value extension & Never-smoker lung-cancer subcohort (blocks the smoking path directly) \\
+Claim ceiling & ``Compatible'' until estimated; ``Associated/Established'' only if effects survive controls \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%% ====================================================================
+\section{Conclusions}
+Environmental carcinogenesis is not reducible to tobacco. High-grade evidence from radiation and solvent-contamination cohorts, supported by graded combustion, dioxin, industrial-release, civilian-conflict, and contextual chronic-pollution evidence, shows that non-tobacco environmental exposures can contribute materially to cancer risk --- but the strength of inference varies sharply and must be graded rather than asserted uniformly. The contribution of this article is the disciplined framework --- grade evidence, separate metrics, discipline causal language, and prevent ecological overclaiming --- together with a pre-specified registry-analysis protocol. The Saudi Eastern Province cancer pattern is \emph{compatible with} a moderate sustained environmental-exposure hypothesis; it does not yet support causal attribution. The latency-stratified SCR event-study specified here, with negative controls and a never-smoker sub-analysis, would convert that ecological signal into a testable epidemiologic estimand.
+
+%% ====================================================================
+\section*{Declarations}
+\textbf{Funding.} No external funding. Prepared internally at Al Yaquob Advisory, Riyadh.
+\textbf{Conflicts of interest.} None declared.
+\textbf{Ethics approval.} Not applicable to this review (no human subjects or new primary data); ethics approval will be required for the proposed SCR microdata analysis.
+\textbf{Data and code availability.} No new data were analysed. The charting/extraction sheet, full search strategy, and protocol will be deposited on the Open Science Framework. The smoking-sensitivity calculation (Table~\ref{tab:sens}) is reproducible from the formula and parameters given.
+\textbf{Author contributions.} Sole author: conceptualization, search design, charting, synthesis, drafting.
+
+%% ====================================================================
+\section*{Appendix A. Database search translations}
+The MEDLINE/PubMed string (Section~2.4) is translated below for the three remaining databases; all limited to inception--2026, English.
+
+\textbf{Embase (Emtree + free text):}
+{\footnotesize
+\begin{verbatim}
+('neoplasm'/exp OR cancer:ti,ab OR carcinoma:ti,ab
+   OR neoplasm:ti,ab OR tumour:ti,ab OR tumor:ti,ab
+   OR leukaemia:ti,ab OR lymphoma:ti,ab)
+AND
+('ionizing radiation'/exp OR 'radioactive fallout'/exp
+   OR fallout:ti,ab OR 'atomic bomb':ti,ab
+   OR 'oil fire':ti,ab OR 'burn pit':ti,ab
+   OR 'polycyclic aromatic hydrocarbon'/exp
+   OR dioxin:ti,ab OR trichloroethylene:ti,ab
+   OR tetrachloroethylene:ti,ab
+   OR 'methyl isocyanate':ti,ab
+   OR petrochemical:ti,ab OR 'volatile organic compound':ti,ab
+   OR 'Gulf War':ti,ab OR 'military personnel'/exp)
+AND
+(incidence:ti,ab OR mortality:ti,ab OR cohort:ti,ab
+   OR registry:ti,ab OR 'relative risk':ti,ab
+   OR 'standardized incidence':ti,ab)
+\end{verbatim}
+}
+
+\textbf{Scopus (TITLE-ABS-KEY):}
+{\footnotesize
+\begin{verbatim}
+TITLE-ABS-KEY(
+  (cancer OR carcinoma OR neoplasm OR tumour OR tumor
+     OR leukaemia OR leukemia OR lymphoma)
+  AND (radiation OR fallout OR "atomic bomb"
+     OR "oil fire" OR "burn pit" OR "polycyclic aromatic"
+     OR dioxin OR TCDD OR trichloroethylene
+     OR tetrachloroethylene OR "methyl isocyanate"
+     OR petrochemical OR "volatile organic compound"
+     OR "Gulf War")
+  AND (incidence OR mortality OR cohort OR registry
+     OR "relative risk" OR "excess relative risk") )
+\end{verbatim}
+}
+
+\textbf{Web of Science Core Collection (Topic, TS=):}
+{\footnotesize
+\begin{verbatim}
+TS=( (cancer OR carcinoma OR neoplasm* OR tumo?r*
+        OR leukaemia OR leukemia OR lymphoma)
+   AND (radiation OR fallout OR "atomic bomb"
+        OR "oil fire*" OR "burn pit*" OR "polycyclic aromatic"
+        OR dioxin* OR TCDD OR trichloroethylene
+        OR tetrachloroethylene OR "methyl isocyanate"
+        OR petrochemical* OR "volatile organic compound*"
+        OR "Gulf War")
+   AND (incidence OR mortality OR cohort OR registry
+        OR "relative risk" OR "excess relative risk") )
+\end{verbatim}
+}
+
+\textbf{Grey literature:} institution-site searches (ATSDR, NASEM, UNSCEAR, IARC, RERF, VA, GAO, Saudi MoH/SCR) by exposure keyword.
+
+\section*{Appendix B. Reporting against PRISMA-ScR}
+\begin{table}[h]
+\centering
+\footnotesize
+\begin{tabular}{@{}L{0.46\columnwidth}L{0.44\columnwidth}@{}}
+\toprule
+PRISMA-ScR item & Status / location \\
+\midrule
+Title; structured abstract & Completed \\
+Rationale; objectives & Section~1 \\
+Protocol \& registration & Section~2.1 (OSF, pre-execution) \\
+Eligibility criteria & Section~2.2 \\
+Information sources & Section~2.3 \\
+Search (full strategy) & Section~2.4, Appendix A \\
+Selection of sources & Registered protocol (Section~5); planned flow Suppl.\ Fig.~S1 \\
+Data charting; data items & Section~2.5; Suppl.\ Table~S1 \\
+Critical appraisal (grading) & Section~2.6 \\
+Synthesis of results & Sections~2.6, 3 \\
+Results: selection (counts/flow) & Pending registered execution (Section~2.7) \\
+Results: characteristics & Section~3.2; Suppl.\ Table~S1 \\
+Results: synthesis & Sections~3.3--3.9 \\
+Summary; limitations; conclusions & Sections~4.1, 4.4, 6 \\
+Funding & Declarations \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%% ====================================================================
+\begin{thebibliography}{99}
+\footnotesize
+
+\bibitem{grant2017} Grant EJ, Brenner A, Sugiyama H, et al. Solid cancer incidence among the Life Span Study of atomic bomb survivors: 1958--2009. \textit{Radiat Res}. 2017;187(5):513--537.
+\bibitem{brenner2025} Brenner AV, et al. Radiation effects on the incidence of solid cancers in the Life Span Study: 1958--2009. 2025.
+\bibitem{furukawa2010} Furukawa K, Preston DL, Lauer S, et al. Radiation and smoking effects on lung cancer incidence among atomic bomb survivors. \textit{Radiat Res}. 2010;174(1):72--82.
+\bibitem{egawa2012} Egawa H, Furukawa K, Preston DL, et al. Radiation and smoking effects on lung cancer incidence by histological types. \textit{Radiat Res}. 2012;178(3):191--201.
+\bibitem{ohtaki2025} Ohtaki M, Otani K, Hoshi M, Yasuda H. Effects of non-initial radiation exposure on solid cancer mortality among Hiroshima A-bomb survivors. \textit{Front Public Health}. 2025;13:1651887.
+\bibitem{cullings2017} Cullings HM, Grant EJ, Egbert SD, et al. DS02R1: improvements to atomic bomb survivors' input data. \textit{Health Phys}. 2017;112(1):56--97.
+\bibitem{bauer2005} Bauer S, Gusev BI, Pivina LM, Apsalikov KN, Grosche B. Radiation exposure due to local fallout from Soviet atmospheric nuclear weapons testing in Kazakhstan: solid cancer mortality in the Semipalatinsk historical cohort, 1960--1999. \textit{Radiat Res}. 2005;164(4):409--419.
+\bibitem{grosche2011} Grosche B, et al. Mortality from cardiovascular diseases in the Semipalatinsk historical cohort, 1960--1999. \textit{Radiat Res}. 2011.
+\bibitem{beir1999} National Research Council. Health Effects of Exposure to Radon: BEIR VI. National Academy Press; 1999.
+\bibitem{puma2023} PUMA Collaboration. Radon and lung cancer in the Pooled Uranium Miners Analysis. 2023.
+\bibitem{whittemore1983} Whittemore AS, McMillan A. Lung cancer mortality among U.S. uranium miners: a reappraisal. \textit{J Natl Cancer Inst}. 1983;71(3):489--499.
+\bibitem{atsdr2024} Agency for Toxic Substances and Disease Registry. Cancer incidence among Marines and Navy personnel and civilian workers exposed to industrial solvents in drinking water at USMC Base Camp Lejeune: a cohort study. ATSDR; 2024.
+\bibitem{ruckart2015} Ruckart PZ, Bove FJ, Maslia M. Evaluation of contaminated drinking water and male breast cancer at Camp Lejeune. 2015.
+\bibitem{nrc2009} National Research Council. Contaminated Water Supplies at Camp Lejeune: Assessing Potential Health Effects. National Academies Press; 2009.
+\bibitem{va2017} U.S. Department of Veterans Affairs. Diseases associated with exposure to contaminants in the water supply at Camp Lejeune (presumptive service connection for eight conditions). Final rule, effective 14 March 2017.
+\bibitem{clja2022} Camp Lejeune Justice Act of 2022 (within the Honoring our PACT Act, PL 117-168) --- civil-claim pathway, distinct from VA presumptive service connection.
+\bibitem{bullman2005} Bullman TA, Mahan CM, Kang HK, Page WF. Mortality in U.S. Army Gulf War veterans exposed to 1991 Khamisiyah chemical munitions destruction. \textit{Am J Public Health}. 2005;95(8):1382--1388.
+\bibitem{barth2009} Barth SK, Kang HK, Bullman TA, Wallin MT. Neurological mortality among U.S. veterans of the Persian Gulf War. \textit{Am J Ind Med}. 2009;52(9):663--670.
+\bibitem{macfarlane2003} Macfarlane GJ, Biggs AM, Maconochie N, et al. Incidence of cancer among UK Gulf War veterans: cohort study. \textit{BMJ}. 2003;327(7428):1373--1376.
+\bibitem{poirier1998} Poirier MC, Weston A, Schoket B, et al. Biomonitoring of United States Army soldiers serving in Kuwait in 1991. \textit{Cancer Epidemiol Biomarkers Prev}. 1998;7(6):545--551. [Low Kuwait PAH exposure; adducts lowest in Kuwait, rising after return --- cited as an exposure-ascertainment cautionary example.]
+\bibitem{amin1994} Amin MS, Husain T. Kuwaiti oil fires: air-quality monitoring. \textit{Atmos Environ}. 1994;28(13):2261--2276.
+\bibitem{iom2005} Institute of Medicine. Gulf War and Health, Vol.\ 3: Fuels, Combustion Products, and Propellants. National Academies Press; 2005.
+\bibitem{nasem2020} National Academies of Sciences, Engineering, and Medicine. Respiratory Health Effects of Airborne Hazards Exposures in the Southwest Asia Theater of Military Operations. National Academies Press; 2020.
+\bibitem{pact2022} Sergeant First Class Heath Robinson Honoring our PACT Act of 2022 (PL 117-168).
+\bibitem{haley2013} Haley RW, Tuite JJ. Epidemiologic evidence of health effects from long-distance transit of chemical-agent fallout from the 1991 Gulf War. \textit{Neuroepidemiology}. 2013;40(3):178--189.
+\bibitem{gao2004} U.S. Government Accountability Office. Gulf War Illnesses: Preliminary Assessment of DOD Plume Modeling. GAO-04-159; 2004.
+\bibitem{akhtar2004} Akhtar FZ, Garabrant DH, Ketchum NS, Michalek JE. Cancer in US Air Force veterans of the Vietnam War. \textit{J Occup Environ Med}. 2004;46(2):123--136.
+\bibitem{steenland1999} Steenland K, Piacitelli L, Deddens J, et al. Cancer, heart disease, and diabetes in workers exposed to TCDD. \textit{J Natl Cancer Inst}. 1999;91(9):779--786.
+\bibitem{iomvao} Institute of Medicine. Veterans and Agent Orange, Update series. National Academies Press; 1993--2018.
+\bibitem{pesatori2009} Pesatori AC, Consonni D, Rubagotti M, et al. Cancer incidence in the population exposed to dioxin after the Seveso accident. \textit{Environ Health}. 2009;8:39.
+\bibitem{sambhavna} Sambhavna Trust Clinic. Community Health Survey, Bhopal Gas Tragedy Survivors. Reports 2021--2026. [Community survey; hypothesis-generating.]
+\bibitem{mishra2009} Mishra PK, Samarth RM, Pathak N, et al. Bhopal gas tragedy: review of clinical and experimental findings after 25 years. \textit{Int J Occup Med Environ Health}. 2009;22(3):193--202.
+\bibitem{senthilkumar2012} Senthilkumar CS, Sah NK, Ganesh N. Methyl isocyanate-affected population and cancer susceptibility. \textit{Asian Pac J Cancer Prev}. 2012;13(11):5645--5647.
+\bibitem{dhara2002} Dhara VR, Dhara R. The Union Carbide disaster in Bhopal: a review of health effects. \textit{Arch Environ Health}. 2002;57(5):391--404.
+\bibitem{busby2010} Busby C, Hamdan M, Ariabi E. Cancer, infant mortality and birth sex-ratio in Fallujah, Iraq 2005--2009. \textit{Int J Environ Res Public Health}. 2010;7(7):2828--2837.
+\bibitem{alaani2011} Alaani S, Tafash M, Busby C, et al. Uranium and other contaminants in hair from parents of children with congenital anomalies in Fallujah. \textit{Confl Health}. 2011;5:15.
+\bibitem{alawadhi2023} Alawadhi E, et al. Progress against cancer in Kuwait: trends in incidence, survival and mortality. \textit{Gulf J Oncol}. 2023.
+\bibitem{cange2013} Cange CW. A Post-Conflict Assessment of Breast Cancer in Kuwait Using Mixed Methods. PhD thesis, University of Washington; 2013.
+\bibitem{alhajj2021} Al-Hajj S, Dhaini HR, Mondello S, et al. Beirut ammonium nitrate blast: analysis, review, and recommendations. \textit{Front Public Health}. 2021;9:657996.
+\bibitem{beirutpm2023} Long-term effect of the Beirut port explosion on airborne particulate matter. \textit{Aerosol Air Qual Res}. 2023;23:220395.
+\bibitem{robinson2025} Robinson AL, DeCarlo PF, Nachman KE, et al. Total cancer risk estimates from measured concentrations of volatile organic compounds in industrialized southeastern Louisiana. \textit{Proc Natl Acad Sci USA}. 2025. [Modeled/measured air-toxics risk; not observed incidence.]
+\bibitem{terrell2024} Terrell KA, James W. Air pollution and cancer risk in Louisiana's industrial corridor. Tulane Environmental Law Clinic; 2024.
+\bibitem{kweon} Kweon S, et al. Uneven magnitude of disparities in cancer risks from air toxics. \textit{Int J Environ Res Public Health}. [Cancer Alley modeled risk.]
+\bibitem{duffy2005} Duffy SW, Agbaje O, Tabar L, et al. Estimates of overdiagnosis from two trials of mammographic screening. \textit{Breast Cancer Res}. 2005;7(6):258--265.
+\bibitem{gotzsche2009} G\o tzsche PC, J\o rgensen KJ, M\ae hlen J, Zahl P-H. Estimation of lead time and overdiagnosis in breast-cancer screening. \textit{Br J Cancer}. 2009;100(1):219.
+\bibitem{paci2006} Paci E, et al. Overdiagnosis of breast cancer due to mammography after adjustment for lead time (Florence). 2006.
+\bibitem{concord3} Allemani C, Matsuda T, Di Carlo V, et al. Global surveillance of trends in cancer survival 2000--14 (CONCORD-3). \textit{Lancet}. 2018;391(10125):1023--1075.
+\bibitem{ksasurv2022} Population-based survival for cancer patients in Saudi Arabia, 2005--2009. \textit{Sci Rep}. 2022;12:330.
+\bibitem{ksaregional2024} Regional disparities and socioeconomic determinants of cancer survival in Saudi Arabia (26,487 patients, 2010--2024). 2024.
+\bibitem{ksacrc} First national survival data for colorectal cancer among Saudis, 1994--2004. [5-yr overall survival 44.6\%.]
+\bibitem{tlv2017} Tomasetti C, Li L, Vogelstein B. Stem-cell divisions, somatic mutations, cancer etiology, and cancer prevention. \textit{Science}. 2017;355(6331):1330--1334.
+\bibitem{wu2016} Wu S, Powers S, Zhu W, Hannun YA. Substantial contribution of extrinsic risk factors to cancer development. \textit{Nature}. 2016;529(7584):43--47.
+\bibitem{alidrissi1987} Al-Idrissi HY, Ibrahim EM, Ahmed T, et al. Cancer at Dhahran Health Center, Saudi Arabia (1981--1985). \textit{Ann Saudi Med}. 1987;7(4):288--294.
+\bibitem{altamimi1996} Al Tamimi T, Al-Bar A, Al-Suhaimi S, et al. Lung cancer in the Eastern Region of Saudi Arabia. \textit{Ann Saudi Med}. 1996;16(1):3--11.
+\bibitem{scr2020} Saudi Ministry of Health, Saudi Cancer Registry. Cancer Incidence Report 2020. National Cancer Center; 2023.
+\bibitem{scrlung2025} AlOmar RS, et al. Epidemiology of lung cancer in Saudi Arabia, Saudi Cancer Registry, 2015--2020. \textit{J Epidemiol Glob Health}. 2025. doi:10.1007/s44197-025-00491-x. [Eastern Province 3.36 vs Jazan 0.59 per 100,000, crude regional incidence rates.]
+\bibitem{basudan2023} Basudan AM, et al. Comprehensive retrospective analysis of colorectal cancer incidence patterns in Saudi Arabia. \textit{Life (Basel)}. 2023;13(11):2198.
+\bibitem{alahmadi2013} Al-Ahmadi K, Al-Zahrani A. Spatial autocorrelation of cancer incidence in Saudi Arabia. \textit{Int J Environ Res Public Health}. 2013;10(12):7207--7228.
+\bibitem{madinah2024} Epidemiological and clinical characteristics of lung cancer in Saudi Arabia (Madinah single-centre). 2024. [43\% never-smoker proportion.]
+\bibitem{gats2019} World Health Organization. Global Adult Tobacco Survey: Saudi Arabia. 2019.
+\bibitem{arksey2005} Arksey H, O'Malley L. Scoping studies: towards a methodological framework. \textit{Int J Soc Res Methodol}. 2005;8(1):19--32.
+\bibitem{levac2010} Levac D, Colquhoun H, O'Brien KK. Scoping studies: advancing the methodology. \textit{Implement Sci}. 2010;5:69.
+\bibitem{tricco2018} Tricco AC, Lillie E, Zarin W, et al. PRISMA Extension for Scoping Reviews (PRISMA-ScR): checklist and explanation. \textit{Ann Intern Med}. 2018;169(7):467--473.
+
+\end{thebibliography}
+
+%% ====================================================================
+%% ====================================================================
+%% Supplementary material (Figures S1-S3, Table S1) has been split into a
+%% separate file for Elsevier submission: see supplementary.tex / its PDF.
+
+
+\end{document}

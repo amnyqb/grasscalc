@@ -1,0 +1,51 @@
+<svg viewBox="0 80 900 460" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <rect width="900" height="540" fill="#FCFBF7"/>
+
+  <!-- Left column: valid markers -->
+  <rect x="40" y="100" width="390" height="400" rx="8" fill="#EAF1F0" stroke="#1B4D52" stroke-width="1.5"/>
+  <rect x="40" y="100" width="390" height="44" rx="8" fill="#1B4D52"/>
+  <text x="60" y="129" font-size="15" font-weight="700" fill="#FFFFFF">Valid exposure markers</text>
+  <text x="60" y="166" font-size="12" fill="#37606A">Low screening sensitivity; excess not readily</text>
+  <text x="60" y="183" font-size="12" fill="#37606A">explained by regional smoking gradients alone.</text>
+
+  <g font-size="13.5" fill="#1C2B36">
+    <circle cx="66" cy="214" r="4" fill="#1B4D52"/><text x="80" y="219">Lung (esp. never-smoker subset)</text>
+    <circle cx="66" cy="246" r="4" fill="#1B4D52"/><text x="80" y="251">Brain / CNS</text>
+    <circle cx="66" cy="278" r="4" fill="#1B4D52"/><text x="80" y="283">Leukaemia &amp; lymphoma</text>
+    <circle cx="66" cy="310" r="4" fill="#1B4D52"/><text x="80" y="315">Oesophageal</text>
+    <circle cx="66" cy="342" r="4" fill="#1B4D52"/><text x="80" y="347">Kidney (solvent-exposed cohorts)</text>
+    <circle cx="66" cy="374" r="4" fill="#1B4D52"/><text x="80" y="379">Bladder</text>
+    <circle cx="66" cy="406" r="4" fill="#1B4D52"/><text x="80" y="411">Pediatric cancers (no pack-years)</text>
+    <circle cx="66" cy="438" r="4" fill="#1B4D52"/><text x="80" y="443">Male breast (solvent-exposed military)</text>
+  </g>
+  <text x="60" y="478" font-size="12" fill="#37606A" font-style="italic">Pediatric and germline/sex-ratio signals are the</text>
+  <text x="60" y="493" font-size="12" fill="#37606A" font-style="italic">most confounding-resistant of all.</text>
+
+  <!-- Right column: confounded markers -->
+  <rect x="470" y="100" width="390" height="400" rx="8" fill="#FBEFE2" stroke="#BE7B45" stroke-width="1.5"/>
+  <rect x="470" y="100" width="390" height="44" rx="8" fill="#BE7B45"/>
+  <text x="490" y="129" font-size="15" font-weight="700" fill="#FFFFFF">Screening-sensitive / confounded</text>
+  <text x="490" y="166" font-size="12" fill="#A8842F">Incidence strongly shaped by detection, hormones,</text>
+  <text x="490" y="183" font-size="12" fill="#A8842F">or behaviour — not primary markers.</text>
+
+  <g font-size="13.5" fill="#1C2B36">
+    <circle cx="496" cy="220" r="4" fill="#BE7B45"/><text x="510" y="225" font-weight="700">Female breast — excluded as primary marker</text>
+    <text x="510" y="244" font-size="12" fill="#A8842F">~37% apparent rise from screening lead-time alone;</text>
+    <text x="510" y="259" font-size="12" fill="#A8842F">reproductive transition; uneven regional rollout.</text>
+    <text x="510" y="274" font-size="12" fill="#A8842F">Retained only in radiation cohorts (dose-response).</text>
+
+    <circle cx="496" cy="306" r="4" fill="#BE7B45"/><text x="510" y="311" font-weight="700">Thyroid — interpret with caution</text>
+    <text x="510" y="330" font-size="12" fill="#A8842F">Incidental detection inflates incidence; but is</text>
+    <text x="510" y="345" font-size="12" fill="#A8842F">radiation-sensitive, so relevant in fallout cohorts.</text>
+
+    <circle cx="496" cy="377" r="4" fill="#BE7B45"/><text x="510" y="382" font-weight="700">Prostate — interpret with caution</text>
+    <text x="510" y="401" font-size="12" fill="#A8842F">PSA-screening-driven; not tobacco-attributable,</text>
+    <text x="510" y="416" font-size="12" fill="#A8842F">so a spatial cluster is still notable but ambiguous.</text>
+
+    <circle cx="496" cy="448" r="4" fill="#BE7B45"/><text x="510" y="453" font-weight="700">Colorectal — secondary outcome</text>
+    <text x="510" y="472" font-size="12" fill="#A8842F">Common and registry-stable, but only modestly</text>
+    <text x="510" y="487" font-size="12" fill="#A8842F">exposure-specific.</text>
+  </g>
+
+  <text x="40" y="525" font-size="12" fill="#5A6B73">Excluding screening-sensitive sites from the primary marker set is a deliberate methodological choice that strengthens the analysis.</text>
+</svg>
