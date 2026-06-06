@@ -12,6 +12,8 @@ downstream analysis. See `data_dictionary.md` for every file and column.
 - `dataset.json` — all of the above in one nested object
 - `data_dictionary.md` — schema + provenance
 - `VALIDATION.md` — offline source-integrity report (see also `../REPORT.md`)
+- `raw_data_sources.csv` / `.json` — **upstream raw-data acquisition register**: where each cohort's primary data lives, custodian, access route, locator (20 clusters)
+- `raw_data_acquisition.md` — guide/action plan for obtaining the upstream raw datasets (what's OPEN vs application/ethics/restricted)
 
 ## Quick start (pandas)
 ```python
