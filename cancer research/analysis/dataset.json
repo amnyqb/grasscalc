@@ -1,0 +1,1237 @@
+{
+  "meta": {
+    "manuscript": "Non-Tobacco Environmental Carcinogenesis in Exposed Populations",
+    "type": "evidence-mapping review + pre-specified protocol",
+    "primary_microdata": false,
+    "note": "No new primary data. Values extracted from published sources. Identifiers not machine-verified (no Crossref/PubMed in build env).",
+    "n_references": 63,
+    "n_claims": 24,
+    "n_comparator_populations": 13
+  },
+  "references": [
+    {
+      "cite_key": "grant2017",
+      "doi": "10.1667/RR14492.1",
+      "pmid_or_pmcid": "28319463",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Grant EJ, Brenner A, Sugiyama H, et al. Solid cancer incidence among the Life Span Study of atomic bomb survivors: 1958--2009. Radiat Res. 2017;187(5):513--537.",
+      "note": "",
+      "exposure_category": "Atomic-bomb radiation",
+      "evidence_grade": "A",
+      "charted": true
+    },
+    {
+      "cite_key": "brenner2025",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "NEEDS_LOOKUP",
+      "citation": "Brenner AV, et al. Radiation effects on the incidence of solid cancers in the Life Span Study: 1958--2009. 2025.",
+      "note": "2025 LSS residual-radiation analysis; confirm full citation/venue.",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "furukawa2010",
+      "doi": "10.1667/RR1925.1",
+      "pmid_or_pmcid": "20681800",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Furukawa K, Preston DL, Lauer S, et al. Radiation and smoking effects on lung cancer incidence among atomic bomb survivors. Radiat Res. 2010;174(1):72--82.",
+      "note": "",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "egawa2012",
+      "doi": "10.1667/RR2819.1",
+      "pmid_or_pmcid": "22817266",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Egawa H, Furukawa K, Preston DL, et al. Radiation and smoking effects on lung cancer incidence by histological types. Radiat Res. 2012;178(3):191--201.",
+      "note": "",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "ohtaki2025",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "NEEDS_LOOKUP",
+      "citation": "Ohtaki M, Otani K, Hoshi M, Yasuda H. Effects of non-initial radiation exposure on solid cancer mortality among Hiroshima A-bomb survivors. Front Public Health. 2025;13:1651887.",
+      "note": "Front Public Health 2025;13:1651887; DOI likely 10.3389/fpubh.2025.1651887 - confirm.",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "cullings2017",
+      "doi": "10.1097/HP.0000000000000598",
+      "pmid_or_pmcid": "27877161",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Cullings HM, Grant EJ, Egbert SD, et al. DS02R1: improvements to atomic bomb survivors' input data. Health Phys. 2017;112(1):56--97.",
+      "note": "",
+      "exposure_category": "Atomic-bomb radiation",
+      "evidence_grade": "A",
+      "charted": true
+    },
+    {
+      "cite_key": "bauer2005",
+      "doi": "10.1667/RR3423.1",
+      "pmid_or_pmcid": "16187743",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Bauer S, Gusev BI, Pivina LM, Apsalikov KN, Grosche B. Radiation exposure due to local fallout from Soviet atmospheric nuclear weapons testing in Kazakhstan: solid cancer mortality in the Semipalatinsk historical cohort, 1960--1999. Radiat Res. 2005;164(4):409--419.",
+      "note": "",
+      "exposure_category": "Nuclear-test fallout",
+      "evidence_grade": "A/B",
+      "charted": true
+    },
+    {
+      "cite_key": "grosche2011",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "NEEDS_LOOKUP",
+      "citation": "Grosche B, et al. Mortality from cardiovascular diseases in the Semipalatinsk historical cohort, 1960--1999. Radiat Res. 2011.",
+      "note": "Grosche et al., Semipalatinsk CVD mortality, Radiat Res 2011; confirm vol/pages/DOI.",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "beir1999",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "NO_DOI",
+      "citation": "National Research Council. Health Effects of Exposure to Radon: BEIR VI. National Academy Press; 1999.",
+      "note": "BEIR VI, National Academy Press 1999; NAP DOI may be 10.17226/5499 - confirm.",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "puma2023",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "NEEDS_LOOKUP",
+      "citation": "PUMA Collaboration. Radon and lung cancer in the Pooled Uranium Miners Analysis. 2023.",
+      "note": "PUMA pooled uranium miners analysis; confirm exact paper/DOI.",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "whittemore1983",
+      "doi": "",
+      "pmid_or_pmcid": "6577223",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Whittemore AS, McMillan A. Lung cancer mortality among U.S. uranium miners: a reappraisal. J Natl Cancer Inst. 1983;71(3):489--499.",
+      "note": "Old article; likely no DOI.",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "atsdr2024",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "NO_DOI",
+      "citation": "Agency for Toxic Substances and Disease Registry. Cancer incidence among Marines and Navy personnel and civilian workers exposed to industrial solvents in drinking water at USMC Base Camp Lejeune: a cohort study. ATSDR; 2024.",
+      "note": "ATSDR 2024 Camp Lejeune cohort study; agency report, use URL.",
+      "exposure_category": "TCE/PCE/benzene water",
+      "evidence_grade": "A/B",
+      "charted": true
+    },
+    {
+      "cite_key": "ruckart2015",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "NEEDS_LOOKUP",
+      "citation": "Ruckart PZ, Bove FJ, Maslia M. Evaluation of contaminated drinking water and male breast cancer at Camp Lejeune. 2015.",
+      "note": "Ruckart/Bove/Maslia male breast cancer Camp Lejeune; confirm journal/DOI.",
+      "exposure_category": "TCE/PCE/benzene water",
+      "evidence_grade": "A/B",
+      "charted": true
+    },
+    {
+      "cite_key": "nrc2009",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "NO_DOI",
+      "citation": "National Research Council. Contaminated Water Supplies at Camp Lejeune: Assessing Potential Health Effects. National Academies Press; 2009.",
+      "note": "NRC 2009 Camp Lejeune; NAP DOI likely 10.17226/12618 - confirm.",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "va2017",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "https://publichealth.va.gov/PUBLICHEALTH/docs/exposures/CLFactsheet.pdf",
+      "status": "VERIFIED",
+      "citation": "U.S. Department of Veterans Affairs. Diseases associated with exposure to contaminants in the water supply at Camp Lejeune (presumptive service connection for eight conditions). Final rule, effective 14 March 2017.",
+      "note": "VA final rule, presumptive service connection; policy, no DOI.",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": true
+    },
+    {
+      "cite_key": "clja2022",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "NO_DOI",
+      "citation": "Camp Lejeune Justice Act of 2022 (within the Honoring our PACT Act, PL 117-168) --- civil-claim pathway, distinct from VA presumptive service connection.",
+      "note": "Camp Lejeune Justice Act 2022 (PL 117-168); statute, no DOI.",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "bullman2005",
+      "doi": "10.2105/AJPH.2004.045799",
+      "pmid_or_pmcid": "16043674",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Bullman TA, Mahan CM, Kang HK, Page WF. Mortality in U.S. Army Gulf War veterans exposed to 1991 Khamisiyah chemical munitions destruction. Am J Public Health. 2005;95(8):1382--1388.",
+      "note": "",
+      "exposure_category": "Oil-fire / nerve agent",
+      "evidence_grade": "B",
+      "charted": true
+    },
+    {
+      "cite_key": "barth2009",
+      "doi": "10.1002/ajim.20718",
+      "pmid_or_pmcid": "19670264",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Barth SK, Kang HK, Bullman TA, Wallin MT. Neurological mortality among U.S. veterans of the Persian Gulf War. Am J Ind Med. 2009;52(9):663--670.",
+      "note": "",
+      "exposure_category": "Oil-fire / nerve agent",
+      "evidence_grade": "B",
+      "charted": true
+    },
+    {
+      "cite_key": "macfarlane2003",
+      "doi": "10.1136/bmj.327.7428.1373",
+      "pmid_or_pmcid": "14670879",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Macfarlane GJ, Biggs AM, Maconochie N, et al. Incidence of cancer among UK Gulf War veterans: cohort study. BMJ. 2003;327(7428):1373--1376.",
+      "note": "",
+      "exposure_category": "Mixed deployment",
+      "evidence_grade": "B, null",
+      "charted": true
+    },
+    {
+      "cite_key": "poirier1998",
+      "doi": "",
+      "pmid_or_pmcid": "9641500",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Poirier MC, Weston A, Schoket B, et al. Biomonitoring of United States Army soldiers serving in Kuwait in 1991. Cancer Epidemiol Biomarkers Prev. 1998;7(6):545--551.",
+      "note": "Likely no DOI (1998 CEBP).",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": true
+    },
+    {
+      "cite_key": "amin1994",
+      "doi": "10.1016/1352-2310(94)90364-6",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Amin MS, Husain T. Kuwaiti oil fires: air-quality monitoring. Atmos Environ. 1994;28(13):2261--2276.",
+      "note": "Atmos Environ 1994; DOI pattern best-effort, confirm.",
+      "exposure_category": "Oil-fire plume + petrochemical",
+      "evidence_grade": "",
+      "charted": true
+    },
+    {
+      "cite_key": "iom2005",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "NO_DOI",
+      "citation": "Institute of Medicine. Gulf War and Health, Vol.\\ 3: Fuels, Combustion Products, and Propellants. National Academies Press; 2005.",
+      "note": "IOM Gulf War and Health Vol.3 2005; NAP DOI likely 10.17226/11180 - confirm.",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "nasem2020",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "NO_DOI",
+      "citation": "National Academies of Sciences, Engineering, and Medicine. Respiratory Health Effects of Airborne Hazards Exposures in the Southwest Asia Theater of Military Operations. National Academies Press; 2020.",
+      "note": "NASEM 2020 Airborne Hazards SW Asia; NAP DOI likely 10.17226/25837 - confirm.",
+      "exposure_category": "Burn-pit combustion",
+      "evidence_grade": "D, contextual",
+      "charted": true
+    },
+    {
+      "cite_key": "pact2022",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "NO_DOI",
+      "citation": "Sergeant First Class Heath Robinson Honoring our PACT Act of 2022 (PL 117-168).",
+      "note": "PACT Act 2022 (PL 117-168); statute, no DOI.",
+      "exposure_category": "Burn-pit combustion",
+      "evidence_grade": "D, contextual",
+      "charted": true
+    },
+    {
+      "cite_key": "haley2013",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "NEEDS_LOOKUP",
+      "citation": "Haley RW, Tuite JJ. Epidemiologic evidence of health effects from long-distance transit of chemical-agent fallout from the 1991 Gulf War. Neuroepidemiology. 2013;40(3):178--189.",
+      "note": "Neuroepidemiology 2013;40(3):178-189; confirm DOI.",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "gao2004",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "NO_DOI",
+      "citation": "U.S. Government Accountability Office. Gulf War Illnesses: Preliminary Assessment of DOD Plume Modeling. GAO-04-159; 2004.",
+      "note": "GAO-04-159; agency report, use URL.",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "akhtar2004",
+      "doi": "10.1097/01.jom.0000111603.84316.0f",
+      "pmid_or_pmcid": "14767215",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Akhtar FZ, Garabrant DH, Ketchum NS, Michalek JE. Cancer in US Air Force veterans of the Vietnam War. J Occup Environ Med. 2004;46(2):123--136.",
+      "note": "",
+      "exposure_category": "Dioxin/TCDD",
+      "evidence_grade": "B/C",
+      "charted": true
+    },
+    {
+      "cite_key": "steenland1999",
+      "doi": "10.1093/jnci/91.9.779",
+      "pmid_or_pmcid": "10328108",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Steenland K, Piacitelli L, Deddens J, et al. Cancer, heart disease, and diabetes in workers exposed to TCDD. J Natl Cancer Inst. 1999;91(9):779--786.",
+      "note": "",
+      "exposure_category": "Dioxin/TCDD",
+      "evidence_grade": "B/C",
+      "charted": true
+    },
+    {
+      "cite_key": "iomvao",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "FLAG_AUTHOR",
+      "citation": "Institute of Medicine. Veterans and Agent Orange, Update series. National Academies Press; 1993--2018.",
+      "note": "IOM Veterans and Agent Orange update SERIES (1993-2018); cite a specific update volume, not the series.",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "pesatori2009",
+      "doi": "10.1186/1476-069X-8-39",
+      "pmid_or_pmcid": "19754930",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Pesatori AC, Consonni D, Rubagotti M, et al. Cancer incidence in the population exposed to dioxin after the Seveso accident. Environ Health. 2009;8:39.",
+      "note": "",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "sambhavna",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "NO_DOI",
+      "citation": "Sambhavna Trust Clinic. Community Health Survey, Bhopal Gas Tragedy Survivors. Reports 2021--2026.",
+      "note": "Sambhavna Trust community survey; grey literature, hypothesis-generating.",
+      "exposure_category": "Methyl isocyanate",
+      "evidence_grade": "F; C",
+      "charted": true
+    },
+    {
+      "cite_key": "mishra2009",
+      "doi": "10.2478/v10001-009-0028-1",
+      "pmid_or_pmcid": "19819836",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Mishra PK, Samarth RM, Pathak N, et al. Bhopal gas tragedy: review of clinical and experimental findings after 25 years. Int J Occup Med Environ Health. 2009;22(3):193--202.",
+      "note": "",
+      "exposure_category": "Methyl isocyanate",
+      "evidence_grade": "F; C",
+      "charted": true
+    },
+    {
+      "cite_key": "senthilkumar2012",
+      "doi": "10.7314/APJCP.2012.13.11.5645",
+      "pmid_or_pmcid": "23317230",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Senthilkumar CS, Sah NK, Ganesh N. Methyl isocyanate-affected population and cancer susceptibility. Asian Pac J Cancer Prev. 2012;13(11):5645--5647.",
+      "note": "",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "dhara2002",
+      "doi": "10.1080/00039890209601427",
+      "pmid_or_pmcid": "12641179",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Dhara VR, Dhara R. The Union Carbide disaster in Bhopal: a review of health effects. Arch Environ Health. 2002;57(5):391--404.",
+      "note": "",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "busby2010",
+      "doi": "10.3390/ijerph7072828",
+      "pmid_or_pmcid": "20717542",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Busby C, Hamdan M, Ariabi E. Cancer, infant mortality and birth sex-ratio in Fallujah, Iraq 2005--2009. Int J Environ Res Public Health. 2010;7(7):2828--2837.",
+      "note": "",
+      "exposure_category": "Conflict-associated",
+      "evidence_grade": "F/B",
+      "charted": true
+    },
+    {
+      "cite_key": "alaani2011",
+      "doi": "10.1186/1752-1505-5-15",
+      "pmid_or_pmcid": "21888647",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Alaani S, Tafash M, Busby C, et al. Uranium and other contaminants in hair from parents of children with congenital anomalies in Fallujah. Confl Health. 2011;5:15.",
+      "note": "",
+      "exposure_category": "Conflict-associated",
+      "evidence_grade": "F/B",
+      "charted": true
+    },
+    {
+      "cite_key": "alawadhi2023",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "NEEDS_LOOKUP",
+      "citation": "Alawadhi E, et al. Progress against cancer in Kuwait: trends in incidence, survival and mortality. Gulf J Oncol. 2023.",
+      "note": "Gulf J Oncol 2023; confirm vol/pages/DOI.",
+      "exposure_category": "Wartime combustion",
+      "evidence_grade": "B/F",
+      "charted": true
+    },
+    {
+      "cite_key": "cange2013",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "NO_DOI",
+      "citation": "Cange CW. A Post-Conflict Assessment of Breast Cancer in Kuwait Using Mixed Methods. PhD thesis, University of Washington; 2013.",
+      "note": "PhD thesis, Univ. of Washington 2013; use repository URL.",
+      "exposure_category": "Wartime combustion",
+      "evidence_grade": "B/F",
+      "charted": true
+    },
+    {
+      "cite_key": "alhajj2021",
+      "doi": "10.3389/fpubh.2021.657996",
+      "pmid_or_pmcid": "34055717",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Al-Hajj S, Dhaini HR, Mondello S, et al. Beirut ammonium nitrate blast: analysis, review, and recommendations. Front Public Health. 2021;9:657996.",
+      "note": "",
+      "exposure_category": "Ammonium-nitrate blast",
+      "evidence_grade": "F/E",
+      "charted": true
+    },
+    {
+      "cite_key": "beirutpm2023",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "FLAG_AUTHOR",
+      "citation": "Long-term effect of the Beirut port explosion on airborne particulate matter. Aerosol Air Qual Res. 2023;23:220395.",
+      "note": "Aerosol Air Qual Res 2023;23:220395; author/title incomplete in notes - confirm.",
+      "exposure_category": "Ammonium-nitrate blast",
+      "evidence_grade": "F/E",
+      "charted": true
+    },
+    {
+      "cite_key": "robinson2025",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "NEEDS_LOOKUP",
+      "citation": "Robinson AL, DeCarlo PF, Nachman KE, et al. Total cancer risk estimates from measured concentrations of volatile organic compounds in industrialized southeastern Louisiana. Proc Natl Acad Sci USA. 2025.",
+      "note": "PNAS 2025; confirm vol/article no/DOI.",
+      "exposure_category": "Petrochemical VOCs",
+      "evidence_grade": "E, contextual",
+      "charted": true
+    },
+    {
+      "cite_key": "terrell2024",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "NO_DOI",
+      "citation": "Terrell KA, James W. Air pollution and cancer risk in Louisiana's industrial corridor. Tulane Environmental Law Clinic; 2024.",
+      "note": "Tulane Environmental Law Clinic 2024; report, use URL.",
+      "exposure_category": "Petrochemical VOCs",
+      "evidence_grade": "E, contextual",
+      "charted": true
+    },
+    {
+      "cite_key": "kweon",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "FLAG_AUTHOR",
+      "citation": "Kweon S, et al. Uneven magnitude of disparities in cancer risks from air toxics. Int J Environ Res Public Health.",
+      "note": "IJERPH; year/vol/pages missing in notes - confirm full citation.",
+      "exposure_category": "Petrochemical VOCs",
+      "evidence_grade": "E, contextual",
+      "charted": true
+    },
+    {
+      "cite_key": "duffy2005",
+      "doi": "10.1186/bcr1354",
+      "pmid_or_pmcid": "16280124",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Duffy SW, Agbaje O, Tabar L, et al. Estimates of overdiagnosis from two trials of mammographic screening. Breast Cancer Res. 2005;7(6):258--265.",
+      "note": "",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": true
+    },
+    {
+      "cite_key": "gotzsche2009",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "NEEDS_LOOKUP",
+      "citation": "Gotzsche PC, Jorgensen KJ, Mahlen J, Zahl P-H. Estimation of lead time and overdiagnosis in breast-cancer screening. Br J Cancer. 2009;100(1):219.",
+      "note": "Br J Cancer 2009;100(1):219; confirm DOI (diacritics fixed in bib).",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": true
+    },
+    {
+      "cite_key": "paci2006",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "FLAG_AUTHOR",
+      "citation": "Paci E, et al. Overdiagnosis of breast cancer due to mammography after adjustment for lead time (Florence). 2006.",
+      "note": "Florence overdiagnosis 2006; incomplete citation in notes - confirm venue/DOI.",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": true
+    },
+    {
+      "cite_key": "concord3",
+      "doi": "10.1016/S0140-6736(17)33326-3",
+      "pmid_or_pmcid": "29395269",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Allemani C, Matsuda T, Di Carlo V, et al. Global surveillance of trends in cancer survival 2000--14 (CONCORD-3). Lancet. 2018;391(10125):1023--1075.",
+      "note": "",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "ksasurv2022",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "NEEDS_LOOKUP",
+      "citation": "Population-based survival for cancer patients in Saudi Arabia, 2005--2009. Sci Rep. 2022;12:330.",
+      "note": "Sci Rep 2022;12:330; confirm DOI 10.1038/s41598-...-.",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "ksaregional2024",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "NEEDS_LOOKUP",
+      "citation": "Regional disparities and socioeconomic determinants of cancer survival in Saudi Arabia (26,487 patients, 2010--2024). 2024.",
+      "note": "Regional survival KSA 26,487 pts 2010-2024; confirm full citation/DOI.",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": true
+    },
+    {
+      "cite_key": "ksacrc",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "FLAG_AUTHOR",
+      "citation": "First national survival data for colorectal cancer among Saudis, 1994--2004.",
+      "note": "First national CRC survival 1994-2004; incomplete citation - confirm.",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "tlv2017",
+      "doi": "10.1126/science.aaf9011",
+      "pmid_or_pmcid": "28336671",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Tomasetti C, Li L, Vogelstein B. Stem-cell divisions, somatic mutations, cancer etiology, and cancer prevention. Science. 2017;355(6331):1330--1334.",
+      "note": "",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "wu2016",
+      "doi": "10.1038/nature16166",
+      "pmid_or_pmcid": "26675728",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Wu S, Powers S, Zhu W, Hannun YA. Substantial contribution of extrinsic risk factors to cancer development. Nature. 2016;529(7584):43--47.",
+      "note": "",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "alidrissi1987",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "NEEDS_LOOKUP",
+      "citation": "Al-Idrissi HY, Ibrahim EM, Ahmed T, et al. Cancer at Dhahran Health Center, Saudi Arabia (1981--1985). Ann Saudi Med. 1987;7(4):288--294.",
+      "note": "Ann Saudi Med 1987;7(4):288-294; confirm DOI (may be none).",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "altamimi1996",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "NEEDS_LOOKUP",
+      "citation": "Al Tamimi T, Al-Bar A, Al-Suhaimi S, et al. Lung cancer in the Eastern Region of Saudi Arabia. Ann Saudi Med. 1996;16(1):3--11.",
+      "note": "Ann Saudi Med 1996;16(1):3-11; confirm DOI (may be none).",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "scr2020",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "NO_DOI",
+      "citation": "Saudi Ministry of Health, Saudi Cancer Registry. Cancer Incidence Report 2020. National Cancer Center; 2023.",
+      "note": "Saudi Cancer Registry Incidence Report 2020; agency report, use URL.",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "scrlung2025",
+      "doi": "10.1007/s44197-025-00491-x",
+      "pmid_or_pmcid": "PMC12678664",
+      "url": "https://doi.org/10.1007/s44197-025-00491-x",
+      "status": "VERIFIED",
+      "citation": "AlOmar RS, et al. Epidemiology of lung cancer in Saudi Arabia, Saudi Cancer Registry, 2015--2020. J Epidemiol Glob Health. 2025. doi:10.1007/s44197-025-00491-x.",
+      "note": "Crude (not ASIR) Eastern Province 3.36 vs Jazan 0.59 per 100,000.",
+      "exposure_category": "Oil-fire plume + petrochemical",
+      "evidence_grade": "",
+      "charted": true
+    },
+    {
+      "cite_key": "basudan2023",
+      "doi": "10.3390/life13112198",
+      "pmid_or_pmcid": "38004338",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Basudan AM, et al. Comprehensive retrospective analysis of colorectal cancer incidence patterns in Saudi Arabia. Life (Basel). 2023;13(11):2198.",
+      "note": "",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "alahmadi2013",
+      "doi": "10.3390/ijerph10127207",
+      "pmid_or_pmcid": "24351742",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Al-Ahmadi K, Al-Zahrani A. Spatial autocorrelation of cancer incidence in Saudi Arabia. Int J Environ Res Public Health. 2013;10(12):7207--7228.",
+      "note": "",
+      "exposure_category": "Oil-fire plume + petrochemical",
+      "evidence_grade": "",
+      "charted": true
+    },
+    {
+      "cite_key": "madinah2024",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "FLAG_AUTHOR",
+      "citation": "Epidemiological and clinical characteristics of lung cancer in Saudi Arabia (Madinah single-centre). 2024.",
+      "note": "Madinah single-centre lung cancer 2024; incomplete citation - confirm.",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "gats2019",
+      "doi": "",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "NO_DOI",
+      "citation": "World Health Organization. Global Adult Tobacco Survey: Saudi Arabia. 2019.",
+      "note": "WHO Global Adult Tobacco Survey Saudi Arabia 2019; report, use URL.",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": true
+    },
+    {
+      "cite_key": "arksey2005",
+      "doi": "10.1080/1364557032000119616",
+      "pmid_or_pmcid": "",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Arksey H, O'Malley L. Scoping studies: towards a methodological framework. Int J Soc Res Methodol. 2005;8(1):19--32.",
+      "note": "",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "levac2010",
+      "doi": "10.1186/1748-5908-5-69",
+      "pmid_or_pmcid": "20854677",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Levac D, Colquhoun H, O'Brien KK. Scoping studies: advancing the methodology. Implement Sci. 2010;5:69.",
+      "note": "",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    },
+    {
+      "cite_key": "tricco2018",
+      "doi": "10.7326/M18-0850",
+      "pmid_or_pmcid": "30178033",
+      "url": "",
+      "status": "UNVERIFIED",
+      "citation": "Tricco AC, Lillie E, Zarin W, et al. PRISMA Extension for Scoping Reviews (PRISMA-ScR): checklist and explanation. Ann Intern Med. 2018;169(7):467--473.",
+      "note": "",
+      "exposure_category": "",
+      "evidence_grade": "",
+      "charted": false
+    }
+  ],
+  "key_values": [
+    {
+      "claim": "LSS cohort size",
+      "value": "105,444 survivors",
+      "metric_type": "count",
+      "source_cite_key": "grant2017; cullings2017",
+      "manuscript_location": "S3.3.1"
+    },
+    {
+      "claim": "LSS solid-cancer cases 1958-2009",
+      "value": "22,538",
+      "metric_type": "count",
+      "source_cite_key": "grant2017",
+      "manuscript_location": "S3.3.1"
+    },
+    {
+      "claim": "LSS radiation ERR/Gy in never-smokers",
+      "value": "statistically significantly positive",
+      "metric_type": "ERR/Gy",
+      "source_cite_key": "grant2017",
+      "manuscript_location": "S3.3.1 (key claim)"
+    },
+    {
+      "claim": "Semipalatinsk full-cohort ERR/Sv all solid cancers",
+      "value": "1.77 (95% CI 1.35-2.27)",
+      "metric_type": "ERR/Sv",
+      "source_cite_key": "bauer2005",
+      "manuscript_location": "S3.3.1"
+    },
+    {
+      "claim": "Semipalatinsk exposed-only ERR/Sv",
+      "value": "0.81 (0.46-1.33)",
+      "metric_type": "ERR/Sv",
+      "source_cite_key": "bauer2005",
+      "manuscript_location": "S3.3.1"
+    },
+    {
+      "claim": "Semipalatinsk cohort / person-years",
+      "value": "19,545 / 582,750 PY",
+      "metric_type": "count",
+      "source_cite_key": "bauer2005",
+      "manuscript_location": "S3.3.1"
+    },
+    {
+      "claim": "VA Camp Lejeune presumptive conditions (2017 rule)",
+      "value": "8 conditions",
+      "metric_type": "policy",
+      "source_cite_key": "va2017",
+      "manuscript_location": "S3.3.2"
+    },
+    {
+      "claim": "Khamisiyah brain-cancer mortality ratio",
+      "value": "2x to 3x",
+      "metric_type": "mortality ratio",
+      "source_cite_key": "bullman2005; barth2009",
+      "manuscript_location": "S3.3.3"
+    },
+    {
+      "claim": "UK Gulf War cancer IRR",
+      "value": "0.99 (0.83-1.17)",
+      "metric_type": "incidence rate ratio",
+      "source_cite_key": "macfarlane2003",
+      "manuscript_location": "S3.3.3 (negative comparator)"
+    },
+    {
+      "claim": "Agent Orange biomarker vs proxy RR",
+      "value": "1.6 (1.2-2.2) vs ~1.01",
+      "metric_type": "relative risk",
+      "source_cite_key": "akhtar2004; steenland1999",
+      "manuscript_location": "S3.3.4"
+    },
+    {
+      "claim": "Poirier 1991 Kuwait PAH exposure",
+      "value": "low; adducts lowest in Kuwait",
+      "metric_type": "biomarker",
+      "source_cite_key": "poirier1998",
+      "manuscript_location": "S3.3.3 (correction)"
+    },
+    {
+      "claim": "Fallujah all-cancer RR",
+      "value": "4.22 (2.8-6.6)",
+      "metric_type": "relative risk",
+      "source_cite_key": "busby2010",
+      "manuscript_location": "S3.3.6"
+    },
+    {
+      "claim": "Fallujah pediatric-cancer RR",
+      "value": "12.6 (4.9-32)",
+      "metric_type": "relative risk",
+      "source_cite_key": "busby2010",
+      "manuscript_location": "S3.3.6"
+    },
+    {
+      "claim": "Cancer Alley measured VOC cancer risk vs models",
+      "value": "up to 11x",
+      "metric_type": "modeled lifetime risk",
+      "source_cite_key": "robinson2025",
+      "manuscript_location": "S3.3.7"
+    },
+    {
+      "claim": "Breast-cancer apparent screening increase (20 yr)",
+      "value": "~37% lead-time; corrected 4.6% (Florence)",
+      "metric_type": "incidence change",
+      "source_cite_key": "duffy2005; gotzsche2009; paci2006",
+      "manuscript_location": "S2.6 / S3.4"
+    },
+    {
+      "claim": "Saudi lung crude incidence Eastern Province",
+      "value": "3.36 per 100,000",
+      "metric_type": "crude incidence rate",
+      "source_cite_key": "scrlung2025",
+      "manuscript_location": "S3.7 (anchor)"
+    },
+    {
+      "claim": "Saudi lung crude incidence Jazan",
+      "value": "0.59 per 100,000",
+      "metric_type": "crude incidence rate",
+      "source_cite_key": "scrlung2025",
+      "manuscript_location": "S3.7 (anchor)"
+    },
+    {
+      "claim": "Saudi EP:Jazan lung crude-rate ratio",
+      "value": "~5.7x",
+      "metric_type": "crude-rate ratio",
+      "source_cite_key": "scrlung2025",
+      "manuscript_location": "S3.7 (anchor; CRUDE not ASIR)"
+    },
+    {
+      "claim": "Saudi active-smoking prevalence",
+      "value": "27.5% men / 3.7% women",
+      "metric_type": "prevalence",
+      "source_cite_key": "gats2019",
+      "manuscript_location": "S3.7 (sensitivity input)"
+    },
+    {
+      "claim": "Saudi regional 5-yr survival range",
+      "value": "45.2-68.7%",
+      "metric_type": "survival",
+      "source_cite_key": "ksaregional2024",
+      "manuscript_location": "S3.6"
+    },
+    {
+      "claim": "Saudi survival adjusted HR (best vs worst region)",
+      "value": "0.68 (0.62-0.74)",
+      "metric_type": "hazard ratio",
+      "source_cite_key": "ksaregional2024",
+      "manuscript_location": "S3.6"
+    },
+    {
+      "claim": "EP spatial clusters (Moran I high-high)",
+      "value": "lung, prostate, Hodgkin (M), thyroid (F)",
+      "metric_type": "spatial cluster",
+      "source_cite_key": "alahmadi2013",
+      "manuscript_location": "S3.5"
+    },
+    {
+      "claim": "Smoking-sensitivity: realistic gap (20% vs 10%)",
+      "value": "rate ratio ~1.5",
+      "metric_type": "derived",
+      "source_cite_key": "gats2019 (input)",
+      "manuscript_location": "Table 3 / smoking_sensitivity.py"
+    },
+    {
+      "claim": "Smoking-sensitivity: only implausible 50% vs 4%, RR=20 reaches",
+      "value": "~6",
+      "metric_type": "derived",
+      "source_cite_key": "gats2019 (input)",
+      "manuscript_location": "Table 3 / smoking_sensitivity.py"
+    }
+  ],
+  "evidence_matrix": [
+    {
+      "comparator_population": "Life Span Study (Hiroshima/Nagasaki)",
+      "exposure_category": "Ionizing radiation",
+      "evidence_grade": "A",
+      "best_supported_signal": "Dose-responsive solid-cancer risk; significant in never-smokers",
+      "reported_metric_native_units": "ERR/Gy",
+      "synthesis_role": "Primary causal anchor"
+    },
+    {
+      "comparator_population": "Semipalatinsk historical cohort",
+      "exposure_category": "Nuclear-test fallout",
+      "evidence_grade": "A/B",
+      "best_supported_signal": "Positive solid-cancer mortality dose-response",
+      "reported_metric_native_units": "ERR/Sv 1.77 (full cohort)",
+      "synthesis_role": "Independent radiation anchor"
+    },
+    {
+      "comparator_population": "Camp Lejeune",
+      "exposure_category": "Solvent contamination (military base)",
+      "evidence_grade": "A/B",
+      "best_supported_signal": "Kidney, bladder, leukaemia, NHL, male breast excess",
+      "reported_metric_native_units": "Dose-response RR/HR",
+      "synthesis_role": "Strong military-associated comparator"
+    },
+    {
+      "comparator_population": "Khamisiyah / Kuwait oil-fire veterans",
+      "exposure_category": "Wartime combustion + nerve agent",
+      "evidence_grade": "B",
+      "best_supported_signal": "Elevated brain-cancer mortality in modeled plume subsets",
+      "reported_metric_native_units": "Mortality ratio 2-3x",
+      "synthesis_role": "Supportive wartime signal"
+    },
+    {
+      "comparator_population": "U.K. Gulf War cohort",
+      "exposure_category": "Mixed deployment",
+      "evidence_grade": "B",
+      "best_supported_signal": "No overall cancer excess in early follow-up",
+      "reported_metric_native_units": "IRR 0.99",
+      "synthesis_role": "Negative comparator (latency constraint)"
+    },
+    {
+      "comparator_population": "Agent Orange / TCDD",
+      "exposure_category": "Chemical agent (dioxin)",
+      "evidence_grade": "B/C",
+      "best_supported_signal": "Stronger associations with serum-TCDD measurement",
+      "reported_metric_native_units": "RR 1.6 (biomarker) vs 1.01 (proxy)",
+      "synthesis_role": "Exposure-ascertainment lesson"
+    },
+    {
+      "comparator_population": "Post-9/11 burn pits / PACT Act",
+      "exposure_category": "Wartime combustion",
+      "evidence_grade": "D (contextual)",
+      "best_supported_signal": "Presumptive cancers incl. non-tobacco sites",
+      "reported_metric_native_units": "Policy-presumptive list",
+      "synthesis_role": "Institutional recognition only"
+    },
+    {
+      "comparator_population": "Bhopal",
+      "exposure_category": "Acute industrial chemical release",
+      "evidence_grade": "F (C cytogenetics)",
+      "best_supported_signal": "Community site ratios; chromosome instability",
+      "reported_metric_native_units": "Community-survey ratios",
+      "synthesis_role": "Hypothesis-generating; verify ratios"
+    },
+    {
+      "comparator_population": "Fallujah",
+      "exposure_category": "Civilian conflict-associated exposure",
+      "evidence_grade": "F/B",
+      "best_supported_signal": "Pediatric cancer & birth-sex-ratio anomalies",
+      "reported_metric_native_units": "RR 12.6 (pediatric)",
+      "synthesis_role": "High-specificity, lower-certainty"
+    },
+    {
+      "comparator_population": "Kuwaiti civilians",
+      "exposure_category": "Wartime combustion",
+      "evidence_grade": "B/F",
+      "best_supported_signal": "Breast-cancer inflection ~1999 (screening-caveated)",
+      "reported_metric_native_units": "ASIR change",
+      "synthesis_role": "Supporting; screening-confounded"
+    },
+    {
+      "comparator_population": "Beirut Port",
+      "exposure_category": "Warehouse oxidizer release",
+      "evidence_grade": "F/E",
+      "best_supported_signal": "Acute air-quality disruption; PAH risk",
+      "reported_metric_native_units": "Immature latency",
+      "synthesis_role": "Contextual exposure case"
+    },
+    {
+      "comparator_population": "Louisiana Cancer Alley",
+      "exposure_category": "Chronic petrochemical pollution",
+      "evidence_grade": "E (contextual)",
+      "best_supported_signal": "Measured VOC cancer-RISK exceeds modeled",
+      "reported_metric_native_units": "Modeled lifetime risk",
+      "synthesis_role": "Chronic-exposure plausibility, not incidence"
+    },
+    {
+      "comparator_population": "Saudi Eastern Province (TEST CASE)",
+      "exposure_category": "Oil-fire plume + petrochemical baseline",
+      "evidence_grade": "Ecological hypothesis",
+      "best_supported_signal": "Lung crude-rate regional contrast; non-tobacco clusters",
+      "reported_metric_native_units": "Crude-rate ratio 5.7x",
+      "synthesis_role": "Main hypothesis to be tested"
+    }
+  ],
+  "extraction_table": [
+    {
+      "source_cite_keys": "grant2017; cullings2017",
+      "setting_exposure": "Atomic-bomb radiation",
+      "population_country": "105,444 survivors, Japan",
+      "design": "Cohort",
+      "exposure_ascertainment": "Individual DS02R1 dose",
+      "outcome_ascertainment": "Tumour registry, 22,538 solid ca",
+      "smoking_confounder_control": "Individual smoking histories",
+      "key_sites": "Solid; lung",
+      "latency": "Decades",
+      "metric_result_grade": "ERR/Gy >0 in never-smokers (A)"
+    },
+    {
+      "source_cite_keys": "bauer2005",
+      "setting_exposure": "Nuclear-test fallout",
+      "population_country": "19,545 residents, Kazakhstan",
+      "design": "Cohort",
+      "exposure_ascertainment": "Modeled fallout dose",
+      "outcome_ascertainment": "Mortality, 582,750 PY",
+      "smoking_confounder_control": "Limited individual smoking",
+      "key_sites": "Lung, stomach, breast, oeso",
+      "latency": "Decades",
+      "metric_result_grade": "ERR/Sv 1.77 (1.35-2.27) (A/B)"
+    },
+    {
+      "source_cite_keys": "atsdr2024; ruckart2015",
+      "setting_exposure": "TCE/PCE/benzene water",
+      "population_country": "Marines, workers, dependents, USA",
+      "design": "Cohort (vs Pendleton)",
+      "exposure_ascertainment": "Modeled water exposure",
+      "outcome_ascertainment": "Cancer incidence",
+      "smoking_confounder_control": "Comparison cohort; partial",
+      "key_sites": "Kidney, bladder, NHL, leuk, M-breast",
+      "latency": "Decades",
+      "metric_result_grade": "Dose-responsive RR/HR (A/B)"
+    },
+    {
+      "source_cite_keys": "bullman2005; barth2009",
+      "setting_exposure": "Oil-fire / nerve agent",
+      "population_country": "Gulf War veterans, USA",
+      "design": "Cohort",
+      "exposure_ascertainment": "DoD plume model",
+      "outcome_ascertainment": "Mortality",
+      "smoking_confounder_control": "Partial; overlapping exposures",
+      "key_sites": "Brain/CNS",
+      "latency": "10-15 yr",
+      "metric_result_grade": "Mortality ratio 2-3x (B)"
+    },
+    {
+      "source_cite_keys": "macfarlane2003",
+      "setting_exposure": "Mixed deployment",
+      "population_country": "51,721 vs 50,755, UK",
+      "design": "Cohort",
+      "exposure_ascertainment": "Deployment record",
+      "outcome_ascertainment": "Cancer incidence",
+      "smoking_confounder_control": "Partial",
+      "key_sites": "All sites",
+      "latency": "Short",
+      "metric_result_grade": "IRR 0.99 (0.83-1.17) (B, null)"
+    },
+    {
+      "source_cite_keys": "akhtar2004; steenland1999",
+      "setting_exposure": "Dioxin/TCDD",
+      "population_country": "Ranch Hand; dioxin workers",
+      "design": "Cohort",
+      "exposure_ascertainment": "Serum TCDD vs proxy",
+      "outcome_ascertainment": "Cancer incidence/mortality",
+      "smoking_confounder_control": "Partial",
+      "key_sites": "All sites",
+      "latency": "Decades",
+      "metric_result_grade": "RR 1.6 biomarker vs 1.01 proxy (B/C)"
+    },
+    {
+      "source_cite_keys": "pact2022; nasem2020",
+      "setting_exposure": "Burn-pit combustion",
+      "population_country": "~3.5M service members, USA",
+      "design": "Policy",
+      "exposure_ascertainment": "Service presumption",
+      "outcome_ascertainment": "Presumptive list",
+      "smoking_confounder_control": "N/A",
+      "key_sites": "Brain, kidney, etc",
+      "latency": "-",
+      "metric_result_grade": "Policy list (D, contextual)"
+    },
+    {
+      "source_cite_keys": "sambhavna; mishra2009",
+      "setting_exposure": "Methyl isocyanate",
+      "population_country": "~500,000 residents, India",
+      "design": "Survey / cytogenetic",
+      "exposure_ascertainment": "Residence in exposed zone",
+      "outcome_ascertainment": "Community survey; cytogenetics",
+      "smoking_confounder_control": "Income/education matched",
+      "key_sites": "Lung, oeso, blood",
+      "latency": "Decades",
+      "metric_result_grade": "Survey ratios; chromosome instability (F; C)"
+    },
+    {
+      "source_cite_keys": "busby2010; alaani2011",
+      "setting_exposure": "Conflict-associated",
+      "population_country": "Fallujah residents, Iraq",
+      "design": "Survey",
+      "exposure_ascertainment": "Residence; hair metals",
+      "outcome_ascertainment": "Self-report survey",
+      "smoking_confounder_control": "Limited",
+      "key_sites": "Pediatric; all",
+      "latency": "2-5 yr",
+      "metric_result_grade": "RR 12.6 pediatric (F/B)"
+    },
+    {
+      "source_cite_keys": "cange2013; alawadhi2023",
+      "setting_exposure": "Wartime combustion",
+      "population_country": "Kuwaiti civilians",
+      "design": "Registry / mixed",
+      "exposure_ascertainment": "Residence",
+      "outcome_ascertainment": "Registry incidence",
+      "smoking_confounder_control": "Screening-caveated",
+      "key_sites": "Breast",
+      "latency": "~8 yr",
+      "metric_result_grade": "ASIR inflection ~1999 (B/F)"
+    },
+    {
+      "source_cite_keys": "alhajj2021; beirutpm2023",
+      "setting_exposure": "Ammonium-nitrate blast",
+      "population_country": "Beirut residents, Lebanon",
+      "design": "Review",
+      "exposure_ascertainment": "Proximity; PM data",
+      "outcome_ascertainment": "Air-quality; immature",
+      "smoking_confounder_control": "N/A",
+      "key_sites": "-",
+      "latency": "Immature",
+      "metric_result_grade": "PAH risk; no incidence yet (F/E)"
+    },
+    {
+      "source_cite_keys": "robinson2025; terrell2024; kweon",
+      "setting_exposure": "Petrochemical VOCs",
+      "population_country": "Industrial corridor, USA",
+      "design": "Risk model",
+      "exposure_ascertainment": "Measured VOCs",
+      "outcome_ascertainment": "Modeled lifetime risk",
+      "smoking_confounder_control": "N/A",
+      "key_sites": "Multiple",
+      "latency": "Chronic",
+      "metric_result_grade": "Risk up to 11x models (E, contextual)"
+    },
+    {
+      "source_cite_keys": "scrlung2025; amin1994; alahmadi2013",
+      "setting_exposure": "Oil-fire plume + petrochemical",
+      "population_country": "Eastern Province, KSA",
+      "design": "Ecological (proposed)",
+      "exposure_ascertainment": "Region; plume gradient (planned)",
+      "outcome_ascertainment": "SCR incidence",
+      "smoking_confounder_control": "To be modelled",
+      "key_sites": "Lung; non-tobacco clusters",
+      "latency": "20-25 yr",
+      "metric_result_grade": "Crude-rate ratio 5.7x (ecological hypothesis)"
+    }
+  ],
+  "smoking_sensitivity": [
+    {
+      "scenario": "Realistic regional gap",
+      "p_high": "0.2",
+      "p_low": "0.1",
+      "rate_ratio_RR10": "1.47",
+      "rate_ratio_RR15": "1.58",
+      "rate_ratio_RR20": "1.66"
+    },
+    {
+      "scenario": "Large gap",
+      "p_high": "0.3",
+      "p_low": "0.08",
+      "rate_ratio_RR10": "2.15",
+      "rate_ratio_RR15": "2.45",
+      "rate_ratio_RR20": "2.66"
+    },
+    {
+      "scenario": "Implausible extreme",
+      "p_high": "0.45",
+      "p_low": "0.05",
+      "rate_ratio_RR10": "3.48",
+      "rate_ratio_RR15": "4.29",
+      "rate_ratio_RR20": "4.9"
+    },
+    {
+      "scenario": "Required to reach 5.7",
+      "p_high": "0.5",
+      "p_low": "0.04",
+      "rate_ratio_RR10": "4.04",
+      "rate_ratio_RR15": "5.13",
+      "rate_ratio_RR20": "5.97"
+    }
+  ]
+}
