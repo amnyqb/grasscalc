@@ -1,0 +1,145 @@
+{
+  "grade_crosswalk": [
+    {
+      "grade": "A",
+      "manuscript_definition": "Individual-level cohort with cancer outcomes, dose/exposure reconstruction, adequate latency, confounder control",
+      "synthesis_role": "Primary causal benchmark",
+      "GRADE_certainty": "Moderate-High (well-conducted cohort; upgradeable for dose-response/large effect)",
+      "NavigationGuide_strength": "Sufficient evidence of toxicity (High quality)",
+      "OHAT_confidence_and_hazard": "High confidence; hazard Known/Presumed",
+      "ROBINS_E_expected": "Low / Some concerns",
+      "BradfordHill_typically_satisfied": "Strength; temporality; dose-response; biological plausibility; consistency",
+      "notes": "Observational starts Low in GRADE but upgrades on dose-response + confounder control (e.g. LSS)."
+    },
+    {
+      "grade": "B",
+      "manuscript_definition": "Cohort or registry study with defined exposed and comparison groups but incomplete smoking or exposure data",
+      "synthesis_role": "Secondary benchmark",
+      "GRADE_certainty": "Low-Moderate",
+      "NavigationGuide_strength": "Limited-to-Sufficient",
+      "OHAT_confidence_and_hazard": "Moderate confidence; hazard Presumed/Suspected",
+      "ROBINS_E_expected": "Some concerns / High (confounding, exposure measurement)",
+      "BradfordHill_typically_satisfied": "Temporality; consistency; some dose-response",
+      "notes": "Downgraded for residual confounding / exposure misclassification."
+    },
+    {
+      "grade": "C",
+      "manuscript_definition": "Biomarker, cytogenetic, or mechanistic evidence linked to an exposed population",
+      "synthesis_role": "Mechanistic support; not standalone",
+      "GRADE_certainty": "Low (indirect; mechanistic stream)",
+      "NavigationGuide_strength": "Supporting mechanistic evidence",
+      "OHAT_confidence_and_hazard": "Mechanistic/biological-plausibility stream (OHAT integrates separately)",
+      "ROBINS_E_expected": "n/a (not an effect estimate)",
+      "BradfordHill_typically_satisfied": "Biological plausibility; (coherence)",
+      "notes": "Maps to the mechanistic evidence stream in OHAT/GRADE, not the effect body."
+    },
+    {
+      "grade": "F",
+      "manuscript_definition": "Community survey, thesis, early-disaster follow-up, or immature-latency cohort",
+      "synthesis_role": "Hypothesis-generating support only",
+      "GRADE_certainty": "Very low",
+      "NavigationGuide_strength": "Inadequate / hypothesis-generating",
+      "OHAT_confidence_and_hazard": "Low/Very-low confidence; Not classifiable",
+      "ROBINS_E_expected": "High / Very high",
+      "BradfordHill_typically_satisfied": "(temporality only, often immature)",
+      "notes": "Excluded from the effect body in OHAT/Navigation Guide; retained here as flagged signal."
+    },
+    {
+      "grade": "D",
+      "manuscript_definition": "Legal or policy presumption based on evidence review",
+      "synthesis_role": "Contextual: institutional recognition",
+      "GRADE_certainty": "Not an evidence-of-effect object",
+      "NavigationGuide_strength": "Out of scope (policy, not toxicity evidence)",
+      "OHAT_confidence_and_hazard": "Out of scope (decision/policy, not hazard ID)",
+      "ROBINS_E_expected": "n/a",
+      "BradfordHill_typically_satisfied": "n/a",
+      "notes": "Held OUTSIDE the certainty ladder; reported as context only (consistent with all frameworks)."
+    },
+    {
+      "grade": "E",
+      "manuscript_definition": "Modeled or measured environmental cancer-risk estimate without observed incidence",
+      "synthesis_role": "Contextual: exposure-risk plausibility",
+      "GRADE_certainty": "Very low (modeled, indirect; not observed incidence)",
+      "NavigationGuide_strength": "Exposure/risk-assessment evidence, not health-outcome evidence",
+      "OHAT_confidence_and_hazard": "Exposure-assessment stream; not a hazard-ID effect estimate",
+      "ROBINS_E_expected": "n/a",
+      "BradfordHill_typically_satisfied": "n/a",
+      "notes": "Risk-assessment output (e.g. EPA AirToxScreen), not an observed-incidence study."
+    }
+  ],
+  "iarc_agent_classification": [
+    {
+      "agent": "Ionizing radiation (all types)",
+      "exposure_cluster": "lss_rerf; semipalatinsk; uranium_miners",
+      "IARC_group": "Group 1",
+      "IARC_group_meaning": "Carcinogenic to humans"
+    },
+    {
+      "agent": "Radon-222 and decay products",
+      "exposure_cluster": "uranium_miners",
+      "IARC_group": "Group 1",
+      "IARC_group_meaning": "Carcinogenic to humans"
+    },
+    {
+      "agent": "Trichloroethylene (TCE)",
+      "exposure_cluster": "camp_lejeune_atsdr",
+      "IARC_group": "Group 1",
+      "IARC_group_meaning": "Carcinogenic to humans"
+    },
+    {
+      "agent": "Tetrachloroethylene (PCE)",
+      "exposure_cluster": "camp_lejeune_atsdr",
+      "IARC_group": "Group 2A",
+      "IARC_group_meaning": "Probably carcinogenic"
+    },
+    {
+      "agent": "Benzene",
+      "exposure_cluster": "camp_lejeune_atsdr",
+      "IARC_group": "Group 1",
+      "IARC_group_meaning": "Carcinogenic to humans"
+    },
+    {
+      "agent": "Vinyl chloride",
+      "exposure_cluster": "camp_lejeune_atsdr",
+      "IARC_group": "Group 1",
+      "IARC_group_meaning": "Carcinogenic to humans"
+    },
+    {
+      "agent": "2,3,7,8-TCDD (dioxin)",
+      "exposure_cluster": "agent_orange",
+      "IARC_group": "Group 1",
+      "IARC_group_meaning": "Carcinogenic to humans"
+    },
+    {
+      "agent": "Benzo[a]pyrene / PAH mixtures",
+      "exposure_cluster": "gulfwar_us; beirut; cancer_alley",
+      "IARC_group": "Group 1 / 2A",
+      "IARC_group_meaning": "Agent-dependent"
+    },
+    {
+      "agent": "Ethylene oxide",
+      "exposure_cluster": "cancer_alley",
+      "IARC_group": "Group 1",
+      "IARC_group_meaning": "Carcinogenic to humans"
+    },
+    {
+      "agent": "Formaldehyde",
+      "exposure_cluster": "cancer_alley",
+      "IARC_group": "Group 1",
+      "IARC_group_meaning": "Carcinogenic to humans"
+    },
+    {
+      "agent": "Outdoor air pollution / particulate matter",
+      "exposure_cluster": "saudi_scr; saudi_plume; beirut",
+      "IARC_group": "Group 1",
+      "IARC_group_meaning": "Carcinogenic to humans"
+    },
+    {
+      "agent": "Methyl isocyanate",
+      "exposure_cluster": "bhopal",
+      "IARC_group": "Group 3",
+      "IARC_group_meaning": "Not classifiable (acute toxicant)"
+    }
+  ],
+  "note": "A-F labels PRESERVED; this maps them to standard frameworks. IARC is AGENT-level (not study-level) and is context for the 'Established' claim level. Framework citations: see methods_references.bib (UNVERIFIED - confirm; no network in build env)."
+}
