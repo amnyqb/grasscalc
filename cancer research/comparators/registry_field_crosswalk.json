@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "rule": "HARMONIZE-THEN-BENCHMARK, never concatenate mismatched labels.",
+    "principle": "Each country is a separate, side-by-side series; compare only after reconciling definitions + a single standard population. This is the cross-registry extension of the manuscript's metric-separation rule.",
+    "fields_NOT_directly_comparable": [
+      "Multiple-primary rules",
+      "Rate type used",
+      "ASR standard population",
+      "Geography unit",
+      "Smoking / covariates",
+      "Exposure ascertainment"
+    ],
+    "biggest_traps": [
+      "crude vs ASR",
+      "ASR to different standard populations",
+      "claims-defined cancer vs registry incidence",
+      "SEER vs IARC multiple-primary rules"
+    ]
+  },
+  "fields": [
+    {
+      "field": "Case ascertainment",
+      "SCR_SaudiArabia": "Population-based registry (notifiable)",
+      "SEER_US_Louisiana": "Population-based registry",
+      "TCR_NHIRD_Taiwan": "Population registry (TCR); NHIRD is CLAIMS",
+      "KCCR_NHIS_Korea": "Registry (KCCR); NHIS is CLAIMS",
+      "Gulf_GCCR": "Population-based registries (GCCR)",
+      "directly_comparable": "Mostly (registries)",
+      "harmonization_action": "Use REGISTRY incidence (TCR/KCCR/SCR), NOT raw insurance claims, for incidence comparisons."
+    },
+    {
+      "field": "Cancer site / topography",
+      "SCR_SaudiArabia": "ICD-O-3",
+      "SEER_US_Louisiana": "ICD-O-3 + SEER site recode",
+      "TCR_NHIRD_Taiwan": "ICD-O-3",
+      "KCCR_NHIS_Korea": "ICD-O-3",
+      "Gulf_GCCR": "ICD-O-3",
+      "directly_comparable": "Yes, if mapped",
+      "harmonization_action": "Map all to ICD-O-3 topography + ONE common site-grouping; do not trust pre-made recodes to match."
+    },
+    {
+      "field": "Morphology / behavior",
+      "SCR_SaudiArabia": "ICD-O-3 behavior",
+      "SEER_US_Louisiana": "ICD-O-3 behavior",
+      "TCR_NHIRD_Taiwan": "ICD-O-3",
+      "KCCR_NHIS_Korea": "ICD-O-3",
+      "Gulf_GCCR": "ICD-O-3",
+      "directly_comparable": "Mostly",
+      "harmonization_action": "Confirm invasive-only vs incl. in situ (e.g. bladder) per site; align behavior codes."
+    },
+    {
+      "field": "Multiple-primary rules",
+      "SCR_SaudiArabia": "IACR/IARC rules",
+      "SEER_US_Louisiana": "SEER rules (differ from IARC)",
+      "TCR_NHIRD_Taiwan": "IACR/IARC",
+      "KCCR_NHIS_Korea": "IACR/IARC",
+      "Gulf_GCCR": "IACR/IARC",
+      "directly_comparable": "NO",
+      "harmonization_action": "SEER vs IARC multiple-primary counting differs -> affects case counts; pick one rule and note residual gap."
+    },
+    {
+      "field": "Rate type used",
+      "SCR_SaudiArabia": "Anchor we hold is CRUDE; reports also give ASR",
+      "SEER_US_Louisiana": "ASR",
+      "TCR_NHIRD_Taiwan": "ASR (TCR); crude in proximity studies",
+      "KCCR_NHIS_Korea": "ASR + crude",
+      "Gulf_GCCR": "ASR(World)",
+      "directly_comparable": "NO",
+      "harmonization_action": "CRUCIAL: never compare crude vs ASR. Age-standardize everything; recompute to a single standard."
+    },
+    {
+      "field": "ASR standard population",
+      "SCR_SaudiArabia": "World (Segi) in SCR reports",
+      "SEER_US_Louisiana": "US 2000 standard",
+      "TCR_NHIRD_Taiwan": "World (Segi)",
+      "KCCR_NHIS_Korea": "Korea 2000 std AND World",
+      "Gulf_GCCR": "World (Segi)",
+      "directly_comparable": "NO",
+      "harmonization_action": "CRUCIAL: ASRs to different standards are NOT comparable. Recompute all to ONE standard (World/Segi) or use CI5."
+    },
+    {
+      "field": "Denominator / population",
+      "SCR_SaudiArabia": "GASTAT census / mid-year est.",
+      "SEER_US_Louisiana": "US Census / NCI populations",
+      "TCR_NHIRD_Taiwan": "MoI household registration",
+      "KCCR_NHIS_Korea": "Resident registration (KOSIS)",
+      "Gulf_GCCR": "National stats offices",
+      "directly_comparable": "Conceptually yes",
+      "harmonization_action": "Use each country's official mid-year denominators; document source; never share denominators across countries."
+    },
+    {
+      "field": "Geography unit",
+      "SCR_SaudiArabia": "13 administrative regions; residence at diagnosis",
+      "SEER_US_Louisiana": "County / SEER registry catchment",
+      "TCR_NHIRD_Taiwan": "Township/county; residence",
+      "KCCR_NHIS_Korea": "Si/gun/gu district; residence",
+      "Gulf_GCCR": "Country/region",
+      "directly_comparable": "NO (definitions differ)",
+      "harmonization_action": "Define exposure geography explicitly (residence at diagnosis); catchment != administrative region."
+    },
+    {
+      "field": "Outcome timing",
+      "SCR_SaudiArabia": "Incidence (diagnosis year)",
+      "SEER_US_Louisiana": "Incidence; + survival follow-up",
+      "TCR_NHIRD_Taiwan": "Incidence; claims have service dates",
+      "KCCR_NHIS_Korea": "Incidence; claims service dates",
+      "Gulf_GCCR": "Incidence",
+      "directly_comparable": "Mostly",
+      "harmonization_action": "Compare incidence-to-incidence; do not mix diagnosis-year incidence with claims-service-date counts."
+    },
+    {
+      "field": "Age grouping",
+      "SCR_SaudiArabia": "5-yr bands (reports)",
+      "SEER_US_Louisiana": "5-yr / 18-group",
+      "TCR_NHIRD_Taiwan": "5-yr",
+      "KCCR_NHIS_Korea": "5-yr",
+      "Gulf_GCCR": "5-yr",
+      "directly_comparable": "Yes if re-binned",
+      "harmonization_action": "Re-bin to a common age structure before any standardization."
+    },
+    {
+      "field": "Sex coding",
+      "SCR_SaudiArabia": "M/F",
+      "SEER_US_Louisiana": "M/F",
+      "TCR_NHIRD_Taiwan": "M/F",
+      "KCCR_NHIS_Korea": "M/F",
+      "Gulf_GCCR": "M/F",
+      "directly_comparable": "Yes",
+      "harmonization_action": "Trivial; confirm coding."
+    },
+    {
+      "field": "Smoking / covariates",
+      "SCR_SaudiArabia": "Not in registry (oncology records only)",
+      "SEER_US_Louisiana": "Limited (SEER); county-level surveys",
+      "TCR_NHIRD_Taiwan": "NHIRD has some claims proxies",
+      "KCCR_NHIS_Korea": "NHIS has health-exam smoking",
+      "Gulf_GCCR": "Limited",
+      "directly_comparable": "NO",
+      "harmonization_action": "Smoking availability differs sharply -> a never-smoker sub-analysis is feasible in KR/TW, not in SCR aggregate."
+    },
+    {
+      "field": "Exposure ascertainment",
+      "SCR_SaudiArabia": "Region / planned plume gradient",
+      "SEER_US_Louisiana": "EPA AirToxScreen + geocoding",
+      "TCR_NHIRD_Taiwan": "Distance-to-complex (Mailiao studies)",
+      "KCCR_NHIS_Korea": "Distance-to-complex / industrial zone",
+      "Gulf_GCCR": "Varies",
+      "directly_comparable": "NO",
+      "harmonization_action": "Exposure metrics are country-specific; never treat 'exposed' labels as equivalent across settings."
+    }
+  ]
+}
