@@ -1,0 +1,4 @@
+smoking_scenario,p_high,p_low,RR,smoking_only_ratio,residual_ratio_after_smoking
+Realistic regional gap,0.2,0.1,20,1.66,3.44
+Large gap,0.3,0.08,20,2.66,2.14
+Implausible extreme,0.45,0.05,20,4.9,1.16
