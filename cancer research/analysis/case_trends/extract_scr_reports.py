@@ -52,12 +52,47 @@ def parse_ranking(page):  # 2023 style
             if n.isdigit(): out[m.group(1).strip()]=int(n)
     return out or None
 
+def parse_table22(page):
+    """2006-2010 layout: 'Table 2.2 Ten Most Common Cancers among Saudis, YYYY
+    (All Ages)' -- a BOTH-SEXES ranking 'Cancer | No. | %'. The both-sexes block
+    sits above the caption; the per-sex figure below it uses '%' signs on its
+    rate cells, so a row whose last cell is a plain decimal (no '%') is a
+    both-sexes row. Read by word coordinates (row = y-band)."""
+    txt=page.get_text()
+    if "Most Common Cancers among Saudis" not in txt or "All Ages" not in txt:
+        return None
+    words=page.get_text("words")
+    def yrow(pred):
+        ys=[(w[1]+w[3])/2 for w in words if pred(w[4])]; return min(ys) if ys else None
+    y_hdr=yrow(lambda t:t=="Cancer")
+    y_cap=yrow(lambda t:t=="Ages)") or yrow(lambda t:t=="(All")
+    if y_hdr is None or y_cap is None: return None
+    from collections import defaultdict
+    rows=defaultdict(list)
+    for w in words:
+        yc=(w[1]+w[3])/2
+        if y_hdr+2 < yc < y_cap-2: rows[round(yc/2)*2].append(w)
+    out={}
+    for y in sorted(rows):
+        cells=[w[4] for w in sorted(rows[y],key=lambda w:w[0])]
+        if any("%" in c for c in cells): continue          # per-sex block, skip
+        nums=[c for c in cells if c.replace(",","").isdigit()]
+        site=" ".join(c for c in cells if not re.match(r'^[\d.,%]+$',c)).strip()
+        if site and nums and len(out)<10:
+            out[site]=int(nums[0].replace(",",""))
+    return out if len(out)>=5 else None
+
 def extract(path):
     d=fitz.open(path)
     for pg in range(d.page_count):
         page=d[pg]; txt=page.get_text()
         if "Most common cancers among Saudi nationals" in txt:
             r=parse_sites_table(page)
+            if r: return r
+    for pg in range(d.page_count):       # 2006-2010 both-sexes Table 2.2
+        page=d[pg]
+        if "Most Common Cancers among Saudis" in page.get_text() and "All Ages" in page.get_text():
+            r=parse_table22(page)
             if r: return r
     for pg in range(d.page_count):       # 2023 fallback
         page=d[pg]
@@ -68,7 +103,10 @@ def extract(path):
 
 NORM={"Leukemia":"Leukaemia","Brain,CNS":"Brain/CNS","Brain, CNS":"Brain/CNS",
       "Hodgkin' lymphoma":"Hodgkin lymphoma","Hodgkin’s lymphoma":"Hodgkin lymphoma",
-      "Hodgkin's lymphoma":"Hodgkin lymphoma"}
+      "Hodgkin's lymphoma":"Hodgkin lymphoma",
+      "Colo-rectal":"Colorectal","Hodgkin disease":"Hodgkin lymphoma",
+      "Hodgkin Disease":"Hodgkin lymphoma","Corpus uteri":"Corpus Uteri",
+      "Breast female":"Breast","Breast Female":"Breast"}
 
 def main(d):
     rows=[]
