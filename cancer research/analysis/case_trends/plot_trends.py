@@ -33,12 +33,15 @@ def plot(d, out, ylabel, title, events=None):
     cmap=plt.get_cmap("tab10"); colour={t:cmap(i%10) for i,t in enumerate(types)}
     n=len(countries)
     fig,axes=plt.subplots(1,n,figsize=(max(4.5*n,6),4.8),squeeze=False); axes=axes[0]
+    yr_min=min(y for c in d.values() for t in c.values() for y in t)
+    yr_max=max(y for c in d.values() for t in c.values() for y in t)
     for ax,c in zip(axes,countries):
         for t in types:
             if t not in d[c]: continue
             ys=sorted(d[c][t]); ax.plot(ys,[d[c][t][y] for y in ys],marker="o",ms=3,lw=1.5,color=colour[t],label=t)
-        if events:
-            for ev_year,ev_lab in events:
+        # only draw event markers that fall within the observed year range
+        for ev_year,ev_lab in (events or []):
+            if yr_min<=ev_year<=yr_max:
                 ax.axvline(ev_year,color="red",ls="--",lw=1,alpha=0.7)
                 ax.text(ev_year,ax.get_ylim()[1],f" {ev_lab}",color="red",fontsize=7,va="top",rotation=90)
         ax.set_title(c,fontsize=10,fontweight="bold"); ax.set_xlabel("Year",fontsize=8)

@@ -1,0 +1,36 @@
+country,year,cancer_type,cases,value
+"Saudi Arabia (SCR, Saudi nationals)",2019,Breast,2894,2894
+"Saudi Arabia (SCR, Saudi nationals)",2020,Breast,2499,2499
+"Saudi Arabia (SCR, Saudi nationals)",2021,Breast,3540,3540
+"Saudi Arabia (SCR, Saudi nationals)",2022,Breast,3334,3334
+"Saudi Arabia (SCR, Saudi nationals)",2023,Breast,4159,4159
+"Saudi Arabia (SCR, Saudi nationals)",2019,Colorectal,1989,1989
+"Saudi Arabia (SCR, Saudi nationals)",2020,Colorectal,1729,1729
+"Saudi Arabia (SCR, Saudi nationals)",2021,Colorectal,2273,2273
+"Saudi Arabia (SCR, Saudi nationals)",2022,Colorectal,2535,2535
+"Saudi Arabia (SCR, Saudi nationals)",2023,Colorectal,2680,2680
+"Saudi Arabia (SCR, Saudi nationals)",2019,Thyroid,1331,1331
+"Saudi Arabia (SCR, Saudi nationals)",2020,Thyroid,1044,1044
+"Saudi Arabia (SCR, Saudi nationals)",2021,Thyroid,1626,1626
+"Saudi Arabia (SCR, Saudi nationals)",2022,Thyroid,1677,1677
+"Saudi Arabia (SCR, Saudi nationals)",2023,Thyroid,1891,1891
+"Saudi Arabia (SCR, Saudi nationals)",2019,NHL,933,933
+"Saudi Arabia (SCR, Saudi nationals)",2020,NHL,756,756
+"Saudi Arabia (SCR, Saudi nationals)",2021,NHL,931,931
+"Saudi Arabia (SCR, Saudi nationals)",2022,NHL,1098,1098
+"Saudi Arabia (SCR, Saudi nationals)",2023,NHL,957,957
+"Saudi Arabia (SCR, Saudi nationals)",2019,Leukaemia,831,831
+"Saudi Arabia (SCR, Saudi nationals)",2020,Leukaemia,835,835
+"Saudi Arabia (SCR, Saudi nationals)",2021,Leukaemia,931,931
+"Saudi Arabia (SCR, Saudi nationals)",2022,Leukaemia,892,892
+"Saudi Arabia (SCR, Saudi nationals)",2023,Leukaemia,867,867
+"Saudi Arabia (SCR, Saudi nationals)",2019,Brain/CNS,527,527
+"Saudi Arabia (SCR, Saudi nationals)",2020,Brain/CNS,488,488
+"Saudi Arabia (SCR, Saudi nationals)",2021,Brain/CNS,596,596
+"Saudi Arabia (SCR, Saudi nationals)",2022,Brain/CNS,650,650
+"Saudi Arabia (SCR, Saudi nationals)",2023,Brain/CNS,643,643
+"Saudi Arabia (SCR, Saudi nationals)",2019,Corpus Uteri,580,580
+"Saudi Arabia (SCR, Saudi nationals)",2020,Corpus Uteri,494,494
+"Saudi Arabia (SCR, Saudi nationals)",2021,Corpus Uteri,631,631
+"Saudi Arabia (SCR, Saudi nationals)",2022,Corpus Uteri,647,647
+"Saudi Arabia (SCR, Saudi nationals)",2023,Corpus Uteri,695,695
