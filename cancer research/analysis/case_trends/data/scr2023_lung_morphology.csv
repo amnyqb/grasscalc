@@ -1,0 +1,8 @@
+morphology,male_n,male_pct,female_n,female_pct,all_n,all_pct,smoking_association
+Adenocarcinoma NOS,265,57.2,124,61.1,389,58.4,weak (predominant in never-smokers)
+Squamous cell carcinoma,50,10.8,15,7.4,65,9.8,strong
+Small cell carcinoma,39,8.4,5,2.5,44,6.6,strongest
+Non-small cell carcinoma,31,6.7,15,7.4,46,6.9,mixed
+Carcinoma NOS,18,3.9,8,3.9,26,3.9,unspecified
+Others,60,13.0,36,17.7,96,14.4,unspecified
+Total,463,100,203,100,666,100,
