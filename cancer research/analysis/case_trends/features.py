@@ -88,10 +88,14 @@ def main():
     # --- APC summary ---
     with open("data/scr_apc_summary.csv", "w", newline="") as fh:
         w = csv.writer(fh)
+        # apc_pre2020 is the trend BEFORE the 2021 denominator break (2022 census
+        # re-basing + COVID rebound), i.e. the defensible biological trend. The
+        # full-series apc_pct is inflated by that artefactual step and should not
+        # be read as real acceleration. See plot_incidence_break.py.
         w.writerow(["population", "sex", "icd_code", "site", "n_years",
                     "apc_pct", "ci_lo", "ci_hi", "r2",
-                    "apc_excl2020", "first_year", "last_year",
-                    "asr_first", "asr_last"])
+                    "apc_excl2020", "apc_pre2020", "pre2020_lo", "pre2020_hi", "apc_2021plus",
+                    "first_year", "last_year", "asr_first", "asr_last"])
         for (pop, sex, code), d in sorted(by.items()):
             yrs = sorted(d)
             vals = [d[y]["asr"] for y in yrs]
@@ -99,10 +103,15 @@ def main():
             if not a:
                 continue
             a2 = apc([y for y in yrs if y != 2020], [d[y]["asr"] for y in yrs if y != 2020])
+            pre = apc([y for y in yrs if y <= 2019], [d[y]["asr"] for y in yrs if y <= 2019])
+            post = apc([y for y in yrs if y >= 2021], [d[y]["asr"] for y in yrs if y >= 2021])
             fy, ly = yrs[0], yrs[-1]
             w.writerow([pop, sex, code, sites.get(code, ""), a["n"],
                         f"{a['apc']:.2f}", f"{a['lo']:.2f}", f"{a['hi']:.2f}", f"{a['r2']:.3f}",
                         f"{a2['apc']:.2f}" if a2 else "",
+                        f"{pre['apc']:.2f}" if pre else "",
+                        f"{pre['lo']:.2f}" if pre else "", f"{pre['hi']:.2f}" if pre else "",
+                        f"{post['apc']:.2f}" if post else "",
                         fy, ly, d[fy]["asr"], d[ly]["asr"]])
 
     # --- sex ratio (M:F) ---

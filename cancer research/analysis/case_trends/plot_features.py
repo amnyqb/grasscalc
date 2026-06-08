@@ -33,14 +33,17 @@ def recent_mean(rows, key, val, years=(2018, 2019, 2020, 2021, 2022, 2023)):
 
 
 def apc_forest():
+    # Use the PRE-2020 trend (before the 2021 census/denominator break) so the
+    # ranking reflects real biology, not the artefactual 2021 step.
     rows = [r for r in csv.DictReader(open("data/scr_apc_summary.csv"))
-            if r["population"] == "Saudi" and int(r["n_years"]) >= 8 and r["icd_code"] not in NOISE]
+            if r["population"] == "Saudi" and r["icd_code"] not in NOISE
+            and r["apc_pre2020"] not in ("", None) and r["pre2020_lo"] not in ("", None)]
     fig, axes = plt.subplots(1, 2, figsize=(13, 7), sharex=True)
     for ax, sex in zip(axes, ("male", "female")):
-        sub = sorted([r for r in rows if r["sex"] == sex], key=lambda r: float(r["apc_pct"]))
+        sub = sorted([r for r in rows if r["sex"] == sex], key=lambda r: float(r["apc_pre2020"]))
         y = range(len(sub))
         for i, r in enumerate(sub):
-            a, lo, hi = float(r["apc_pct"]), float(r["ci_lo"]), float(r["ci_hi"])
+            a, lo, hi = float(r["apc_pre2020"]), float(r["pre2020_lo"]), float(r["pre2020_hi"])
             c = "#c0392b" if lo > 0 else ("#1f7a1f" if hi < 0 else "#888")
             ax.plot([lo, hi], [i, i], color=c, lw=1.5, alpha=0.8, zorder=1)
             ax.scatter([a], [i], color=c, s=22, zorder=2)
@@ -48,8 +51,9 @@ def apc_forest():
         ax.set_yticks(list(y)); ax.set_yticklabels([lab(r["site"])[:24] for r in sub], fontsize=7)
         ax.set_title(f"Saudi {sex}s", fontsize=11, fontweight="bold")
         ax.set_xlabel("Annual % change in ASR (95% CI)", fontsize=9); ax.grid(axis="x", alpha=0.25)
-    fig.suptitle("Cancer incidence trend by site, Saudi nationals (SCR, ~2006–2023)\n"
-                 "red = rising, green = declining, grey = no clear trend", fontsize=12, fontweight="bold")
+    fig.suptitle("Cancer incidence trend by site, Saudi nationals (SCR, ~2006–2019, PRE-break)\n"
+                 "ASR APC before the 2021 census/denominator break — red = rising, green = declining, grey = flat",
+                 fontsize=12, fontweight="bold")
     fig.tight_layout(rect=[0, 0, 1, 0.95])
     fig.savefig("data/fig_apc_forest.png", dpi=300, bbox_inches="tight")
     fig.savefig("data/fig_apc_forest.pdf", bbox_inches="tight"); print("[written] data/fig_apc_forest.*")

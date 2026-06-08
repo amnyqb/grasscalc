@@ -36,10 +36,16 @@ Charts: `scr_trend_2006_2023.*` (top-site count trend), `scr_stacked_2006_2023.*
   rebound — pandemic disruption of diagnosis/registration, not a real fall.
 - **Counts ≠ rates.** Use ASR for trends. Count drift partly reflects population
   growth + improving coverage. The top-sites file is counts only.
-- **Possible ASR standardization/method change ~2021.** Lung male ASR sits at
-  ~5–7 (2006–2020) then steps up to 7.5/8.8/8.5 (2021/2022/2023). This may be a
-  real recent rise and/or a change in the report's standard population — described,
-  **not asserted as causal**. Keep claims at the "Compatible" level.
+- **⚠️ 2021 DENOMINATOR/METHOD BREAK — do not read across it as a real rise.**
+  All-sites Saudi-male ASR sat at **74–86 for 2006–2019**, dipped in 2020 (COVID),
+  then **stepped up to 124/145/135 in 2021/2022/2023**. Case *counts* rose only
+  ~22% over the same span while the *rate* rose ~57% — the divergence shows it is
+  largely a **denominator change**: the 2022 Saudi census re-based the population
+  estimates (back-cast to earlier years), and COVID-deferred 2020 cases rebounded
+  in 2021–22. Documented in the SCR breast/lung trend papers and Saudi Med J
+  46(12):1463. **Practical rule:** treat **≤2019 and ≥2021 as separate eras**; the
+  `apc_pre2020` column in `scr_apc_summary.csv` is the defensible biological trend
+  (the full-series `apc_pct` is inflated by the step). See `fig_incidence_break.*`.
 - **No exposure data.** The registry records site, sex, age, morphology, stage —
   not smoking, occupation, or residence. It is national, not regional (does not
   isolate the Eastern Province).
