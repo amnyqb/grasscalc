@@ -7,10 +7,11 @@ year,male_n,female_n,total,male_asr,female_asr,source_counts,source_asr,flag
 2010,292,105,397,5.8,2.1,table,table,
 2011,343,109,452,6.4,1.9,narrative,narrative,
 2012,336,127,463,5.9,2.2,narrative,narrative,
-2013,,,,5.5,1.8,missing,narrative,incidence tables are images; ASR from narrative; counts not extractable
+2013,326,109,435,5.5,1.8,narrative,narrative,OCR-recovered from narrative (tables were images); ASR cross-checked = 5.5/1.8
+2014,354,98,452,5.3,1.4,narrative,narrative,OCR-recovered from narrative (image-only scan); total 452 matches published figure
 2015,324,92,416,,,table,missing,summary-table column set differs; ASR cell ambiguous -> verify in PDF
 2016,,148,,4.4,2.0,dropped (implausible glyph-merge),table,"male count cell garbled (overlapping glyphs ~298); ASR readable, count dropped"
-2017,,,,,,missing,missing,corrupted/garbled text layer -> needs OCR
+2017,356,152,508,5.0,2.0,narrative,narrative,OCR-recovered from narrative (garbled text layer); ASR = 5.0/2.0
 2018,349,155,504,5.0,2.0,table,table=narr,
 2019,435,154,589,6.0,2.1,table=narr,table=narr,
 2020,353,105,458,4.8,1.4,table=narr,table=narr,

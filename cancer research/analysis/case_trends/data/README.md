@@ -56,12 +56,44 @@ Charts: `scr_trend_2006_2023.*` (top-site count trend), `scr_stacked_2006_2023.*
   excluded from the top-sites COUNT series, but lung (counts + ASR) IS captured
   from their narratives.
 
+## All sites × sex × nationality (NEW)
+
+| File | What |
+|---|---|
+| `scr_all_sites_long.csv` | long format: year, population, sex, icd_code, site, count, crude, asr, source |
+| `scr_asr_by_site_saudi_male.csv` / `_female.csv` | wide pivots (year × site) of Saudi ASR |
+| `scr_asr_trends_saudi.*` | ASR trend, top sites, Saudi male/female panels |
+| `scr_asr_saudi_vs_nonsaudi.*` | ASR trend, key sites, Saudi vs non-Saudi males |
+
+- **Source tables:** Saudi = the per-site×sex summary (Table 2.3/2.6); non-Saudi =
+  the by-age tables (5.4.3/5.4.4), which give count (first cell) + crude + ASR
+  (last cell). Tool: `extract_all_sites.py`. Saudi ASR from the two tables agrees
+  cell-for-cell (validated 2008 & 2023), and site totals reconcile with the
+  top-sites file (e.g. 2023 colorectal C18+C19-C20 = 2680; 2008 breast M17+F1152 = 1169).
+- **Coverage:** Saudi 2006–2010, 2015–2016, 2018–2023; non-Saudi 2010, 2018–2023.
+- **Not included (flagged, not guessed):** the 2006–2009 non-Saudi and 2011–2012
+  rate tables are *transposed* (ICD codes as rotated column-headers) with no clean
+  count/ASR anchors; 2004 has no per-site table.
+- **non-Saudi = expatriates:** a young, incompletely-captured population (many
+  diagnosed/treated abroad) — its rates are interpretively weak; read with caution.
+
+## OCR-recovered years (2013, 2014, 2017)
+These reports are image-only / garbled, so their tables were rasterised and OCR'd
+(`/tmp/ocr/ocr_to_pdf.py`, tesseract). **Lung** for these years is taken from the
+OCR'd *narrative* (prose — low OCR risk, and cross-validated: 2014 total 452 matches
+the published figure; 2013 ASR 5.5/1.8 matches the known value). **All-sites tables**
+for these years are **excluded** — dense-numeric OCR is unreliable cell-by-cell
+(observed: 2014 lung female ASR mis-read 1.4 → 14.0). They need manual verification
+before use.
+
 ## Regenerate / extend
 ```
 pip install pymupdf matplotlib
 python3 ../extract_scr_reports.py  /folder/with/SCR/pdfs   # top-site counts
 python3 ../extract_lung_series.py  /folder/with/SCR/pdfs   # lung counts + ASR (prints all values)
+python3 ../extract_all_sites.py    /folder/with/SCR/pdfs   # all sites x sex x nationality
 python3 ../plot_trends.py        --input scr_saudi_topsites_2006_2023.csv --out scr_trend_2006_2023 --ylabel "Incident cases (count)"
 python3 ../plot_cases_by_year.py --input scr_saudi_topsites_2006_2023.csv --out scr_stacked_2006_2023
 python3 ../plot_lung_asr.py       --input scr_lung_by_sex_asr_2004_2023.csv
+python3 ../plot_all_sites.py      --input scr_all_sites_long.csv
 ```

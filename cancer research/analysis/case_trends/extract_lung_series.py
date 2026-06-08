@@ -46,11 +46,11 @@ SUMMARY_PAGE = {2006:19, 2007:19, 2008:19, 2009:21, 2010:21, 2015:20, 2016:18,
 
 FLAG = {
     2004: "narrative ASR scrambled by RTL interleaving; counts from narrative only",
-    2013: "incidence tables are images; ASR from narrative; counts not extractable",
-    2014: "image-only scan, no text layer -> needs OCR",
+    2013: "OCR-recovered from narrative (tables were images); ASR cross-checked = 5.5/1.8",
+    2014: "OCR-recovered from narrative (image-only scan); total 452 matches published figure",
     2015: "summary-table column set differs; ASR cell ambiguous -> verify in PDF",
     2016: "male count cell garbled (overlapping glyphs ~298); ASR readable, count dropped",
-    2017: "corrupted/garbled text layer -> needs OCR",
+    2017: "OCR-recovered from narrative (garbled text layer); ASR = 5.0/2.0",
 }
 
 # Saudi-national lung counts per sex are in the low hundreds; anything larger is a
