@@ -76,10 +76,17 @@ Charts: `scr_trend_2006_2023.*` (top-site count trend), `scr_stacked_2006_2023.*
   (last cell). Tool: `extract_all_sites.py`. Saudi ASR from the two tables agrees
   cell-for-cell (validated 2008 & 2023), and site totals reconcile with the
   top-sites file (e.g. 2023 colorectal C18+C19-C20 = 2680; 2008 breast M17+F1152 = 1169).
-- **Coverage:** Saudi 2006–2010, 2015–2016, 2018–2023; non-Saudi 2010, 2018–2023.
-- **Not included (flagged, not guessed):** the 2006–2009 non-Saudi and 2011–2012
-  rate tables are *transposed* (ICD codes as rotated column-headers) with no clean
-  count/ASR anchors; 2004 has no per-site table.
+- **Coverage:** Saudi 2006–2012, 2015–2016, 2018–2023; non-Saudi 2010, 2018–2023.
+- **2011–2012 recovered** via `extract_transposed.py` — those reports laid the
+  rate table out *transposed* (ICD codes as rotated column-headers, age/Crude/ASR
+  as rows). It reads *across* the ASR/Crude rows, x-aligning to site columns, and
+  accepts a page only if the parsed lung ASR matches the known narrative value
+  (2011 M 6.4/F 1.9, 2012 M 5.9/F 2.2). These years carry **ASR + crude only**
+  (the rate table has no counts); they slot continuously into 2006–2010 (e.g.
+  breast-F ASR 25→23→22). On the pre-break basis, consistent with 2006–2019.
+- **Still not included (flagged, not guessed):** the 2006–2009 *non-Saudi*
+  transposed tables (no narrative anchor to validate against), and 2004
+  (no per-site table). 2013/2014/2017 all-sites still gap (image/OCR-only).
 - **non-Saudi = expatriates:** a young, incompletely-captured population (many
   diagnosed/treated abroad) — its rates are interpretively weak; read with caution.
 
