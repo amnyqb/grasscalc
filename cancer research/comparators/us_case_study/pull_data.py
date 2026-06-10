@@ -33,7 +33,7 @@ def scp_incidence(state_fips, cancer):
     for r in csv.reader(io.StringIO(get(url).decode("utf-8", "replace"))):
         if len(r) > 3 and r[1].isdigit() and len(r[1]) == 5 and not r[1].endswith("000"):
             try:
-                out[r[1]] = (float(r[3]), r[0].split("(")[0].strip())
+                out[r[1]] = (float(r[3]), r[0].split("(")[0].strip(), r[2].strip())  # rate, name, RUCC
             except ValueError:
                 pass
     return out
@@ -58,19 +58,26 @@ def airtoxscreen(path="/tmp/ats_county.xlsx"):
     wb = openpyxl.load_workbook(path, read_only=True); ws = wb.active
     hdr = [str(c.value).strip().lower() for c in next(ws.iter_rows(min_row=1, max_row=1))]
     ci = lambda s: next(i for i, h in enumerate(hdr) if s in h)
-    i_f, i_t, i_p = ci("fips"), ci("total cancer risk"), ci("pt-stationarypoint")
+    i_f, i_t, i_p, i_pop = ci("fips"), ci("total cancer risk"), ci("pt-stationarypoint"), ci("population")
     out = {}
     for row in ws.iter_rows(min_row=2, values_only=True):
         try:
-            out[str(row[i_f]).zfill(5)] = (float(row[i_t]), float(row[i_p]))
+            out[str(row[i_f]).zfill(5)] = (float(row[i_t]), float(row[i_p]), float(row[i_pop]))
         except (ValueError, TypeError):
             pass
     return out
 
 
-# minimal state FIPS<->abbr for the layers that key differently
-ST = {"22": "LA", "48": "TX", "06": "CA", "36": "NY", "12": "FL", "01": "AL",
-      "28": "MS", "21": "KY", "47": "TN", "13": "GA"}
+# state FIPS <-> USPS abbr (50 states + DC)
+ST = {"01": "AL", "02": "AK", "04": "AZ", "05": "AR", "06": "CA", "08": "CO",
+      "09": "CT", "10": "DE", "11": "DC", "12": "FL", "13": "GA", "15": "HI",
+      "16": "ID", "17": "IL", "18": "IN", "19": "IA", "20": "KS", "21": "KY",
+      "22": "LA", "23": "ME", "24": "MD", "25": "MA", "26": "MI", "27": "MN",
+      "28": "MS", "29": "MO", "30": "MT", "31": "NE", "32": "NV", "33": "NH",
+      "34": "NJ", "35": "NM", "36": "NY", "37": "NC", "38": "ND", "39": "OH",
+      "40": "OK", "41": "OR", "42": "PA", "44": "RI", "45": "SC", "46": "SD",
+      "47": "TN", "48": "TX", "49": "UT", "50": "VT", "51": "VA", "53": "WA",
+      "54": "WV", "55": "WI", "56": "WY"}
 
 
 def main():
@@ -78,25 +85,35 @@ def main():
     ap.add_argument("--states", default="22", help="comma FIPS, or 'all'")
     a = ap.parse_args()
     states = list(ST) if a.states == "all" else a.states.split(",")
+    import time
     pol = airtoxscreen()
     rows = []
     for sf in states:
         abbr = ST.get(sf)
         if not abbr:
             print(f"skip {sf} (add to ST map)"); continue
-        smk = places_smoking(abbr)
+        try:
+            smk = places_smoking(abbr)
+        except Exception as e:
+            print(f"{abbr}: smoking pull failed ({e})"); smk = {}
         for code, site in SENTINELS.items():
-            inc = scp_incidence(sf, code)
-            for fips, (rate, name) in inc.items():
+            try:
+                inc = scp_incidence(sf, code)
+            except Exception as e:
+                print(f"{abbr}/{site}: incidence failed ({e})"); continue
+            for fips, (rate, name, rucc) in inc.items():
                 if fips in smk and fips in pol:
                     rows.append(dict(fips=fips, county=name, state=abbr, site=site,
                                      incidence=rate, smoking_pct=smk[fips],
-                                     ind_pollution=pol[fips][1], total_pollution=pol[fips][0]))
-        print(f"{abbr}: merged {len([r for r in rows if r['state']==abbr])} county-site rows")
+                                     ind_pollution=pol[fips][1], total_pollution=pol[fips][0],
+                                     rucc=rucc, population=int(pol[fips][2])))
+            time.sleep(0.4)  # be polite to State Cancer Profiles
+        print(f"{abbr}: {len([r for r in rows if r['state']==abbr])} rows  (running total {len(rows)})", flush=True)
     os.makedirs("data", exist_ok=True)
     with open("data/us_county_merged.csv", "w", newline="") as fh:
-        w = csv.DictWriter(fh, fieldnames=["fips", "county", "state", "site",
-                                           "incidence", "smoking_pct", "ind_pollution", "total_pollution"])
+        w = csv.DictWriter(fh, fieldnames=["fips", "county", "state", "site", "incidence",
+                                           "smoking_pct", "ind_pollution", "total_pollution",
+                                           "rucc", "population"])
         w.writeheader(); w.writerows(rows)
     print(f"[written] data/us_county_merged.csv ({len(rows)} rows)")
 
