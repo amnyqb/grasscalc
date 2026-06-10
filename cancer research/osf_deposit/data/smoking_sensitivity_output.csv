@@ -1,0 +1,5 @@
+scenario,p_high,p_low,rate_ratio_RR10,rate_ratio_RR15,rate_ratio_RR20
+Realistic regional gap,0.2,0.1,1.47,1.58,1.66
+Large gap,0.3,0.08,2.15,2.45,2.66
+Implausible extreme,0.45,0.05,3.48,4.29,4.9
+Required to reach 5.7,0.5,0.04,4.04,5.13,5.97

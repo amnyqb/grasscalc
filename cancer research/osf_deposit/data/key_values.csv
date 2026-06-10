@@ -1,0 +1,25 @@
+claim,value,metric_type,source_cite_key,manuscript_location
+LSS cohort size,"105,444 survivors",count,grant2017; cullings2017,S3.3.1
+LSS solid-cancer cases 1958-2009,"22,538",count,grant2017,S3.3.1
+LSS radiation ERR/Gy in never-smokers,statistically significantly positive,ERR/Gy,grant2017,S3.3.1 (key claim)
+Semipalatinsk full-cohort ERR/Sv all solid cancers,1.77 (95% CI 1.35-2.27),ERR/Sv,bauer2005,S3.3.1
+Semipalatinsk exposed-only ERR/Sv,0.81 (0.46-1.33),ERR/Sv,bauer2005,S3.3.1
+Semipalatinsk cohort / person-years,"19,545 / 582,750 PY",count,bauer2005,S3.3.1
+VA Camp Lejeune presumptive conditions (2017 rule),8 conditions,policy,va2017,S3.3.2
+Khamisiyah brain-cancer mortality ratio,2x to 3x,mortality ratio,bullman2005; barth2009,S3.3.3
+UK Gulf War cancer IRR,0.99 (0.83-1.17),incidence rate ratio,macfarlane2003,S3.3.3 (negative comparator)
+Agent Orange biomarker vs proxy RR,1.6 (1.2-2.2) vs ~1.01,relative risk,akhtar2004; steenland1999,S3.3.4
+Poirier 1991 Kuwait PAH exposure,low; adducts lowest in Kuwait,biomarker,poirier1998,S3.3.3 (correction)
+Fallujah all-cancer RR,4.22 (2.8-6.6),relative risk,busby2010,S3.3.6
+Fallujah pediatric-cancer RR,12.6 (4.9-32),relative risk,busby2010,S3.3.6
+Cancer Alley measured VOC cancer risk vs models,up to 11x,modeled lifetime risk,robinson2025,S3.3.7
+Breast-cancer apparent screening increase (20 yr),~37% lead-time; corrected 4.6% (Florence),incidence change,duffy2005; gotzsche2009; paci2006,S2.6 / S3.4
+Saudi lung crude incidence Eastern Province,"3.36 per 100,000",crude incidence rate,scrlung2025,S3.7 (anchor)
+Saudi lung crude incidence Jazan,"0.59 per 100,000",crude incidence rate,scrlung2025,S3.7 (anchor)
+Saudi EP:Jazan lung crude-rate ratio,~5.7x,crude-rate ratio,scrlung2025,S3.7 (anchor; CRUDE not ASIR)
+Saudi active-smoking prevalence,27.5% men / 3.7% women,prevalence,gats2019,S3.7 (sensitivity input)
+Saudi regional 5-yr survival range,45.2-68.7%,survival,ksaregional2024,S3.6
+Saudi survival adjusted HR (best vs worst region),0.68 (0.62-0.74),hazard ratio,ksaregional2024,S3.6
+EP spatial clusters (Moran I high-high),"lung, prostate, Hodgkin (M), thyroid (F)",spatial cluster,alahmadi2013,S3.5
+Smoking-sensitivity: realistic gap (20% vs 10%),rate ratio ~1.5,derived,gats2019 (input),Table 3 / smoking_sensitivity.py
+"Smoking-sensitivity: only implausible 50% vs 4%, RR=20 reaches",~6,derived,gats2019 (input),Table 3 / smoking_sensitivity.py

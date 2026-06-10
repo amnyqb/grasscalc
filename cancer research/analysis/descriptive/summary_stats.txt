@@ -1,0 +1,138 @@
+======================================================================
+DESCRIPTIVE SUMMARY STATISTICS — assembled evidence base
+======================================================================
+
+[A] REFERENCE CORPUS
+  Total references (N)          : 63
+    status UNVERIFIED   : 29  (46.0%)
+    status NEEDS_LOOKUP : 13  (20.6%)
+    status NO_DOI       : 13  (20.6%)
+    status FLAG_AUTHOR  :  6  ( 9.5%)
+    status VERIFIED     :  2  ( 3.2%)
+  DOI present                   : 28 / 63
+  PMID/PMCID present            : 28 / 63
+  Cited in main text            : 53 / 63
+  In bibliography but uncited   : 10  -> ['alhajj2021', 'basudan2023', 'beir1999', 'beirutpm2023', 'grosche2011', 'iom2005', 'ksacrc', 'madinah2024', 'puma2023', 'whittemore1983']
+
+[B] COMPARATOR POPULATIONS (evidence matrix)
+  Total comparator populations  : 13  (incl. the Saudi test case)
+  Distinct exposure categories  : 12
+     2  Wartime combustion
+     1  Ionizing radiation
+     1  Nuclear-test fallout
+     1  Solvent contamination (military base)
+     1  Wartime combustion + nerve agent
+     1  Mixed deployment
+     1  Chemical agent (dioxin)
+     1  Acute industrial chemical release
+     1  Civilian conflict-associated exposure
+     1  Warehouse oxidizer release
+     1  Chronic petrochemical pollution
+     1  Oil-fire plume + petrochemical baseline
+
+  Evidence grade (as charted)   : 11 distinct labels
+     2  A/B
+     2  B
+     1  A
+     1  B/C
+     1  D (contextual)
+     1  F (C cytogenetics)
+     1  F/B
+     1  B/F
+     1  F/E
+     1  E (contextual)
+     1  Ecological hypothesis
+  Collapsed to primary grade    :
+    A          : 3
+    B          : 4
+    D          : 1
+    E          : 1
+    Ecological : 1
+    F          : 3
+
+  Effect-metric FAMILIES        : 12 incommensurable families (NOT pooled)
+     2  Relative risk
+     1  ERR per dose (Gy)
+     1  ERR per dose (Sv)
+     1  Dose-response RR/HR
+     1  Mortality ratio
+     1  Incidence rate ratio
+     1  Policy-presumptive list
+     1  Community-survey ratio
+     1  ASIR change
+     1  No incidence yet (immature latency)
+     1  Modeled lifetime risk
+     1  Crude-rate ratio
+
+  Cross-tab (primary grade x exposure category):
+    A          : Ionizing radiation, Nuclear-test fallout, Solvent contamination (military base)
+    B          : Wartime combustion + nerve agent, Mixed deployment, Chemical agent (dioxin), Wartime combustion
+    D          : Wartime combustion
+    E          : Chronic petrochemical pollution
+    Ecological : Oil-fire plume + petrochemical baseline
+    F          : Acute industrial chemical release, Civilian conflict-associated exposure, Warehouse oxidizer release
+
+[C] SOURCE-LEVEL EXTRACTION (charting sheet)
+  Charted source rows           : 13
+  Study design:
+     5  Cohort
+     1  Cohort (vs Pendleton)
+     1  Policy
+     1  Survey / cytogenetic
+     1  Survey
+     1  Registry / mixed
+     1  Review
+     1  Risk model
+     1  Ecological (proposed)
+  Smoking / confounder control:
+     3  N/A
+     2  Partial
+     1  Individual smoking histories
+     1  Limited individual smoking
+     1  Comparison cohort; partial
+     1  Partial; overlapping exposures
+     1  Income/education matched
+     1  Limited
+     1  Screening-caveated
+     1  To be modelled
+  Latency (as charted):
+     5  Decades
+     1  10-15 yr
+     1  Short
+     1  -
+     1  2-5 yr
+     1  ~8 yr
+     1  Immature
+     1  Chronic
+     1  20-25 yr
+
+[D] HEADLINE NUMERIC CLAIMS (key-values register)
+  Total charted claims          : 24
+  Metric types represented      : 17
+     3  count
+     3  relative risk
+     2  ERR/Sv
+     2  crude incidence rate
+     2  derived
+     1  ERR/Gy
+     1  policy
+     1  mortality ratio
+     1  incidence rate ratio
+     1  biomarker
+     1  modeled lifetime risk
+     1  incidence change
+     1  crude-rate ratio
+     1  prevalence
+     1  survival
+     1  hazard ratio
+     1  spatial cluster
+  Distinct sources behind claims: 20
+  NOTE: no mean/median of effect values is reported — the metric types above
+        are incommensurable (metric-separation rule). Values are listed with
+        provenance in ../claims_long.csv only.
+
+[E] SMOKING-PREVALENCE SENSITIVITY (Table 3) — observed contrast 5.69x
+    Realistic regional gap   p 0.2/0.1  RR10=1.47  RR15=1.58  RR20=1.66
+    Large gap                p 0.3/0.08  RR10=2.15  RR15=2.45  RR20=2.66
+    Implausible extreme      p 0.45/0.05  RR10=3.48  RR15=4.29  RR20=4.9
+    Required to reach 5.7    p 0.5/0.04  RR10=4.04  RR15=5.13  RR20=5.97

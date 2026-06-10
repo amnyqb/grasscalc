@@ -1,0 +1,2125 @@
+year,population,sex,icd_code,site,count,crude,asr,source
+2006,Saudi,male,C00,C00 Lip,6,0.1,0.1,summary
+2006,Saudi,male,C01-C02,C01-C02 Tongue,37,0.4,0.8,summary
+2006,Saudi,male,C03-C06,C03-C06 Mouth,30,0.3,0.8,summary
+2006,Saudi,male,C07-C08,C07-C08 Salivary glands,14,0.2,0.2,summary
+2006,Saudi,male,C09,C09 Tonsil,0,0.0,0.0,summary
+2006,Saudi,male,C10,C10 Other Oropharynx,0,0.0,0.0,summary
+2006,Saudi,male,C11,C11 Nasopharynx,95,1.1,1.7,summary
+2006,Saudi,male,C12-C13,C12-C13 Hypopharynx,9,0.1,0.2,summary
+2006,Saudi,male,C14,C14 Pharynx unspeciﬁed,3,0.0,0.1,summary
+2006,Saudi,male,C15,C15 Oesophagus,55,0.6,1.4,summary
+2006,Saudi,male,C16,C16 Stomach,162,1.9,3.9,summary
+2006,Saudi,male,C17,C17 Small intestine,18,0.2,0.4,summary
+2006,Saudi,male,C18,C18 Colon,232,2.7,5.3,summary
+2006,Saudi,male,C19-C20,C19-C20 Rectum,182,2.1,4.4,summary
+2006,Saudi,male,C21,C21 Anus,8,0.1,0.2,summary
+2006,Saudi,male,C22,C22 Liver,291,3.4,7.5,summary
+2006,Saudi,male,C23-C24,C23-C24 Gallbladder etc.,46,0.5,1.2,summary
+2006,Saudi,male,C25,C25 Pancreas,93,1.1,2.4,summary
+2006,Saudi,male,C30-C31,"C30-C31 Nose, sinuses etc.",10,0.1,0.2,summary
+2006,Saudi,male,C32,C32 Larynx,62,0.7,1.6,summary
+2006,Saudi,male,C33-C34,"C33-C34 Trachea, Bronchus, Lung",232,2.7,6.1,summary
+2006,Saudi,male,C37-C38,C37-C38 Other Thoracic organs,14,0.2,0.2,summary
+2006,Saudi,male,C40-C41,C40-C41 Bone,64,0.7,0.7,summary
+2006,Saudi,male,C43,C43 Melanoma of Skin,11,0.1,0.2,summary
+2006,Saudi,male,C44,C44 Other Skin,193,2.2,4.6,summary
+2006,Saudi,male,C45,C45 Mesothelioma,8,0.1,0.2,summary
+2006,Saudi,male,C46,C46 Kaposi sarcoma,22,0.3,0.5,summary
+2006,Saudi,male,C47;C49,"C47;C49 Connective, Soft tissue",57,0.7,0.9,summary
+2006,Saudi,male,C50,C50 Breast,18,0.2,0.4,summary
+2006,Saudi,male,C64,C64 Kidney,111,1.3,2.4,summary
+2006,Saudi,male,C65,C65 Renal Pelvis,5,0.1,0.1,summary
+2006,Saudi,male,C66,C66 Ureter,1,0.0,0.0,summary
+2006,Saudi,male,C67,C67 Bladder,169,2.0,4.1,summary
+2006,Saudi,male,C68,C68 Other Urinary organs,0,0.0,0.0,summary
+2006,Saudi,male,C69,C69 Eye,26,0.3,0.3,summary
+2006,Saudi,male,C70-C72,"C70-C72 Brain, Nervous system",149,1.7,2.5,summary
+2006,Saudi,male,C73,C73 Thyroid,117,1.4,2.1,summary
+2006,Saudi,male,C74,C74 Adrenal gland,19,0.2,0.2,summary
+2006,Saudi,male,C75,C75 Other Endocrine,5,0.1,0.1,summary
+2006,Saudi,male,C81,C81 Hodgkin disease,173,2.0,2.1,summary
+2006,Saudi,male,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,351,4.1,6.6,summary
+2006,Saudi,male,C88,C88 Immunoproliferative dis.,0,0.0,0.0,summary
+2006,Saudi,male,C90,C90 Multiple Myeloma,48,0.6,1.2,summary
+2006,Saudi,male,C91,C91 Lymphoid Leukemia,155,1.8,2.3,summary
+2006,Saudi,male,C92-C94,C92-C94 Myeloid Leukemia,115,1.3,1.8,summary
+2006,Saudi,male,C95,C95 Leukemia unspeciﬁed,26,0.3,0.4,summary
+2006,Saudi,female,C00,C00 Lip,4,0.0,0.1,summary
+2006,Saudi,female,C01-C02,C01-C02 Tongue,26,0.3,0.6,summary
+2006,Saudi,female,C03-C06,C03-C06 Mouth,34,0.4,0.8,summary
+2006,Saudi,female,C07-C08,C07-C08 Salivary glands,12,0.1,0.2,summary
+2006,Saudi,female,C09,C09 Tonsil,2,0.0,0.0,summary
+2006,Saudi,female,C10,C10 Other Oropharynx,0,0.0,0.0,summary
+2006,Saudi,female,C11,C11 Nasopharynx,43,0.5,0.8,summary
+2006,Saudi,female,C12-C13,C12-C13 Hypopharynx,11,0.1,0.2,summary
+2006,Saudi,female,C14,C14 Pharynx unspeciﬁed,1,0.0,0.0,summary
+2006,Saudi,female,C15,C15 Oesophagus,64,0.7,1.6,summary
+2006,Saudi,female,C16,C16 Stomach,113,1.3,2.7,summary
+2006,Saudi,female,C17,C17 Small intestine,14,0.2,0.3,summary
+2006,Saudi,female,C18,C18 Colon,227,2.6,5.3,summary
+2006,Saudi,female,C19-C20,C19-C20 Rectum,143,1.7,3.3,summary
+2006,Saudi,female,C21,C21 Anus,9,0.1,0.2,summary
+2006,Saudi,female,C22,C22 Liver,125,1.5,3.1,summary
+2006,Saudi,female,C23-C24,C23-C24 Gallbladder etc.,70,0.8,1.7,summary
+2006,Saudi,female,C25,C25 Pancreas,73,0.8,1.8,summary
+2006,Saudi,female,C30-C31,"C30-C31 Nose, sinuses etc.",10,0.1,0.2,summary
+2006,Saudi,female,C32,C32 Larynx,9,0.1,0.2,summary
+2006,Saudi,female,C33-C34,"C33-C34 Trachea, Bronchus, Lung",80,0.9,2.0,summary
+2006,Saudi,female,C37-C38,C37-C38 Other Thoracic organs,10,0.1,0.2,summary
+2006,Saudi,female,C40-C41,C40-C41 Bone,36,0.4,0.4,summary
+2006,Saudi,female,C43,C43 Melanoma of Skin,12,0.1,0.3,summary
+2006,Saudi,female,C44,C44 Other Skin,134,1.6,3.0,summary
+2006,Saudi,female,C45,C45 Mesothelioma,5,0.1,0.1,summary
+2006,Saudi,female,C46,C46 Kaposi sarcoma,14,0.2,0.3,summary
+2006,Saudi,female,C47;C49,"C47;C49 Connective, Soft tissue",37,0.4,0.5,summary
+2006,Saudi,female,C50,C50 Breast,981,11.4,18.0,summary
+2006,Saudi,female,C64,C64 Kidney,78,0.9,1.5,summary
+2006,Saudi,female,C65,C65 Renal Pelvis,4,0.0,0.1,summary
+2006,Saudi,female,C66,C66 Ureter,2,0.0,0.0,summary
+2006,Saudi,female,C67,C67 Bladder,42,0.5,1.0,summary
+2006,Saudi,female,C68,C68 Other Urinary organs,0,0.0,0.0,summary
+2006,Saudi,female,C69,C69 Eye,19,0.2,0.3,summary
+2006,Saudi,female,C70-C72,"C70-C72 Brain, Nervous system",103,1.2,1.6,summary
+2006,Saudi,female,C73,C73 Thyroid,424,4.9,6.5,summary
+2006,Saudi,female,C74,C74 Adrenal gland,10,0.1,0.1,summary
+2006,Saudi,female,C75,C75 Other Endocrine,5,0.1,0.1,summary
+2006,Saudi,female,C81,C81 Hodgkin disease,120,1.4,1.6,summary
+2006,Saudi,female,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,234,2.7,4.8,summary
+2006,Saudi,female,C88,C88 Immunoproliferative dis.,0,0.0,0.0,summary
+2006,Saudi,female,C90,C90 Multiple Myeloma,26,0.3,0.6,summary
+2006,Saudi,female,C91,C91 Lymphoid Leukemia,90,1.0,1.2,summary
+2006,Saudi,female,C92-C94,C92-C94 Myeloid Leukemia,113,1.3,2.0,summary
+2006,Saudi,female,C95,C95 Leukemia unspeciﬁed,9,0.1,0.2,summary
+2007,Saudi,male,C44,Not C44 All sites but C44,4188,47.5,76.8,summary
+2007,Saudi,male,C44,Not C44 All sites but C44,4188,47.5,76.8,summary
+2007,Saudi,male,C00,C00 Lip,12,0.1,0.2,summary
+2007,Saudi,male,C01-C02,C01-C02 Tongue,39,0.4,0.8,summary
+2007,Saudi,male,C03-C06,C03-C06 Mouth,37,0.4,0.8,summary
+2007,Saudi,male,C07-C08,C07-C08 Salivary glands,19,0.2,0.4,summary
+2007,Saudi,male,C09,C09 Tonsil,4,0.0,0.1,summary
+2007,Saudi,male,C10,C10 Other Oropharynx,2,0.0,0.0,summary
+2007,Saudi,male,C11,C11 Nasopharynx,94,1.1,1.5,summary
+2007,Saudi,male,C12-C13,C12-C13 Hypopharynx,15,0.2,0.3,summary
+2007,Saudi,male,C14,C14 Pharynx unspeciﬁed,2,0.0,0.0,summary
+2007,Saudi,male,C15,C15 Oesophagus,75,0.9,1.5,summary
+2007,Saudi,male,C16,C16 Stomach,173,2.0,3.6,summary
+2007,Saudi,male,C17,C17 Small intestine,27,0.3,0.5,summary
+2007,Saudi,male,C18,C18 Colon,275,3.1,5.5,summary
+2007,Saudi,male,C19-C20,C19-C20 Rectum,211,2.4,4.1,summary
+2007,Saudi,male,C21,C21 Anus,12,0.1,0.2,summary
+2007,Saudi,male,C22,C22 Liver,315,3.6,6.8,summary
+2007,Saudi,male,C23-C24,C23-C24 Gallbladder etc.,52,0.6,1.1,summary
+2007,Saudi,male,C25,C25 Pancreas,127,1.4,2.7,summary
+2007,Saudi,male,C30-C31,"C30-C31 Nose, sinuses etc.",12,0.1,0.2,summary
+2007,Saudi,male,C32,C32 Larynx,56,0.6,1.2,summary
+2007,Saudi,male,C33-C34,"C33-C34 Trachea, Bronchus, Lung",323,3.7,6.9,summary
+2007,Saudi,male,C37-C38,C37-C38 Other Thoracic organs,21,0.2,0.4,summary
+2007,Saudi,male,C40-C41,C40-C41 Bone,64,0.7,0.7,summary
+2007,Saudi,male,C43,C43 Melanoma of Skin,15,0.2,0.3,summary
+2007,Saudi,male,C44,C44 Other Skin,163,1.8,3.1,summary
+2007,Saudi,male,C45,C45 Mesothelioma,13,0.1,0.3,summary
+2007,Saudi,male,C46,C46 Kaposi sarcoma,17,0.2,0.3,summary
+2007,Saudi,male,C47;,"C47; C49 Connective, Soft tissue",75,0.9,1.1,summary
+2007,Saudi,male,C49,"C47; C49 Connective, Soft tissue",75,0.9,1.1,summary
+2007,Saudi,male,C50,C50 Breast,20,0.2,0.4,summary
+2007,Saudi,male,C64,C64 Kidney,143,1.6,2.7,summary
+2007,Saudi,male,C65,C65 Renal Pelvis,4,0.0,0.1,summary
+2007,Saudi,male,C66,C66 Ureter,2,0.0,0.0,summary
+2007,Saudi,male,C67,C67 Bladder,171,1.9,3.5,summary
+2007,Saudi,male,C68,C68 Other Urinary organs,1,0.0,0.0,summary
+2007,Saudi,male,C69,C69 Eye,22,0.2,0.3,summary
+2007,Saudi,male,C70-C72,"C70-C72 Brain, Nervous system",133,1.5,1.9,summary
+2007,Saudi,male,C73,C73 Thyroid,115,1.3,1.8,summary
+2007,Saudi,male,C74,C74 Adrenal gland,15,0.2,0.2,summary
+2007,Saudi,male,C75,C75 Other Endocrine,3,0.0,0.0,summary
+2007,Saudi,male,C81,C81 Hodgkin disease,180,2.0,2.2,summary
+2007,Saudi,male,C82-C85;,C82-C85; C96 Non-Hodgkin lymphoma,418,4.7,7.0,summary
+2007,Saudi,male,C96,C82-C85; C96 Non-Hodgkin lymphoma,418,4.7,7.0,summary
+2007,Saudi,male,C88,C88 Immunoproliferative dis.,0,0.0,0.0,summary
+2007,Saudi,male,C90,C90 Multiple Myeloma,43,0.5,0.9,summary
+2007,Saudi,male,C91,C91 Lymphoid Leukemia,194,2.2,2.4,summary
+2007,Saudi,male,C92-C94,C92-C94 Myeloid Leukemia,113,1.3,1.6,summary
+2007,Saudi,male,C95,C95 Leukemia unspeciﬁed,28,0.3,0.4,summary
+2007,Saudi,female,C44,Not C44 All sites but C44,4653,53.7,81.7,summary
+2007,Saudi,female,C44,Not C44 All sites but C44,4653,53.7,81.7,summary
+2007,Saudi,female,C00,C00 Lip,6,0.1,0.1,summary
+2007,Saudi,female,C01-C02,C01-C02 Tongue,37,0.4,0.8,summary
+2007,Saudi,female,C03-C06,C03-C06 Mouth,53,0.6,1.0,summary
+2007,Saudi,female,C07-C08,C07-C08 Salivary glands,18,0.2,0.3,summary
+2007,Saudi,female,C09,C09 Tonsil,3,0.0,0.1,summary
+2007,Saudi,female,C10,C10 Other Oropharynx,1,0.0,0.0,summary
+2007,Saudi,female,C11,C11 Nasopharynx,58,0.7,0.9,summary
+2007,Saudi,female,C12-C13,C12-C13 Hypopharynx,9,0.1,0.2,summary
+2007,Saudi,female,C14,C14 Pharynx unspeciﬁed,3,0.0,0.0,summary
+2007,Saudi,female,C15,C15 Oesophagus,57,0.7,1.2,summary
+2007,Saudi,female,C16,C16 Stomach,126,1.5,2.5,summary
+2007,Saudi,female,C17,C17 Small intestine,14,0.2,0.3,summary
+2007,Saudi,female,C18,C18 Colon,252,2.9,4.8,summary
+2007,Saudi,female,C19-C20,C19-C20 Rectum,169,2.0,3.3,summary
+2007,Saudi,female,C21,C21 Anus,12,0.1,0.2,summary
+2007,Saudi,female,C22,C22 Liver,121,1.4,2.6,summary
+2007,Saudi,female,C23-C24,C23-C24 Gallbladder etc.,86,1.0,1.9,summary
+2007,Saudi,female,C25,C25 Pancreas,51,0.6,1.1,summary
+2007,Saudi,female,C30-C31,"C30-C31 Nose, sinuses etc.",14,0.2,0.2,summary
+2007,Saudi,female,C32,C32 Larynx,10,0.1,0.2,summary
+2007,Saudi,female,C33-C34,"C33-C34 Trachea, Bronchus, Lung",89,1.0,1.9,summary
+2007,Saudi,female,C37-C38,C37-C38 Other Thoracic organs,9,0.1,0.1,summary
+2007,Saudi,female,C40-C41,C40-C41 Bone,33,0.4,0.3,summary
+2007,Saudi,female,C43,C43 Melanoma of Skin,18,0.2,0.4,summary
+2007,Saudi,female,C44,C44 Other Skin,120,1.4,2.5,summary
+2007,Saudi,female,C45,C45 Mesothelioma,2,0.0,0.0,summary
+2007,Saudi,female,C46,C46 Kaposi sarcoma,6,0.1,0.1,summary
+2007,Saudi,female,C47;,"C47; C49 Connective, Soft tissue",60,0.7,0.7,summary
+2007,Saudi,female,C49,"C47; C49 Connective, Soft tissue",60,0.7,0.7,summary
+2007,Saudi,female,C50,C50 Breast,1239,14.3,21.6,summary
+2007,Saudi,female,C64,C64 Kidney,84,1.0,1.4,summary
+2007,Saudi,female,C65,C65 Renal Pelvis,1,0.0,0.0,summary
+2007,Saudi,female,C66,C66 Ureter,0,0.0,0.0,summary
+2007,Saudi,female,C67,C67 Bladder,37,0.4,0.8,summary
+2007,Saudi,female,C68,C68 Other Urinary organs,0,0.0,0.0,summary
+2007,Saudi,female,C69,C69 Eye,20,0.2,0.3,summary
+2007,Saudi,female,C70-C72,"C70-C72 Brain, Nervous system",120,1.4,1.7,summary
+2007,Saudi,female,C73,C73 Thyroid,471,5.4,6.6,summary
+2007,Saudi,female,C74,C74 Adrenal gland,8,0.1,0.1,summary
+2007,Saudi,female,C75,C75 Other Endocrine,4,0.0,0.1,summary
+2007,Saudi,female,C81,C81 Hodgkin disease,129,1.5,1.5,summary
+2007,Saudi,female,C82-C85;,C82-C85; C96 Non-Hodgkin lymphoma,285,3.3,5.1,summary
+2007,Saudi,female,C96,C82-C85; C96 Non-Hodgkin lymphoma,285,3.3,5.1,summary
+2007,Saudi,female,C88,C88 Immunoproliferative dis.,0,0.0,0.0,summary
+2007,Saudi,female,C90,C90 Multiple Myeloma,43,0.5,0.9,summary
+2007,Saudi,female,C91,C91 Lymphoid Leukemia,111,1.3,1.4,summary
+2007,Saudi,female,C92-C94,C92-C94 Myeloid Leukemia,101,1.2,1.5,summary
+2007,Saudi,female,C95,C95 Leukemia unspeciﬁed,19,0.2,0.3,summary
+2008,Saudi,male,C44,Not C44 All sites but C44,4072,44.7,71.1,summary
+2008,Saudi,male,C44,Not C44 All sites but C44,4072,44.7,71.1,summary
+2008,Saudi,male,C00,C00 Lip,9,0.1,0.2,summary
+2008,Saudi,male,C01-C02,C01-C02 Tongue,30,0.3,0.6,summary
+2008,Saudi,male,C03-C06,C03-C06 Mouth,39,0.4,0.7,summary
+2008,Saudi,male,C07-C08,C07-C08 Salivary glands,17,0.2,0.3,summary
+2008,Saudi,male,C09,C09 Tonsil,2,0.0,0.0,summary
+2008,Saudi,male,C10,C10 Other Oropharynx,2,0.0,0.0,summary
+2008,Saudi,male,C11,C11 Nasopharynx,122,1.3,2.0,summary
+2008,Saudi,male,C12-C13,C12-C13 Hypopharynx,5,0.1,0.1,summary
+2008,Saudi,male,C14,C14 Pharynx unspeciﬁed,3,0.0,0.1,summary
+2008,Saudi,male,C15,C15 Oesophagus,51,0.6,1.0,summary
+2008,Saudi,male,C16,C16 Stomach,166,1.8,3.2,summary
+2008,Saudi,male,C17,C17 Small intestine,31,0.3,0.6,summary
+2008,Saudi,male,C18,C18 Colon,286,3.1,5.3,summary
+2008,Saudi,male,C19-C20,C19-C20 Rectum,192,2.1,3.7,summary
+2008,Saudi,male,C21,C21 Anus,10,0.1,0.2,summary
+2008,Saudi,male,C22,C22 Liver,303,3.3,6.2,summary
+2008,Saudi,male,C23-C24,C23-C24 Gallbladder etc.,54,0.6,1.0,summary
+2008,Saudi,male,C25,C25 Pancreas,100,1.1,2.0,summary
+2008,Saudi,male,C30-C31,"C30-C31 Nose, sinuses etc.",14,0.2,0.2,summary
+2008,Saudi,male,C32,C32 Larynx,57,0.6,1.2,summary
+2008,Saudi,male,C33-C34,"C33-C34 Trachea, Bronchus, Lung",285,3.1,5.8,summary
+2008,Saudi,male,C37-C38,C37-C38 Other Thoracic organs,11,0.1,0.2,summary
+2008,Saudi,male,C40-C41,C40-C41 Bone,73,0.8,0.8,summary
+2008,Saudi,male,C43,C43 Melanoma of Skin,12,0.1,0.2,summary
+2008,Saudi,male,C44,C44 Other Skin,159,1.7,3.0,summary
+2008,Saudi,male,C45,C45 Mesothelioma,17,0.2,0.3,summary
+2008,Saudi,male,C46,C46 Kaposi sarcoma,16,0.2,0.3,summary
+2008,Saudi,male,C47;C49,"C47;C49 Connective, Soft tissue",66,0.7,0.9,summary
+2008,Saudi,male,C50,C50 Breast,17,0.2,0.3,summary
+2008,Saudi,male,C64,C64 Kidney,144,1.6,2.5,summary
+2008,Saudi,male,C65,C65 Renal Pelvis,5,0.1,0.1,summary
+2008,Saudi,male,C66,C66 Ureter,3,0.0,0.1,summary
+2008,Saudi,male,C67,C67 Bladder,173,1.9,3.6,summary
+2008,Saudi,male,C68,C68 Other Urinary organs,1,0.0,0.0,summary
+2008,Saudi,male,C69,C69 Eye,27,0.3,0.3,summary
+2008,Saudi,male,C70-C72,"C70-C72 Brain, Nervous system",158,1.7,2.1,summary
+2008,Saudi,male,C73,C73 Thyroid,131,1.4,2.0,summary
+2008,Saudi,male,C74,C74 Adrenal gland,14,0.2,0.1,summary
+2008,Saudi,male,C75,C75 Other Endocrine,9,0.1,0.1,summary
+2008,Saudi,male,C81,C81 Hodgkin disease,175,1.9,1.9,summary
+2008,Saudi,male,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,370,4.1,6.0,summary
+2008,Saudi,male,C88,C88 Immunoproliferative dis.,0,0.0,0.0,summary
+2008,Saudi,male,C90,C90 Multiple Myeloma,37,0.4,0.7,summary
+2008,Saudi,male,C91,C91 Lymphoid Leukemia,157,1.7,2.0,summary
+2008,Saudi,male,C92-C94,C92-C94 Myeloid Leukemia,139,1.5,1.9,summary
+2008,Saudi,male,C95,C95 Leukemia unspeciﬁed,39,0.4,0.6,summary
+2008,Saudi,female,C44,Not C44 All sites but C44,4492,50.1,77.0,summary
+2008,Saudi,female,C44,Not C44 All sites but C44,4492,50.1,77.0,summary
+2008,Saudi,female,C00,C00 Lip,5,0.1,0.1,summary
+2008,Saudi,female,C01-C02,C01-C02 Tongue,29,0.3,0.6,summary
+2008,Saudi,female,C03-C06,C03-C06 Mouth,46,0.5,0.9,summary
+2008,Saudi,female,C07-C08,C07-C08 Salivary glands,18,0.2,0.2,summary
+2008,Saudi,female,C09,C09 Tonsil,3,0.0,0.1,summary
+2008,Saudi,female,C10,C10 Other Oropharynx,0,0.0,0.0,summary
+2008,Saudi,female,C11,C11 Nasopharynx,45,0.5,0.7,summary
+2008,Saudi,female,C12-C13,C12-C13 Hypopharynx,16,0.2,0.3,summary
+2008,Saudi,female,C14,C14 Pharynx unspeciﬁed,1,0.0,0.0,summary
+2008,Saudi,female,C15,C15 Oesophagus,54,0.6,1.1,summary
+2008,Saudi,female,C16,C16 Stomach,100,1.1,1.9,summary
+2008,Saudi,female,C17,C17 Small intestine,14,0.2,0.3,summary
+2008,Saudi,female,C18,C18 Colon,274,3.1,5.2,summary
+2008,Saudi,female,C19-C20,C19-C20 Rectum,152,1.7,3.0,summary
+2008,Saudi,female,C21,C21 Anus,7,0.1,0.1,summary
+2008,Saudi,female,C22,C22 Liver,115,1.3,2.3,summary
+2008,Saudi,female,C23-C24,C23-C24 Gallbladder etc.,77,0.9,1.6,summary
+2008,Saudi,female,C25,C25 Pancreas,67,0.7,1.4,summary
+2008,Saudi,female,C30-C31,"C30-C31 Nose, sinuses etc.",6,0.1,0.1,summary
+2008,Saudi,female,C32,C32 Larynx,5,0.1,0.1,summary
+2008,Saudi,female,C33-C34,"C33-C34 Trachea, Bronchus, Lung",82,0.9,1.7,summary
+2008,Saudi,female,C37-C38,C37-C38 Other Thoracic organs,11,0.1,0.1,summary
+2008,Saudi,female,C40-C41,C40-C41 Bone,47,0.5,0.5,summary
+2008,Saudi,female,C43,C43 Melanoma of Skin,10,0.1,0.2,summary
+2008,Saudi,female,C44,C44 Other Skin,125,1.4,2.4,summary
+2008,Saudi,female,C45,C45 Mesothelioma,2,0.0,0.0,summary
+2008,Saudi,female,C46,C46 Kaposi sarcoma,5,0.1,0.1,summary
+2008,Saudi,female,C47;C49,"C47;C49 Connective, Soft tissue",54,0.6,0.8,summary
+2008,Saudi,female,C50,C50 Breast,1152,12.9,19.2,summary
+2008,Saudi,female,C64,C64 Kidney,93,1.0,1.5,summary
+2008,Saudi,female,C65,C65 Renal Pelvis,1,0.0,0.0,summary
+2008,Saudi,female,C66,C66 Ureter,0,0.0,0.0,summary
+2008,Saudi,female,C67,C67 Bladder,38,0.4,0.8,summary
+2008,Saudi,female,C68,C68 Other Urinary organs,1,0.0,0.0,summary
+2008,Saudi,female,C69,C69 Eye,17,0.2,0.2,summary
+2008,Saudi,female,C70-C72,"C70-C72 Brain, Nervous system",92,1.0,1.3,summary
+2008,Saudi,female,C73,C73 Thyroid,475,5.3,6.8,summary
+2008,Saudi,female,C74,C74 Adrenal gland,13,0.1,0.1,summary
+2008,Saudi,female,C75,C75 Other Endocrine,2,0.0,0.0,summary
+2008,Saudi,female,C81,C81 Hodgkin disease,131,1.5,1.5,summary
+2008,Saudi,female,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,304,3.4,5.4,summary
+2008,Saudi,female,C88,C88 Immunoproliferative dis.,0,0.0,0.0,summary
+2008,Saudi,female,C90,C90 Multiple Myeloma,25,0.3,0.5,summary
+2008,Saudi,female,C91,C91 Lymphoid Leukemia,112,1.2,1.4,summary
+2008,Saudi,female,C92-C94,C92-C94 Myeloid Leukemia,104,1.2,1.4,summary
+2008,Saudi,female,C95,C95 Leukemia unspeciﬁed,31,0.3,0.4,summary
+2009,Saudi,male,C44,Not C44 All sites but C44,4437,48.1,77.4,summary
+2009,Saudi,male,C44,Not C44 All sites but C44,4437,48.1,77.4,summary
+2009,Saudi,male,C00,C00 Lip,6,0.1,0.1,summary
+2009,Saudi,male,C01-C02,C01-C02 Tongue,42,0.5,0.8,summary
+2009,Saudi,male,C03-C06,C03-C06 Mouth,39,0.4,0.8,summary
+2009,Saudi,male,C07-C08,C07-C08 Salivary glands,17,0.2,0.3,summary
+2009,Saudi,male,C09,C09 Tonsil,0,0.0,0.0,summary
+2009,Saudi,male,C10,C10 Other Oropharynx,1,0.0,0.0,summary
+2009,Saudi,male,C11,C11 Nasopharynx,93,1.0,1.5,summary
+2009,Saudi,male,C12-C13,C12-C13 Hypopharynx,6,0.1,0.1,summary
+2009,Saudi,male,C14,C14 Pharynx unspecified,1,0.0,0.0,summary
+2009,Saudi,male,C15,C15 Oesophagus,67,0.7,1.3,summary
+2009,Saudi,male,C16,C16 Stomach,201,2.2,3.9,summary
+2009,Saudi,male,C17,C17 Small intestine,30,0.3,0.6,summary
+2009,Saudi,male,C18,C18 Colon,341,3.7,6.5,summary
+2009,Saudi,male,C19-C20,C19-C20 Rectum,276,3.0,5.1,summary
+2009,Saudi,male,C21,C21 Anus,21,0.2,0.4,summary
+2009,Saudi,male,C22,C22 Liver,295,3.2,5.9,summary
+2009,Saudi,male,C23-C24,C23-C24 Gallbladder etc.,56,0.6,1.1,summary
+2009,Saudi,male,C25,C25 Pancreas,117,1.3,2.3,summary
+2009,Saudi,male,C30-C31,"C30-C31 Nose, sinuses etc.",5,0.1,0.1,summary
+2009,Saudi,male,C32,C32 Larynx,55,0.6,1.1,summary
+2009,Saudi,male,C37-C38,C37-C38 Other Thoracic organs,17,0.2,0.3,summary
+2009,Saudi,male,C40-C41,C40-C41 Bone,59,0.6,0.6,summary
+2009,Saudi,male,C43,C43 Melanoma of Skin,13,0.1,0.2,summary
+2009,Saudi,male,C44,C44 Other Skin,181,2.0,3.5,summary
+2009,Saudi,male,C45,C45 Mesothelioma,5,0.1,0.1,summary
+2009,Saudi,male,C47;C49,"C47;C49 Connective, Soft tissue",70,0.8,0.9,summary
+2009,Saudi,male,C50,C50 Breast,23,0.2,0.4,summary
+2009,Saudi,male,C64,C64 Kidney,174,1.9,3.0,summary
+2009,Saudi,male,C65,C65 Renal Pelvis,5,0.1,0.1,summary
+2009,Saudi,male,C66,C66 Ureter,2,0.0,0.0,summary
+2009,Saudi,male,C67,C67 Bladder,197,2.1,3.9,summary
+2009,Saudi,male,C68,C68 Other Urinary organs,1,0.0,0.0,summary
+2009,Saudi,male,C69,C69 Eye,28,0.3,0.4,summary
+2009,Saudi,male,C70-C72,"C70-C72 Brain, Nervous system",145,1.6,2.0,summary
+2009,Saudi,male,C73,C73 Thyroid,141,1.5,2.1,summary
+2009,Saudi,male,C74,C74 Adrenal gland,18,0.2,0.2,summary
+2009,Saudi,male,C75,C75 Other Endocrine,5,0.1,0.1,summary
+2009,Saudi,male,C81,C81 Hodgkin disease,194,2.1,2.3,summary
+2009,Saudi,male,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,422,4.6,6.8,summary
+2009,Saudi,male,C88,C88 Immunoproliferative dis.,1,0.0,0.0,summary
+2009,Saudi,male,C90,C90 Multiple Myeloma,57,0.6,1.1,summary
+2009,Saudi,male,C91,C91 Lymphoid Leukaemia,180,2.0,2.3,summary
+2009,Saudi,male,C92-C94,C92-C94 Myeloid Leukaemia,145,1.6,2.0,summary
+2009,Saudi,male,C95,C95 Leukaemia unspecified,18,0.2,0.3,summary
+2009,Saudi,female,C44,Not C44 All sites but C44,5064,57.0,87.4,summary
+2009,Saudi,female,C44,Not C44 All sites but C44,5064,57.0,87.4,summary
+2009,Saudi,female,C00,C00 Lip,8,0.1,0.2,summary
+2009,Saudi,female,C01-C02,C01-C02 Tongue,37,0.4,0.7,summary
+2009,Saudi,female,C03-C06,C03-C06 Mouth,37,0.4,0.7,summary
+2009,Saudi,female,C07-C08,C07-C08 Salivary glands,21,0.2,0.3,summary
+2009,Saudi,female,C09,C09 Tonsil,3,0.0,0.0,summary
+2009,Saudi,female,C10,C10 Other Oropharynx,0,0.0,0.0,summary
+2009,Saudi,female,C11,C11 Nasopharynx,42,0.5,0.7,summary
+2009,Saudi,female,C12-C13,C12-C13 Hypopharynx,11,0.1,0.2,summary
+2009,Saudi,female,C14,C14 Pharynx unspecified,3,0.0,0.1,summary
+2009,Saudi,female,C15,C15 Oesophagus,46,0.5,0.9,summary
+2009,Saudi,female,C16,C16 Stomach,112,1.3,2.1,summary
+2009,Saudi,female,C17,C17 Small intestine,26,0.3,0.5,summary
+2009,Saudi,female,C18,C18 Colon,299,3.4,5.7,summary
+2009,Saudi,female,C19-C20,C19-C20 Rectum,193,2.2,3.7,summary
+2009,Saudi,female,C21,C21 Anus,14,0.2,0.3,summary
+2009,Saudi,female,C22,C22 Liver,136,1.5,2.7,summary
+2009,Saudi,female,C23-C24,C23-C24 Gallbladder etc.,87,1.0,1.8,summary
+2009,Saudi,female,C25,C25 Pancreas,82,0.9,1.7,summary
+2009,Saudi,female,C30-C31,"C30-C31 Nose, sinuses etc.",5,0.1,0.1,summary
+2009,Saudi,female,C32,C32 Larynx,18,0.2,0.4,summary
+2009,Saudi,female,C37-C38,C37-C38 Other Thoracic organs,9,0.1,0.1,summary
+2009,Saudi,female,C40-C41,C40-C41 Bone,43,0.5,0.5,summary
+2009,Saudi,female,C43,C43 Melanoma of Skin,8,0.1,0.1,summary
+2009,Saudi,female,C44,C44 Other Skin,141,1.6,2.7,summary
+2009,Saudi,female,C45,C45 Mesothelioma,10,0.1,0.2,summary
+2009,Saudi,female,C47;C49,"C47;C49 Connective, Soft tissue",65,0.7,0.8,summary
+2009,Saudi,female,C50,C50 Breast,1308,14.7,22.7,summary
+2009,Saudi,female,C64,C64 Kidney,120,1.4,1.9,summary
+2009,Saudi,female,C65,C65 Renal Pelvis,3,0.0,0.1,summary
+2009,Saudi,female,C66,C66 Ureter,1,0.0,0.0,summary
+2009,Saudi,female,C67,C67 Bladder,38,0.4,0.7,summary
+2009,Saudi,female,C68,C68 Other Urinary organs,0,0.0,0.0,summary
+2009,Saudi,female,C69,C69 Eye,22,0.2,0.3,summary
+2009,Saudi,female,C70-C72,"C70-C72 Brain, Nervous system",103,1.2,1.5,summary
+2009,Saudi,female,C73,C73 Thyroid,538,6.1,7.6,summary
+2009,Saudi,female,C74,C74 Adrenal gland,10,0.1,0.1,summary
+2009,Saudi,female,C75,C75 Other Endocrine,2,0.0,0.0,summary
+2009,Saudi,female,C81,C81 Hodgkin disease,150,1.7,1.7,summary
+2009,Saudi,female,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,287,3.2,5.1,summary
+2009,Saudi,female,C88,C88 Immunoproliferative dis.,1,0.0,0.0,summary
+2009,Saudi,female,C90,C90 Multiple Myeloma,39,0.4,0.8,summary
+2009,Saudi,female,C91,C91 Lymphoid Leukaemia,127,1.4,1.5,summary
+2009,Saudi,female,C92-C94,C92-C94 Myeloid Leukaemia,126,1.4,1.8,summary
+2009,Saudi,female,C95,C95 Leukaemia unspecified,23,0.3,0.4,summary
+2010,Saudi,male,C44,Not C44 All sites but C44,4425,46.5,73.6,summary
+2010,Saudi,male,C44,Not C44 All sites but C44,4425,46.5,73.6,summary
+2010,Saudi,male,C00,C00 Lip,8,0.1,0.1,summary
+2010,Saudi,male,C01-C02,C01-C02 Tongue,53,0.6,1.0,summary
+2010,Saudi,male,C03-C06,C03-C06 Mouth,45,0.5,0.9,summary
+2010,Saudi,male,C07-C08,C07-C08 Salivary glands,11,0.1,0.2,summary
+2010,Saudi,male,C09,C09 Tonsil,2,0.0,0.0,summary
+2010,Saudi,male,C10,C10 Other Oropharynx,2,0.0,0.0,summary
+2010,Saudi,male,C11,C11 Nasopharynx,131,1.4,2.0,summary
+2010,Saudi,male,C12-C13,C12-C13 Hypopharynx,9,0.1,0.2,summary
+2010,Saudi,male,C14,C14 Pharynx unspecified,3,0.0,0.0,summary
+2010,Saudi,male,C15,C15 Oesophagus,73,0.8,1.4,summary
+2010,Saudi,male,C16,C16 Stomach,165,1.7,3.1,summary
+2010,Saudi,male,C17,C17 Small intestine,27,0.3,0.5,summary
+2010,Saudi,male,C18,C18 Colon,303,3.2,5.5,summary
+2010,Saudi,male,C19-C20,C19-C20 Rectum,238,2.5,4.4,summary
+2010,Saudi,male,C21,C21 Anus,18,0.2,0.3,summary
+2010,Saudi,male,C22,C22 Liver,329,3.5,6.4,summary
+2010,Saudi,male,C23-C24,C23-C24 Gallbladder etc.,51,0.5,0.9,summary
+2010,Saudi,male,C25,C25 Pancreas,114,1.2,2.2,summary
+2010,Saudi,male,C30-C31,"C30-C31 Nose, sinuses etc.",9,0.1,0.2,summary
+2010,Saudi,male,C32,C32 Larynx,48,0.5,0.9,summary
+2010,Saudi,male,C33-C34,"C33-C34 Trachea, Bronchus, Lung",292,3.1,5.8,summary
+2010,Saudi,male,C37-C38,C37-C38 Other Thoracic organs,25,0.3,0.3,summary
+2010,Saudi,male,C40-C41,C40-C41 Bone,74,0.8,0.7,summary
+2010,Saudi,male,C43,C43 Melanoma of Skin,12,0.1,0.2,summary
+2010,Saudi,male,C44,C44 Other Skin,168,1.8,3.1,summary
+2010,Saudi,male,C45,C45 Mesothelioma,9,0.1,0.2,summary
+2010,Saudi,male,C46,C46 Kaposi sarcoma,21,0.2,0.4,summary
+2010,Saudi,male,C47;C49,"C47;C49 Connective, Soft tissue",69,0.7,0.8,summary
+2010,Saudi,male,C50,C50 Breast,24,0.3,0.4,summary
+2010,Saudi,male,C64,C64 Kidney,167,1.8,2.9,summary
+2010,Saudi,male,C65,C65 Renal Pelvis,5,0.1,0.1,summary
+2010,Saudi,male,C66,C66 Ureter,1,0.0,0.0,summary
+2010,Saudi,male,C67,C67 Bladder,193,2.0,3.6,summary
+2010,Saudi,male,C68,C68 Other Urinary organs,3,0.0,0.1,summary
+2010,Saudi,male,C69,C69 Eye,22,0.2,0.3,summary
+2010,Saudi,male,C70-C72,"C70-C72 Brain, Nervous system",148,1.6,1.9,summary
+2010,Saudi,male,C73,C73 Thyroid,149,1.6,2.3,summary
+2010,Saudi,male,C74,C74 Adrenal gland,29,0.3,0.3,summary
+2010,Saudi,male,C75,C75 Other Endocrine,0,0.0,0.0,summary
+2010,Saudi,male,C81,C81 Hodgkin disease,194,2.0,2.1,summary
+2010,Saudi,male,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,407,4.3,6.2,summary
+2010,Saudi,male,C88,C88 Immunoproliferative dis.,0,0.0,0.0,summary
+2010,Saudi,male,C90,C90 Multiple Myeloma,61,0.6,1.2,summary
+2010,Saudi,male,C91,C91 Lymphoid Leukaemia,187,2.0,2.1,summary
+2010,Saudi,male,C92-C94,C92-C94 Myeloid Leukaemia,156,1.6,2.0,summary
+2010,Saudi,male,C95,C95 Leukaemia unspecified.,16,0.2,0.2,summary
+2010,Saudi,female,C44,Not C44 All sites but C44,5227,57.0,88.4,summary
+2010,Saudi,female,C44,Not C44 All sites but C44,5227,57.0,88.4,summary
+2010,Saudi,female,C00,C00 Lip,5,0.1,0.1,summary
+2010,Saudi,female,C01-C02,C01-C02 Tongue,43,0.5,0.8,summary
+2010,Saudi,female,C03-C06,C03-C06 Mouth,48,0.5,0.8,summary
+2010,Saudi,female,C07-C08,C07-C08 Salivary glands,15,0.2,0.2,summary
+2010,Saudi,female,C09,C09 Tonsil,0,0.0,0.0,summary
+2010,Saudi,female,C10,C10 Other Oropharynx,1,0.0,0.0,summary
+2010,Saudi,female,C11,C11 Nasopharynx,40,0.4,0.6,summary
+2010,Saudi,female,C12-C13,C12-C13 Hypopharynx,17,0.2,0.3,summary
+2010,Saudi,female,C14,C14 Pharynx unspecified,2,0.0,0.0,summary
+2010,Saudi,female,C15,C15 Oesophagus,50,0.5,1.0,summary
+2010,Saudi,female,C16,C16 Stomach,126,1.4,2.3,summary
+2010,Saudi,female,C17,C17 Small intestine,13,0.1,0.2,summary
+2010,Saudi,female,C18,C18 Colon,306,3.3,5.8,summary
+2010,Saudi,female,C19-C20,C19-C20 Rectum,186,2.0,3.4,summary
+2010,Saudi,female,C21,C21 Anus,9,0.1,0.2,summary
+2010,Saudi,female,C22,C22 Liver,154,1.7,3.1,summary
+2010,Saudi,female,C23-C24,C23-C24 Gallbladder etc.,89,1.0,1.8,summary
+2010,Saudi,female,C25,C25 Pancreas,81,0.9,1.6,summary
+2010,Saudi,female,C30-C31,"C30-C31 Nose, sinuses etc.",4,0.0,0.1,summary
+2010,Saudi,female,C32,C32 Larynx,5,0.1,0.1,summary
+2010,Saudi,female,C33-C34,"C33-C34 Trachea, Bronchus, Lung",105,1.1,2.1,summary
+2010,Saudi,female,C37-C38,C37-C38 Other Thoracic organs,11,0.1,0.2,summary
+2010,Saudi,female,C40-C41,C40-C41 Bone,44,0.5,0.5,summary
+2010,Saudi,female,C43,C43 Melanoma of Skin,12,0.1,0.2,summary
+2010,Saudi,female,C44,C44 Other Skin,151,1.6,2.8,summary
+2010,Saudi,female,C45,C45 Mesothelioma,4,0.0,0.1,summary
+2010,Saudi,female,C46,C46 Kaposi sarcoma,6,0.1,0.1,summary
+2010,Saudi,female,C47;C49,"C47;C49 Connective, Soft tissue",76,0.8,1.1,summary
+2010,Saudi,female,C50,C50 Breast,1473,16.1,24.9,summary
+2010,Saudi,female,C64,C64 Kidney,117,1.3,2.0,summary
+2010,Saudi,female,C65,C65 Renal Pelvis,5,0.1,0.1,summary
+2010,Saudi,female,C66,C66 Ureter,4,0.0,0.1,summary
+2010,Saudi,female,C67,C67 Bladder,50,0.5,1.0,summary
+2010,Saudi,female,C68,C68 Other Urinary organs,2,0.0,0.0,summary
+2010,Saudi,female,C69,C69 Eye,24,0.3,0.3,summary
+2010,Saudi,female,C70-C72,"C70-C72 Brain, Nervous system",105,1.1,1.4,summary
+2010,Saudi,female,C73,C73 Thyroid,548,6.0,7.5,summary
+2010,Saudi,female,C74,C74 Adrenal gland,14,0.2,0.2,summary
+2010,Saudi,female,C75,C75 Other Endocrine,1,0.0,0.0,summary
+2010,Saudi,female,C81,C81 Hodgkin disease,142,1.5,1.6,summary
+2010,Saudi,female,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,296,3.2,5.2,summary
+2010,Saudi,female,C88,C88 Immunoproliferative dis.,0,0.0,0.0,summary
+2010,Saudi,female,C90,C90 Multiple Myeloma,42,0.5,0.9,summary
+2010,Saudi,female,C91,C91 Lymphoid Leukaemia,113,1.2,1.4,summary
+2010,Saudi,female,C92-C94,C92-C94 Myeloid Leukaemia,128,1.4,1.8,summary
+2010,Saudi,female,C95,C95 Leukaemia unspecified.,16,0.2,0.2,summary
+2010,non-Saudi,male,C00,C00 Lip,4,0.1,0.0,byage
+2010,non-Saudi,male,C01-C02,C01-C02 Tongue,24,0.4,0.9,byage
+2010,non-Saudi,male,C03-C06,C03-C06 Mouth,10,0.2,0.4,byage
+2010,non-Saudi,male,C07-C08,C07-C08 Salivary Glands,13,0.2,0.2,byage
+2010,non-Saudi,male,C09,C09 Tonsil,0,0.0,0.0,byage
+2010,non-Saudi,male,C10,C10 Other Oropharynx,0,0.0,0.0,byage
+2010,non-Saudi,male,C11,C11 Nasopharynx,39,0.7,0.8,byage
+2010,non-Saudi,male,C12-C13,C12-C13 Hypopharynx,5,0.1,0.3,byage
+2010,non-Saudi,male,C14,C14 Pharynx Unspecified,1,0.0,0.0,byage
+2010,non-Saudi,male,C15,C15 Oesophagus,24,0.4,1.2,byage
+2010,non-Saudi,male,C16,C16 Stomach,82,1.4,3.9,byage
+2010,non-Saudi,male,C17,C17 Small Intestine,5,0.1,0.3,byage
+2010,non-Saudi,male,C18,C18 Colon,137,2.3,5.2,byage
+2010,non-Saudi,male,C19-C20,C19-C20 Rectum,104,1.8,3.9,byage
+2010,non-Saudi,male,C21,C21 Anus,16,0.3,0.4,byage
+2010,non-Saudi,male,C22,C22 Liver,49,0.8,2.7,byage
+2010,non-Saudi,male,C23-C24,C23-C24 Gallbladder etc.,23,0.4,1.0,byage
+2010,non-Saudi,male,C25,C25 Pancreas,31,0.5,1.8,byage
+2010,non-Saudi,male,C30-C31,"C30-C31 Nose, Sinuses etc.",4,0.1,0.1,byage
+2010,non-Saudi,male,C32,C32 Larynx,30,0.5,1.2,byage
+2010,non-Saudi,male,C33-C34,"C33-C34 Trachea, Bronchus, Lung",98,1.7,4.5,byage
+2010,non-Saudi,male,C37-C38,C37-C38 Other Thoracic Organs,6,0.1,0.2,byage
+2010,non-Saudi,male,C40-C41,C40-C41 Bone,23,0.4,0.6,byage
+2010,non-Saudi,male,C43,C43 Melanoma of Skin,11,0.2,0.4,byage
+2010,non-Saudi,male,C44,C44 Other Skin,136,2.3,5.0,byage
+2010,non-Saudi,male,C45,C45 Mesothelioma,4,0.1,0.1,byage
+2010,non-Saudi,male,C46,C46 Kaposi Sarcoma,8,0.1,0.5,byage
+2010,non-Saudi,male,C47;C49,"C47;C49 Connective, Soft Tissue",43,0.7,0.8,byage
+2010,non-Saudi,male,C50,C50 Breast,13,0.2,0.3,byage
+2010,non-Saudi,male,C60,C60 Penis,3,0.1,0.1,byage
+2010,non-Saudi,male,C61,C61 Prostate,104,1.8,8.5,byage
+2010,non-Saudi,male,C62,C62 Testis,25,0.4,0.4,byage
+2010,non-Saudi,male,C63,C63 Other Male Genital,0,0.0,0.0,byage
+2010,non-Saudi,male,C64,C64 Kidney,59,1.0,2.4,byage
+2010,non-Saudi,male,C65,C65 Renal Pelvis,3,0.1,0.2,byage
+2010,non-Saudi,male,C66,C66 Ureter,0,0.0,0.0,byage
+2010,non-Saudi,male,C67,C67 Bladder,85,1.4,4.0,byage
+2010,non-Saudi,male,C68,C68 Other Urinary Organs,1,0.0,0.0,byage
+2010,non-Saudi,male,C69,C69 Eye,5,0.1,0.1,byage
+2010,non-Saudi,male,C70-C72,"C70-C72 Brain, Nervous System",56,0.9,1.6,byage
+2010,non-Saudi,male,C73,C73 Thyroid,51,0.9,1.3,byage
+2010,non-Saudi,male,C74,C74 Adrenal Gland,3,0.1,0.1,byage
+2010,non-Saudi,male,C75,C75 Other Endocrine,3,0.1,0.1,byage
+2010,non-Saudi,male,C81,C81 Hodgkin Disease,50,0.8,1.4,byage
+2010,non-Saudi,male,C82-C85;C96,C82-C85;C96 Non-Hodgkin Lymphoma,123,2.1,3.3,byage
+2010,non-Saudi,male,C88,C88 Immunoproliferative Disease,0,0.0,0.0,byage
+2010,non-Saudi,male,C90,C90 Multiple Myeloma,17,0.3,0.7,byage
+2010,non-Saudi,male,C91,C91 Lymphoid Leukemia,45,0.8,1.6,byage
+2010,non-Saudi,male,C92-C94,C92-C94 Myeloid Leukemia,37,0.6,1.2,byage
+2010,non-Saudi,male,C95,C95 Leukemia Unspecified,16,0.3,0.6,byage
+2010,non-Saudi,male,C44,Not C44 All Sites but C44,1576,26.6,62.4,byage
+2010,non-Saudi,male,C44,Not C44 All Sites but C44,1576,26.6,62.4,byage
+2010,non-Saudi,female,C00,C00 Lip,0,0.0,0.0,byage
+2010,non-Saudi,female,C01-C02,C01-C02 Tongue,9,0.4,1.2,byage
+2010,non-Saudi,female,C03-C06,C03-C06 Mouth,3,0.1,0.0,byage
+2010,non-Saudi,female,C07-C08,C07-C08 Salivary Glands,7,0.3,0.4,byage
+2010,non-Saudi,female,C09,C09 Tonsil,2,0.1,0.2,byage
+2010,non-Saudi,female,C10,C10 Other Oropharynx,1,0.0,0.0,byage
+2010,non-Saudi,female,C11,C11 Nasopharynx,6,0.2,0.1,byage
+2010,non-Saudi,female,C12-C13,C12-C13 Hypopharynx,2,0.1,0.2,byage
+2010,non-Saudi,female,C14,C14 Pharynx Unspecified,0,0.0,0.0,byage
+2010,non-Saudi,female,C15,C15 Oesophagus,12,0.5,1.8,byage
+2010,non-Saudi,female,C16,C16 Stomach,31,1.2,3.8,byage
+2010,non-Saudi,female,C17,C17 Small Intestine,8,0.3,0.8,byage
+2010,non-Saudi,female,C18,C18 Colon,75,3.0,8.3,byage
+2010,non-Saudi,female,C19-C20,C19-C20 Rectum,53,2.1,6.4,byage
+2010,non-Saudi,female,C21,C21 Anus,5,0.2,0.7,byage
+2010,non-Saudi,female,C22,C22 Liver,32,1.3,5.2,byage
+2010,non-Saudi,female,C23-C24,C23-C24 Gallbladder etc.,11,0.4,1.3,byage
+2010,non-Saudi,female,C25,C25 Pancreas,19,0.8,2.5,byage
+2010,non-Saudi,female,C30-C31,"C30-C31 Nose, Sinuses etc.",3,0.1,0.3,byage
+2010,non-Saudi,female,C32,C32 Larynx,0,0.0,0.0,byage
+2010,non-Saudi,female,C33-C34,"C33-C34 Trachea, Bronchus, Lung",25,1.0,3.4,byage
+2010,non-Saudi,female,C37-C38,C37-C38 Other Thoracic Organs,3,0.1,0.1,byage
+2010,non-Saudi,female,C40-C41,C40-C41 Bone,13,0.5,0.4,byage
+2010,non-Saudi,female,C43,C43 Melanoma of Skin,2,0.1,0.3,byage
+2010,non-Saudi,female,C44,C44 Other Skin,44,1.8,5.9,byage
+2010,non-Saudi,female,C45,C45 Mesothelioma,1,0.0,0.2,byage
+2010,non-Saudi,female,C46,C46 Kaposi Sarcoma,1,0.0,0.0,byage
+2010,non-Saudi,female,C47;C49,"C47;C49 Connective, Soft Tissue",8,0.3,0.4,byage
+2010,non-Saudi,female,C50,C50 Breast,575,23.0,44.6,byage
+2010,non-Saudi,female,C51,C51 Vulva,2,0.1,0.1,byage
+2010,non-Saudi,female,C52,C52 Vagina,7,0.3,0.6,byage
+2010,non-Saudi,female,C53,C53 Cervix Uteri,71,2.8,7.0,byage
+2010,non-Saudi,female,C54,C54 Corpus Uteri,70,2.8,8.4,byage
+2010,non-Saudi,female,C55,C55 Uterus Unspecified,5,0.2,0.6,byage
+2010,non-Saudi,female,C56,C56 Ovary,54,2.2,4.5,byage
+2010,non-Saudi,female,C57,C57 Other Female Genital,3,0.1,0.5,byage
+2010,non-Saudi,female,C58,C58 Placenta,1,0.0,0.1,byage
+2010,non-Saudi,female,C64,C64 Kidney,17,0.7,1.7,byage
+2010,non-Saudi,female,C65,C65 Renal Pelvis,0,0.0,0.0,byage
+2010,non-Saudi,female,C66,C66 Ureter,0,0.0,0.0,byage
+2010,non-Saudi,female,C67,C67 Bladder,11,0.4,1.7,byage
+2010,non-Saudi,female,C68,C68 Other Urinary Organs,0,0.0,0.0,byage
+2010,non-Saudi,female,C69,C69 Eye,1,0.0,0.2,byage
+2010,non-Saudi,female,C70-C72,"C70-C72 Brain, Nervous System",16,0.6,1.4,byage
+2010,non-Saudi,female,C73,C73 Thyroid,89,3.6,5.0,byage
+2010,non-Saudi,female,C74,C74 Adrenal Glands,0,0.0,0.0,byage
+2010,non-Saudi,female,C75,C75 Other Endocrine,0,0.0,0.0,byage
+2010,non-Saudi,female,C81,C81 Hodgkin Disease,19,0.8,1.1,byage
+2010,non-Saudi,female,C82-C85;C96,C82-C85;C96 Non-Hodgkin Lymphoma,50,2.0,5.2,byage
+2010,non-Saudi,female,C88,C88 Immunoproliferative Disease,0,0.0,0.0,byage
+2010,non-Saudi,female,C90,C90 Multiple Myeloma,11,0.4,1.6,byage
+2010,non-Saudi,female,C91,C91 Lymphoid Leukemia,31,1.2,1.6,byage
+2010,non-Saudi,female,C92-C94,C92-C94 Myeloid Leukemia,21,0.8,1.1,byage
+2010,non-Saudi,female,C95,C95 Leukemia Unspecified,3,0.1,0.2,byage
+2010,non-Saudi,female,C44,,74,57.4,129.6,byage
+2010,non-Saudi,female,C44,,74,57.4,129.6,byage
+2015,Saudi,male,C12-C13,C12-C13 Hypopharynx,5,0.0,0.1,summary
+2015,Saudi,male,C14,C14 Pharynx unspec.,1,0.0,0.0,summary
+2015,Saudi,male,C22,C22 Liver,274,2.7,4.0,summary
+2015,Saudi,male,C32,C32 Larynx,77,0.8,1.2,summary
+2015,Saudi,male,C37-C38,C37-C38 Other Thoracic organs,20,0.2,0.2,summary
+2015,Saudi,male,C45,C45 Mesothelioma,9,0.1,0.1,summary
+2015,Saudi,male,C66,C66 Ureter,3,0.0,0.0,summary
+2015,Saudi,male,C81,C81 Hodgkin disease,267,2.6,2.6,summary
+2015,Saudi,male,C88,C88 Immunoproliferative dis.,0,0.0,0.0,summary
+2015,Saudi,female,C12-C13,C12-C13 Hypopharynx,7,0.1,0.1,summary
+2015,Saudi,female,C14,C14 Pharynx unspec.,1,0.0,0.0,summary
+2015,Saudi,female,C22,C22 Liver,102,1.0,1.5,summary
+2015,Saudi,female,C32,C32 Larynx,16,0.2,0.2,summary
+2015,Saudi,female,C37-C38,C37-C38 Other Thoracic organs,10,0.1,0.1,summary
+2015,Saudi,female,C45,C45 Mesothelioma,4,0.0,0.1,summary
+2015,Saudi,female,C66,C66 Ureter,0,0.0,0.0,summary
+2015,Saudi,female,C81,C81 Hodgkin disease,169,1.7,1.7,summary
+2015,Saudi,female,C88,C88 Immunoproliferative dis.,0,0.0,0.0,summary
+2016,Saudi,male,C44,Not C44 All sites but C C44,55596,54.6,72.0,summary
+2016,Saudi,male,C00,C00 Lip,16,0.2,0.2,summary
+2016,Saudi,male,C01-C02,C01-C02 Tongue,660,0.6,0.8,summary
+2016,Saudi,male,C03-C06,C03-C06,559,0.6,0.8,summary
+2016,Saudi,male,C07-C08,C07-C08 Salivary gland ds,223,0.2,0.3,summary
+2016,Saudi,male,C09,C09 Tonsil,33,0.0,0.0,summary
+2016,Saudi,male,C10,C10 Other Oropha arynx,44,0.0,0.1,summary
+2016,Saudi,male,C11,C11 Nasopharynx x,1554,1.5,1.8,summary
+2016,Saudi,male,C12-C13,C12-C13 Hypopharynx x,77,0.1,0.1,summary
+2016,Saudi,male,C14,C14 Pharynx unsp pec.,22,0.0,0.0,summary
+2016,Saudi,male,C15,C15 Oesophagus,778,0.8,1.1,summary
+2016,Saudi,male,C16,C16 Stomach,2007,2.0,2.9,summary
+2016,Saudi,male,C17,C17 Small intestin ne,337,0.4,0.5,summary
+2016,Saudi,male,C18,C18 Colon,5881,5.7,7.8,summary
+2016,Saudi,male,C19-C20,C19-C20 Rectum,3774,3.6,5.1,summary
+2016,Saudi,male,C21,C21 Anus,224,0.2,0.3,summary
+2016,Saudi,male,C22,C22 Liver,2990,2.8,4.2,summary
+2016,Saudi,male,C23-C24,C23-C24,880,0.8,1.2,summary
+2016,Saudi,male,C25,C25 Pancreas,1770,1.7,2.5,summary
+2016,Saudi,male,C30-C31,"C30-C31 Nose, sinuses s etc.",18,0.2,0.2,summary
+2016,Saudi,male,C32,C32 Larynx,669,0.7,0.9,summary
+2016,Saudi,male,C33-C34,C33-C34,2998,2.9,4.4,summary
+2016,Saudi,male,C37-C38,C37-C38 Other Thorac cic organs,16,0.2,0.2,summary
+2016,Saudi,male,C40-C41,C40-C41 Bone,993,0.9,0.9,summary
+2016,Saudi,male,C43,C43 Melanoma of Skin,14,0.1,0.2,summary
+2016,Saudi,male,C44,C44 Other Skin,2007,2.0,2.7,summary
+2016,Saudi,male,C45,C45 Mesothelioma a,11,0.1,0.2,summary
+2016,Saudi,male,C46,C46 Kaposi sarco ma,227,0.3,0.4,summary
+2016,Saudi,male,C47;C49,"C47;C49 Connective,S Soft tissue",889,0.9,1.0,summary
+2016,Saudi,male,C50,C50 Breast,442,0.4,0.6,summary
+2016,Saudi,male,C64,C64 Kidney,1996,2.6,1.635,summary
+2016,Saudi,male,C65,C65 Renal Pelvis,77,0.1,0.08,summary
+2016,Saudi,male,C66,C66 Ureter,88,0.1,0.03,summary
+2016,Saudi,male,C67,C67 Bladder,2229,3.2,1.725,summary
+2016,Saudi,male,C68,C68 Other Urinary y organs,77,0.1,0.1,summary
+2016,Saudi,male,C69,C69 Eye,330,0.3,0.3,summary
+2016,Saudi,male,C70-C72,"C70-C72 Brain, Nervou us system",212,2.1,2.3,summary
+2016,Saudi,male,C73,C73 Thyroid,2222,2.2,2.5,summary
+2016,Saudi,male,C74,C74 Adrenal gland d,222,0.2,0.2,summary
+2016,Saudi,male,C75,C75 Other Endocr rine,55,0.0,0.1,summary
+2016,Saudi,male,C81,C81 Hodgkin dise ease,2665,2.6,2.6,summary
+2016,Saudi,male,C82-C85,C82-C85 5;C96 Non-Hodgkin lymphoma,4669,4.6,5.6,summary
+2016,Saudi,male,C88,C88 Immunoprolif ferative dis.,0,0.0,0.0,summary
+2016,Saudi,male,C90,C90 Multiple Myel oma,772,0.7,1.0,summary
+2016,Saudi,male,C91,C91 Lymphoid Le ukaemia,1665,1.6,1.8,summary
+2016,Saudi,male,C92-C94,C92-C94,1442,1.4,1.5,summary
+2016,Saudi,male,C95,C95 Leukaemia un nspec.,227,0.3,0.3,summary
+2016,Saudi,male,C44,Not C44 All sites but C C44,55596,54.6,72.0,summary
+2016,Saudi,female,C44,Not C44 All sites but C C44,7192,72.9,89.0,summary
+2016,Saudi,female,C00,C00 Lip,6,0.1,0.1,summary
+2016,Saudi,female,C01-C02,C01-C02 Tongue,47,0.5,0.7,summary
+2016,Saudi,female,C03-C06,C03-C06,60,0.6,0.8,summary
+2016,Saudi,female,C07-C08,C07-C08 Salivary gland ds,30,0.3,0.4,summary
+2016,Saudi,female,C09,C09 Tonsil,2,0.0,0.0,summary
+2016,Saudi,female,C10,C10 Other Oropha arynx,2,0.0,0.0,summary
+2016,Saudi,female,C11,C11 Nasopharynx x,59,0.6,0.7,summary
+2016,Saudi,female,C12-C13,C12-C13 Hypopharynx x,14,0.1,0.2,summary
+2016,Saudi,female,C14,C14 Pharynx unsp pec.,1,0.0,0.0,summary
+2016,Saudi,female,C15,C15 Oesophagus,50,0.5,0.7,summary
+2016,Saudi,female,C16,C16 Stomach,111,1.1,1.5,summary
+2016,Saudi,female,C17,C17 Small intestin ne,32,0.3,0.4,summary
+2016,Saudi,female,C18,C18 Colon,447,4.5,6.1,summary
+2016,Saudi,female,C19-C20,C19-C20 Rectum,257,2.6,3.4,summary
+2016,Saudi,female,C21,C21 Anus,11,0.1,0.2,summary
+2016,Saudi,female,C22,C22 Liver,127,1.3,1.9,summary
+2016,Saudi,female,C23-C24,C23-C24,113,1.1,1.7,summary
+2016,Saudi,female,C25,C25 Pancreas,104,1.1,1.5,summary
+2016,Saudi,female,C30-C31,"C30-C31 Nose, sinuses s etc.",5,0.1,0.1,summary
+2016,Saudi,female,C32,C32 Larynx,7,0.1,0.1,summary
+2016,Saudi,female,C33-C34,C33-C34,148,1.5,2.0,summary
+2016,Saudi,female,C37-C38,C37-C38 Other Thorac cic organs,10,0.1,0.1,summary
+2016,Saudi,female,C40-C41,C40-C41 Bone,53,0.5,0.5,summary
+2016,Saudi,female,C43,C43 Melanoma of Skin,25,0.3,0.3,summary
+2016,Saudi,female,C44,C44 Other Skin,166,1.7,2.1,summary
+2016,Saudi,female,C45,C45 Mesothelioma a,7,0.1,0.1,summary
+2016,Saudi,female,C46,C46 Kaposi sarco ma,4,0.0,0.1,summary
+2016,Saudi,female,C47;C49,"C47;C49 Connective,S Soft tissue",70,0.7,0.8,summary
+2016,Saudi,female,C50,C50 Breast,2240,22.7,27.0,summary
+2016,Saudi,female,C64,C64 Kidney,0,1.8,8.0,summary
+2016,Saudi,female,C65,C65 Renal Pelvis,0,0.0,0.0,summary
+2016,Saudi,female,C66,C66 Ureter,0,0.0,0.0,summary
+2016,Saudi,female,C67,C67 Bladder,0,0.8,8.0,summary
+2016,Saudi,female,C68,C68 Other Urinary y organs,2,0.0,0.0,summary
+2016,Saudi,female,C69,C69 Eye,16,0.2,0.2,summary
+2016,Saudi,female,C70-C72,"C70-C72 Brain, Nervou us system",155,1.6,1.8,summary
+2016,Saudi,female,C73,C73 Thyroid,854,8.7,8.9,summary
+2016,Saudi,female,C74,C74 Adrenal gland d,19,0.2,0.2,summary
+2016,Saudi,female,C75,C75 Other Endocr rine,6,0.1,0.1,summary
+2016,Saudi,female,C81,C81 Hodgkin dise ease,230,2.3,2.3,summary
+2016,Saudi,female,C82-C85,C82-C85 5;C96 Non-Hodgkin lymphoma,372,3.8,4.9,summary
+2016,Saudi,female,C88,C88 Immunoprolif ferative dis.,0,0.0,0.0,summary
+2016,Saudi,female,C90,C90 Multiple Myel oma,48,0.5,0.6,summary
+2016,Saudi,female,C91,C91 Lymphoid Le ukaemia,105,1.1,1.2,summary
+2016,Saudi,female,C92-C94,C92-C94,158,1.6,1.7,summary
+2016,Saudi,female,C95,C95 Leukaemia un nspec.,13,0.1,0.1,summary
+2016,Saudi,female,C44,Not C44 All sites but C C44,7192,72.9,89.0,summary
+2018,Saudi,male,C44,Not C44 All sites but C44,6626,62.7,82.6,summary
+2018,Saudi,male,C00,C00 Lip,9,0.1,0.1,summary
+2018,Saudi,male,C01-C02,C01-C02 Tongue,73,0.7,0.9,summary
+2018,Saudi,male,C03-C06,C03-C06 Mouth,67,0.6,0.9,summary
+2018,Saudi,male,C07-C08,C07-C08 Salivary glands,31,0.3,0.3,summary
+2018,Saudi,male,C09,C09 Tonsil,2,0.0,0.0,summary
+2018,Saudi,male,C10,C10 Other Oropharynx,5,0.0,0.1,summary
+2018,Saudi,male,C11,C11 Nasopharynx,143,1.4,1.7,summary
+2018,Saudi,male,C12-C13,C12-C13 Hypopharynx,8,0.1,0.1,summary
+2018,Saudi,male,C14,C14 Pharynx unspec.,12,0.1,0.1,summary
+2018,Saudi,male,C15,C15 Oesophagus,79,0.7,1.0,summary
+2018,Saudi,male,C16,C16 Stomach,173,1.6,2.3,summary
+2018,Saudi,male,C17,C17 Small intestine,52,0.5,0.7,summary
+2018,Saudi,male,C18,C18 Colon,629,6.0,8.5,summary
+2018,Saudi,male,C19-C20,C19-C20 Rectum,416,3.9,5.4,summary
+2018,Saudi,male,C21,C21 Anus,24,0.2,0.3,summary
+2018,Saudi,male,C22,C22 Liver,332,3.1,4.8,summary
+2018,Saudi,male,C23-C24,C23-C24 Gallbladder etc.,91,0.9,1.3,summary
+2018,Saudi,male,C25,C25 Pancreas,209,2.0,2.9,summary
+2018,Saudi,male,C30-C31,"C30-C31 Nose, sinuses etc.",18,0.2,0.2,summary
+2018,Saudi,male,C32,C32 Larynx,75,0.7,1.0,summary
+2018,Saudi,male,C33-C34,"C33-C34 Trachea,Bronchus,Lung",349,3.3,5.0,summary
+2018,Saudi,male,C37-C38,C37-C38 Other Thoracic organs,21,0.2,0.2,summary
+2018,Saudi,male,C40-C41,C40-C41 Bone,99,0.9,0.9,summary
+2018,Saudi,male,C43,C43 Melanoma of Skin,20,0.2,0.3,summary
+2018,Saudi,male,C44,C44 Other Skin,222,2.1,2.9,summary
+2018,Saudi,male,C45,C45 Mesothelioma,6,0.1,0.1,summary
+2018,Saudi,male,C46,C46 Kaposi sarcoma,22,0.2,0.3,summary
+2018,Saudi,male,C47;C49,"C47;C49 Connective,Soft tissue",101,1.0,1.1,summary
+2018,Saudi,male,C50,C50 Breast,47,0.4,0.6,summary
+2018,Saudi,male,C64,C64 Kidney,282,2.7,3.5,summary
+2018,Saudi,male,C65,C65 Renal Pelvis,4,0.0,0.1,summary
+2018,Saudi,male,C66,C66 Ureter,2,0.0,0.0,summary
+2018,Saudi,male,C67,C67 Bladder,388,3.7,5.3,summary
+2018,Saudi,male,C68,C68 Other Urinary organs,2,0.0,0.0,summary
+2018,Saudi,male,C69,C69 Eye,29,0.3,0.3,summary
+2018,Saudi,male,C70-C72,"C70-C72 Brain, Nervous system",270,2.6,2.9,summary
+2018,Saudi,male,C73,C73 Thyroid,278,2.6,2.9,summary
+2018,Saudi,male,C74,C74 Adrenal gland,18,0.2,0.2,summary
+2018,Saudi,male,C75,C75 Other Endocrine,8,0.1,0.1,summary
+2018,Saudi,male,C81,C81 Hodgkin disease,337,3.2,3.1,summary
+2018,Saudi,male,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,552,5.2,6.3,summary
+2018,Saudi,male,C88,C88 Immunoproliferative dis.,2,0.0,0.0,summary
+2018,Saudi,male,C90,C90 Multiple Myeloma,90,0.9,1.2,summary
+2018,Saudi,male,C91,C91 Lymphoid Leukaemia,222,2.1,2.4,summary
+2018,Saudi,male,C92-C94,C92-C94 Myeloid Leukaemia,195,1.8,2.0,summary
+2018,Saudi,male,C95,C95 Leukaemia unspec.,49,0.5,0.5,summary
+2018,Saudi,male,C44,Not C44 All sites but C44,6626,62.7,82.6,summary
+2018,Saudi,female,C44,Not C44 All sites but C44,8694,85.4,105.5,summary
+2018,Saudi,female,C00,C00 Lip,4,0.0,0.1,summary
+2018,Saudi,female,C01-C02,C01-C02 Tongue,47,0.5,0.6,summary
+2018,Saudi,female,C03-C06,C03-C06 Mouth,49,0.5,0.7,summary
+2018,Saudi,female,C07-C08,C07-C08 Salivary glands,15,0.1,0.2,summary
+2018,Saudi,female,C09,C09 Tonsil,1,0.0,0.0,summary
+2018,Saudi,female,C10,C10 Other Oropharynx,2,0.0,0.0,summary
+2018,Saudi,female,C11,C11 Nasopharynx,67,0.7,0.7,summary
+2018,Saudi,female,C12-C13,C12-C13 Hypopharynx,14,0.1,0.2,summary
+2018,Saudi,female,C14,C14 Pharynx unspec.,7,0.1,0.1,summary
+2018,Saudi,female,C15,C15 Oesophagus,53,0.5,0.7,summary
+2018,Saudi,female,C16,C16 Stomach,152,1.5,1.9,summary
+2018,Saudi,female,C17,C17 Small intestine,24,0.2,0.3,summary
+2018,Saudi,female,C18,C18 Colon,560,5.5,7.3,summary
+2018,Saudi,female,C19-C20,C19-C20 Rectum,303,3.0,4.0,summary
+2018,Saudi,female,C21,C21 Anus,14,0.1,0.2,summary
+2018,Saudi,female,C22,C22 Liver,149,1.5,2.1,summary
+2018,Saudi,female,C23-C24,C23-C24 Gallbladder etc.,139,1.4,2.0,summary
+2018,Saudi,female,C25,C25 Pancreas,141,1.4,2.0,summary
+2018,Saudi,female,C30-C31,"C30-C31 Nose, sinuses etc.",8,0.1,0.1,summary
+2018,Saudi,female,C32,C32 Larynx,6,0.1,0.1,summary
+2018,Saudi,female,C33-C34,"C33-C34 Trachea,Bronchus,Lung",155,1.5,2.0,summary
+2018,Saudi,female,C37-C38,C37-C38 Other Thoracic organs,17,0.2,0.2,summary
+2018,Saudi,female,C40-C41,C40-C41 Bone,81,0.8,0.8,summary
+2018,Saudi,female,C43,C43 Melanoma of Skin,18,0.2,0.2,summary
+2018,Saudi,female,C44,C44 Other Skin,146,1.4,1.8,summary
+2018,Saudi,female,C45,C45 Mesothelioma,7,0.1,0.1,summary
+2018,Saudi,female,C46,C46 Kaposi sarcoma,5,0.0,0.1,summary
+2018,Saudi,female,C47;C49,"C47;C49 Connective,Soft tissue",77,0.8,0.9,summary
+2018,Saudi,female,C50,C50 Breast,2814,27.6,33.7,summary
+2018,Saudi,female,C64,C64 Kidney,160,1.6,2.0,summary
+2018,Saudi,female,C65,C65 Renal Pelvis,4,0.0,0.1,summary
+2018,Saudi,female,C66,C66 Ureter,0,0.0,0.0,summary
+2018,Saudi,female,C67,C67 Bladder,70,0.7,1.0,summary
+2018,Saudi,female,C68,C68 Other Urinary organs,1,0.0,0.0,summary
+2018,Saudi,female,C69,C69 Eye,17,0.2,0.2,summary
+2018,Saudi,female,C70-C72,"C70-C72 Brain, Nervous system",184,1.8,2.0,summary
+2018,Saudi,female,C73,C73 Thyroid,1045,10.3,10.6,summary
+2018,Saudi,female,C74,C74 Adrenal gland,27,0.3,0.3,summary
+2018,Saudi,female,C75,C75 Other Endocrine,4,0.0,0.0,summary
+2018,Saudi,female,C81,C81 Hodgkin disease,207,2.0,2.0,summary
+2018,Saudi,female,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,371,3.6,4.5,summary
+2018,Saudi,female,C88,C88 Immunoproliferative dis.,0,0.0,0.0,summary
+2018,Saudi,female,C90,C90 Multiple Myeloma,71,0.7,1.0,summary
+2018,Saudi,female,C91,C91 Lymphoid Leukaemia,136,1.3,1.5,summary
+2018,Saudi,female,C92-C94,C92-C94 Myeloid Leukaemia,164,1.6,1.8,summary
+2018,Saudi,female,C95,C95 Leukaemia unspec.,33,0.3,0.4,summary
+2018,Saudi,female,C44,Not C44 All sites but C44,8694,85.4,105.5,summary
+2018,non-Saudi,male,C00,C00 Lip,5,0.1,0.1,byage
+2018,non-Saudi,male,C01-C02,C01-C02 Tongue,19,0.2,0.3,byage
+2018,non-Saudi,male,C03-C06,C03-C06 Mouth,44,0.5,0.7,byage
+2018,non-Saudi,male,C07-C08,C07-C08 Salivary glands,8,0.1,0.1,byage
+2018,non-Saudi,male,C09,C09 Tonsil,1,0.0,0.0,byage
+2018,non-Saudi,male,C10,C10 Other Oropharynx,0,0.0,0.0,byage
+2018,non-Saudi,male,C11,C11 Nasopharynx,38,0.4,0.4,byage
+2018,non-Saudi,male,C12-C13,C12-C13 Hypopharynx,3,0.0,0.1,byage
+2018,non-Saudi,male,C14,C14 Pharynx unspec.,2,0.0,0.0,byage
+2018,non-Saudi,male,C15,C15 Oesophagus,22,0.3,0.6,byage
+2018,non-Saudi,male,C16,C16 Stomach,75,0.9,1.5,byage
+2018,non-Saudi,male,C17,C17 Small intestine,14,0.2,0.3,byage
+2018,non-Saudi,male,C18,C18 Colon,195,2.3,3.5,byage
+2018,non-Saudi,male,C19-C20,C19-C20 Rectum,155,1.8,2.5,byage
+2018,non-Saudi,male,C21,C21 Anus,11,0.1,0.2,byage
+2018,non-Saudi,male,C22,C22 Liver,30,0.3,0.8,byage
+2018,non-Saudi,male,C23-C24,C23-C24 Gallbladder etc.,16,0.2,0.4,byage
+2018,non-Saudi,male,C25,C25 Pancreas,41,0.5,0.9,byage
+2018,non-Saudi,male,C30-C31,"C30-C31 Nose, sinuses etc.",4,0.0,0.0,byage
+2018,non-Saudi,male,C32,C32 Larynx,22,0.3,0.4,byage
+2018,non-Saudi,male,C33-C34,"C33-C34 Trachea,Bronchus,Lung",102,1.2,2.1,byage
+2018,non-Saudi,male,C37-C38,C37-C38 Other Thoracic organs,8,0.1,0.1,byage
+2018,non-Saudi,male,C40-C41,C40-C41 Bone,22,0.3,0.3,byage
+2018,non-Saudi,male,C43,C43 Melanoma of Skin,9,0.1,0.2,byage
+2018,non-Saudi,male,C44,C44 Other Skin,125,1.4,2.2,byage
+2018,non-Saudi,male,C45,C45 Mesothelioma,8,0.1,0.1,byage
+2018,non-Saudi,male,C46,C46 Kaposi sarcoma,5,0.1,0.1,byage
+2018,non-Saudi,male,C47;C49,"C47;C49 Connective,Soft tissue",40,0.5,0.6,byage
+2018,non-Saudi,male,C50,C50 Breast,20,0.2,0.3,byage
+2018,non-Saudi,male,C60,C60 Penis,1,0.0,0.0,byage
+2018,non-Saudi,male,C61,C61 Prostate,161,1.9,5.9,byage
+2018,non-Saudi,male,C62,C62 Testis,41,0.5,0.4,byage
+2018,non-Saudi,male,C63,C63 Other male genital,0,0.0,0.0,byage
+2018,non-Saudi,male,C64,C64 Kidney,87,1.0,1.3,byage
+2018,non-Saudi,male,C65,C65 Renal Pelvis,1,0.0,0.1,byage
+2018,non-Saudi,male,C66,C66 Ureter,2,0.0,0.0,byage
+2018,non-Saudi,male,C67,C67 Bladder,130,1.5,3.0,byage
+2018,non-Saudi,male,C68,C68 Other Urinary organs,0,0.0,0.0,byage
+2018,non-Saudi,male,C69,C69 Eye,10,0.1,0.4,byage
+2018,non-Saudi,male,C70-C72,"C70-C72 Brain, Nervous system",78,0.9,1.5,byage
+2018,non-Saudi,male,C73,C73 Thyroid,84,1.0,1.0,byage
+2018,non-Saudi,male,C74,C74 Adrenal gland,3,0.0,0.1,byage
+2018,non-Saudi,male,C75,C75 Other Endocrine,3,0.0,0.1,byage
+2018,non-Saudi,male,C81,C81 Hodgkin disease,61,0.7,0.9,byage
+2018,non-Saudi,male,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,130,1.5,2.0,byage
+2018,non-Saudi,male,C88,C88 Immunoproliferative dis.,0,0.0,0.0,byage
+2018,non-Saudi,male,C90,C90 Multiple Myeloma,21,0.2,0.4,byage
+2018,non-Saudi,male,C91,C91 Lymphoid Leukaemia,40,0.5,0.8,byage
+2018,non-Saudi,male,C92-C94,C92-C94 Myeloid Leukaemia,61,0.7,0.7,byage
+2018,non-Saudi,male,C95,C95 Leukaemia unspec.,14,0.2,0.3,byage
+2018,non-Saudi,male,C44,Not C44 All sites but C44,1914,22.1,36.4,byage
+2018,non-Saudi,male,C44,Not C44 All sites but C44,1914,22.1,36.4,byage
+2018,non-Saudi,female,C00,C00 Lip,3,0.1,0.3,byage
+2018,non-Saudi,female,C01-C02,C01-C02 Tongue,11,0.3,0.5,byage
+2018,non-Saudi,female,C03-C06,C03-C06 Mouth,11,0.3,0.6,byage
+2018,non-Saudi,female,C07-C08,C07-C08 Salivary glands,7,0.2,0.2,byage
+2018,non-Saudi,female,C09,C09 Tonsil,0,0.0,0.0,byage
+2018,non-Saudi,female,C10,C10 Other Oropharynx,1,0.0,0.0,byage
+2018,non-Saudi,female,C11,C11 Nasopharynx,9,0.2,0.4,byage
+2018,non-Saudi,female,C12-C13,C12-C13 Hypopharynx,0,0.0,0.0,byage
+2018,non-Saudi,female,C14,C14 Pharynx unspec.,0,0.0,0.0,byage
+2018,non-Saudi,female,C15,C15 Oesophagus,5,0.1,0.4,byage
+2018,non-Saudi,female,C16,C16 Stomach,30,0.8,2.2,byage
+2018,non-Saudi,female,C17,C17 Small intestine,5,0.1,0.5,byage
+2018,non-Saudi,female,C18,C18 Colon,98,2.5,5.6,byage
+2018,non-Saudi,female,C19-C20,C19-C20 Rectum,54,1.4,2.5,byage
+2018,non-Saudi,female,C21,C21 Anus,0,0.0,0.0,byage
+2018,non-Saudi,female,C22,C22 Liver,23,0.6,1.7,byage
+2018,non-Saudi,female,C23-C24,C23-C24 Gallbladder etc.,15,0.4,1.0,byage
+2018,non-Saudi,female,C25,C25 Pancreas,14,0.4,1.0,byage
+2018,non-Saudi,female,C30-C31,"C30-C31 Nose, sinuses etc.",3,0.1,0.1,byage
+2018,non-Saudi,female,C32,C32 Larynx,2,0.1,0.1,byage
+2018,non-Saudi,female,C33-C34,"C33-C34 Trachea,Bronchus,Lung",31,0.8,2.1,byage
+2018,non-Saudi,female,C37-C38,C37-C38 Other Thoracic organs,3,0.1,0.1,byage
+2018,non-Saudi,female,C40-C41,C40-C41 Bone,12,0.3,0.5,byage
+2018,non-Saudi,female,C43,C43 Melanoma of Skin,5,0.1,0.2,byage
+2018,non-Saudi,female,C44,C44 Other Skin,48,1.2,3.6,byage
+2018,non-Saudi,female,C45,C45 Mesothelioma,0,0.0,0.0,byage
+2018,non-Saudi,female,C46,C46 Kaposi sarcoma,2,0.1,0.2,byage
+2018,non-Saudi,female,C47;C49,"C47;C49 Connective,Soft tissue",24,0.6,1.2,byage
+2018,non-Saudi,female,C50,C50 Breast,868,21.8,36.0,byage
+2018,non-Saudi,female,C51,C51 Vulva,1,0.0,0.2,byage
+2018,non-Saudi,female,C52,C52 Vagina,7,0.2,0.6,byage
+2018,non-Saudi,female,C53,C53 Cervix Uteri,71,1.8,3.4,byage
+2018,non-Saudi,female,C54,C54 Corpus Uteri,113,2.8,6.4,byage
+2018,non-Saudi,female,C55,C55 Uterus unspec.,18,0.5,1.0,byage
+2018,non-Saudi,female,C56,C56 Ovary,68,1.7,3.5,byage
+2018,non-Saudi,female,C57,C57 Other Female Genital,2,0.1,0.2,byage
+2018,non-Saudi,female,C58,C58 Placenta,0,0.0,0.0,byage
+2018,non-Saudi,female,C64,C64 Kidney,32,0.8,1.8,byage
+2018,non-Saudi,female,C65,C65 Renal Pelvis,0,0.0,0.0,byage
+2018,non-Saudi,female,C66,C66 Ureter,0,0.0,0.0,byage
+2018,non-Saudi,female,C67,C67 Bladder,28,0.7,2.2,byage
+2018,non-Saudi,female,C68,C68 Other Urinary organs,0,0.0,0.0,byage
+2018,non-Saudi,female,C69,C69 Eye,2,0.1,0.1,byage
+2018,non-Saudi,female,C70-C72,"C70-C72 Brain, Nervous system",36,0.9,1.8,byage
+2018,non-Saudi,female,C73,C73 Thyroid,162,4.1,4.9,byage
+2018,non-Saudi,female,C74,C74 Adrenal gland,5,0.1,0.3,byage
+2018,non-Saudi,female,C75,C75 Other Endocrine,2,0.1,0.1,byage
+2018,non-Saudi,female,C81,C81 Hodgkin disease,25,0.6,0.7,byage
+2018,non-Saudi,female,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,68,1.7,3.5,byage
+2018,non-Saudi,female,C88,C88 Immunoproliferative dis.,0,0.0,0.0,byage
+2018,non-Saudi,female,C90,C90 Multiple Myeloma,7,0.2,0.3,byage
+2018,non-Saudi,female,C91,C91 Lymphoid Leukaemia,17,0.4,0.6,byage
+2018,non-Saudi,female,C92-C94,C92-C94 Myeloid Leukaemia,28,0.7,1.0,byage
+2018,non-Saudi,female,C95,C95 Leukaemia unspec.,13,0.3,0.6,byage
+2018,non-Saudi,female,C44,Not C44 All sites but C44,1983,49.9,92.6,byage
+2018,non-Saudi,female,C44,Not C44 All sites but C44,1983,49.9,92.6,byage
+2019,Saudi,male,C44,Not C44 All sites but C44,6808,63.4,83.9,summary
+2019,Saudi,male,C00,C00 Lip,9,0.1,0.1,summary
+2019,Saudi,male,C01-C02,C01-C02 Tongue,67,0.6,0.8,summary
+2019,Saudi,male,C03-C06,C03-C06 Mouth,80,0.7,1.1,summary
+2019,Saudi,male,C07-C08,C07-C08 Salivary glands,22,0.2,0.2,summary
+2019,Saudi,male,C09,C09 Tonsil,5,0.0,0.1,summary
+2019,Saudi,male,C10,C10 Other Oropharynx,1,0.0,0.0,summary
+2019,Saudi,male,C11,C11 Nasopharynx,132,1.2,1.5,summary
+2019,Saudi,male,C12-C13,C12-C13 Hypopharynx,11,0.1,0.1,summary
+2019,Saudi,male,C14,C14 Pharynx unspec.,1,0.0,0.0,summary
+2019,Saudi,male,C15,C15 Oesophagus,65,0.6,0.9,summary
+2019,Saudi,male,C16,C16 Stomach,156,1.5,2.0,summary
+2019,Saudi,male,C17,C17 Small intestine,45,0.4,0.6,summary
+2019,Saudi,male,C18,C18 Colon,691,6.4,9.0,summary
+2019,Saudi,male,C19-C20,C19-C20 Rectum,401,3.7,5.3,summary
+2019,Saudi,male,C21,C21 Anus,23,0.2,0.3,summary
+2019,Saudi,male,C22,C22 Liver,344,3.2,4.8,summary
+2019,Saudi,male,C23-C24,C23-C24 Gallbladder etc.,86,0.8,1.2,summary
+2019,Saudi,male,C25,C25 Pancreas,238,2.2,3.2,summary
+2019,Saudi,male,C30-C31,"C30-C31 Nose, sinuses etc.",25,0.2,0.3,summary
+2019,Saudi,male,C32,C32 Larynx,80,0.7,1.1,summary
+2019,Saudi,male,C33-C34,"C33-C34 Trachea,Bronchus,Lung",435,4.1,6.0,summary
+2019,Saudi,male,C37-C38,C37-C38 Other Thoracic organs,19,0.2,0.2,summary
+2019,Saudi,male,C40-C41,C40-C41 Bone,108,1.0,1.0,summary
+2019,Saudi,male,C43,C43 Melanoma of Skin,14,0.1,0.2,summary
+2019,Saudi,male,C44,C44 Other Skin,197,1.8,2.5,summary
+2019,Saudi,male,C45,C45 Mesothelioma,14,0.1,0.2,summary
+2019,Saudi,male,C46,C46 Kaposi sarcoma,26,0.2,0.4,summary
+2019,Saudi,male,C47;C49,"C47;C49 Connective,Soft tissue",104,1.0,1.1,summary
+2019,Saudi,male,C50,C50 Breast,54,0.5,0.7,summary
+2019,Saudi,male,C64,C64 Kidney,294,2.7,3.6,summary
+2019,Saudi,male,C65,C65 Renal Pelvis,4,0.0,0.0,summary
+2019,Saudi,male,C66,C66 Ureter,8,0.1,0.1,summary
+2019,Saudi,male,C67,C67 Bladder,358,3.3,4.8,summary
+2019,Saudi,male,C68,C68 Other Urinary organs,8,0.1,0.1,summary
+2019,Saudi,male,C69,C69 Eye,26,0.2,0.3,summary
+2019,Saudi,male,C70-C72,"C70-C72 Brain, Nervous system",314,2.9,3.3,summary
+2019,Saudi,male,C73,C73 Thyroid,307,2.9,3.3,summary
+2019,Saudi,male,C74,C74 Adrenal gland,22,0.2,0.2,summary
+2019,Saudi,male,C75,C75 Other Endocrine,7,0.1,0.1,summary
+2019,Saudi,male,C81,C81 Hodgkin’s lymphoma,307,2.9,2.8,summary
+2019,Saudi,male,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,526,4.9,6.1,summary
+2019,Saudi,male,C88,C88 Immunoproliferative dis.,0,0.0,0.0,summary
+2019,Saudi,male,C90,C90 Multiple Myeloma,112,1.0,1.5,summary
+2019,Saudi,male,C91,C91 Lymphoid Leukaemia,197,1.8,2.1,summary
+2019,Saudi,male,C92-C94,C92-C94 Myeloid Leukaemia,177,1.6,1.8,summary
+2019,Saudi,male,C95,C95 Leukaemia unspec.,114,1.1,1.1,summary
+2019,Saudi,male,C44,Not C44 All sites but C44,6808,63.4,83.9,summary
+2019,Saudi,female,C44,Not C44 All sites but C44,8976,86.7,107.6,summary
+2019,Saudi,female,C00,C00 Lip,11,0.1,0.1,summary
+2019,Saudi,female,C01-C02,C01-C02 Tongue,68,0.7,0.9,summary
+2019,Saudi,female,C03-C06,C03-C06 Mouth,43,0.4,0.6,summary
+2019,Saudi,female,C07-C08,C07-C08 Salivary glands,18,0.2,0.2,summary
+2019,Saudi,female,C09,C09 Tonsil,1,0.0,0.0,summary
+2019,Saudi,female,C10,C10 Other Oropharynx,0,0.0,0.0,summary
+2019,Saudi,female,C11,C11 Nasopharynx,67,0.6,0.8,summary
+2019,Saudi,female,C12-C13,C12-C13 Hypopharynx,8,0.1,0.1,summary
+2019,Saudi,female,C14,C14 Pharynx unspec.,1,0.0,0.0,summary
+2019,Saudi,female,C15,C15 Oesophagus,51,0.5,0.7,summary
+2019,Saudi,female,C16,C16 Stomach,160,1.5,1.9,summary
+2019,Saudi,female,C17,C17 Small intestine,35,0.3,0.5,summary
+2019,Saudi,female,C18,C18 Colon,629,6.1,8.0,summary
+2019,Saudi,female,C19-C20,C19-C20 Rectum,268,2.6,3.6,summary
+2019,Saudi,female,C21,C21 Anus,11,0.1,0.1,summary
+2019,Saudi,female,C22,C22 Liver,159,1.5,2.2,summary
+2019,Saudi,female,C23-C24,C23-C24 Gallbladder etc.,119,1.1,1.7,summary
+2019,Saudi,female,C25,C25 Pancreas,156,1.5,2.1,summary
+2019,Saudi,female,C30-C31,"C30-C31 Nose, sinuses etc.",22,0.2,0.2,summary
+2019,Saudi,female,C32,C32 Larynx,14,0.1,0.2,summary
+2019,Saudi,female,C33-C34,"C33-C34 Trachea,Bronchus,Lung",154,1.5,2.1,summary
+2019,Saudi,female,C37-C38,C37-C38 Other Thoracic organs,23,0.2,0.3,summary
+2019,Saudi,female,C40-C41,C40-C41 Bone,86,0.8,0.9,summary
+2019,Saudi,female,C43,C43 Melanoma of Skin,16,0.2,0.2,summary
+2019,Saudi,female,C44,C44 Other Skin,158,1.5,1.9,summary
+2019,Saudi,female,C45,C45 Mesothelioma,6,0.1,0.1,summary
+2019,Saudi,female,C46,C46 Kaposi sarcoma,8,0.1,0.1,summary
+2019,Saudi,female,C47;C49,"C47;C49 Connective,Soft tissue",92,0.9,1.0,summary
+2019,Saudi,female,C50,C50 Breast,2840,27.4,33.2,summary
+2019,Saudi,female,C64,C64 Kidney,189,1.8,2.3,summary
+2019,Saudi,female,C65,C65 Renal Pelvis,4,0.0,0.1,summary
+2019,Saudi,female,C66,C66 Ureter,3,0.0,0.0,summary
+2019,Saudi,female,C67,C67 Bladder,77,0.7,1.1,summary
+2019,Saudi,female,C68,C68 Other Urinary organs,4,0.0,0.0,summary
+2019,Saudi,female,C69,C69 Eye,26,0.3,0.3,summary
+2019,Saudi,female,C70-C72,"C70-C72 Brain, Nervous system",213,2.1,2.3,summary
+2019,Saudi,female,C73,C73 Thyroid,1024,9.9,10.3,summary
+2019,Saudi,female,C74,C74 Adrenal gland,17,0.2,0.2,summary
+2019,Saudi,female,C75,C75 Other Endocrine,5,0.0,0.0,summary
+2019,Saudi,female,C81,C81 Hodgkin’s lymphoma,183,1.8,1.8,summary
+2019,Saudi,female,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,407,3.9,5.0,summary
+2019,Saudi,female,C88,C88 Immunoproliferative dis.,1,0.0,0.0,summary
+2019,Saudi,female,C90,C90 Multiple Myeloma,87,0.8,1.2,summary
+2019,Saudi,female,C91,C91 Lymphoid Leukaemia,94,0.9,1.1,summary
+2019,Saudi,female,C92-C94,C92-C94 Myeloid Leukaemia,168,1.6,1.8,summary
+2019,Saudi,female,C95,C95 Leukaemia unspec.,81,0.8,0.9,summary
+2019,Saudi,female,C44,Not C44 All sites but C44,8976,86.7,107.6,summary
+2019,non-Saudi,male,C00,C00 Lip,4,0.0,0.0,byage
+2019,non-Saudi,male,C01-C02,C01-C02 Tongue,35,0.4,0.6,byage
+2019,non-Saudi,male,C03-C06,C03-C06 Mouth,28,0.3,0.7,byage
+2019,non-Saudi,male,C07-C08,C07-C08 Salivary glands,21,0.2,0.4,byage
+2019,non-Saudi,male,C09,C09 Tonsil,1,0.0,0.0,byage
+2019,non-Saudi,male,C10,C10 Other Oropharynx,1,0.0,0.0,byage
+2019,non-Saudi,male,C11,C11 Nasopharynx,48,0.5,0.6,byage
+2019,non-Saudi,male,C12-C13,C12-C13 Hypopharynx,1,0.0,0.1,byage
+2019,non-Saudi,male,C14,C14 Pharynx unspec.,1,0.0,0.0,byage
+2019,non-Saudi,male,C15,C15 Oesophagus,17,0.2,0.3,byage
+2019,non-Saudi,male,C16,C16 Stomach,64,0.7,1.4,byage
+2019,non-Saudi,male,C17,C17 Small intestine,15,0.2,0.3,byage
+2019,non-Saudi,male,C18,C18 Colon,174,1.9,3.6,byage
+2019,non-Saudi,male,C19-C20,C19-C20 Rectum,118,1.3,2.2,byage
+2019,non-Saudi,male,C21,C21 Anus,16,0.2,0.2,byage
+2019,non-Saudi,male,C22,C22 Liver,51,0.6,1.0,byage
+2019,non-Saudi,male,C23-C24,C23-C24 Gallbladder etc.,16,0.2,0.5,byage
+2019,non-Saudi,male,C25,C25 Pancreas,32,0.4,0.8,byage
+2019,non-Saudi,male,C30-C31,"C30-C31 Nose, sinuses etc.",9,0.1,0.1,byage
+2019,non-Saudi,male,C32,C32 Larynx,29,0.3,0.6,byage
+2019,non-Saudi,male,C33-C34,"C33-C34 Trachea,Bronchus,Lung",106,1.2,2.4,byage
+2019,non-Saudi,male,C37-C38,C37-C38 Other Thoracic organs,20,0.2,0.2,byage
+2019,non-Saudi,male,C40-C41,C40-C41 Bone,30,0.3,0.8,byage
+2019,non-Saudi,male,C43,C43 Melanoma of Skin,9,0.1,0.1,byage
+2019,non-Saudi,male,C44,C44 Other Skin,83,0.9,1.7,byage
+2019,non-Saudi,male,C45,C45 Mesothelioma,8,0.1,0.2,byage
+2019,non-Saudi,male,C46,C46 Kaposi sarcoma,4,0.0,0.0,byage
+2019,non-Saudi,male,C47;C49,"C47;C49 Connective,Soft tissue",41,0.5,0.6,byage
+2019,non-Saudi,male,C50,C50 Breast,24,0.3,0.4,byage
+2019,non-Saudi,male,C60,C60 Penis,0,0.0,0.0,byage
+2019,non-Saudi,male,C61,C61 Prostate,110,1.2,4.1,byage
+2019,non-Saudi,male,C62,C62 Testis,35,0.4,0.4,byage
+2019,non-Saudi,male,C63,C63 Other male genital,1,0.0,0.0,byage
+2019,non-Saudi,male,C64,C64 Kidney,59,0.7,1.0,byage
+2019,non-Saudi,male,C65,C65 Renal Pelvis,2,0.0,0.1,byage
+2019,non-Saudi,male,C66,C66 Ureter,0,0.0,0.0,byage
+2019,non-Saudi,male,C67,C67 Bladder,96,1.1,2.2,byage
+2019,non-Saudi,male,C68,C68 Other Urinary organs,2,0.0,0.0,byage
+2019,non-Saudi,male,C69,C69 Eye,9,0.1,0.3,byage
+2019,non-Saudi,male,C70-C72,"C70-C72 Brain, Nervous system",65,0.7,1.0,byage
+2019,non-Saudi,male,C73,C73 Thyroid,65,0.7,0.7,byage
+2019,non-Saudi,male,C74,C74 Adrenal gland,6,0.1,0.2,byage
+2019,non-Saudi,male,C75,C75 Other Endocrine,1,0.0,0.0,byage
+2019,non-Saudi,male,C81,C81 Hodgkin disease,55,0.6,0.9,byage
+2019,non-Saudi,male,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,110,1.2,1.8,byage
+2019,non-Saudi,male,C88,C88 Immunoproliferative dis.,1,0.0,0.1,byage
+2019,non-Saudi,male,C90,C90 Multiple Myeloma,28,0.3,0.6,byage
+2019,non-Saudi,male,C91,C91 Lymphoid Leukaemia,61,0.7,1.4,byage
+2019,non-Saudi,male,C92-C94,C92-C94 Myeloid Leukaemia,66,0.7,0.8,byage
+2019,non-Saudi,male,C95,C95 Leukaemia unspec.,23,0.3,0.5,byage
+2019,non-Saudi,male,C44,Not C44 All sites but C44,1762,19.6,35.2,byage
+2019,non-Saudi,male,C44,Not C44 All sites but C44,1762,19.6,35.2,byage
+2019,non-Saudi,female,C00,C00 Lip,1,0.0,0.1,byage
+2019,non-Saudi,female,C01-C02,C01-C02 Tongue,13,0.3,0.6,byage
+2019,non-Saudi,female,C03-C06,C03-C06 Mouth,3,0.1,0.1,byage
+2019,non-Saudi,female,C07-C08,C07-C08 Salivary glands,5,0.1,0.2,byage
+2019,non-Saudi,female,C09,C09 Tonsil,0,0.0,0.0,byage
+2019,non-Saudi,female,C10,C10 Other Oropharynx,0,0.0,0.0,byage
+2019,non-Saudi,female,C11,C11 Nasopharynx,14,0.3,0.6,byage
+2019,non-Saudi,female,C12-C13,C12-C13 Hypopharynx,4,0.1,0.1,byage
+2019,non-Saudi,female,C14,C14 Pharynx unspec.,1,0.0,0.0,byage
+2019,non-Saudi,female,C15,C15 Oesophagus,5,0.1,0.2,byage
+2019,non-Saudi,female,C16,C16 Stomach,31,0.8,1.6,byage
+2019,non-Saudi,female,C17,C17 Small intestine,5,0.1,0.4,byage
+2019,non-Saudi,female,C18,C18 Colon,95,2.3,5.7,byage
+2019,non-Saudi,female,C19-C20,C19-C20 Rectum,55,1.3,3.7,byage
+2019,non-Saudi,female,C21,C21 Anus,4,0.1,0.1,byage
+2019,non-Saudi,female,C22,C22 Liver,19,0.5,1.3,byage
+2019,non-Saudi,female,C23-C24,C23-C24 Gallbladder etc.,7,0.2,0.5,byage
+2019,non-Saudi,female,C25,C25 Pancreas,20,0.5,1.6,byage
+2019,non-Saudi,female,C30-C31,"C30-C31 Nose, sinuses etc.",6,0.1,0.1,byage
+2019,non-Saudi,female,C32,C32 Larynx,3,0.1,0.2,byage
+2019,non-Saudi,female,C33-C34,"C33-C34 Trachea,Bronchus,Lung",45,1.1,3.2,byage
+2019,non-Saudi,female,C37-C38,C37-C38 Other Thoracic organs,7,0.2,0.3,byage
+2019,non-Saudi,female,C40-C41,C40-C41 Bone,16,0.4,0.7,byage
+2019,non-Saudi,female,C43,C43 Melanoma of Skin,4,0.1,0.3,byage
+2019,non-Saudi,female,C44,C44 Other Skin,36,0.9,2.2,byage
+2019,non-Saudi,female,C45,C45 Mesothelioma,0,0.0,0.0,byage
+2019,non-Saudi,female,C46,C46 Kaposi sarcoma,2,0.0,0.1,byage
+2019,non-Saudi,female,C47;C49,"C47;C49 Connective,Soft tissue",26,0.6,1.0,byage
+2019,non-Saudi,female,C50,C50 Breast,769,18.7,32.5,byage
+2019,non-Saudi,female,C51,C51 Vulva,5,0.1,0.2,byage
+2019,non-Saudi,female,C52,C52 Vagina,1,0.0,0.0,byage
+2019,non-Saudi,female,C53,C53 Cervix Uteri,65,1.6,3.1,byage
+2019,non-Saudi,female,C54,C54 Corpus Uteri,59,1.4,3.0,byage
+2019,non-Saudi,female,C55,C55 Uterus unspec.,26,0.6,1.4,byage
+2019,non-Saudi,female,C56,C56 Ovary,56,1.4,2.5,byage
+2019,non-Saudi,female,C57,C57 Other Female Genital,5,0.1,0.3,byage
+2019,non-Saudi,female,C58,C58 Placenta,1,0.0,0.0,byage
+2019,non-Saudi,female,C64,C64 Kidney,31,0.8,1.5,byage
+2019,non-Saudi,female,C65,C65 Renal Pelvis,1,0.0,0.0,byage
+2019,non-Saudi,female,C66,C66 Ureter,0,0.0,0.0,byage
+2019,non-Saudi,female,C67,C67 Bladder,10,0.2,0.9,byage
+2019,non-Saudi,female,C68,C68 Other Urinary organs,1,0.0,0.1,byage
+2019,non-Saudi,female,C69,C69 Eye,3,0.1,0.1,byage
+2019,non-Saudi,female,C70-C72,"C70-C72 Brain, Nervous system",38,0.9,1.4,byage
+2019,non-Saudi,female,C73,C73 Thyroid,140,3.4,4.0,byage
+2019,non-Saudi,female,C74,C74 Adrenal gland,6,0.1,0.3,byage
+2019,non-Saudi,female,C75,C75 Other Endocrine,0,0.0,0.0,byage
+2019,non-Saudi,female,C81,C81 Hodgkin disease,13,0.3,0.3,byage
+2019,non-Saudi,female,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,55,1.3,2.8,byage
+2019,non-Saudi,female,C88,C88 Immunoproliferative dis.,0,0.0,0.0,byage
+2019,non-Saudi,female,C90,C90 Multiple Myeloma,13,0.3,0.8,byage
+2019,non-Saudi,female,C91,C91 Lymphoid Leukaemia,30,0.7,1.1,byage
+2019,non-Saudi,female,C92-C94,C92-C94 Myeloid Leukaemia,34,0.8,1.6,byage
+2019,non-Saudi,female,C95,C95 Leukaemia unspec.,21,0.5,1.2,byage
+2019,non-Saudi,female,C44,Not C44 All sites but C44,1805,43.8,83.6,byage
+2019,non-Saudi,female,C44,Not C44 All sites but C44,1805,43.8,83.6,byage
+2020,Saudi,male,C44,Not C44 All sites but C44,6087,55.7,73.1,summary
+2020,Saudi,male,C00,C00 Lip,14,0.1,0.2,summary
+2020,Saudi,male,C01-C02,C01-C02 Tongue,62,0.6,0.8,summary
+2020,Saudi,male,C03-C06,C03-C06 Mouth,68,0.6,0.9,summary
+2020,Saudi,male,C07-C08,C07-C08 Salivary glands,23,0.2,0.2,summary
+2020,Saudi,male,C09,C09 Tonsil,4,0.0,0.0,summary
+2020,Saudi,male,C10,C10 Other Oropharynx,5,0.0,0.1,summary
+2020,Saudi,male,C11,C11 Nasopharynx,139,1.3,1.5,summary
+2020,Saudi,male,C12-C13,C12-C13 Hypopharynx,6,0.1,0.1,summary
+2020,Saudi,male,C14,C14 Pharynx unspec.,2,0.0,0.0,summary
+2020,Saudi,male,C15,C15 Oesophagus,76,0.7,1.0,summary
+2020,Saudi,male,C16,C16 Stomach,164,1.5,2.1,summary
+2020,Saudi,male,C17,C17 Small intestine,50,0.5,0.6,summary
+2020,Saudi,male,C18,C18 Colon,597,5.5,7.6,summary
+2020,Saudi,male,C19-C20,C19-C20 Rectum,369,3.4,4.8,summary
+2020,Saudi,male,C21,C21 Anus,26,0.2,0.4,summary
+2020,Saudi,male,C22,C22 Liver,291,2.7,4.0,summary
+2020,Saudi,male,C23-C24,C23-C24 Gallbladder etc.,77,0.7,1.0,summary
+2020,Saudi,male,C25,C25 Pancreas,226,2.1,3.0,summary
+2020,Saudi,male,C30-C31,"C30-C31 Nose, sinuses etc.",33,0.3,0.4,summary
+2020,Saudi,male,C32,C32 Larynx,72,0.7,1.0,summary
+2020,Saudi,male,C33-C34,"C33-C34 Trachea,Bronchus,Lung",353,3.2,4.8,summary
+2020,Saudi,male,C37-C38,C37-C38 Other Thoracic organs,35,0.3,0.4,summary
+2020,Saudi,male,C40-C41,C40-C41 Bone,132,1.2,1.2,summary
+2020,Saudi,male,C43,C43 Melanoma of Skin,13,0.1,0.2,summary
+2020,Saudi,male,C44,C44 Other Skin,122,1.1,1.6,summary
+2020,Saudi,male,C45,C45 Mesothelioma,10,0.1,0.1,summary
+2020,Saudi,male,C46,C46 Kaposi sarcoma,22,0.2,0.3,summary
+2020,Saudi,male,C47;C49,"C47;C49 Connective,Soft tissue",99,0.9,1.0,summary
+2020,Saudi,male,C50,C50 Breast,40,0.4,0.5,summary
+2020,Saudi,male,C64,C64 Kidney,228,2.1,2.8,summary
+2020,Saudi,male,C65,C65 Renal Pelvis,9,0.1,0.1,summary
+2020,Saudi,male,C66,C66 Ureter,5,0.0,0.1,summary
+2020,Saudi,male,C67,C67 Bladder,291,2.7,3.9,summary
+2020,Saudi,male,C68,C68 Other Urinary organs,13,0.1,0.2,summary
+2020,Saudi,male,C69,C69 Eye,20,0.2,0.2,summary
+2020,Saudi,male,C70-C72,"C70-C72 Brain, Nervous system",283,2.6,3.0,summary
+2020,Saudi,male,C73,C73 Thyroid,228,2.1,2.4,summary
+2020,Saudi,male,C74,C74 Adrenal gland,16,0.1,0.1,summary
+2020,Saudi,male,C75,C75 Other Endocrine,4,0.0,0.0,summary
+2020,Saudi,male,C81,C81 Hodgkin disease,347,3.2,3.3,summary
+2020,Saudi,male,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,420,3.8,4.6,summary
+2020,Saudi,male,C88,C88 Immunoproliferative dis.,0,0.0,0.0,summary
+2020,Saudi,male,C90,C90 Multiple Myeloma,94,0.9,1.2,summary
+2020,Saudi,male,C91,C91 Lymphoid Leukaemia,150,1.4,1.7,summary
+2020,Saudi,male,C92-C94,C92-C94 Myeloid Leukaemia,210,1.9,2.3,summary
+2020,Saudi,male,C95,C95 Leukaemia unspec.,134,1.2,1.3,summary
+2020,Saudi,male,C44,Not C44 All sites but C44,6087,55.7,73.1,summary
+2020,Saudi,female,C44,Not C44 All sites but C44,7753,73.5,91.0,summary
+2020,Saudi,female,C00,C00 Lip,8,0.1,0.1,summary
+2020,Saudi,female,C01-C02,C01-C02 Tongue,58,0.6,0.8,summary
+2020,Saudi,female,C03-C06,C03-C06 Mouth,40,0.4,0.5,summary
+2020,Saudi,female,C07-C08,C07-C08 Salivary glands,12,0.1,0.1,summary
+2020,Saudi,female,C09,C09 Tonsil,3,0.0,0.0,summary
+2020,Saudi,female,C10,C10 Other Oropharynx,0,0.0,0.0,summary
+2020,Saudi,female,C11,C11 Nasopharynx,57,0.5,0.6,summary
+2020,Saudi,female,C12-C13,C12-C13 Hypopharynx,6,0.1,0.1,summary
+2020,Saudi,female,C14,C14 Pharynx unspec.,5,0.0,0.1,summary
+2020,Saudi,female,C15,C15 Oesophagus,32,0.3,0.4,summary
+2020,Saudi,female,C16,C16 Stomach,125,1.2,1.5,summary
+2020,Saudi,female,C17,C17 Small intestine,27,0.3,0.4,summary
+2020,Saudi,female,C18,C18 Colon,519,4.9,6.5,summary
+2020,Saudi,female,C19-C20,C19-C20 Rectum,244,2.3,3.1,summary
+2020,Saudi,female,C21,C21 Anus,12,0.1,0.2,summary
+2020,Saudi,female,C22,C22 Liver,159,1.5,2.2,summary
+2020,Saudi,female,C23-C24,C23-C24 Gallbladder etc.,89,0.8,1.2,summary
+2020,Saudi,female,C25,C25 Pancreas,131,1.2,1.8,summary
+2020,Saudi,female,C30-C31,"C30-C31 Nose, sinuses etc.",18,0.2,0.2,summary
+2020,Saudi,female,C32,C32 Larynx,7,0.1,0.1,summary
+2020,Saudi,female,C33-C34,"C33-C34 Trachea,Bronchus,Lung",105,1.0,1.4,summary
+2020,Saudi,female,C37-C38,C37-C38 Other Thoracic organs,23,0.2,0.2,summary
+2020,Saudi,female,C40-C41,C40-C41 Bone,91,0.9,0.9,summary
+2020,Saudi,female,C43,C43 Melanoma of Skin,8,0.1,0.1,summary
+2020,Saudi,female,C44,C44 Other Skin,88,0.8,1.1,summary
+2020,Saudi,female,C45,C45 Mesothelioma,3,0.0,0.0,summary
+2020,Saudi,female,C46,C46 Kaposi sarcoma,6,0.1,0.1,summary
+2020,Saudi,female,C47;C49,"C47;C49 Connective,Soft tissue",86,0.8,0.9,summary
+2020,Saudi,female,C50,C50 Breast,2459,23.3,28.4,summary
+2020,Saudi,female,C64,C64 Kidney,150,1.4,1.8,summary
+2020,Saudi,female,C65,C65 Renal Pelvis,0,0.0,0.0,summary
+2020,Saudi,female,C66,C66 Ureter,0,0.0,0.0,summary
+2020,Saudi,female,C67,C67 Bladder,57,0.5,0.7,summary
+2020,Saudi,female,C68,C68 Other Urinary organs,1,0.0,0.0,summary
+2020,Saudi,female,C69,C69 Eye,18,0.2,0.2,summary
+2020,Saudi,female,C70-C72,"C70-C72 Brain, Nervous system",205,1.9,2.2,summary
+2020,Saudi,female,C73,C73 Thyroid,816,7.7,8.1,summary
+2020,Saudi,female,C74,C74 Adrenal gland,21,0.2,0.2,summary
+2020,Saudi,female,C75,C75 Other Endocrine,5,0.0,0.0,summary
+2020,Saudi,female,C81,C81 Hodgkin disease,234,2.2,2.2,summary
+2020,Saudi,female,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,336,3.2,3.9,summary
+2020,Saudi,female,C88,C88 Immunoproliferative dis.,1,0.0,0.0,summary
+2020,Saudi,female,C90,C90 Multiple Myeloma,70,0.7,0.9,summary
+2020,Saudi,female,C91,C91 Lymphoid Leukaemia,84,0.8,0.9,summary
+2020,Saudi,female,C92-C94,C92-C94 Myeloid Leukaemia,156,1.5,1.7,summary
+2020,Saudi,female,C95,C95 Leukaemia unspec.,101,1.0,1.1,summary
+2020,Saudi,female,C44,Not C44 All sites but C44,7753,73.5,91.0,summary
+2020,non-Saudi,male,C00,C00 Lip,9,0.1,0.1,byage
+2020,non-Saudi,male,C01-C02,C01-C02 Tongue,22,0.2,0.1,byage
+2020,non-Saudi,male,C03-C06,C03-C06 Mouth,15,0.2,0.2,byage
+2020,non-Saudi,male,C07-C08,C07-C08 Salivary glands,9,0.1,0.1,byage
+2020,non-Saudi,male,C09,C09 Tonsil,1,0.0,0.0,byage
+2020,non-Saudi,male,C10,C10 Other Oropharynx,2,0.0,0.0,byage
+2020,non-Saudi,male,C11,C11 Nasopharynx,36,0.4,0.3,byage
+2020,non-Saudi,male,C12-C13,C12-C13 Hypopharynx,3,0.0,0.0,byage
+2020,non-Saudi,male,C14,C14 Pharynx unspec.,3,0.0,0.1,byage
+2020,non-Saudi,male,C15,C15 Oesophagus,22,0.2,0.5,byage
+2020,non-Saudi,male,C16,C16 Stomach,60,0.6,1.0,byage
+2020,non-Saudi,male,C17,C17 Small intestine,15,0.2,0.2,byage
+2020,non-Saudi,male,C18,C18 Colon,167,1.8,3.0,byage
+2020,non-Saudi,male,C19-C20,C19-C20 Rectum,89,1.0,1.3,byage
+2020,non-Saudi,male,C21,C21 Anus,6,0.1,0.1,byage
+2020,non-Saudi,male,C22,C22 Liver,50,0.5,1.1,byage
+2020,non-Saudi,male,C23-C24,C23-C24 Gallbladder etc.,16,0.2,0.2,byage
+2020,non-Saudi,male,C25,C25 Pancreas,35,0.4,0.8,byage
+2020,non-Saudi,male,C30-C31,"C30-C31 Nose, sinuses etc.",6,0.1,0.1,byage
+2020,non-Saudi,male,C32,C32 Larynx,23,0.2,0.5,byage
+2020,non-Saudi,male,C33-C34,"C33-C34 Trachea,Bronchus,Lung",107,1.1,2.3,byage
+2020,non-Saudi,male,C37-C38,C37-C38 Other Thoracic organs,14,0.1,0.1,byage
+2020,non-Saudi,male,C40-C41,C40-C41 Bone,45,0.5,0.9,byage
+2020,non-Saudi,male,C43,C43 Melanoma of Skin,8,0.1,0.1,byage
+2020,non-Saudi,male,C44,C44 Other Skin,69,0.7,1.5,byage
+2020,non-Saudi,male,C45,C45 Mesothelioma,1,0.0,0.0,byage
+2020,non-Saudi,male,C46,C46 Kaposi sarcoma,1,0.0,0.0,byage
+2020,non-Saudi,male,C47;C49,"C47;C49 Connective,Soft tissue",40,0.4,0.6,byage
+2020,non-Saudi,male,C50,C50 Breast,12,0.1,0.1,byage
+2020,non-Saudi,male,C60,C60 Penis,3,0.0,0.1,byage
+2020,non-Saudi,male,C61,C61 Prostate,89,1.0,2.9,byage
+2020,non-Saudi,male,C62,C62 Testis,23,0.2,0.3,byage
+2020,non-Saudi,male,C63,C63 Other male genital,2,0.0,0.0,byage
+2020,non-Saudi,male,C64,C64 Kidney,54,0.6,0.8,byage
+2020,non-Saudi,male,C65,C65 Renal Pelvis,0,0.0,0.0,byage
+2020,non-Saudi,male,C66,C66 Ureter,0,0.0,0.0,byage
+2020,non-Saudi,male,C67,C67 Bladder,83,0.9,1.8,byage
+2020,non-Saudi,male,C68,C68 Other Urinary organs,1,0.0,0.0,byage
+2020,non-Saudi,male,C69,C69 Eye,6,0.1,0.2,byage
+2020,non-Saudi,male,C70-C72,"C70-C72 Brain, Nervous system",72,0.8,0.9,byage
+2020,non-Saudi,male,C73,C73 Thyroid,55,0.6,0.5,byage
+2020,non-Saudi,male,C74,C74 Adrenal gland,4,0.0,0.1,byage
+2020,non-Saudi,male,C75,C75 Other Endocrine,1,0.0,0.0,byage
+2020,non-Saudi,male,C81,C81 Hodgkin disease,54,0.6,0.8,byage
+2020,non-Saudi,male,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,103,1.1,1.7,byage
+2020,non-Saudi,male,C88,C88 Immunoproliferative dis.,0,0.0,0.0,byage
+2020,non-Saudi,male,C90,C90 Multiple Myeloma,31,0.3,0.4,byage
+2020,non-Saudi,male,C91,C91 Lymphoid Leukaemia,69,0.7,1.4,byage
+2020,non-Saudi,male,C92-C94,C92-C94 Myeloid Leukaemia,49,0.5,0.6,byage
+2020,non-Saudi,male,C95,C95 Leukaemia unspec.,37,0.4,0.7,byage
+2020,non-Saudi,male,C44,Not C44 All sites but C44,1600,17.1,27.8,byage
+2020,non-Saudi,male,C44,Not C44 All sites but C44,1600,17.1,27.8,byage
+2020,non-Saudi,female,C00,C00 Lip,3,0.1,0.2,byage
+2020,non-Saudi,female,C01-C02,C01-C02 Tongue,12,0.3,0.4,byage
+2020,non-Saudi,female,C03-C06,C03-C06 Mouth,2,0.0,0.1,byage
+2020,non-Saudi,female,C07-C08,C07-C08 Salivary glands,4,0.1,0.2,byage
+2020,non-Saudi,female,C09,C09 Tonsil,0,0.0,0.0,byage
+2020,non-Saudi,female,C10,C10 Other Oropharynx,2,0.0,0.1,byage
+2020,non-Saudi,female,C11,C11 Nasopharynx,4,0.1,0.3,byage
+2020,non-Saudi,female,C12-C13,C12-C13 Hypopharynx,4,0.1,0.1,byage
+2020,non-Saudi,female,C14,C14 Pharynx unspec.,0,0.0,0.0,byage
+2020,non-Saudi,female,C15,C15 Oesophagus,11,0.3,0.5,byage
+2020,non-Saudi,female,C16,C16 Stomach,24,0.6,0.7,byage
+2020,non-Saudi,female,C17,C17 Small intestine,5,0.1,0.2,byage
+2020,non-Saudi,female,C18,C18 Colon,75,1.8,4.1,byage
+2020,non-Saudi,female,C19-C20,C19-C20 Rectum,24,0.6,1.2,byage
+2020,non-Saudi,female,C21,C21 Anus,2,0.0,0.1,byage
+2020,non-Saudi,female,C22,C22 Liver,13,0.3,0.9,byage
+2020,non-Saudi,female,C23-C24,C23-C24 Gallbladder etc.,10,0.2,0.7,byage
+2020,non-Saudi,female,C25,C25 Pancreas,23,0.5,1.3,byage
+2020,non-Saudi,female,C30-C31,"C30-C31 Nose, sinuses etc.",5,0.1,0.2,byage
+2020,non-Saudi,female,C32,C32 Larynx,1,0.0,0.1,byage
+2020,non-Saudi,female,C33-C34,"C33-C34 Trachea,Bronchus,Lung",30,0.7,1.8,byage
+2020,non-Saudi,female,C37-C38,C37-C38 Other Thoracic organs,4,0.1,0.2,byage
+2020,non-Saudi,female,C40-C41,C40-C41 Bone,30,0.7,1.4,byage
+2020,non-Saudi,female,C43,C43 Melanoma of Skin,5,0.1,0.4,byage
+2020,non-Saudi,female,C44,C44 Other Skin,24,0.6,1.4,byage
+2020,non-Saudi,female,C45,C45 Mesothelioma,0,0.0,0.0,byage
+2020,non-Saudi,female,C46,C46 Kaposi sarcoma,1,0.0,0.0,byage
+2020,non-Saudi,female,C47;C49,"C47;C49 Connective,Soft tissue",28,0.7,1.0,byage
+2020,non-Saudi,female,C50,C50 Breast,646,15.1,23.4,byage
+2020,non-Saudi,female,C51,C51 Vulva,0,0.0,0.0,byage
+2020,non-Saudi,female,C52,C52 Vagina,1,0.0,0.0,byage
+2020,non-Saudi,female,C53,C53 Cervix Uteri,36,0.8,1.3,byage
+2020,non-Saudi,female,C54,C54 Corpus Uteri,64,1.5,3.8,byage
+2020,non-Saudi,female,C55,C55 Uterus unspec.,20,0.5,1.0,byage
+2020,non-Saudi,female,C56,C56 Ovary,45,1.1,1.2,byage
+2020,non-Saudi,female,C57,C57 Other Female Genital,6,0.1,0.4,byage
+2020,non-Saudi,female,C58,C58 Placenta,1,0.0,0.0,byage
+2020,non-Saudi,female,C64,C64 Kidney,16,0.4,0.8,byage
+2020,non-Saudi,female,C65,C65 Renal Pelvis,0,0.0,0.0,byage
+2020,non-Saudi,female,C66,C66 Ureter,0,0.0,0.0,byage
+2020,non-Saudi,female,C67,C67 Bladder,13,0.3,0.8,byage
+2020,non-Saudi,female,C68,C68 Other Urinary organs,0,0.0,0.0,byage
+2020,non-Saudi,female,C69,C69 Eye,2,0.0,0.1,byage
+2020,non-Saudi,female,C70-C72,"C70-C72 Brain, Nervous system",39,0.9,1.5,byage
+2020,non-Saudi,female,C73,C73 Thyroid,116,2.7,2.7,byage
+2020,non-Saudi,female,C74,C74 Adrenal gland,2,0.0,0.0,byage
+2020,non-Saudi,female,C75,C75 Other Endocrine,1,0.0,0.0,byage
+2020,non-Saudi,female,C81,C81 Hodgkin disease,34,0.8,1.0,byage
+2020,non-Saudi,female,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,40,0.9,1.4,byage
+2020,non-Saudi,female,C88,C88 Immunoproliferative dis.,0,0.0,0.0,byage
+2020,non-Saudi,female,C90,C90 Multiple Myeloma,14,0.3,0.9,byage
+2020,non-Saudi,female,C91,C91 Lymphoid Leukaemia,33,0.8,1.0,byage
+2020,non-Saudi,female,C92-C94,C92-C94 Myeloid Leukaemia,27,0.6,1.3,byage
+2020,non-Saudi,female,C95,C95 Leukaemia unspec.,17,0.4,0.8,byage
+2020,non-Saudi,female,C44,Not C44 All sites but C44,1548,36.3,61.7,byage
+2020,non-Saudi,female,C44,Not C44 All sites but C44,1548,36.3,61.7,byage
+2021,Saudi,male,C44,Not C44 All sites but C44,7080,76.8,120.6,summary
+2021,Saudi,male,C00,C00 Lip,11,0.1,0.2,summary
+2021,Saudi,male,C01-C02,C01-C02 Tongue,57,0.6,1.0,summary
+2021,Saudi,male,C03-C06,C03-C06 Mouth,45,0.5,0.8,summary
+2021,Saudi,male,C07-C08,C07-C08 Salivary glands,23,0.2,0.3,summary
+2021,Saudi,male,C09,C09 Tonsil,4,0.0,0.1,summary
+2021,Saudi,male,C10,C10 Other Oropharynx,7,0.1,0.1,summary
+2021,Saudi,male,C11,C11 Nasopharynx,158,1.7,2.5,summary
+2021,Saudi,male,C12-C13,C12-C13 Hypopharynx,4,0.0,0.1,summary
+2021,Saudi,male,C14,C14 Pharynx unspec.,7,0.1,0.1,summary
+2021,Saudi,male,C15,C15 Oesophagus,71,0.8,1.3,summary
+2021,Saudi,male,C16,C16 Stomach,192,2.1,3.7,summary
+2021,Saudi,male,C17,C17 Small intestine,53,0.6,1.0,summary
+2021,Saudi,male,C18,C18 Colon,775,8.4,14.2,summary
+2021,Saudi,male,C19-C20,C19-C20 Rectum,425,4.6,7.8,summary
+2021,Saudi,male,C21,C21 Anus,32,0.3,0.6,summary
+2021,Saudi,male,C22,C22 Liver,390,4.2,7.7,summary
+2021,Saudi,male,C23-C24,C23-C24 Gallbladder etc.,75,0.8,1.4,summary
+2021,Saudi,male,C25,C25 Pancreas,282,3.1,5.4,summary
+2021,Saudi,male,C30-C31,"C30-C31 Nose, sinuses etc.",22,0.2,0.4,summary
+2021,Saudi,male,C32,C32 Larynx,93,1.0,1.8,summary
+2021,Saudi,male,C33-C34,"C33-C34 Trachea,Bronchus,Lung",369,4.0,7.5,summary
+2021,Saudi,male,C37-C38,C37-C38 Other Thoracic organs,36,0.4,0.5,summary
+2021,Saudi,male,C40-C41,C40-C41 Bone,103,1.1,1.2,summary
+2021,Saudi,male,C43,C43 Melanoma of Skin,12,0.1,0.2,summary
+2021,Saudi,male,C44,C44 Other Skin,168,1.8,2.9,summary
+2021,Saudi,male,C45,C45 Mesothelioma,4,0.0,0.1,summary
+2021,Saudi,male,C46,C46 Kaposi sarcoma,30,0.3,0.6,summary
+2021,Saudi,male,C47;C49,"C47;C49 Connective,Soft tissue",125,1.4,1.9,summary
+2021,Saudi,male,C50,C50 Breast,68,0.7,1.2,summary
+2021,Saudi,male,C64,C64 Kidney,301,3.3,5.2,summary
+2021,Saudi,male,C65,C65 Renal Pelvis,13,0.1,0.3,summary
+2021,Saudi,male,C66,C66 Ureter,6,0.1,0.1,summary
+2021,Saudi,male,C67,C67 Bladder,310,3.4,6.0,summary
+2021,Saudi,male,C68,C68 Other Urinary organs,7,0.1,0.1,summary
+2021,Saudi,male,C69,C69 Eye,38,0.4,0.5,summary
+2021,Saudi,male,C70-C72,"C70-C72 Brain, Nervous system",298,3.2,4.1,summary
+2021,Saudi,male,C73,C73 Thyroid,322,3.5,4.7,summary
+2021,Saudi,male,C74,C74 Adrenal gland,21,0.2,0.2,summary
+2021,Saudi,male,C75,C75 Other Endocrine,11,0.1,0.2,summary
+2021,Saudi,male,C81,C81 Hodgkin disease,326,3.5,3.8,summary
+2021,Saudi,male,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,515,5.6,8.0,summary
+2021,Saudi,male,C88,C88 Immunoproliferative dis.,0,0.0,0.0,summary
+2021,Saudi,male,C90,C90 Multiple Myeloma,94,1.0,1.8,summary
+2021,Saudi,male,C91,C91 Lymphoid Leukaemia,110,1.2,1.6,summary
+2021,Saudi,male,C92-C94,C92-C94 Myeloid Leukaemia,193,2.1,2.7,summary
+2021,Saudi,male,C95,C95 Leukaemia unspec.,195,2.1,2.3,summary
+2021,Saudi,male,C44,Not C44 All sites but C44,7080,76.8,120.6,summary
+2021,Saudi,female,C44,Not C44 All sites but C44,10538,115.2,166.0,summary
+2021,Saudi,female,C00,C00 Lip,6,0.1,0.1,summary
+2021,Saudi,female,C01-C02,C01-C02 Tongue,59,0.6,1.0,summary
+2021,Saudi,female,C03-C06,C03-C06 Mouth,26,0.3,0.4,summary
+2021,Saudi,female,C07-C08,C07-C08 Salivary glands,27,0.3,0.4,summary
+2021,Saudi,female,C09,C09 Tonsil,1,0.0,0.0,summary
+2021,Saudi,female,C10,C10 Other Oropharynx,1,0.0,0.0,summary
+2021,Saudi,female,C11,C11 Nasopharynx,66,0.7,1.0,summary
+2021,Saudi,female,C12-C13,C12-C13 Hypopharynx,3,0.0,0.0,summary
+2021,Saudi,female,C14,C14 Pharynx unspec.,3,0.0,0.0,summary
+2021,Saudi,female,C15,C15 Oesophagus,48,0.5,0.8,summary
+2021,Saudi,female,C16,C16 Stomach,150,1.6,2.5,summary
+2021,Saudi,female,C17,C17 Small intestine,48,0.5,0.7,summary
+2021,Saudi,female,C18,C18 Colon,724,7.9,12.7,summary
+2021,Saudi,female,C19-C20,C19-C20 Rectum,349,3.8,5.9,summary
+2021,Saudi,female,C21,C21 Anus,16,0.2,0.3,summary
+2021,Saudi,female,C22,C22 Liver,230,2.5,4.3,summary
+2021,Saudi,female,C23-C24,C23-C24 Gallbladder etc.,123,1.3,2.4,summary
+2021,Saudi,female,C25,C25 Pancreas,176,1.9,3.3,summary
+2021,Saudi,female,C30-C31,"C30-C31 Nose, sinuses etc.",10,0.1,0.1,summary
+2021,Saudi,female,C32,C32 Larynx,13,0.1,0.2,summary
+2021,Saudi,female,C33-C34,"C33-C34 Trachea,Bronchus,Lung",166,1.8,3.0,summary
+2021,Saudi,female,C37-C38,C37-C38 Other Thoracic organs,18,0.2,0.3,summary
+2021,Saudi,female,C40-C41,C40-C41 Bone,104,1.1,1.2,summary
+2021,Saudi,female,C43,C43 Melanoma of Skin,16,0.2,0.3,summary
+2021,Saudi,female,C44,C44 Other Skin,155,1.7,2.6,summary
+2021,Saudi,female,C45,C45 Mesothelioma,7,0.1,0.1,summary
+2021,Saudi,female,C46,C46 Kaposi sarcoma,6,0.1,0.1,summary
+2021,Saudi,female,C47;C49,"C47;C49 Connective,Soft tissue",103,1.1,1.5,summary
+2021,Saudi,female,C50,C50 Breast,3472,38.0,54.4,summary
+2021,Saudi,female,C64,C64 Kidney,202,2.2,3.3,summary
+2021,Saudi,female,C65,C65 Renal Pelvis,5,0.1,0.1,summary
+2021,Saudi,female,C66,C66 Ureter,1,0.0,0.0,summary
+2021,Saudi,female,C67,C67 Bladder,75,0.8,1.4,summary
+2021,Saudi,female,C68,C68 Other Urinary organs,1,0.0,0.0,summary
+2021,Saudi,female,C69,C69 Eye,27,0.3,0.4,summary
+2021,Saudi,female,C70-C72,"C70-C72 Brain, Nervous system",298,3.3,3.9,summary
+2021,Saudi,female,C73,C73 Thyroid,1304,14.3,17.1,summary
+2021,Saudi,female,C74,C74 Adrenal gland,23,0.3,0.3,summary
+2021,Saudi,female,C75,C75 Other Endocrine,10,0.1,0.1,summary
+2021,Saudi,female,C81,C81 Hodgkin disease,215,2.4,2.5,summary
+2021,Saudi,female,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,416,4.5,6.4,summary
+2021,Saudi,female,C88,C88 Immunoproliferative dis.,0,0.0,0.0,summary
+2021,Saudi,female,C90,C90 Multiple Myeloma,103,1.1,1.8,summary
+2021,Saudi,female,C91,C91 Lymphoid Leukaemia,59,0.6,0.9,summary
+2021,Saudi,female,C92-C94,C92-C94 Myeloid Leukaemia,211,2.3,3.0,summary
+2021,Saudi,female,C95,C95 Leukaemia unspec.,163,1.8,2.0,summary
+2021,Saudi,female,C44,Not C44 All sites but C44,10538,115.2,166.0,summary
+2021,non-Saudi,male,C00,C00 Lip,10,0.1,0.1,byage
+2021,non-Saudi,male,C01-C02,C01-C02 Tongue,35,0.4,0.5,byage
+2021,non-Saudi,male,C03-C06,C03-C06 Mouth,16,0.2,0.3,byage
+2021,non-Saudi,male,C07-C08,C07-C08 Salivary glands,13,0.1,0.1,byage
+2021,non-Saudi,male,C09,C09 Tonsil,1,0.0,0.0,byage
+2021,non-Saudi,male,C10,C10 Other Oropharynx,3,0.0,0.1,byage
+2021,non-Saudi,male,C11,C11 Nasopharynx,29,0.3,0.4,byage
+2021,non-Saudi,male,C12-C13,C12-C13 Hypopharynx,2,0.0,0.0,byage
+2021,non-Saudi,male,C14,C14 Pharynx unspec.,0,0.0,0.0,byage
+2021,non-Saudi,male,C15,C15 Oesophagus,15,0.2,0.5,byage
+2021,non-Saudi,male,C16,C16 Stomach,65,0.7,1.2,byage
+2021,non-Saudi,male,C17,C17 Small intestine,19,0.2,0.5,byage
+2021,non-Saudi,male,C18,C18 Colon,189,2.0,4.2,byage
+2021,non-Saudi,male,C19-C20,C19-C20 Rectum,116,1.2,2.1,byage
+2021,non-Saudi,male,C21,C21 Anus,8,0.1,0.1,byage
+2021,non-Saudi,male,C22,C22 Liver,48,0.5,1.4,byage
+2021,non-Saudi,male,C23-C24,C23-C24 Gallbladder etc.,17,0.2,0.5,byage
+2021,non-Saudi,male,C25,C25 Pancreas,48,0.5,1.3,byage
+2021,non-Saudi,male,C30-C31,"C30-C31 Nose, sinuses etc.",4,0.0,0.2,byage
+2021,non-Saudi,male,C32,C32 Larynx,26,0.3,0.4,byage
+2021,non-Saudi,male,C33-C34,"C33-C34 Trachea,Bronchus,Lung",89,1.0,2.5,byage
+2021,non-Saudi,male,C37-C38,C37-C38 Other Thoracic organs,18,0.2,0.3,byage
+2021,non-Saudi,male,C40-C41,C40-C41 Bone,46,0.5,0.8,byage
+2021,non-Saudi,male,C43,C43 Melanoma of Skin,6,0.1,0.0,byage
+2021,non-Saudi,male,C44,C44 Other Skin,107,1.1,2.6,byage
+2021,non-Saudi,male,C45,C45 Mesothelioma,2,0.0,0.0,byage
+2021,non-Saudi,male,C46,C46 Kaposi sarcoma,1,0.0,0.1,byage
+2021,non-Saudi,male,C47;C49,"C47;C49 Connective,Soft tissue",46,0.5,1.0,byage
+2021,non-Saudi,male,C50,C50 Breast,23,0.2,0.5,byage
+2021,non-Saudi,male,C60,C60 Penis,0,0.0,0.0,byage
+2021,non-Saudi,male,C61,C61 Prostate,145,1.6,5.4,byage
+2021,non-Saudi,male,C62,C62 Testis,29,0.3,0.2,byage
+2021,non-Saudi,male,C63,C63 Other male genital,3,0.0,0.0,byage
+2021,non-Saudi,male,C64,C64 Kidney,89,1.0,1.3,byage
+2021,non-Saudi,male,C65,C65 Renal Pelvis,1,0.0,0.0,byage
+2021,non-Saudi,male,C66,C66 Ureter,1,0.0,0.1,byage
+2021,non-Saudi,male,C67,C67 Bladder,111,1.2,3.0,byage
+2021,non-Saudi,male,C68,C68 Other Urinary organs,1,0.0,0.0,byage
+2021,non-Saudi,male,C69,C69 Eye,3,0.0,0.1,byage
+2021,non-Saudi,male,C70-C72,"C70-C72 Brain, Nervous system",75,0.8,1.6,byage
+2021,non-Saudi,male,C73,C73 Thyroid,86,0.9,1.1,byage
+2021,non-Saudi,male,C74,C74 Adrenal gland,3,0.0,0.0,byage
+2021,non-Saudi,male,C75,C75 Other Endocrine,4,0.0,0.1,byage
+2021,non-Saudi,male,C81,C81 Hodgkin disease,63,0.7,1.2,byage
+2021,non-Saudi,male,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,96,1.0,1.5,byage
+2021,non-Saudi,male,C88,C88 Immunoproliferative dis.,0,0.0,0.0,byage
+2021,non-Saudi,male,C90,C90 Multiple Myeloma,32,0.3,0.9,byage
+2021,non-Saudi,male,C91,C91 Lymphoid Leukaemia,54,0.6,1.9,byage
+2021,non-Saudi,male,C92-C94,C92-C94 Myeloid Leukaemia,57,0.6,0.8,byage
+2021,non-Saudi,male,C95,C95 Leukaemia unspec.,51,0.5,1.4,byage
+2021,non-Saudi,male,C44,Not C44 All sites but C44,1855,19.9,40.9,byage
+2021,non-Saudi,male,C44,Not C44 All sites but C44,1855,19.9,40.9,byage
+2021,non-Saudi,female,C00,C00 Lip,3,0.1,0.2,byage
+2021,non-Saudi,female,C01-C02,C01-C02 Tongue,6,0.2,0.4,byage
+2021,non-Saudi,female,C03-C06,C03-C06 Mouth,3,0.1,0.3,byage
+2021,non-Saudi,female,C07-C08,C07-C08 Salivary glands,5,0.2,0.2,byage
+2021,non-Saudi,female,C09,C09 Tonsil,1,0.0,0.0,byage
+2021,non-Saudi,female,C10,C10 Other Oropharynx,0,0.0,0.0,byage
+2021,non-Saudi,female,C11,C11 Nasopharynx,13,0.4,0.4,byage
+2021,non-Saudi,female,C12-C13,C12-C13 Hypopharynx,1,0.0,0.0,byage
+2021,non-Saudi,female,C14,C14 Pharynx unspec.,1,0.0,0.1,byage
+2021,non-Saudi,female,C15,C15 Oesophagus,11,0.4,0.7,byage
+2021,non-Saudi,female,C16,C16 Stomach,30,1.0,2.2,byage
+2021,non-Saudi,female,C17,C17 Small intestine,10,0.3,0.5,byage
+2021,non-Saudi,female,C18,C18 Colon,120,3.9,8.1,byage
+2021,non-Saudi,female,C19-C20,C19-C20 Rectum,59,1.9,3.4,byage
+2021,non-Saudi,female,C21,C21 Anus,4,0.1,0.5,byage
+2021,non-Saudi,female,C22,C22 Liver,30,1.0,2.5,byage
+2021,non-Saudi,female,C23-C24,C23-C24 Gallbladder etc.,17,0.6,1.3,byage
+2021,non-Saudi,female,C25,C25 Pancreas,19,0.6,1.7,byage
+2021,non-Saudi,female,C30-C31,"C30-C31 Nose, sinuses etc.",6,0.2,0.3,byage
+2021,non-Saudi,female,C32,C32 Larynx,0,0.0,0.0,byage
+2021,non-Saudi,female,C33-C34,"C33-C34 Trachea,Bronchus,Lung",44,1.4,3.0,byage
+2021,non-Saudi,female,C37-C38,C37-C38 Other Thoracic organs,7,0.2,0.3,byage
+2021,non-Saudi,female,C40-C41,C40-C41 Bone,33,1.1,1.4,byage
+2021,non-Saudi,female,C43,C43 Melanoma of Skin,5,0.2,0.4,byage
+2021,non-Saudi,female,C44,C44 Other Skin,30,1.0,1.7,byage
+2021,non-Saudi,female,C45,C45 Mesothelioma,0,0.0,0.0,byage
+2021,non-Saudi,female,C46,C46 Kaposi sarcoma,0,0.0,0.0,byage
+2021,non-Saudi,female,C47;C49,"C47;C49 Connective,Soft tissue",26,0.8,1.4,byage
+2021,non-Saudi,female,C50,C50 Breast,911,29.8,43.4,byage
+2021,non-Saudi,female,C51,C51 Vulva,6,0.2,0.5,byage
+2021,non-Saudi,female,C52,C52 Vagina,3,0.1,0.2,byage
+2021,non-Saudi,female,C53,C53 Cervix Uteri,61,2.0,2.7,byage
+2021,non-Saudi,female,C54,C54 Corpus Uteri,86,2.8,5.8,byage
+2021,non-Saudi,female,C55,C55 Uterus unspec.,30,1.0,1.6,byage
+2021,non-Saudi,female,C56,C56 Ovary,77,2.5,4.5,byage
+2021,non-Saudi,female,C57,C57 Other Female Genital,12,0.4,0.7,byage
+2021,non-Saudi,female,C58,C58 Placenta,0,0.0,0.0,byage
+2021,non-Saudi,female,C64,C64 Kidney,36,1.2,1.8,byage
+2021,non-Saudi,female,C65,C65 Renal Pelvis,5,0.2,0.3,byage
+2021,non-Saudi,female,C66,C66 Ureter,1,0.0,0.0,byage
+2021,non-Saudi,female,C67,C67 Bladder,14,0.5,0.8,byage
+2021,non-Saudi,female,C68,C68 Other Urinary organs,0,0.0,0.0,byage
+2021,non-Saudi,female,C69,C69 Eye,2,0.1,0.1,byage
+2021,non-Saudi,female,C70-C72,"C70-C72 Brain, Nervous system",52,1.7,2.4,byage
+2021,non-Saudi,female,C73,C73 Thyroid,197,6.4,6.7,byage
+2021,non-Saudi,female,C74,C74 Adrenal gland,5,0.2,0.2,byage
+2021,non-Saudi,female,C75,C75 Other Endocrine,1,0.0,0.0,byage
+2021,non-Saudi,female,C81,C81 Hodgkin disease,46,1.5,1.5,byage
+2021,non-Saudi,female,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,60,2.0,3.0,byage
+2021,non-Saudi,female,C88,C88 Immunoproliferative dis.,0,0.0,0.0,byage
+2021,non-Saudi,female,C90,C90 Multiple Myeloma,8,0.3,0.6,byage
+2021,non-Saudi,female,C91,C91 Lymphoid Leukaemia,42,1.4,2.0,byage
+2021,non-Saudi,female,C92-C94,C92-C94 Myeloid Leukaemia,33,1.1,1.5,byage
+2021,non-Saudi,female,C95,C95 Leukaemia unspec.,33,1.1,1.7,byage
+2021,non-Saudi,female,C44,Not C44 All sites but C44,2223,72.6,114.1,byage
+2021,non-Saudi,female,C44,Not C44 All sites but C44,2223,72.6,114.1,byage
+2022,Saudi,male,C44,Not C44 All sites but C44,8495,90.1,140.5,summary
+2022,Saudi,male,C00,C00 Lip,13,0.1,0.2,summary
+2022,Saudi,male,C01-C02,C01-C02 Tongue,78,0.8,1.4,summary
+2022,Saudi,male,C03-C06,C03-C06 Mouth,66,0.7,1.2,summary
+2022,Saudi,male,C07-C08,C07-C08 Salivary glands,28,0.3,0.5,summary
+2022,Saudi,male,C09,C09 Tonsil,7,0.1,0.1,summary
+2022,Saudi,male,C10,C10 Other Oropharynx,6,0.1,0.1,summary
+2022,Saudi,male,C11,C11 Nasopharynx,198,2.1,3.0,summary
+2022,Saudi,male,C12-C13,C12-C13 Hypopharynx,12,0.1,0.2,summary
+2022,Saudi,male,C14,C14 Pharynx unspec.,2,0.0,0.0,summary
+2022,Saudi,male,C15,C15 Oesophagus,102,1.1,1.9,summary
+2022,Saudi,male,C16,C16 Stomach,230,2.4,4.1,summary
+2022,Saudi,male,C17,C17 Small intestine,68,0.7,1.1,summary
+2022,Saudi,male,C18,C18 Colon,895,9.5,16.1,summary
+2022,Saudi,male,C19-C20,C19-C20 Rectum,575,6.1,10.1,summary
+2022,Saudi,male,C21,C21 Anus,22,0.2,0.4,summary
+2022,Saudi,male,C22,C22 Liver,437,4.6,8.5,summary
+2022,Saudi,male,C23-C24,C23-C24 Gallbladder etc.,104,1.1,2.0,summary
+2022,Saudi,male,C25,C25 Pancreas,290,3.1,5.5,summary
+2022,Saudi,male,C30-C31,"C30-C31 Nose, sinuses etc.",21,0.2,0.3,summary
+2022,Saudi,male,C32,C32 Larynx,108,1.1,2.1,summary
+2022,Saudi,male,C33-C34,"C33-C34 Trachea,Bronchus,Lung",464,4.9,8.8,summary
+2022,Saudi,male,C37-C38,C37-C38 Other Thoracic organs,38,0.4,0.5,summary
+2022,Saudi,male,C40-C41,C40-C41 Bone,115,1.2,1.3,summary
+2022,Saudi,male,C43,C43 Melanoma of Skin,17,0.2,0.3,summary
+2022,Saudi,male,C44,C44 Other Skin,253,2.7,4.3,summary
+2022,Saudi,male,C45,C45 Mesothelioma,7,0.1,0.1,summary
+2022,Saudi,male,C46,C46 Kaposi sarcoma,36,0.4,0.6,summary
+2022,Saudi,male,C47;C49,"C47;C49 Connective,Soft tissue",137,1.5,1.9,summary
+2022,Saudi,male,C50,C50 Breast,54,0.6,0.9,summary
+2022,Saudi,male,C66,C66 Ureter,7,0.1,0.1,summary
+2022,Saudi,male,C67,C67 Bladder,474,5.0,8.9,summary
+2022,Saudi,male,C70-C72,"C70-C72 Brain, Nervous system",367,3.9,4.9,summary
+2022,Saudi,male,C73,C73 Thyroid,389,4.1,5.4,summary
+2022,Saudi,male,C74,C74 Adrenal gland,24,0.3,0.3,summary
+2022,Saudi,male,C75,C75 Other Endocrine,17,0.2,0.2,summary
+2022,Saudi,male,C81,C81 Hodgkin disease,360,3.8,4.0,summary
+2022,Saudi,male,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,627,6.7,9.5,summary
+2022,Saudi,male,C88,C88 Immunoproliferative dis.,0,0.0,0.0,summary
+2022,Saudi,male,C90,C90 Multiple Myeloma,127,1.3,2.3,summary
+2022,Saudi,male,C91,C91 Lymphoid Leukaemia,173,1.8,2.3,summary
+2022,Saudi,male,C92-C94,C92-C94 Myeloid Leukaemia,228,2.4,3.2,summary
+2022,Saudi,male,C95,C95 Leukaemia unspec.,116,1.2,1.3,summary
+2022,Saudi,male,C44,Not C44 All sites but C44,8495,90.1,140.5,summary
+2022,Saudi,female,C44,Not C44 All sites but C44,10334,110.5,156.6,summary
+2022,Saudi,female,C00,C00 Lip,12,0.1,0.2,summary
+2022,Saudi,female,C01-C02,C01-C02 Tongue,65,0.7,1.0,summary
+2022,Saudi,female,C03-C06,C03-C06 Mouth,59,0.6,1.0,summary
+2022,Saudi,female,C07-C08,C07-C08 Salivary glands,20,0.2,0.2,summary
+2022,Saudi,female,C09,C09 Tonsil,2,0.0,0.0,summary
+2022,Saudi,female,C10,C10 Other Oropharynx,3,0.0,0.0,summary
+2022,Saudi,female,C11,C11 Nasopharynx,51,0.5,0.8,summary
+2022,Saudi,female,C12-C13,C12-C13 Hypopharynx,8,0.1,0.1,summary
+2022,Saudi,female,C14,C14 Pharynx unspec.,3,0.0,0.1,summary
+2022,Saudi,female,C15,C15 Oesophagus,50,0.5,0.8,summary
+2022,Saudi,female,C16,C16 Stomach,137,1.5,2.2,summary
+2022,Saudi,female,C17,C17 Small intestine,52,0.6,0.8,summary
+2022,Saudi,female,C18,C18 Colon,741,7.9,12.4,summary
+2022,Saudi,female,C19-C20,C19-C20 Rectum,324,3.5,5.4,summary
+2022,Saudi,female,C21,C21 Anus,11,0.1,0.2,summary
+2022,Saudi,female,C22,C22 Liver,213,2.3,3.9,summary
+2022,Saudi,female,C23-C24,C23-C24 Gallbladder etc.,110,1.2,2.0,summary
+2022,Saudi,female,C25,C25 Pancreas,189,2.0,3.3,summary
+2022,Saudi,female,C30-C31,"C30-C31 Nose, sinuses etc.",6,0.1,0.1,summary
+2022,Saudi,female,C32,C32 Larynx,8,0.1,0.1,summary
+2022,Saudi,female,C33-C34,"C33-C34 Trachea,Bronchus,Lung",159,1.7,2.7,summary
+2022,Saudi,female,C37-C38,C37-C38 Other Thoracic organs,26,0.3,0.3,summary
+2022,Saudi,female,C40-C41,C40-C41 Bone,108,1.2,1.2,summary
+2022,Saudi,female,C43,C43 Melanoma of Skin,16,0.2,0.3,summary
+2022,Saudi,female,C44,C44 Other Skin,151,1.6,2.6,summary
+2022,Saudi,female,C45,C45 Mesothelioma,3,0.0,0.0,summary
+2022,Saudi,female,C46,C46 Kaposi sarcoma,6,0.1,0.1,summary
+2022,Saudi,female,C47;C49,"C47;C49 Connective,Soft tissue",113,1.2,1.5,summary
+2022,Saudi,female,C50,C50 Breast,3280,35.1,49.7,summary
+2022,Saudi,female,C66,C66 Ureter,6,0.1,0.1,summary
+2022,Saudi,female,C67,C67 Bladder,88,0.9,1.4,summary
+2022,Saudi,female,C70-C72,"C70-C72 Brain, Nervous system",283,3.0,3.7,summary
+2022,Saudi,female,C73,C73 Thyroid,1288,13.8,16.5,summary
+2022,Saudi,female,C74,C74 Adrenal gland,27,0.3,0.3,summary
+2022,Saudi,female,C75,C75 Other Endocrine,9,0.1,0.1,summary
+2022,Saudi,female,C81,C81 Hodgkin disease,200,2.1,2.3,summary
+2022,Saudi,female,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,471,5.0,7.1,summary
+2022,Saudi,female,C88,C88 Immunoproliferative dis.,1,0.0,0.0,summary
+2022,Saudi,female,C90,C90 Multiple Myeloma,85,0.9,1.4,summary
+2022,Saudi,female,C91,C91 Lymphoid Leukaemia,99,1.1,1.3,summary
+2022,Saudi,female,C92-C94,C92-C94 Myeloid Leukaemia,178,1.9,2.5,summary
+2022,Saudi,female,C95,C95 Leukaemia unspec.,98,1.0,1.1,summary
+2022,Saudi,female,C44,Not C44 All sites but C44,10334,110.5,156.6,summary
+2022,non-Saudi,male,C00,C00 Lip,14,0.1,0.2,byage
+2022,non-Saudi,male,C01-C02,C01-C02 Tongue,34,0.3,0.7,byage
+2022,non-Saudi,male,C03-C06,C03-C06 Mouth,17,0.2,0.3,byage
+2022,non-Saudi,male,C07-C08,C07-C08 Salivary glands,17,0.2,0.3,byage
+2022,non-Saudi,male,C09,C09 Tonsil,2,0.0,0.0,byage
+2022,non-Saudi,male,C10,C10 Other Oropharynx,3,0.0,0.0,byage
+2022,non-Saudi,male,C11,C11 Nasopharynx,56,0.5,0.7,byage
+2022,non-Saudi,male,C12-C13,C12-C13 Hypopharynx,2,0.0,0.0,byage
+2022,non-Saudi,male,C14,C14 Pharynx unspec.,0,0.0,0.0,byage
+2022,non-Saudi,male,C15,C15 Oesophagus,20,0.2,0.3,byage
+2022,non-Saudi,male,C16,C16 Stomach,74,0.7,1.1,byage
+2022,non-Saudi,male,C17,C17 Small intestine,21,0.2,0.6,byage
+2022,non-Saudi,male,C18,C18 Colon,231,2.3,4.5,byage
+2022,non-Saudi,male,C19-C20,C19-C20 Rectum,113,1.1,2.1,byage
+2022,non-Saudi,male,C21,C21 Anus,12,0.1,0.2,byage
+2022,non-Saudi,male,C22,C22 Liver,86,0.8,2.2,byage
+2022,non-Saudi,male,C23-C24,C23-C24 Gallbladder etc.,17,0.2,0.4,byage
+2022,non-Saudi,male,C25,C25 Pancreas,55,0.5,1.5,byage
+2022,non-Saudi,male,C30-C31,"C30-C31 Nose, sinuses etc.",6,0.1,0.0,byage
+2022,non-Saudi,male,C32,C32 Larynx,22,0.2,0.5,byage
+2022,non-Saudi,male,C33-C34,"C33-C34 Trachea,Bronchus,Lung",118,1.2,2.9,byage
+2022,non-Saudi,male,C37-C38,C37-C38 Other Thoracic organs,21,0.2,0.3,byage
+2022,non-Saudi,male,C40-C41,C40-C41 Bone,52,0.5,1.0,byage
+2022,non-Saudi,male,C43,C43 Melanoma of Skin,12,0.1,0.2,byage
+2022,non-Saudi,male,C44,C44 Other Skin,92,0.9,2.0,byage
+2022,non-Saudi,male,C45,C45 Mesothelioma,4,0.0,0.0,byage
+2022,non-Saudi,male,C46,C46 Kaposi sarcoma,2,0.0,0.1,byage
+2022,non-Saudi,male,C47;C49,"C47;C49 Connective,Soft tissue",60,0.6,1.1,byage
+2022,non-Saudi,male,C50,C50 Breast,13,0.1,0.4,byage
+2022,non-Saudi,male,C60,C60 Penis,2,0.0,0.0,byage
+2022,non-Saudi,male,C61,C61 Prostate,173,1.7,6.6,byage
+2022,non-Saudi,male,C62,C62 Testis,35,0.3,0.3,byage
+2022,non-Saudi,male,C63,C63 Other male genital,1,0.0,0.0,byage
+2022,non-Saudi,male,C64,C64 Kidney,99,1.0,1.8,byage
+2022,non-Saudi,male,C65,C65 Renal Pelvis,4,0.0,0.1,byage
+2022,non-Saudi,male,C66,C66 Ureter,2,0.0,0.1,byage
+2022,non-Saudi,male,C67,C67 Bladder,112,1.1,2.8,byage
+2022,non-Saudi,male,C68,C68 Other Urinary organs,1,0.0,0.0,byage
+2022,non-Saudi,male,C69,C69 Eye,4,0.0,0.2,byage
+2022,non-Saudi,male,C70-C72,"C70-C72 Brain, Nervous system",120,1.2,2.3,byage
+2022,non-Saudi,male,C73,C73 Thyroid,80,0.8,0.8,byage
+2022,non-Saudi,male,C74,C74 Adrenal gland,7,0.1,0.2,byage
+2022,non-Saudi,male,C75,C75 Other Endocrine,2,0.0,0.0,byage
+2022,non-Saudi,male,C81,C81 Hodgkin disease,85,0.8,1.4,byage
+2022,non-Saudi,male,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,140,1.4,2.5,byage
+2022,non-Saudi,male,C88,C88 Immunoproliferative dis.,0,0.0,0.0,byage
+2022,non-Saudi,male,C90,C90 Multiple Myeloma,36,0.4,0.7,byage
+2022,non-Saudi,male,C91,C91 Lymphoid Leukaemia,72,0.7,2.5,byage
+2022,non-Saudi,male,C92-C94,C92-C94 Myeloid Leukaemia,61,0.6,1.0,byage
+2022,non-Saudi,male,C95,C95 Leukaemia unspec.,46,0.4,0.9,byage
+2022,non-Saudi,male,C44,Not C44 All sites but C44,2224,21.7,47.4,byage
+2022,non-Saudi,male,C44,Not C44 All sites but C44,2224,21.7,47.4,byage
+2022,non-Saudi,female,C00,C00 Lip,9,0.3,0.8,byage
+2022,non-Saudi,female,C01-C02,C01-C02 Tongue,18,0.6,1.1,byage
+2022,non-Saudi,female,C03-C06,C03-C06 Mouth,10,0.3,0.6,byage
+2022,non-Saudi,female,C07-C08,C07-C08 Salivary glands,8,0.3,0.2,byage
+2022,non-Saudi,female,C09,C09 Tonsil,1,0.0,0.0,byage
+2022,non-Saudi,female,C10,C10 Other Oropharynx,0,0.0,0.0,byage
+2022,non-Saudi,female,C11,C11 Nasopharynx,17,0.5,0.6,byage
+2022,non-Saudi,female,C12-C13,C12-C13 Hypopharynx,2,0.1,0.1,byage
+2022,non-Saudi,female,C14,C14 Pharynx unspec.,0,0.0,0.0,byage
+2022,non-Saudi,female,C15,C15 Oesophagus,14,0.4,0.6,byage
+2022,non-Saudi,female,C16,C16 Stomach,48,1.5,3.3,byage
+2022,non-Saudi,female,C17,C17 Small intestine,6,0.2,0.4,byage
+2022,non-Saudi,female,C18,C18 Colon,141,4.5,8.2,byage
+2022,non-Saudi,female,C19-C20,C19-C20 Rectum,58,1.8,3.1,byage
+2022,non-Saudi,female,C21,C21 Anus,2,0.1,0.0,byage
+2022,non-Saudi,female,C22,C22 Liver,38,1.2,3.1,byage
+2022,non-Saudi,female,C23-C24,C23-C24 Gallbladder etc.,19,0.6,1.6,byage
+2022,non-Saudi,female,C25,C25 Pancreas,35,1.1,2.9,byage
+2022,non-Saudi,female,C30-C31,"C30-C31 Nose, sinuses etc.",1,0.0,0.0,byage
+2022,non-Saudi,female,C32,C32 Larynx,2,0.1,0.0,byage
+2022,non-Saudi,female,C33-C34,"C33-C34 Trachea,Bronchus,Lung",63,2.0,4.4,byage
+2022,non-Saudi,female,C37-C38,C37-C38 Other Thoracic organs,6,0.2,0.2,byage
+2022,non-Saudi,female,C40-C41,C40-C41 Bone,21,0.7,0.9,byage
+2022,non-Saudi,female,C43,C43 Melanoma of Skin,5,0.2,0.2,byage
+2022,non-Saudi,female,C44,C44 Other Skin,38,1.2,2.1,byage
+2022,non-Saudi,female,C45,C45 Mesothelioma,1,0.0,0.0,byage
+2022,non-Saudi,female,C46,C46 Kaposi sarcoma,0,0.0,0.0,byage
+2022,non-Saudi,female,C47;C49,"C47;C49 Connective,Soft tissue",36,1.1,1.6,byage
+2022,non-Saudi,female,C50,C50 Breast,1013,32.3,41.7,byage
+2022,non-Saudi,female,C51,C51 Vulva,7,0.2,0.3,byage
+2022,non-Saudi,female,C52,C52 Vagina,6,0.2,0.3,byage
+2022,non-Saudi,female,C53,C53 Cervix Uteri,68,2.2,2.9,byage
+2022,non-Saudi,female,C54,C54 Corpus Uteri,81,2.6,5.4,byage
+2022,non-Saudi,female,C55,C55 Uterus unspec.,33,1.1,2.2,byage
+2022,non-Saudi,female,C56,C56 Ovary,81,2.6,3.5,byage
+2022,non-Saudi,female,C57,C57 Other Female Genital,12,0.4,0.7,byage
+2022,non-Saudi,female,C58,C58 Placenta,1,0.0,0.0,byage
+2022,non-Saudi,female,C64,C64 Kidney,34,1.1,2.2,byage
+2022,non-Saudi,female,C65,C65 Renal Pelvis,2,0.1,0.1,byage
+2022,non-Saudi,female,C66,C66 Ureter,2,0.1,0.1,byage
+2022,non-Saudi,female,C67,C67 Bladder,23,0.7,1.7,byage
+2022,non-Saudi,female,C68,C68 Other Urinary organs,0,0.0,0.0,byage
+2022,non-Saudi,female,C69,C69 Eye,4,0.1,0.2,byage
+2022,non-Saudi,female,C70-C72,"C70-C72 Brain, Nervous system",62,2.0,2.9,byage
+2022,non-Saudi,female,C73,C73 Thyroid,195,6.2,5.6,byage
+2022,non-Saudi,female,C74,C74 Adrenal gland,6,0.2,0.2,byage
+2022,non-Saudi,female,C75,C75 Other Endocrine,1,0.0,0.0,byage
+2022,non-Saudi,female,C81,C81 Hodgkin disease,44,1.4,1.9,byage
+2022,non-Saudi,female,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,82,2.6,4.2,byage
+2022,non-Saudi,female,C88,C88 Immunoproliferative dis.,0,0.0,0.0,byage
+2022,non-Saudi,female,C90,C90 Multiple Myeloma,18,0.6,1.1,byage
+2022,non-Saudi,female,C91,C91 Lymphoid Leukaemia,38,1.2,1.9,byage
+2022,non-Saudi,female,C92-C94,C92-C94 Myeloid Leukaemia,33,1.1,1.6,byage
+2022,non-Saudi,female,C95,C95 Leukaemia unspec.,31,1.0,1.6,byage
+2022,non-Saudi,female,C44,Not C44 All sites but C44,2485,79.2,119.3,byage
+2022,non-Saudi,female,C44,Not C44 All sites but C44,2485,79.2,119.3,byage
+2023,Saudi,male,C44,NOT C44 All sites but C44,8348,86.6,131.5,summary
+2023,Saudi,male,C00,C00 Lip,0,0.0,0.0,summary
+2023,Saudi,male,C01-C02,C01-C02 Tongue,99,1.0,1.6,summary
+2023,Saudi,male,C03-C06,C03-C06 Mouth,72,0.7,1.2,summary
+2023,Saudi,male,C07-C08,C07-C08 Salivary glands,27,0.3,0.4,summary
+2023,Saudi,male,C09,C09 Tonsil,5,0.1,0.1,summary
+2023,Saudi,male,C10,C10 Other Oropharynx,7,0.1,0.1,summary
+2023,Saudi,male,C11,C11 Nasopharynx,149,1.5,2.2,summary
+2023,Saudi,male,C12-C13,C12-C13 Hypopharynx,2,0.0,0.0,summary
+2023,Saudi,male,C14,C14 Pharynx Unspeciﬁed,6,0.1,0.1,summary
+2023,Saudi,male,C15,C15 Oesophagus,81,0.8,1.3,summary
+2023,Saudi,male,C16,C16 Stomach,239,2.5,4.2,summary
+2023,Saudi,male,C17,C17 Small intestine,49,0.5,0.8,summary
+2023,Saudi,male,C18,C18 Colon,921,9.6,15.6,summary
+2023,Saudi,male,C19-C20,C19-C20 Rectum,509,5.3,8.5,summary
+2023,Saudi,male,C21,C21 Anus,24,0.2,0.3,summary
+2023,Saudi,male,C22,C22 Liver,394,4.1,7.2,summary
+2023,Saudi,male,C23-C24,C23-C24 Gallbladder etc.,111,1.2,2.0,summary
+2023,Saudi,male,C25,C25 Pancreas,298,3.1,5.2,summary
+2023,Saudi,male,C30-C31,"C30-C31 Nose, sinuses etc.",22,0.2,0.3,summary
+2023,Saudi,male,C32,C32 Larynx,96,1.0,1.7,summary
+2023,Saudi,male,C33-C34,C33-C34 Lung,463,4.8,8.5,summary
+2023,Saudi,male,C37-C38,C37-C38 Other Thoracic organs,43,0.4,0.6,summary
+2023,Saudi,male,C40-C41,C40-C41 Bone,145,1.5,1.6,summary
+2023,Saudi,male,C43,C43 Melanoma of Skin,15,0.2,0.3,summary
+2023,Saudi,male,C44,C44 Other Skin,221,2.3,3.6,summary
+2023,Saudi,male,C45,C45 Mesothelioma,4,0.0,0.1,summary
+2023,Saudi,male,C46,C46 Kaposi sarcoma,20,0.2,0.3,summary
+2023,Saudi,male,C47;C49,"C47;C49 Connective, Soft tissue",150,1.6,1.9,summary
+2023,Saudi,male,C50,C50 Breast,80,0.8,1.3,summary
+2023,Saudi,male,C64,C64 Kidney,397,4.1,6.2,summary
+2023,Saudi,male,C65,C65 Renal Pelvis,9,0.1,0.1,summary
+2023,Saudi,male,C66,C66 Ureter,4,0.0,0.1,summary
+2023,Saudi,male,C67,C67 Bladder,552,5.7,9.6,summary
+2023,Saudi,male,C68,C68 Other Urinary organs,6,0.1,0.1,summary
+2023,Saudi,male,C69,C69 Eye,20,0.2,0.2,summary
+2023,Saudi,male,C70-C72,"C70-C72 Brain, CNS",343,3.6,4.5,summary
+2023,Saudi,male,C73,C73 Thyroid,449,4.7,6.0,summary
+2023,Saudi,male,C74,C74 Adrenal gland,19,0.2,0.2,summary
+2023,Saudi,male,C75,C75 Other Endocrine,7,0.1,0.1,summary
+2023,Saudi,male,C81,C81 Hodgkin Lymphoma,382,4.0,4.2,summary
+2023,Saudi,male,C82-C85;C96,C82-C85;C96 NHL,553,5.7,8.0,summary
+2023,Saudi,male,C88,C88 Immunoproliferative dis.,3,0.0,0.1,summary
+2023,Saudi,male,C90,C90 Multiple Myeloma,97,1.0,1.7,summary
+2023,Saudi,male,C91,C91 Lymphoid Leukemia,129,1.3,1.6,summary
+2023,Saudi,male,C92-C94,C92-C94 Myeloid Leukemia,181,1.9,2.5,summary
+2023,Saudi,male,C95,C95 Leukemia Unspeciﬁed,193,2.0,2.6,summary
+2023,Saudi,male,C44,NOT C44 All sites but C44,8348,86.6,131.5,summary
+2023,Saudi,female,C44,NOT C44 All sites but C44,11760,122.5,169.5,summary
+2023,Saudi,female,C00,C00 Lip,0,0.0,0.0,summary
+2023,Saudi,female,C01-C02,C01-C02 Tongue,75,0.8,1.2,summary
+2023,Saudi,female,C03-C06,C03-C06 Mouth,63,0.7,1.0,summary
+2023,Saudi,female,C07-C08,C07-C08 Salivary glands,26,0.3,0.3,summary
+2023,Saudi,female,C09,C09 Tonsil,5,0.1,0.1,summary
+2023,Saudi,female,C10,C10 Other Oropharynx,4,0.0,0.1,summary
+2023,Saudi,female,C11,C11 Nasopharynx,58,0.6,0.8,summary
+2023,Saudi,female,C12-C13,C12-C13 Hypopharynx,10,0.1,0.1,summary
+2023,Saudi,female,C14,C14 Pharynx Unspeciﬁed,5,0.1,0.1,summary
+2023,Saudi,female,C15,C15 Oesophagus,54,0.6,0.8,summary
+2023,Saudi,female,C16,C16 Stomach,175,1.8,2.6,summary
+2023,Saudi,female,C17,C17 Small intestine,69,0.7,1.0,summary
+2023,Saudi,female,C18,C18 Colon,873,9.1,14.0,summary
+2023,Saudi,female,C19-C20,C19-C20 Rectum,377,3.9,5.9,summary
+2023,Saudi,female,C21,C21 Anus,9,0.1,0.1,summary
+2023,Saudi,female,C22,C22 Liver,231,2.4,3.9,summary
+2023,Saudi,female,C23-C24,C23-C24 Gallbladder etc.,132,1.4,2.2,summary
+2023,Saudi,female,C25,C25 Pancreas,187,1.9,3.2,summary
+2023,Saudi,female,C30-C31,"C30-C31 Nose, sinuses etc.",15,0.2,0.2,summary
+2023,Saudi,female,C32,C32 Larynx,13,0.1,0.2,summary
+2023,Saudi,female,C33-C34,C33-C34 Lung,203,2.1,3.3,summary
+2023,Saudi,female,C37-C38,C37-C38 Other Thoracic organs,36,0.4,0.5,summary
+2023,Saudi,female,C40-C41,C40-C41 Bone,120,1.3,1.4,summary
+2023,Saudi,female,C43,C43 Melanoma of Skin,17,0.2,0.3,summary
+2023,Saudi,female,C44,C44 Other Skin,167,1.7,2.5,summary
+2023,Saudi,female,C45,C45 Mesothelioma,5,0.1,0.1,summary
+2023,Saudi,female,C46,C46 Kaposi sarcoma,5,0.1,0.1,summary
+2023,Saudi,female,C47;C49,"C47;C49 Connective, Soft tissue",148,1.5,1.8,summary
+2023,Saudi,female,C50,C50 Breast,4079,42.5,58.1,summary
+2023,Saudi,female,C64,C64 Kidney,186,1.9,2.7,summary
+2023,Saudi,female,C65,C65 Renal Pelvis,7,0.1,0.1,summary
+2023,Saudi,female,C66,C66 Ureter,3,0.0,0.0,summary
+2023,Saudi,female,C67,C67 Bladder,97,1.0,1.6,summary
+2023,Saudi,female,C68,C68 Other Urinary organs,2,0.0,0.0,summary
+2023,Saudi,female,C69,C69 Eye,13,0.1,0.2,summary
+2023,Saudi,female,C70-C72,"C70-C72 Brain, CNS",300,3.1,3.8,summary
+2023,Saudi,female,C73,C73 Thyroid,1442,15.0,17.5,summary
+2023,Saudi,female,C74,C74 Adrenal gland,18,0.2,0.2,summary
+2023,Saudi,female,C75,C75 Other Endocrine,12,0.1,0.2,summary
+2023,Saudi,female,C81,C81 Hodgkin Lymphoma,235,2.4,2.6,summary
+2023,Saudi,female,C82-C85;C96,C82-C85;C96 NHL,404,4.2,5.8,summary
+2023,Saudi,female,C88,C88 Immunoproliferative dis.,0,0.0,0.0,summary
+2023,Saudi,female,C90,C90 Multiple Myeloma,81,0.8,1.3,summary
+2023,Saudi,female,C91,C91 Lymphoid Leukemia,77,0.8,1.0,summary
+2023,Saudi,female,C92-C94,C92-C94 Myeloid Leukemia,154,1.6,2.0,summary
+2023,Saudi,female,C95,C95 Leukemia Unspeciﬁed,133,1.4,1.6,summary
+2023,Saudi,female,C44,NOT C44 All sites but C44,11760,122.5,169.5,summary
+2023,non-Saudi,male,C00,C00 Lip,1,0.0,0.0,byage
+2023,non-Saudi,male,C01-C02,C01-C02 Tongue,31,0.3,0.5,byage
+2023,non-Saudi,male,C03-C06,C03-C06 Mouth,22,0.2,0.3,byage
+2023,non-Saudi,male,C07-C08,C07-C08 Salivary glands,16,0.1,0.2,byage
+2023,non-Saudi,male,C09,C09 Tonsil,2,0.0,0.0,byage
+2023,non-Saudi,male,C10,C10 Other Oropharynx,3,0.0,0.1,byage
+2023,non-Saudi,male,C11,C11 Nasopharynx,54,0.5,0.8,byage
+2023,non-Saudi,male,C12-C13,C12-C13 Hypopharynx,5,0.0,0.0,byage
+2023,non-Saudi,male,C14,C14 Pharynx unspec.,5,0.0,0.1,byage
+2023,non-Saudi,male,C15,C15 Oesophagus,34,0.3,0.6,byage
+2023,non-Saudi,male,C16,C16 Stomach,88,0.8,1.7,byage
+2023,non-Saudi,male,C17,C17 Small intestine,26,0.2,0.5,byage
+2023,non-Saudi,male,C18,C18 Colon,291,2.6,5.8,byage
+2023,non-Saudi,male,C19-C20,C19-C20 Rectum,139,1.2,2.5,byage
+2023,non-Saudi,male,C21,C21 Anus,5,0.0,0.1,byage
+2023,non-Saudi,male,C22,C22 Liver,80,0.7,2.0,byage
+2023,non-Saudi,male,C23-C24,C23-C24 Gallbladder etc.,33,0.3,0.6,byage
+2023,non-Saudi,male,C25,C25 Pancreas,65,0.6,1.6,byage
+2023,non-Saudi,male,C30-C31,"C30-C31 Nose, sinuses etc.",14,0.1,0.2,byage
+2023,non-Saudi,male,C32,C32 Larynx,24,0.2,0.6,byage
+2023,non-Saudi,male,C33-C34,"C33-C34 Trachea,Bronchus,Lung",157,1.4,3.8,byage
+2023,non-Saudi,male,C37-C38,C37-C38 Other Thoracic organs,20,0.2,0.3,byage
+2023,non-Saudi,male,C40-C41,C40-C41 Bone,54,0.5,1.1,byage
+2023,non-Saudi,male,C43,C43 Melanoma of Skin,16,0.1,0.3,byage
+2023,non-Saudi,male,C44,C44 Other Skin,143,1.3,2.9,byage
+2023,non-Saudi,male,C45,C45 Mesothelioma,3,0.0,0.0,byage
+2023,non-Saudi,male,C46,C46 Kaposi sarcoma,2,0.0,0.0,byage
+2023,non-Saudi,male,C47;C49,"C47;C49 Connective,Soft tissue",54,0.5,0.7,byage
+2023,non-Saudi,male,C50,C50 Breast,44,0.4,0.8,byage
+2023,non-Saudi,male,C60,C60 Penis,0,0.0,0.0,byage
+2023,non-Saudi,male,C61,C61 Prostate,188,1.7,6.4,byage
+2023,non-Saudi,male,C62,C62 Testis,49,0.4,0.6,byage
+2023,non-Saudi,male,C63,C63 Other male genital,1,0.0,0.0,byage
+2023,non-Saudi,male,C64,C64 Kidney,81,0.7,1.6,byage
+2023,non-Saudi,male,C65,C65 Renal Pelvis,3,0.0,0.1,byage
+2023,non-Saudi,male,C66,C66 Ureter,1,0.0,0.1,byage
+2023,non-Saudi,male,C67,C67 Bladder,126,1.1,3.3,byage
+2023,non-Saudi,male,C68,C68 Other Urinary organs,2,0.0,0.0,byage
+2023,non-Saudi,male,C69,C69 Eye,8,0.1,0.4,byage
+2023,non-Saudi,male,C70-C72,"C70-C72 Brain, Nervous system",100,0.9,1.6,byage
+2023,non-Saudi,male,C73,C73 Thyroid,126,1.1,1.1,byage
+2023,non-Saudi,male,C74,C74 Adrenal gland,8,0.1,0.3,byage
+2023,non-Saudi,male,C75,C75 Other Endocrine,2,0.0,0.0,byage
+2023,non-Saudi,male,C81,C81 Hodgkin disease,78,0.7,1.3,byage
+2023,non-Saudi,male,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,122,1.1,1.9,byage
+2023,non-Saudi,male,C88,C88 Immunoproliferative dis.,0,0.0,0.0,byage
+2023,non-Saudi,male,C90,C90 Multiple Myeloma,27,0.2,0.6,byage
+2023,non-Saudi,male,C91,C91 Lymphoid Leukaemia,44,0.4,1.0,byage
+2023,non-Saudi,male,C92-C94,C92-C94 Myeloid Leukaemia,58,0.5,0.8,byage
+2023,non-Saudi,male,C95,C95 Leukaemia unspec.,39,0.3,0.8,byage
+2023,non-Saudi,male,C44,Not C44 All sites but C44,2441,21.9,48.4,byage
+2023,non-Saudi,male,C44,Not C44 All sites but C44,2441,21.9,48.4,byage
+2023,non-Saudi,female,C00,C00 Lip,0,0.0,0.0,byage
+2023,non-Saudi,female,C01-C02,C01-C02 Tongue,15,0.5,0.6,byage
+2023,non-Saudi,female,C03-C06,C03-C06 Mouth,10,0.3,0.7,byage
+2023,non-Saudi,female,C07-C08,C07-C08 Salivary glands,7,0.2,0.2,byage
+2023,non-Saudi,female,C09,C09 Tonsil,0,0.0,0.0,byage
+2023,non-Saudi,female,C10,C10 Other Oropharynx,0,0.0,0.0,byage
+2023,non-Saudi,female,C11,C11 Nasopharynx,16,0.5,0.7,byage
+2023,non-Saudi,female,C12-C13,C12-C13 Hypopharynx,3,0.1,0.1,byage
+2023,non-Saudi,female,C14,C14 Pharynx unspec.,2,0.1,0.2,byage
+2023,non-Saudi,female,C15,C15 Oesophagus,22,0.7,1.6,byage
+2023,non-Saudi,female,C16,C16 Stomach,47,1.4,2.1,byage
+2023,non-Saudi,female,C17,C17 Small intestine,16,0.5,1.0,byage
+2023,non-Saudi,female,C18,C18 Colon,149,4.5,9.6,byage
+2023,non-Saudi,female,C19-C20,C19-C20 Rectum,78,2.4,4.3,byage
+2023,non-Saudi,female,C21,C21 Anus,4,0.1,0.4,byage
+2023,non-Saudi,female,C22,C22 Liver,39,1.2,2.8,byage
+2023,non-Saudi,female,C23-C24,C23-C24 Gallbladder etc.,9,0.3,0.7,byage
+2023,non-Saudi,female,C25,C25 Pancreas,23,0.7,1.4,byage
+2023,non-Saudi,female,C30-C31,"C30-C31 Nose, sinuses etc.",5,0.2,0.3,byage
+2023,non-Saudi,female,C32,C32 Larynx,1,0.0,0.1,byage
+2023,non-Saudi,female,C33-C34,"C33-C34 Trachea,Bronchus,Lung",70,2.1,4.1,byage
+2023,non-Saudi,female,C37-C38,C37-C38 Other Thoracic organs,8,0.2,0.5,byage
+2023,non-Saudi,female,C40-C41,C40-C41 Bone,41,1.2,2.4,byage
+2023,non-Saudi,female,C43,C43 Melanoma of Skin,7,0.2,0.2,byage
+2023,non-Saudi,female,C44,C44 Other Skin,68,2.1,3.9,byage
+2023,non-Saudi,female,C45,C45 Mesothelioma,1,0.0,0.0,byage
+2023,non-Saudi,female,C46,C46 Kaposi sarcoma,1,0.0,0.1,byage
+2023,non-Saudi,female,C47;C49,"C47;C49 Connective,Soft tissue",54,1.6,2.6,byage
+2023,non-Saudi,female,C50,C50 Breast,1127,34.1,47.7,byage
+2023,non-Saudi,female,C51,C51 Vulva,4,0.1,0.3,byage
+2023,non-Saudi,female,C52,C52 Vagina,5,0.2,0.3,byage
+2023,non-Saudi,female,C53,C53 Cervix Uteri,78,2.4,3.0,byage
+2023,non-Saudi,female,C54,C54 Corpus Uteri,88,2.7,5.6,byage
+2023,non-Saudi,female,C55,C55 Uterus unspec.,51,1.5,2.8,byage
+2023,non-Saudi,female,C56,C56 Ovary,78,2.4,3.5,byage
+2023,non-Saudi,female,C57,C57 Other Female Genital,4,0.1,0.3,byage
+2023,non-Saudi,female,C58,C58 Placenta,2,0.1,0.0,byage
+2023,non-Saudi,female,C64,C64 Kidney,38,1.2,2.1,byage
+2023,non-Saudi,female,C65,C65 Renal Pelvis,4,0.1,0.2,byage
+2023,non-Saudi,female,C66,C66 Ureter,0,0.0,0.0,byage
+2023,non-Saudi,female,C67,C67 Bladder,20,0.6,1.8,byage
+2023,non-Saudi,female,C68,C68 Other Urinary organs,0,0.0,0.0,byage
+2023,non-Saudi,female,C69,C69 Eye,2,0.1,0.1,byage
+2023,non-Saudi,female,C70-C72,"C70-C72 Brain, Nervous system",50,1.5,2.0,byage
+2023,non-Saudi,female,C73,C73 Thyroid,240,7.3,6.2,byage
+2023,non-Saudi,female,C74,C74 Adrenal gland,6,0.2,0.3,byage
+2023,non-Saudi,female,C75,C75 Other Endocrine,2,0.1,0.0,byage
+2023,non-Saudi,female,C81,C81 Hodgkin disease,49,1.5,2.1,byage
+2023,non-Saudi,female,C82-C85;C96,C82-C85;C96 Non-Hodgkin lymphoma,76,2.3,3.7,byage
+2023,non-Saudi,female,C88,C88 Immunoproliferative dis.,0,0.0,0.0,byage
+2023,non-Saudi,female,C90,C90 Multiple Myeloma,16,0.5,1.2,byage
+2023,non-Saudi,female,C91,C91 Lymphoid Leukaemia,23,0.7,1.1,byage
+2023,non-Saudi,female,C92-C94,C92-C94 Myeloid Leukaemia,42,1.3,1.8,byage
+2023,non-Saudi,female,C95,C95 Leukaemia unspec.,38,1.2,1.9,byage
+2023,non-Saudi,female,C44,Not C44 All sites but C44,2716,82.3,127.0,byage
+2023,non-Saudi,female,C44,Not C44 All sites but C44,2716,82.3,127.0,byage
+2011,Saudi,male,C00,C00,,0.1,0.1,byage-transposed
+2011,Saudi,male,C01-C02,C01-C02,,0.5,0.7,byage-transposed
+2011,Saudi,male,C03-C06,C03-C06,,0.4,0.7,byage-transposed
+2011,Saudi,male,C07-C08,C07-C08,,0.1,0.2,byage-transposed
+2011,Saudi,male,C09,C09,,0.0,0.1,byage-transposed
+2011,Saudi,male,C10,C10,,0.0,0.0,byage-transposed
+2011,Saudi,male,C11,C11,,1.2,1.8,byage-transposed
+2011,Saudi,male,C12-C13,C12-C13,,0.1,0.2,byage-transposed
+2011,Saudi,male,C14,C14,,0.0,0.0,byage-transposed
+2011,Saudi,male,C15,C15,,0.8,1.3,byage-transposed
+2011,Saudi,male,C16,Stomach,,1.7,2.8,byage-transposed
+2011,Saudi,male,C17,C17,,0.4,0.6,byage-transposed
+2011,Saudi,male,C18,Colon,,3.9,6.6,byage-transposed
+2011,Saudi,male,C19-C20,Rectum,,2.9,4.7,byage-transposed
+2011,Saudi,male,C21,C21,,0.1,0.2,byage-transposed
+2011,Saudi,male,C22,Liver,,3.4,6.1,byage-transposed
+2011,Saudi,male,C23-C24,C23-C24,,,1.3,byage-transposed
+2011,Saudi,male,C25,C25,,,2.3,byage-transposed
+2011,Saudi,male,C30-C31,C30-C31,,,0.1,byage-transposed
+2011,Saudi,male,C32,Larynx,,,1.3,byage-transposed
+2011,Saudi,male,C33-C34,"Trachea,Bronchus,Lung",,,6.4,byage-transposed
+2011,Saudi,male,C37-C38,C37-C38,,,0.3,byage-transposed
+2011,Saudi,male,C40-C41,C40-C41,,,0.8,byage-transposed
+2011,Saudi,male,C43,C43,,,0.3,byage-transposed
+2011,Saudi,male,C44,C44,,,75.2,byage-transposed
+2011,Saudi,male,C45,Mesothelioma,,,0.2,byage-transposed
+2011,Saudi,male,C46,C46,,,0.3,byage-transposed
+2011,Saudi,male,C47;C49,C47;C49,,,0.9,byage-transposed
+2011,Saudi,male,C50,Breast,,,0.3,byage-transposed
+2011,Saudi,male,C60,C60,,,0.0,byage-transposed
+2011,Saudi,male,C61,Prostate,,,6.0,byage-transposed
+2011,Saudi,male,C62,C62,,,0.8,byage-transposed
+2011,Saudi,male,C63,C63,,,0.1,byage-transposed
+2011,Saudi,male,C64,C64,,,2.9,byage-transposed
+2011,Saudi,male,C65,C65,,,0.0,byage-transposed
+2011,Saudi,male,C66,C66,,,0.1,byage-transposed
+2011,Saudi,male,C67,Bladder,,,3.3,byage-transposed
+2011,Saudi,male,C68,C68,,,0.0,byage-transposed
+2011,Saudi,male,C69,C69,,,0.2,byage-transposed
+2011,Saudi,male,C70-C72,C70-C72,,,2.2,byage-transposed
+2011,Saudi,male,C73,Thyroid,,,2.2,byage-transposed
+2011,Saudi,male,C74,C74,,,0.1,byage-transposed
+2011,Saudi,male,C75,C75,,,0.1,byage-transposed
+2011,Saudi,male,C81,C81,,,1.9,byage-transposed
+2011,Saudi,male,C82-C85;C96,C82-C85;C96,,,6.4,byage-transposed
+2011,Saudi,male,C88,C88,,,0.0,byage-transposed
+2011,Saudi,male,C90,C90,,,0.9,byage-transposed
+2011,Saudi,male,C91,C91,,,2.3,byage-transposed
+2011,Saudi,male,C92-C94,C92-C94,,,2.0,byage-transposed
+2011,Saudi,male,C95,C95,,,0.2,byage-transposed
+2011,Saudi,female,C00,C00,,0.1,0.1,byage-transposed
+2011,Saudi,female,C01-C02,C01-C02,,0.5,0.9,byage-transposed
+2011,Saudi,female,C03-C06,C03-C06,,0.5,0.8,byage-transposed
+2011,Saudi,female,C07-C08,C07-C08,,0.2,0.3,byage-transposed
+2011,Saudi,female,C09,C09,,0.0,0.0,byage-transposed
+2011,Saudi,female,C10,C10,,0.0,0.0,byage-transposed
+2011,Saudi,female,C11,C11,,0.5,0.6,byage-transposed
+2011,Saudi,female,C12-C13,C12-C13,,0.2,0.3,byage-transposed
+2011,Saudi,female,C14,C14,,0.0,0.0,byage-transposed
+2011,Saudi,female,C15,C15,,0.6,1.0,byage-transposed
+2011,Saudi,female,C16,Stomach,,1.4,2.3,byage-transposed
+2011,Saudi,female,C17,C17,,0.4,0.6,byage-transposed
+2011,Saudi,female,C18,Colon,,3.5,5.7,byage-transposed
+2011,Saudi,female,C19-C20,Rectum,,2.0,3.3,byage-transposed
+2011,Saudi,female,C21,C21,,0.2,0.3,byage-transposed
+2011,Saudi,female,C22,Liver,,1.6,2.9,byage-transposed
+2011,Saudi,female,C23-C24,C23-C24,,0.9,1.6,byage-transposed
+2011,Saudi,female,C25,C25,,0.8,1.4,byage-transposed
+2011,Saudi,female,C30-C31,C30-C31,,0.0,0.0,byage-transposed
+2011,Saudi,female,C32,Larynx,,0.1,0.1,byage-transposed
+2011,Saudi,female,C33-C34,"Trachea,Bronchus,Lung",,1.1,1.9,byage-transposed
+2011,Saudi,female,C37-C38,C37-C38,,0.1,0.1,byage-transposed
+2011,Saudi,female,C40-C41,C40-C41,,0.6,0.6,byage-transposed
+2011,Saudi,female,C43,C43,,0.2,0.2,byage-transposed
+2011,Saudi,female,C44,C44,,60.4,88.0,byage-transposed
+2011,Saudi,female,C45,Mesothelioma,,0.0,0.0,byage-transposed
+2011,Saudi,female,C46,C46,,0.1,0.1,byage-transposed
+2011,Saudi,female,C47;C49,C47;C49,,0.7,0.9,byage-transposed
+2011,Saudi,female,C50,Breast,,16.5,23.4,byage-transposed
+2011,Saudi,female,C51,C51,,0.1,0.1,byage-transposed
+2011,Saudi,female,C52,C52,,0.0,0.1,byage-transposed
+2011,Saudi,female,C53,C53,,1.2,1.7,byage-transposed
+2011,Saudi,female,C54,C54,,3.3,5.8,byage-transposed
+2011,Saudi,female,C55,C55,,0.4,0.7,byage-transposed
+2011,Saudi,female,C56,C56,,2.1,3.1,byage-transposed
+2011,Saudi,female,C57,C57,,0.1,0.2,byage-transposed
+2011,Saudi,female,C58,C58,,0.1,0.1,byage-transposed
+2011,Saudi,female,C64,C64,,1.2,1.7,byage-transposed
+2011,Saudi,female,C65,C65,,0.0,0.0,byage-transposed
+2011,Saudi,female,C66,C66,,0.0,0.0,byage-transposed
+2011,Saudi,female,C67,Bladder,,0.5,1.0,byage-transposed
+2011,Saudi,female,C68,C68,,0.0,0.0,byage-transposed
+2011,Saudi,female,C69,C69,,0.2,0.2,byage-transposed
+2011,Saudi,female,C70-C72,C70-C72,,1.0,1.2,byage-transposed
+2011,Saudi,female,C73,Thyroid,,6.7,8.1,byage-transposed
+2011,Saudi,female,C74,C74,,0.1,0.0,byage-transposed
+2011,Saudi,female,C75,C75,,0.0,0.1,byage-transposed
+2011,Saudi,female,C81,C81,,1.6,1.7,byage-transposed
+2011,Saudi,female,C82-C85;C96,C82-C85;C96,,3.2,4.8,byage-transposed
+2011,Saudi,female,C88,C88,,0.0,0.0,byage-transposed
+2011,Saudi,female,C90,C90,,0.5,0.8,byage-transposed
+2011,Saudi,female,C91,C91,,1.5,1.6,byage-transposed
+2011,Saudi,female,C92-C94,C92-C94,,1.8,2.2,byage-transposed
+2011,Saudi,female,C95,C95,,0.1,0.2,byage-transposed
+2012,Saudi,male,C00,C00,,0.0,0.1,byage-transposed
+2012,Saudi,male,C01-C02,C01-C02,,0.4,0.6,byage-transposed
+2012,Saudi,male,C03-C06,C03-C06,,0.4,0.6,byage-transposed
+2012,Saudi,male,C07-C08,C07-C08,,0.1,0.1,byage-transposed
+2012,Saudi,male,C09,C09,,0.0,0.0,byage-transposed
+2012,Saudi,male,C10,C10,,0.0,0.1,byage-transposed
+2012,Saudi,male,C11,C11,,1.1,1.6,byage-transposed
+2012,Saudi,male,C12-C13,C12-C13,,0.1,0.1,byage-transposed
+2012,Saudi,male,C14,C14,,0.0,0.0,byage-transposed
+2012,Saudi,male,C15,C15,,0.8,1.4,byage-transposed
+2012,Saudi,male,C16,Stomach,,1.9,3.2,byage-transposed
+2012,Saudi,male,C17,C17,,0.3,0.6,byage-transposed
+2012,Saudi,male,C18,Colon,,3.9,6.5,byage-transposed
+2012,Saudi,male,C19-C20,Rectum,,2.8,4.6,byage-transposed
+2012,Saudi,male,C21,C21,,0.2,0.4,byage-transposed
+2012,Saudi,male,C22,Liver,,3.4,6.3,byage-transposed
+2012,Saudi,male,C23-C24,C23-C24,,0.7,1.2,byage-transposed
+2012,Saudi,male,C25,C25,,1.6,2.6,byage-transposed
+2012,Saudi,male,C30-C31,C30-C31,,0.2,0.3,byage-transposed
+2012,Saudi,male,C32,Larynx,,0.6,1.1,byage-transposed
+2012,Saudi,male,C33-C34,"Trachea,Bronchus,Lung",,3.4,5.9,byage-transposed
+2012,Saudi,male,C37-C38,C37-C38,,0.2,0.2,byage-transposed
+2012,Saudi,male,C40-C41,C40-C41,,0.9,0.9,byage-transposed
+2012,Saudi,male,C43,C43,,0.1,0.1,byage-transposed
+2012,Saudi,male,C44,C44,,49.1,75.3,byage-transposed
+2012,Saudi,male,C45,Mesothelioma,,0.1,0.2,byage-transposed
+2012,Saudi,male,C46,C46,,0.2,0.4,byage-transposed
+2012,Saudi,male,C47;,C47;,,0.9,1.0,byage-transposed
+2012,Saudi,male,C49,C49,,0.9,1.0,byage-transposed
+2012,Saudi,male,C50,Breast,,0.3,0.4,byage-transposed
+2012,Saudi,male,C60,C60,,0.0,0.1,byage-transposed
+2012,Saudi,male,C61,Prostate,,2.9,5.3,byage-transposed
+2012,Saudi,male,C62,C62,,0.8,0.8,byage-transposed
+2012,Saudi,male,C63,C63,,0.0,0.0,byage-transposed
+2012,Saudi,male,C64,C64,,1.9,2.8,byage-transposed
+2012,Saudi,male,C65,C65,,0.1,0.1,byage-transposed
+2012,Saudi,male,C66,C66,,0.0,0.0,byage-transposed
+2012,Saudi,male,C67,Bladder,,1.9,3.2,byage-transposed
+2012,Saudi,male,C68,C68,,0.0,0.0,byage-transposed
+2012,Saudi,male,C69,C69,,0.2,0.3,byage-transposed
+2012,Saudi,male,C70-C72,C70-C72,,1.8,2.2,byage-transposed
+2012,Saudi,male,C73,Thyroid,,1.9,2.7,byage-transposed
+2012,Saudi,male,C74,C74,,0.2,0.2,byage-transposed
+2012,Saudi,male,C75,C75,,0.1,0.1,byage-transposed
+2012,Saudi,male,C81,C81,,1.9,2.0,byage-transposed
+2012,Saudi,male,C82-C85;,C82-C85;,,4.2,6.2,byage-transposed
+2012,Saudi,male,C96,C96,,4.2,6.2,byage-transposed
+2012,Saudi,male,C88,C88,,0.0,0.0,byage-transposed
+2012,Saudi,male,C90,C90,,0.7,1.2,byage-transposed
+2012,Saudi,male,C91,C91,,2.3,2.6,byage-transposed
+2012,Saudi,male,C92-C94,C92-C94,,1.7,2.1,byage-transposed
+2012,Saudi,male,C95,C95,,0.2,0.3,byage-transposed
+2012,Saudi,female,C00,C00,,0.0,0.1,byage-transposed
+2012,Saudi,female,C01-C02,C01-C02,,0.5,0.8,byage-transposed
+2012,Saudi,female,C03-C06,C03-C06,,0.3,0.5,byage-transposed
+2012,Saudi,female,C07-C08,C07-C08,,0.3,0.4,byage-transposed
+2012,Saudi,female,C09,C09,,0.0,0.0,byage-transposed
+2012,Saudi,female,C10,C10,,0.0,0.0,byage-transposed
+2012,Saudi,female,C11,C11,,0.5,0.6,byage-transposed
+2012,Saudi,female,C12-C13,C12-C13,,0.2,0.3,byage-transposed
+2012,Saudi,female,C14,C14,,0.0,0.0,byage-transposed
+2012,Saudi,female,C15,C15,,0.6,1.0,byage-transposed
+2012,Saudi,female,C16,Stomach,,0.9,1.5,byage-transposed
+2012,Saudi,female,C17,C17,,0.3,0.4,byage-transposed
+2012,Saudi,female,C18,Colon,,3.3,5.3,byage-transposed
+2012,Saudi,female,C19-C20,Rectum,,2.3,3.7,byage-transposed
+2012,Saudi,female,C21,C21,,0.1,0.2,byage-transposed
+2012,Saudi,female,C22,Liver,,1.3,2.3,byage-transposed
+2012,Saudi,female,C23-C24,C23-C24,,0.9,1.6,byage-transposed
+2012,Saudi,female,C25,C25,,0.9,1.5,byage-transposed
+2012,Saudi,female,C30-C31,C30-C31,,0.1,0.2,byage-transposed
+2012,Saudi,female,C32,Larynx,,0.1,0.2,byage-transposed
+2012,Saudi,female,C33-C34,"Trachea,Bronchus,Lung",,1.3,2.2,byage-transposed
+2012,Saudi,female,C37-C38,C37-C38,,0.1,0.1,byage-transposed
+2012,Saudi,female,C40-C41,C40-C41,,0.6,0.7,byage-transposed
+2012,Saudi,female,C43,C43,,0.2,0.3,byage-transposed
+2012,Saudi,female,C44,C44,,59.0,84.6,byage-transposed
+2012,Saudi,female,C45,Mesothelioma,,0.0,0.0,byage-transposed
+2012,Saudi,female,C46,C46,,0.0,0.0,byage-transposed
+2012,Saudi,female,C47;C49,C47;C49,,0.6,0.7,byage-transposed
+2012,Saudi,female,C50,Breast,,15.6,22.1,byage-transposed
+2012,Saudi,female,C51,C51,,0.1,0.1,byage-transposed
+2012,Saudi,female,C52,C52,,0.0,0.1,byage-transposed
+2012,Saudi,female,C53,C53,,1.4,2.1,byage-transposed
+2012,Saudi,female,C54,C54,,3.2,5.4,byage-transposed
+2012,Saudi,female,C55,C55,,0.5,0.8,byage-transposed
+2012,Saudi,female,C56,C56,,2.0,3.0,byage-transposed
+2012,Saudi,female,C57,C57,,0.2,0.2,byage-transposed
+2012,Saudi,female,C58,C58,,0.0,0.0,byage-transposed
+2012,Saudi,female,C64,C64,,1.2,1.8,byage-transposed
+2012,Saudi,female,C65,C65,,0.0,0.0,byage-transposed
+2012,Saudi,female,C66,C66,,0.0,0.0,byage-transposed
+2012,Saudi,female,C67,Bladder,,0.5,0.9,byage-transposed
+2012,Saudi,female,C68,C68,,0.0,0.0,byage-transposed
+2012,Saudi,female,C69,C69,,0.2,0.2,byage-transposed
+2012,Saudi,female,C70-C72,C70-C72,,1.2,1.5,byage-transposed
+2012,Saudi,female,C73,Thyroid,,7.0,8.3,byage-transposed
+2012,Saudi,female,C74,C74,,0.2,0.2,byage-transposed
+2012,Saudi,female,C75,C75,,0.0,0.0,byage-transposed
+2012,Saudi,female,C81,C81,,1.6,1.6,byage-transposed
+2012,Saudi,female,C82-C85;C96,C82-C85;C96,,3.2,4.7,byage-transposed
+2012,Saudi,female,C88,C88,,0.0,0.0,byage-transposed
+2012,Saudi,female,C90,C90,,0.5,0.9,byage-transposed
+2012,Saudi,female,C91,C91,,1.3,1.4,byage-transposed
+2012,Saudi,female,C92-C94,C92-C94,,1.7,2.1,byage-transposed
+2012,Saudi,female,C95,C95,,0.3,0.3,byage-transposed

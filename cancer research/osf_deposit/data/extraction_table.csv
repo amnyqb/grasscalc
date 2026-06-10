@@ -1,0 +1,14 @@
+source_cite_keys,setting_exposure,population_country,design,exposure_ascertainment,outcome_ascertainment,smoking_confounder_control,key_sites,latency,metric_result_grade
+grant2017; cullings2017,Atomic-bomb radiation,"105,444 survivors, Japan",Cohort,Individual DS02R1 dose,"Tumour registry, 22,538 solid ca",Individual smoking histories,Solid; lung,Decades,ERR/Gy >0 in never-smokers (A)
+bauer2005,Nuclear-test fallout,"19,545 residents, Kazakhstan",Cohort,Modeled fallout dose,"Mortality, 582,750 PY",Limited individual smoking,"Lung, stomach, breast, oeso",Decades,ERR/Sv 1.77 (1.35-2.27) (A/B)
+atsdr2024; ruckart2015,TCE/PCE/benzene water,"Marines, workers, dependents, USA",Cohort (vs Pendleton),Modeled water exposure,Cancer incidence,Comparison cohort; partial,"Kidney, bladder, NHL, leuk, M-breast",Decades,Dose-responsive RR/HR (A/B)
+bullman2005; barth2009,Oil-fire / nerve agent,"Gulf War veterans, USA",Cohort,DoD plume model,Mortality,Partial; overlapping exposures,Brain/CNS,10-15 yr,Mortality ratio 2-3x (B)
+macfarlane2003,Mixed deployment,"51,721 vs 50,755, UK",Cohort,Deployment record,Cancer incidence,Partial,All sites,Short,"IRR 0.99 (0.83-1.17) (B, null)"
+akhtar2004; steenland1999,Dioxin/TCDD,Ranch Hand; dioxin workers,Cohort,Serum TCDD vs proxy,Cancer incidence/mortality,Partial,All sites,Decades,RR 1.6 biomarker vs 1.01 proxy (B/C)
+pact2022; nasem2020,Burn-pit combustion,"~3.5M service members, USA",Policy,Service presumption,Presumptive list,N/A,"Brain, kidney, etc",-,"Policy list (D, contextual)"
+sambhavna; mishra2009,Methyl isocyanate,"~500,000 residents, India",Survey / cytogenetic,Residence in exposed zone,Community survey; cytogenetics,Income/education matched,"Lung, oeso, blood",Decades,Survey ratios; chromosome instability (F; C)
+busby2010; alaani2011,Conflict-associated,"Fallujah residents, Iraq",Survey,Residence; hair metals,Self-report survey,Limited,Pediatric; all,2-5 yr,RR 12.6 pediatric (F/B)
+cange2013; alawadhi2023,Wartime combustion,Kuwaiti civilians,Registry / mixed,Residence,Registry incidence,Screening-caveated,Breast,~8 yr,ASIR inflection ~1999 (B/F)
+alhajj2021; beirutpm2023,Ammonium-nitrate blast,"Beirut residents, Lebanon",Review,Proximity; PM data,Air-quality; immature,N/A,-,Immature,PAH risk; no incidence yet (F/E)
+robinson2025; terrell2024; kweon,Petrochemical VOCs,"Industrial corridor, USA",Risk model,Measured VOCs,Modeled lifetime risk,N/A,Multiple,Chronic,"Risk up to 11x models (E, contextual)"
+scrlung2025; amin1994; alahmadi2013,Oil-fire plume + petrochemical,"Eastern Province, KSA",Ecological (proposed),Region; plume gradient (planned),SCR incidence,To be modelled,Lung; non-tobacco clusters,20-25 yr,Crude-rate ratio 5.7x (ecological hypothesis)

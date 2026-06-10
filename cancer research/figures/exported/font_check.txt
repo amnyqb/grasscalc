@@ -1,0 +1,18 @@
+Figure export report — Elsevier artwork spec
+============================================
+Vector PDF (preferred) + 600 dpi PNG fallback, rendered from editable SVG via cairosvg.
+Final width assumed 190 mm (double / full-text-width; brief: place full-text-width).
+In-figure font minimum required: 7 pt.
+
+Fig1   <- Figure2_evidence_grade_hierarchy.svg     min font  12.0 units ->  7.18 pt @ 190 mm  [OK >=7pt]  PDF 24 KB / PNG 61 KB
+Fig2   <- Figure3_metric_separation.svg            min font  12.0 units ->  7.18 pt @ 190 mm  [OK >=7pt]  PDF 22 KB / PNG 55 KB
+Fig3   <- Figure4_cross_cohort_benchmark.svg       min font  12.0 units ->  7.18 pt @ 190 mm  [OK >=7pt]  PDF 24 KB / PNG 63 KB
+Fig4   <- Figure7_proposed_DAG.svg                 min font  12.0 units ->  7.18 pt @ 190 mm  [OK >=7pt]  PDF 19 KB / PNG 48 KB
+FigS1  <- Figure1_PRISMA_ScR_flow.svg              min font  12.0 units ->  7.18 pt @ 190 mm  [OK >=7pt]  PDF 23 KB / PNG 53 KB
+FigS2  <- Figure6_marker_site_framework.svg        min font  12.0 units ->  7.18 pt @ 190 mm  [OK >=7pt]  PDF 21 KB / PNG 85 KB
+FigS3  <- Figure5_saudi_timeline.svg               min font  12.0 units ->  7.18 pt @ 190 mm  [OK >=7pt]  PDF 28 KB / PNG 47 KB
+
+All figures clear the 7 pt floor at 190 mm. At 90 mm single-column they would NOT;
+these are conceptual diagrams intended for full-text-width placement.
+EPS was NOT generated (no ghostscript/inkscape in this environment); vector PDF is an
+Elsevier-accepted preferred format, so EPS is not required.

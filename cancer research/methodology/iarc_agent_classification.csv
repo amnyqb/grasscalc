@@ -1,0 +1,13 @@
+agent,exposure_cluster,IARC_group,IARC_group_meaning
+Ionizing radiation (all types),lss_rerf; semipalatinsk; uranium_miners,Group 1,Carcinogenic to humans
+Radon-222 and decay products,uranium_miners,Group 1,Carcinogenic to humans
+Trichloroethylene (TCE),camp_lejeune_atsdr,Group 1,Carcinogenic to humans
+Tetrachloroethylene (PCE),camp_lejeune_atsdr,Group 2A,Probably carcinogenic
+Benzene,camp_lejeune_atsdr,Group 1,Carcinogenic to humans
+Vinyl chloride,camp_lejeune_atsdr,Group 1,Carcinogenic to humans
+"2,3,7,8-TCDD (dioxin)",agent_orange,Group 1,Carcinogenic to humans
+Benzo[a]pyrene / PAH mixtures,gulfwar_us; beirut; cancer_alley,Group 1 / 2A,Agent-dependent
+Ethylene oxide,cancer_alley,Group 1,Carcinogenic to humans
+Formaldehyde,cancer_alley,Group 1,Carcinogenic to humans
+Outdoor air pollution / particulate matter,saudi_scr; saudi_plume; beirut,Group 1,Carcinogenic to humans
+Methyl isocyanate,bhopal,Group 3,Not classifiable (acute toxicant)

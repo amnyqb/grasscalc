@@ -1,0 +1,117 @@
+country,year,cancer_type,cases,value
+"Saudi Arabia (SCR, Saudi nationals)",2006,Breast,999,999
+"Saudi Arabia (SCR, Saudi nationals)",2006,Colorectal,784,784
+"Saudi Arabia (SCR, Saudi nationals)",2006,NHL,585,585
+"Saudi Arabia (SCR, Saudi nationals)",2006,Thyroid,541,541
+"Saudi Arabia (SCR, Saudi nationals)",2006,Leukaemia,508,508
+"Saudi Arabia (SCR, Saudi nationals)",2006,Liver,416,416
+"Saudi Arabia (SCR, Saudi nationals)",2006,Skin,327,327
+"Saudi Arabia (SCR, Saudi nationals)",2006,Lung,312,312
+"Saudi Arabia (SCR, Saudi nationals)",2006,Hodgkin lymphoma,293,293
+"Saudi Arabia (SCR, Saudi nationals)",2006,Stomach,275,275
+"Saudi Arabia (SCR, Saudi nationals)",2007,Breast,1259,1259
+"Saudi Arabia (SCR, Saudi nationals)",2007,Colorectal,907,907
+"Saudi Arabia (SCR, Saudi nationals)",2007,NHL,703,703
+"Saudi Arabia (SCR, Saudi nationals)",2007,Thyroid,586,586
+"Saudi Arabia (SCR, Saudi nationals)",2007,Leukaemia,566,566
+"Saudi Arabia (SCR, Saudi nationals)",2007,Liver,436,436
+"Saudi Arabia (SCR, Saudi nationals)",2007,Lung,412,412
+"Saudi Arabia (SCR, Saudi nationals)",2007,Hodgkin lymphoma,309,309
+"Saudi Arabia (SCR, Saudi nationals)",2007,Stomach,299,299
+"Saudi Arabia (SCR, Saudi nationals)",2007,Skin,283,283
+"Saudi Arabia (SCR, Saudi nationals)",2008,Breast,1169,1169
+"Saudi Arabia (SCR, Saudi nationals)",2008,Colorectal,904,904
+"Saudi Arabia (SCR, Saudi nationals)",2008,NHL,674,674
+"Saudi Arabia (SCR, Saudi nationals)",2008,Thyroid,606,606
+"Saudi Arabia (SCR, Saudi nationals)",2008,Leukaemia,582,582
+"Saudi Arabia (SCR, Saudi nationals)",2008,Liver,418,418
+"Saudi Arabia (SCR, Saudi nationals)",2008,Lung,367,367
+"Saudi Arabia (SCR, Saudi nationals)",2008,Hodgkin lymphoma,306,306
+"Saudi Arabia (SCR, Saudi nationals)",2008,Skin,284,284
+"Saudi Arabia (SCR, Saudi nationals)",2008,Prostate,267,267
+"Saudi Arabia (SCR, Saudi nationals)",2009,Breast,1331,1331
+"Saudi Arabia (SCR, Saudi nationals)",2009,Colorectal,1109,1109
+"Saudi Arabia (SCR, Saudi nationals)",2009,NHL,709,709
+"Saudi Arabia (SCR, Saudi nationals)",2009,Thyroid,679,679
+"Saudi Arabia (SCR, Saudi nationals)",2009,Leukaemia,619,619
+"Saudi Arabia (SCR, Saudi nationals)",2009,Liver,431,431
+"Saudi Arabia (SCR, Saudi nationals)",2009,Lung,379,379
+"Saudi Arabia (SCR, Saudi nationals)",2009,Hodgkin lymphoma,344,344
+"Saudi Arabia (SCR, Saudi nationals)",2009,Skin,322,322
+"Saudi Arabia (SCR, Saudi nationals)",2009,Stomach,313,313
+"Saudi Arabia (SCR, Saudi nationals)",2010,Breast,1497,1497
+"Saudi Arabia (SCR, Saudi nationals)",2010,Colorectal,1033,1033
+"Saudi Arabia (SCR, Saudi nationals)",2010,NHL,703,703
+"Saudi Arabia (SCR, Saudi nationals)",2010,Thyroid,697,697
+"Saudi Arabia (SCR, Saudi nationals)",2010,Leukaemia,616,616
+"Saudi Arabia (SCR, Saudi nationals)",2010,Liver,483,483
+"Saudi Arabia (SCR, Saudi nationals)",2010,Lung,397,397
+"Saudi Arabia (SCR, Saudi nationals)",2010,Hodgkin lymphoma,336,336
+"Saudi Arabia (SCR, Saudi nationals)",2010,Skin,319,319
+"Saudi Arabia (SCR, Saudi nationals)",2010,Stomach,291,291
+"Saudi Arabia (SCR, Saudi nationals)",2015,Breast,2016,2016
+"Saudi Arabia (SCR, Saudi nationals)",2015,Colorectal,1465,1465
+"Saudi Arabia (SCR, Saudi nationals)",2015,Thyroid,1020,1020
+"Saudi Arabia (SCR, Saudi nationals)",2015,NHL,829,829
+"Saudi Arabia (SCR, Saudi nationals)",2015,Leukaemia,702,702
+"Saudi Arabia (SCR, Saudi nationals)",2015,Hodgkin lymphoma,416,416
+"Saudi Arabia (SCR, Saudi nationals)",2018,Breast,2814,2814
+"Saudi Arabia (SCR, Saudi nationals)",2018,Colorectal,1908,1908
+"Saudi Arabia (SCR, Saudi nationals)",2018,Thyroid,1323,1323
+"Saudi Arabia (SCR, Saudi nationals)",2018,NHL,923,923
+"Saudi Arabia (SCR, Saudi nationals)",2018,Leukaemia,799,799
+"Saudi Arabia (SCR, Saudi nationals)",2018,Corpus Uteri,564,564
+"Saudi Arabia (SCR, Saudi nationals)",2018,Hodgkin lymphoma,544,544
+"Saudi Arabia (SCR, Saudi nationals)",2018,Lung,504,504
+"Saudi Arabia (SCR, Saudi nationals)",2018,Liver,481,481
+"Saudi Arabia (SCR, Saudi nationals)",2018,Prostate,475,475
+"Saudi Arabia (SCR, Saudi nationals)",2019,Breast,2894,2894
+"Saudi Arabia (SCR, Saudi nationals)",2019,Colorectal,1989,1989
+"Saudi Arabia (SCR, Saudi nationals)",2019,Thyroid,1331,1331
+"Saudi Arabia (SCR, Saudi nationals)",2019,NHL,933,933
+"Saudi Arabia (SCR, Saudi nationals)",2019,Leukaemia,831,831
+"Saudi Arabia (SCR, Saudi nationals)",2019,Lung,589,589
+"Saudi Arabia (SCR, Saudi nationals)",2019,Corpus Uteri,580,580
+"Saudi Arabia (SCR, Saudi nationals)",2019,Brain/CNS,527,527
+"Saudi Arabia (SCR, Saudi nationals)",2019,Liver,503,503
+"Saudi Arabia (SCR, Saudi nationals)",2019,Hodgkin lymphoma,490,490
+"Saudi Arabia (SCR, Saudi nationals)",2020,Breast,2499,2499
+"Saudi Arabia (SCR, Saudi nationals)",2020,Colorectal,1729,1729
+"Saudi Arabia (SCR, Saudi nationals)",2020,Thyroid,1044,1044
+"Saudi Arabia (SCR, Saudi nationals)",2020,Leukaemia,835,835
+"Saudi Arabia (SCR, Saudi nationals)",2020,NHL,756,756
+"Saudi Arabia (SCR, Saudi nationals)",2020,Hodgkin lymphoma,581,581
+"Saudi Arabia (SCR, Saudi nationals)",2020,Corpus Uteri,494,494
+"Saudi Arabia (SCR, Saudi nationals)",2020,Brain/CNS,488,488
+"Saudi Arabia (SCR, Saudi nationals)",2020,Lung,458,458
+"Saudi Arabia (SCR, Saudi nationals)",2020,Liver,450,450
+"Saudi Arabia (SCR, Saudi nationals)",2021,Breast,3540,3540
+"Saudi Arabia (SCR, Saudi nationals)",2021,Colorectal,2273,2273
+"Saudi Arabia (SCR, Saudi nationals)",2021,Thyroid,1626,1626
+"Saudi Arabia (SCR, Saudi nationals)",2021,NHL,931,931
+"Saudi Arabia (SCR, Saudi nationals)",2021,Leukaemia,931,931
+"Saudi Arabia (SCR, Saudi nationals)",2021,Corpus Uteri,631,631
+"Saudi Arabia (SCR, Saudi nationals)",2021,Liver,620,620
+"Saudi Arabia (SCR, Saudi nationals)",2021,Brain/CNS,596,596
+"Saudi Arabia (SCR, Saudi nationals)",2021,Hodgkin lymphoma,541,541
+"Saudi Arabia (SCR, Saudi nationals)",2021,Prostate,540,540
+"Saudi Arabia (SCR, Saudi nationals)",2022,Breast,3334,3334
+"Saudi Arabia (SCR, Saudi nationals)",2022,Colorectal,2535,2535
+"Saudi Arabia (SCR, Saudi nationals)",2022,Thyroid,1677,1677
+"Saudi Arabia (SCR, Saudi nationals)",2022,NHL,1098,1098
+"Saudi Arabia (SCR, Saudi nationals)",2022,Leukaemia,892,892
+"Saudi Arabia (SCR, Saudi nationals)",2022,Prostate,661,661
+"Saudi Arabia (SCR, Saudi nationals)",2022,Liver,650,650
+"Saudi Arabia (SCR, Saudi nationals)",2022,Brain/CNS,650,650
+"Saudi Arabia (SCR, Saudi nationals)",2022,Corpus Uteri,647,647
+"Saudi Arabia (SCR, Saudi nationals)",2022,Kidney,630,630
+"Saudi Arabia (SCR, Saudi nationals)",2023,Breast,4159,4159
+"Saudi Arabia (SCR, Saudi nationals)",2023,Colorectal,2680,2680
+"Saudi Arabia (SCR, Saudi nationals)",2023,Thyroid,1891,1891
+"Saudi Arabia (SCR, Saudi nationals)",2023,NHL,957,957
+"Saudi Arabia (SCR, Saudi nationals)",2023,Leukaemia,867,867
+"Saudi Arabia (SCR, Saudi nationals)",2023,Corpus Uteri,695,695
+"Saudi Arabia (SCR, Saudi nationals)",2023,Lung,666,666
+"Saudi Arabia (SCR, Saudi nationals)",2023,Prostate,650,650
+"Saudi Arabia (SCR, Saudi nationals)",2023,Bladder,649,649
+"Saudi Arabia (SCR, Saudi nationals)",2023,Brain/CNS,643,643

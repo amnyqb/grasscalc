@@ -1,0 +1,81 @@
+<svg viewBox="0 80 900 540" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <rect width="900" height="620" fill="#FCFBF7"/>
+
+  <!-- Plot frame -->
+  <rect x="120" y="100" width="640" height="400" fill="#FFFFFF" stroke="#C9CFC9"/>
+  <!-- Axis labels -->
+  <text x="440" y="540" text-anchor="middle" font-size="13" font-weight="700" fill="#1C2B36">Evidence grade  (stronger  →  weaker inference)</text>
+  <g font-size="12" fill="#5A6B73" text-anchor="middle">
+    <text x="180" y="518">A</text><text x="300" y="518">B</text><text x="420" y="518">C</text>
+    <text x="540" y="518">D</text><text x="630" y="518">E</text><text x="720" y="518">F</text>
+  </g>
+  <text x="58" y="300" font-size="13" font-weight="700" fill="#1C2B36" transform="rotate(-90 58 300)" text-anchor="middle">Exposure-specificity of signal</text>
+  <g font-size="12" fill="#5A6B73" text-anchor="end">
+    <text x="112" y="140">high</text>
+    <text x="112" y="300">moderate</text>
+    <text x="112" y="470">low</text>
+  </g>
+  <!-- gridlines -->
+  <g stroke="#EEEDE6">
+    <line x1="240" y1="100" x2="240" y2="500"/><line x1="360" y1="100" x2="360" y2="500"/>
+    <line x1="480" y1="100" x2="480" y2="500"/><line x1="585" y1="100" x2="585" y2="500"/>
+    <line x1="675" y1="100" x2="675" y2="500"/>
+    <line x1="120" y1="220" x2="760" y2="220"/><line x1="120" y1="380" x2="760" y2="380"/>
+  </g>
+
+  <!-- Markers: cohorts. Color by grade family. -->
+  <g font-size="12" fill="#1C2B36">
+    <!-- LSS: Grade A, high specificity -->
+    <circle cx="180" cy="150" r="9" fill="#15454A"/>
+    <text x="195" y="154">Life Span Study (radiation)</text>
+    <!-- Semipalatinsk: A/B high -->
+    <circle cx="225" cy="178" r="9" fill="#1B4D52"/>
+    <text x="240" y="182">Semipalatinsk (fallout)</text>
+    <!-- Camp Lejeune: A/B, high (kidney/bladder non-tobacco) -->
+    <circle cx="250" cy="138" r="9" fill="#1B4D52"/>
+    <text x="265" y="142">Camp Lejeune (solvents)</text>
+    <!-- Khamisiyah: B, high specificity (brain) -->
+    <circle cx="320" cy="160" r="9" fill="#2E6B72"/>
+    <text x="335" y="164">Khamisiyah (brain cancer)</text>
+    <!-- Agent Orange biomarker: B/C moderate -->
+    <circle cx="430" cy="250" r="9" fill="#5E9298"/>
+    <text x="445" y="254">Agent Orange / TCDD (biomarker)</text>
+    <!-- UK Gulf War: B, null (low specificity, plotted low) -->
+    <circle cx="305" cy="430" r="9" fill="#2E6B72"/>
+    <text x="320" y="434">U.K. Gulf War (null comparator)</text>
+    <!-- Bhopal cytogenetics: C moderate -->
+    <circle cx="440" cy="300" r="9" fill="#5E9298"/>
+    <text x="455" y="304">Bhopal cytogenetics</text>
+    <!-- PACT Act: D -->
+    <circle cx="545" cy="270" r="9" fill="#9DB0A6"/>
+    <text x="560" y="274">PACT Act presumptions (policy)</text>
+    <!-- Cancer Alley: E modeled -->
+    <circle cx="600" cy="240" r="9" fill="#C2A878"/>
+    <text x="500" y="226">"Cancer Alley" (modeled risk)</text>
+    <!-- Bhopal survey: F high-signal but low grade -->
+    <circle cx="715" cy="165" r="9" fill="#C98A5E"/>
+    <text x="650" y="150">Bhopal survey ratios</text>
+    <!-- Fallujah: F/B high specificity (pediatric) -->
+    <circle cx="700" cy="135" r="9" fill="#C98A5E"/>
+    <text x="560" y="120">Fallujah pediatric (contested)</text>
+    <!-- Beirut: F immature -->
+    <circle cx="725" cy="430" r="9" fill="#C98A5E"/>
+    <text x="600" y="450">Beirut Port (immature latency)</text>
+  </g>
+
+  <!-- Saudi Eastern Province: distinct dashed marker in hypothesis-generating zone -->
+  <g>
+    <rect x="592" y="300" width="160" height="68" rx="8" fill="#FBEFE2" stroke="#BE7B45" stroke-width="1.6" stroke-dasharray="5 4"/>
+    <circle cx="612" cy="334" r="9" fill="none" stroke="#BE7B45" stroke-width="2.5" stroke-dasharray="4 3"/>
+    <text x="628" y="328" font-size="12" font-weight="700" fill="#BE7B45">Saudi Eastern</text>
+    <text x="628" y="343" font-size="12" font-weight="700" fill="#BE7B45">Province</text>
+    <text x="602" y="360" font-size="12" fill="#A8842F">ecological · hypothesis-generating</text>
+  </g>
+
+  <!-- Legend -->
+  <g font-size="12" fill="#1C2B36">
+    <text x="120" y="575" font-weight="700">Reading:</text>
+    <text x="185" y="575" fill="#5A6B73">vertical position = how specific the signal is to the exposure (e.g. non-tobacco / pediatric sites rank high);</text>
+    <text x="185" y="593" fill="#5A6B73">horizontal position = evidence grade. The Saudi marker is dashed to denote it is not yet a graded cohort estimate.</text>
+  </g>
+</svg>

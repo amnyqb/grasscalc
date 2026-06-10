@@ -1,0 +1,13 @@
+metric_family,n
+Relative risk,2
+ERR per dose (Gy),1
+ERR per dose (Sv),1
+Dose-response RR/HR,1
+Mortality ratio,1
+Incidence rate ratio,1
+Policy-presumptive list,1
+Community-survey ratio,1
+ASIR change,1
+No incidence yet (immature latency),1
+Modeled lifetime risk,1
+Crude-rate ratio,1

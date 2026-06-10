@@ -1,0 +1,69 @@
+<svg viewBox="0 80 900 380" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <rect width="900" height="460" fill="#FCFBF7"/>
+
+  <!-- Timeline spine -->
+  <line x1="70" y1="240" x2="830" y2="240" stroke="#1B4D52" stroke-width="3" marker-end="url(#tip)"/>
+  <defs>
+    <marker id="tip" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+      <path d="M0 0 L12 6 L0 12 z" fill="#1B4D52"/>
+    </marker>
+  </defs>
+
+  <!-- Milestones: alternate above/below -->
+  <!-- 1980s baseline (below) -->
+  <circle cx="120" cy="240" r="7" fill="#5E9298"/>
+  <line x1="120" y1="240" x2="120" y2="300" stroke="#C9CFC9"/>
+  <rect x="60" y="300" width="135" height="78" rx="6" fill="#FFFFFF" stroke="#C9CFC9"/>
+  <text x="70" y="320" font-size="13" font-weight="700" fill="#1C2B36">1980s</text>
+  <text x="70" y="340" font-size="12" fill="#5A6B73">Petrochemical-industry</text>
+  <text x="70" y="356" font-size="12" fill="#5A6B73">baseline; Dhahran case</text>
+  <text x="70" y="372" font-size="12" fill="#5A6B73">series document cancer</text>
+
+  <!-- 1991 oil fires (above) -->
+  <circle cx="270" cy="240" r="8" fill="#BE7B45"/>
+  <line x1="270" y1="240" x2="270" y2="180" stroke="#C9CFC9"/>
+  <rect x="205" y="100" width="150" height="80" rx="6" fill="#FBEFE2" stroke="#BE7B45" stroke-width="1.5"/>
+  <text x="215" y="120" font-size="13" font-weight="700" fill="#BE7B45">1991  ⚑ EVENT</text>
+  <text x="215" y="140" font-size="12" fill="#A8842F">Kuwait oil fires (~8 mo);</text>
+  <text x="215" y="156" font-size="12" fill="#A8842F">documented plume PM /</text>
+  <text x="215" y="172" font-size="12" fill="#A8842F">SO₂ at Eastern Prov. sites</text>
+
+  <!-- 1994 SCR begins (below) -->
+  <circle cx="400" cy="240" r="7" fill="#2E6B72"/>
+  <line x1="400" y1="240" x2="400" y2="300" stroke="#C9CFC9"/>
+  <rect x="335" y="300" width="135" height="78" rx="6" fill="#FFFFFF" stroke="#C9CFC9"/>
+  <text x="345" y="320" font-size="13" font-weight="700" fill="#1C2B36">1994</text>
+  <text x="345" y="340" font-size="12" fill="#5A6B73">Saudi Cancer Registry</text>
+  <text x="345" y="356" font-size="12" fill="#5A6B73">begins; cancer notifiable</text>
+  <text x="345" y="372" font-size="12" fill="#5A6B73">by royal decree</text>
+
+  <!-- 2000s latency (above) -->
+  <circle cx="540" cy="240" r="7" fill="#5E9298"/>
+  <line x1="540" y1="240" x2="540" y2="180" stroke="#C9CFC9"/>
+  <rect x="475" y="120" width="140" height="60" rx="6" fill="#FFFFFF" stroke="#C9CFC9"/>
+  <text x="485" y="140" font-size="13" font-weight="700" fill="#1C2B36">2000s</text>
+  <text x="485" y="160" font-size="12" fill="#5A6B73">Solid-tumour latency</text>
+  <text x="485" y="174" font-size="12" fill="#5A6B73">window (15–30 yr)</text>
+
+  <!-- 2010-2020 elevation (below) -->
+  <circle cx="680" cy="240" r="8" fill="#1B4D52"/>
+  <line x1="680" y1="240" x2="680" y2="300" stroke="#C9CFC9"/>
+  <rect x="612" y="300" width="150" height="78" rx="6" fill="#EAF1F0" stroke="#1B4D52" stroke-width="1.5"/>
+  <text x="622" y="320" font-size="13" font-weight="700" fill="#1B4D52">2010–2020</text>
+  <text x="622" y="340" font-size="12" fill="#37606A">Reported lung-cancer</text>
+  <text x="622" y="356" font-size="12" fill="#37606A">ASIR elevation; non-</text>
+  <text x="622" y="372" font-size="12" fill="#37606A">tobacco spatial clusters</text>
+
+  <!-- Proposed analysis (above) -->
+  <circle cx="810" cy="240" r="8" fill="#1C2B36"/>
+  <line x1="810" y1="240" x2="810" y2="180" stroke="#C9CFC9"/>
+  <rect x="700" y="100" width="160" height="80" rx="6" fill="#1C2B36"/>
+  <text x="710" y="120" font-size="13" font-weight="700" fill="#FFFFFF">NEXT STEP</text>
+  <text x="710" y="140" font-size="12" fill="#D9E2E0">Pre-specified SCR</text>
+  <text x="710" y="156" font-size="12" fill="#D9E2E0">microdata event-study</text>
+  <text x="710" y="172" font-size="12" fill="#D9E2E0">(region × year × site)</text>
+
+  <!-- Latency bracket -->
+  <path d="M270 415 L270 405 L680 405 L680 415" fill="none" stroke="#BE7B45" stroke-width="1.5"/>
+  <text x="475" y="435" text-anchor="middle" font-size="12" fill="#BE7B45" font-weight="700">~20–25-year exposure-to-observed-elevation interval (consistent with solid-tumour latency)</text>
+</svg>

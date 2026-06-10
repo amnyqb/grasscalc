@@ -1,0 +1,649 @@
+country,year,cancer_type,cases
+Saudi Arabia (SCR),1994,Lung,80
+Saudi Arabia (SCR),1995,Lung,84
+Saudi Arabia (SCR),1996,Lung,82
+Saudi Arabia (SCR),1997,Lung,80
+Saudi Arabia (SCR),1998,Lung,86
+Saudi Arabia (SCR),1999,Lung,84
+Saudi Arabia (SCR),2000,Lung,94
+Saudi Arabia (SCR),2001,Lung,107
+Saudi Arabia (SCR),2002,Lung,95
+Saudi Arabia (SCR),2003,Lung,96
+Saudi Arabia (SCR),2004,Lung,108
+Saudi Arabia (SCR),2005,Lung,109
+Saudi Arabia (SCR),2006,Lung,109
+Saudi Arabia (SCR),2007,Lung,102
+Saudi Arabia (SCR),2008,Lung,113
+Saudi Arabia (SCR),2009,Lung,122
+Saudi Arabia (SCR),2010,Lung,105
+Saudi Arabia (SCR),2011,Lung,116
+Saudi Arabia (SCR),2012,Lung,198
+Saudi Arabia (SCR),2013,Lung,214
+Saudi Arabia (SCR),2014,Lung,207
+Saudi Arabia (SCR),2015,Lung,243
+Saudi Arabia (SCR),2016,Lung,119
+Saudi Arabia (SCR),2017,Lung,138
+Saudi Arabia (SCR),2018,Lung,139
+Saudi Arabia (SCR),2019,Lung,137
+Saudi Arabia (SCR),2020,Lung,113
+Saudi Arabia (SCR),1994,Breast,114
+Saudi Arabia (SCR),1995,Breast,123
+Saudi Arabia (SCR),1996,Breast,128
+Saudi Arabia (SCR),1997,Breast,114
+Saudi Arabia (SCR),1998,Breast,129
+Saudi Arabia (SCR),1999,Breast,127
+Saudi Arabia (SCR),2000,Breast,132
+Saudi Arabia (SCR),2001,Breast,157
+Saudi Arabia (SCR),2002,Breast,139
+Saudi Arabia (SCR),2003,Breast,152
+Saudi Arabia (SCR),2004,Breast,167
+Saudi Arabia (SCR),2005,Breast,152
+Saudi Arabia (SCR),2006,Breast,161
+Saudi Arabia (SCR),2007,Breast,168
+Saudi Arabia (SCR),2008,Breast,171
+Saudi Arabia (SCR),2009,Breast,156
+Saudi Arabia (SCR),2010,Breast,178
+Saudi Arabia (SCR),2011,Breast,200
+Saudi Arabia (SCR),2012,Breast,161
+Saudi Arabia (SCR),2013,Breast,201
+Saudi Arabia (SCR),2014,Breast,193
+Saudi Arabia (SCR),2015,Breast,185
+Saudi Arabia (SCR),2016,Breast,231
+Saudi Arabia (SCR),2017,Breast,215
+Saudi Arabia (SCR),2018,Breast,186
+Saudi Arabia (SCR),2019,Breast,211
+Saudi Arabia (SCR),2020,Breast,223
+Saudi Arabia (SCR),1994,Colorectal,98
+Saudi Arabia (SCR),1995,Colorectal,108
+Saudi Arabia (SCR),1996,Colorectal,105
+Saudi Arabia (SCR),1997,Colorectal,114
+Saudi Arabia (SCR),1998,Colorectal,124
+Saudi Arabia (SCR),1999,Colorectal,108
+Saudi Arabia (SCR),2000,Colorectal,119
+Saudi Arabia (SCR),2001,Colorectal,116
+Saudi Arabia (SCR),2002,Colorectal,125
+Saudi Arabia (SCR),2003,Colorectal,114
+Saudi Arabia (SCR),2004,Colorectal,123
+Saudi Arabia (SCR),2005,Colorectal,130
+Saudi Arabia (SCR),2006,Colorectal,145
+Saudi Arabia (SCR),2007,Colorectal,151
+Saudi Arabia (SCR),2008,Colorectal,126
+Saudi Arabia (SCR),2009,Colorectal,135
+Saudi Arabia (SCR),2010,Colorectal,155
+Saudi Arabia (SCR),2011,Colorectal,126
+Saudi Arabia (SCR),2012,Colorectal,148
+Saudi Arabia (SCR),2013,Colorectal,155
+Saudi Arabia (SCR),2014,Colorectal,176
+Saudi Arabia (SCR),2015,Colorectal,171
+Saudi Arabia (SCR),2016,Colorectal,161
+Saudi Arabia (SCR),2017,Colorectal,164
+Saudi Arabia (SCR),2018,Colorectal,168
+Saudi Arabia (SCR),2019,Colorectal,196
+Saudi Arabia (SCR),2020,Colorectal,171
+Saudi Arabia (SCR),1994,Leukaemia,39
+Saudi Arabia (SCR),1995,Leukaemia,42
+Saudi Arabia (SCR),1996,Leukaemia,41
+Saudi Arabia (SCR),1997,Leukaemia,42
+Saudi Arabia (SCR),1998,Leukaemia,40
+Saudi Arabia (SCR),1999,Leukaemia,45
+Saudi Arabia (SCR),2000,Leukaemia,45
+Saudi Arabia (SCR),2001,Leukaemia,52
+Saudi Arabia (SCR),2002,Leukaemia,52
+Saudi Arabia (SCR),2003,Leukaemia,50
+Saudi Arabia (SCR),2004,Leukaemia,54
+Saudi Arabia (SCR),2005,Leukaemia,51
+Saudi Arabia (SCR),2006,Leukaemia,58
+Saudi Arabia (SCR),2007,Leukaemia,55
+Saudi Arabia (SCR),2008,Leukaemia,59
+Saudi Arabia (SCR),2009,Leukaemia,52
+Saudi Arabia (SCR),2010,Leukaemia,60
+Saudi Arabia (SCR),2011,Leukaemia,52
+Saudi Arabia (SCR),2012,Leukaemia,51
+Saudi Arabia (SCR),2013,Leukaemia,61
+Saudi Arabia (SCR),2014,Leukaemia,59
+Saudi Arabia (SCR),2015,Leukaemia,66
+Saudi Arabia (SCR),2016,Leukaemia,78
+Saudi Arabia (SCR),2017,Leukaemia,63
+Saudi Arabia (SCR),2018,Leukaemia,65
+Saudi Arabia (SCR),2019,Leukaemia,71
+Saudi Arabia (SCR),2020,Leukaemia,74
+Saudi Arabia (SCR),1994,Brain/CNS,24
+Saudi Arabia (SCR),1995,Brain/CNS,25
+Saudi Arabia (SCR),1996,Brain/CNS,27
+Saudi Arabia (SCR),1997,Brain/CNS,28
+Saudi Arabia (SCR),1998,Brain/CNS,25
+Saudi Arabia (SCR),1999,Brain/CNS,28
+Saudi Arabia (SCR),2000,Brain/CNS,29
+Saudi Arabia (SCR),2001,Brain/CNS,27
+Saudi Arabia (SCR),2002,Brain/CNS,31
+Saudi Arabia (SCR),2003,Brain/CNS,29
+Saudi Arabia (SCR),2004,Brain/CNS,35
+Saudi Arabia (SCR),2005,Brain/CNS,33
+Saudi Arabia (SCR),2006,Brain/CNS,34
+Saudi Arabia (SCR),2007,Brain/CNS,33
+Saudi Arabia (SCR),2008,Brain/CNS,35
+Saudi Arabia (SCR),2009,Brain/CNS,30
+Saudi Arabia (SCR),2010,Brain/CNS,33
+Saudi Arabia (SCR),2011,Brain/CNS,38
+Saudi Arabia (SCR),2012,Brain/CNS,31
+Saudi Arabia (SCR),2013,Brain/CNS,41
+Saudi Arabia (SCR),2014,Brain/CNS,34
+Saudi Arabia (SCR),2015,Brain/CNS,43
+Saudi Arabia (SCR),2016,Brain/CNS,38
+Saudi Arabia (SCR),2017,Brain/CNS,44
+Saudi Arabia (SCR),2018,Brain/CNS,43
+Saudi Arabia (SCR),2019,Brain/CNS,38
+Saudi Arabia (SCR),2020,Brain/CNS,48
+Saudi Arabia (SCR),1994,Other,167
+Saudi Arabia (SCR),1995,Other,153
+Saudi Arabia (SCR),1996,Other,155
+Saudi Arabia (SCR),1997,Other,161
+Saudi Arabia (SCR),1998,Other,154
+Saudi Arabia (SCR),1999,Other,187
+Saudi Arabia (SCR),2000,Other,169
+Saudi Arabia (SCR),2001,Other,180
+Saudi Arabia (SCR),2002,Other,174
+Saudi Arabia (SCR),2003,Other,180
+Saudi Arabia (SCR),2004,Other,175
+Saudi Arabia (SCR),2005,Other,219
+Saudi Arabia (SCR),2006,Other,201
+Saudi Arabia (SCR),2007,Other,224
+Saudi Arabia (SCR),2008,Other,213
+Saudi Arabia (SCR),2009,Other,205
+Saudi Arabia (SCR),2010,Other,216
+Saudi Arabia (SCR),2011,Other,216
+Saudi Arabia (SCR),2012,Other,231
+Saudi Arabia (SCR),2013,Other,228
+Saudi Arabia (SCR),2014,Other,234
+Saudi Arabia (SCR),2015,Other,217
+Saudi Arabia (SCR),2016,Other,232
+Saudi Arabia (SCR),2017,Other,287
+Saudi Arabia (SCR),2018,Other,244
+Saudi Arabia (SCR),2019,Other,240
+Saudi Arabia (SCR),2020,Other,274
+USA-Louisiana (SEER),1994,Lung,195
+USA-Louisiana (SEER),1995,Lung,160
+USA-Louisiana (SEER),1996,Lung,183
+USA-Louisiana (SEER),1997,Lung,182
+USA-Louisiana (SEER),1998,Lung,169
+USA-Louisiana (SEER),1999,Lung,214
+USA-Louisiana (SEER),2000,Lung,207
+USA-Louisiana (SEER),2001,Lung,214
+USA-Louisiana (SEER),2002,Lung,205
+USA-Louisiana (SEER),2003,Lung,231
+USA-Louisiana (SEER),2004,Lung,218
+USA-Louisiana (SEER),2005,Lung,231
+USA-Louisiana (SEER),2006,Lung,218
+USA-Louisiana (SEER),2007,Lung,220
+USA-Louisiana (SEER),2008,Lung,276
+USA-Louisiana (SEER),2009,Lung,244
+USA-Louisiana (SEER),2010,Lung,266
+USA-Louisiana (SEER),2011,Lung,265
+USA-Louisiana (SEER),2012,Lung,261
+USA-Louisiana (SEER),2013,Lung,265
+USA-Louisiana (SEER),2014,Lung,295
+USA-Louisiana (SEER),2015,Lung,279
+USA-Louisiana (SEER),2016,Lung,288
+USA-Louisiana (SEER),2017,Lung,297
+USA-Louisiana (SEER),2018,Lung,331
+USA-Louisiana (SEER),2019,Lung,324
+USA-Louisiana (SEER),2020,Lung,322
+USA-Louisiana (SEER),1994,Breast,252
+USA-Louisiana (SEER),1995,Breast,241
+USA-Louisiana (SEER),1996,Breast,301
+USA-Louisiana (SEER),1997,Breast,310
+USA-Louisiana (SEER),1998,Breast,292
+USA-Louisiana (SEER),1999,Breast,316
+USA-Louisiana (SEER),2000,Breast,330
+USA-Louisiana (SEER),2001,Breast,340
+USA-Louisiana (SEER),2002,Breast,351
+USA-Louisiana (SEER),2003,Breast,323
+USA-Louisiana (SEER),2004,Breast,384
+USA-Louisiana (SEER),2005,Breast,316
+USA-Louisiana (SEER),2006,Breast,383
+USA-Louisiana (SEER),2007,Breast,381
+USA-Louisiana (SEER),2008,Breast,401
+USA-Louisiana (SEER),2009,Breast,440
+USA-Louisiana (SEER),2010,Breast,437
+USA-Louisiana (SEER),2011,Breast,362
+USA-Louisiana (SEER),2012,Breast,351
+USA-Louisiana (SEER),2013,Breast,441
+USA-Louisiana (SEER),2014,Breast,388
+USA-Louisiana (SEER),2015,Breast,429
+USA-Louisiana (SEER),2016,Breast,467
+USA-Louisiana (SEER),2017,Breast,387
+USA-Louisiana (SEER),2018,Breast,377
+USA-Louisiana (SEER),2019,Breast,471
+USA-Louisiana (SEER),2020,Breast,471
+USA-Louisiana (SEER),1994,Colorectal,215
+USA-Louisiana (SEER),1995,Colorectal,227
+USA-Louisiana (SEER),1996,Colorectal,217
+USA-Louisiana (SEER),1997,Colorectal,210
+USA-Louisiana (SEER),1998,Colorectal,243
+USA-Louisiana (SEER),1999,Colorectal,233
+USA-Louisiana (SEER),2000,Colorectal,225
+USA-Louisiana (SEER),2001,Colorectal,276
+USA-Louisiana (SEER),2002,Colorectal,271
+USA-Louisiana (SEER),2003,Colorectal,288
+USA-Louisiana (SEER),2004,Colorectal,263
+USA-Louisiana (SEER),2005,Colorectal,277
+USA-Louisiana (SEER),2006,Colorectal,275
+USA-Louisiana (SEER),2007,Colorectal,284
+USA-Louisiana (SEER),2008,Colorectal,317
+USA-Louisiana (SEER),2009,Colorectal,299
+USA-Louisiana (SEER),2010,Colorectal,334
+USA-Louisiana (SEER),2011,Colorectal,341
+USA-Louisiana (SEER),2012,Colorectal,393
+USA-Louisiana (SEER),2013,Colorectal,306
+USA-Louisiana (SEER),2014,Colorectal,377
+USA-Louisiana (SEER),2015,Colorectal,356
+USA-Louisiana (SEER),2016,Colorectal,364
+USA-Louisiana (SEER),2017,Colorectal,328
+USA-Louisiana (SEER),2018,Colorectal,364
+USA-Louisiana (SEER),2019,Colorectal,407
+USA-Louisiana (SEER),2020,Colorectal,389
+USA-Louisiana (SEER),1994,Leukaemia,88
+USA-Louisiana (SEER),1995,Leukaemia,88
+USA-Louisiana (SEER),1996,Leukaemia,101
+USA-Louisiana (SEER),1997,Leukaemia,95
+USA-Louisiana (SEER),1998,Leukaemia,81
+USA-Louisiana (SEER),1999,Leukaemia,95
+USA-Louisiana (SEER),2000,Leukaemia,87
+USA-Louisiana (SEER),2001,Leukaemia,78
+USA-Louisiana (SEER),2002,Leukaemia,104
+USA-Louisiana (SEER),2003,Leukaemia,123
+USA-Louisiana (SEER),2004,Leukaemia,114
+USA-Louisiana (SEER),2005,Leukaemia,106
+USA-Louisiana (SEER),2006,Leukaemia,110
+USA-Louisiana (SEER),2007,Leukaemia,133
+USA-Louisiana (SEER),2008,Leukaemia,126
+USA-Louisiana (SEER),2009,Leukaemia,128
+USA-Louisiana (SEER),2010,Leukaemia,129
+USA-Louisiana (SEER),2011,Leukaemia,133
+USA-Louisiana (SEER),2012,Leukaemia,144
+USA-Louisiana (SEER),2013,Leukaemia,144
+USA-Louisiana (SEER),2014,Leukaemia,143
+USA-Louisiana (SEER),2015,Leukaemia,131
+USA-Louisiana (SEER),2016,Leukaemia,152
+USA-Louisiana (SEER),2017,Leukaemia,140
+USA-Louisiana (SEER),2018,Leukaemia,164
+USA-Louisiana (SEER),2019,Leukaemia,138
+USA-Louisiana (SEER),2020,Leukaemia,154
+USA-Louisiana (SEER),1994,Brain/CNS,54
+USA-Louisiana (SEER),1995,Brain/CNS,50
+USA-Louisiana (SEER),1996,Brain/CNS,66
+USA-Louisiana (SEER),1997,Brain/CNS,66
+USA-Louisiana (SEER),1998,Brain/CNS,59
+USA-Louisiana (SEER),1999,Brain/CNS,67
+USA-Louisiana (SEER),2000,Brain/CNS,66
+USA-Louisiana (SEER),2001,Brain/CNS,52
+USA-Louisiana (SEER),2002,Brain/CNS,69
+USA-Louisiana (SEER),2003,Brain/CNS,69
+USA-Louisiana (SEER),2004,Brain/CNS,71
+USA-Louisiana (SEER),2005,Brain/CNS,66
+USA-Louisiana (SEER),2006,Brain/CNS,73
+USA-Louisiana (SEER),2007,Brain/CNS,75
+USA-Louisiana (SEER),2008,Brain/CNS,85
+USA-Louisiana (SEER),2009,Brain/CNS,81
+USA-Louisiana (SEER),2010,Brain/CNS,81
+USA-Louisiana (SEER),2011,Brain/CNS,93
+USA-Louisiana (SEER),2012,Brain/CNS,80
+USA-Louisiana (SEER),2013,Brain/CNS,83
+USA-Louisiana (SEER),2014,Brain/CNS,75
+USA-Louisiana (SEER),2015,Brain/CNS,100
+USA-Louisiana (SEER),2016,Brain/CNS,98
+USA-Louisiana (SEER),2017,Brain/CNS,99
+USA-Louisiana (SEER),2018,Brain/CNS,99
+USA-Louisiana (SEER),2019,Brain/CNS,97
+USA-Louisiana (SEER),2020,Brain/CNS,99
+USA-Louisiana (SEER),1994,Other,323
+USA-Louisiana (SEER),1995,Other,334
+USA-Louisiana (SEER),1996,Other,351
+USA-Louisiana (SEER),1997,Other,403
+USA-Louisiana (SEER),1998,Other,386
+USA-Louisiana (SEER),1999,Other,377
+USA-Louisiana (SEER),2000,Other,371
+USA-Louisiana (SEER),2001,Other,379
+USA-Louisiana (SEER),2002,Other,461
+USA-Louisiana (SEER),2003,Other,436
+USA-Louisiana (SEER),2004,Other,431
+USA-Louisiana (SEER),2005,Other,426
+USA-Louisiana (SEER),2006,Other,408
+USA-Louisiana (SEER),2007,Other,456
+USA-Louisiana (SEER),2008,Other,501
+USA-Louisiana (SEER),2009,Other,463
+USA-Louisiana (SEER),2010,Other,479
+USA-Louisiana (SEER),2011,Other,489
+USA-Louisiana (SEER),2012,Other,512
+USA-Louisiana (SEER),2013,Other,452
+USA-Louisiana (SEER),2014,Other,518
+USA-Louisiana (SEER),2015,Other,501
+USA-Louisiana (SEER),2016,Other,586
+USA-Louisiana (SEER),2017,Other,523
+USA-Louisiana (SEER),2018,Other,593
+USA-Louisiana (SEER),2019,Other,647
+USA-Louisiana (SEER),2020,Other,572
+Taiwan (TCR),1994,Lung,121
+Taiwan (TCR),1995,Lung,133
+Taiwan (TCR),1996,Lung,135
+Taiwan (TCR),1997,Lung,128
+Taiwan (TCR),1998,Lung,148
+Taiwan (TCR),1999,Lung,170
+Taiwan (TCR),2000,Lung,147
+Taiwan (TCR),2001,Lung,152
+Taiwan (TCR),2002,Lung,145
+Taiwan (TCR),2003,Lung,166
+Taiwan (TCR),2004,Lung,149
+Taiwan (TCR),2005,Lung,155
+Taiwan (TCR),2006,Lung,191
+Taiwan (TCR),2007,Lung,165
+Taiwan (TCR),2008,Lung,197
+Taiwan (TCR),2009,Lung,208
+Taiwan (TCR),2010,Lung,193
+Taiwan (TCR),2011,Lung,201
+Taiwan (TCR),2012,Lung,227
+Taiwan (TCR),2013,Lung,197
+Taiwan (TCR),2014,Lung,195
+Taiwan (TCR),2015,Lung,186
+Taiwan (TCR),2016,Lung,213
+Taiwan (TCR),2017,Lung,241
+Taiwan (TCR),2018,Lung,237
+Taiwan (TCR),2019,Lung,207
+Taiwan (TCR),2020,Lung,212
+Taiwan (TCR),1994,Breast,184
+Taiwan (TCR),1995,Breast,202
+Taiwan (TCR),1996,Breast,200
+Taiwan (TCR),1997,Breast,212
+Taiwan (TCR),1998,Breast,220
+Taiwan (TCR),1999,Breast,215
+Taiwan (TCR),2000,Breast,225
+Taiwan (TCR),2001,Breast,236
+Taiwan (TCR),2002,Breast,236
+Taiwan (TCR),2003,Breast,253
+Taiwan (TCR),2004,Breast,286
+Taiwan (TCR),2005,Breast,267
+Taiwan (TCR),2006,Breast,262
+Taiwan (TCR),2007,Breast,230
+Taiwan (TCR),2008,Breast,281
+Taiwan (TCR),2009,Breast,235
+Taiwan (TCR),2010,Breast,252
+Taiwan (TCR),2011,Breast,309
+Taiwan (TCR),2012,Breast,312
+Taiwan (TCR),2013,Breast,297
+Taiwan (TCR),2014,Breast,265
+Taiwan (TCR),2015,Breast,303
+Taiwan (TCR),2016,Breast,301
+Taiwan (TCR),2017,Breast,341
+Taiwan (TCR),2018,Breast,389
+Taiwan (TCR),2019,Breast,341
+Taiwan (TCR),2020,Breast,320
+Taiwan (TCR),1994,Colorectal,145
+Taiwan (TCR),1995,Colorectal,164
+Taiwan (TCR),1996,Colorectal,167
+Taiwan (TCR),1997,Colorectal,158
+Taiwan (TCR),1998,Colorectal,180
+Taiwan (TCR),1999,Colorectal,167
+Taiwan (TCR),2000,Colorectal,205
+Taiwan (TCR),2001,Colorectal,210
+Taiwan (TCR),2002,Colorectal,215
+Taiwan (TCR),2003,Colorectal,195
+Taiwan (TCR),2004,Colorectal,216
+Taiwan (TCR),2005,Colorectal,210
+Taiwan (TCR),2006,Colorectal,210
+Taiwan (TCR),2007,Colorectal,216
+Taiwan (TCR),2008,Colorectal,203
+Taiwan (TCR),2009,Colorectal,205
+Taiwan (TCR),2010,Colorectal,251
+Taiwan (TCR),2011,Colorectal,237
+Taiwan (TCR),2012,Colorectal,250
+Taiwan (TCR),2013,Colorectal,271
+Taiwan (TCR),2014,Colorectal,220
+Taiwan (TCR),2015,Colorectal,244
+Taiwan (TCR),2016,Colorectal,269
+Taiwan (TCR),2017,Colorectal,278
+Taiwan (TCR),2018,Colorectal,266
+Taiwan (TCR),2019,Colorectal,303
+Taiwan (TCR),2020,Colorectal,289
+Taiwan (TCR),1994,Leukaemia,57
+Taiwan (TCR),1995,Leukaemia,61
+Taiwan (TCR),1996,Leukaemia,72
+Taiwan (TCR),1997,Leukaemia,72
+Taiwan (TCR),1998,Leukaemia,60
+Taiwan (TCR),1999,Leukaemia,81
+Taiwan (TCR),2000,Leukaemia,79
+Taiwan (TCR),2001,Leukaemia,85
+Taiwan (TCR),2002,Leukaemia,76
+Taiwan (TCR),2003,Leukaemia,79
+Taiwan (TCR),2004,Leukaemia,75
+Taiwan (TCR),2005,Leukaemia,102
+Taiwan (TCR),2006,Leukaemia,85
+Taiwan (TCR),2007,Leukaemia,100
+Taiwan (TCR),2008,Leukaemia,86
+Taiwan (TCR),2009,Leukaemia,94
+Taiwan (TCR),2010,Leukaemia,82
+Taiwan (TCR),2011,Leukaemia,93
+Taiwan (TCR),2012,Leukaemia,106
+Taiwan (TCR),2013,Leukaemia,90
+Taiwan (TCR),2014,Leukaemia,111
+Taiwan (TCR),2015,Leukaemia,107
+Taiwan (TCR),2016,Leukaemia,97
+Taiwan (TCR),2017,Leukaemia,103
+Taiwan (TCR),2018,Leukaemia,106
+Taiwan (TCR),2019,Leukaemia,111
+Taiwan (TCR),2020,Leukaemia,109
+Taiwan (TCR),1994,Brain/CNS,37
+Taiwan (TCR),1995,Brain/CNS,40
+Taiwan (TCR),1996,Brain/CNS,38
+Taiwan (TCR),1997,Brain/CNS,39
+Taiwan (TCR),1998,Brain/CNS,44
+Taiwan (TCR),1999,Brain/CNS,49
+Taiwan (TCR),2000,Brain/CNS,41
+Taiwan (TCR),2001,Brain/CNS,48
+Taiwan (TCR),2002,Brain/CNS,47
+Taiwan (TCR),2003,Brain/CNS,46
+Taiwan (TCR),2004,Brain/CNS,55
+Taiwan (TCR),2005,Brain/CNS,50
+Taiwan (TCR),2006,Brain/CNS,60
+Taiwan (TCR),2007,Brain/CNS,52
+Taiwan (TCR),2008,Brain/CNS,58
+Taiwan (TCR),2009,Brain/CNS,56
+Taiwan (TCR),2010,Brain/CNS,55
+Taiwan (TCR),2011,Brain/CNS,63
+Taiwan (TCR),2012,Brain/CNS,60
+Taiwan (TCR),2013,Brain/CNS,65
+Taiwan (TCR),2014,Brain/CNS,63
+Taiwan (TCR),2015,Brain/CNS,59
+Taiwan (TCR),2016,Brain/CNS,65
+Taiwan (TCR),2017,Brain/CNS,67
+Taiwan (TCR),2018,Brain/CNS,74
+Taiwan (TCR),2019,Brain/CNS,64
+Taiwan (TCR),2020,Brain/CNS,70
+Taiwan (TCR),1994,Other,206
+Taiwan (TCR),1995,Other,260
+Taiwan (TCR),1996,Other,232
+Taiwan (TCR),1997,Other,223
+Taiwan (TCR),1998,Other,267
+Taiwan (TCR),1999,Other,300
+Taiwan (TCR),2000,Other,248
+Taiwan (TCR),2001,Other,265
+Taiwan (TCR),2002,Other,279
+Taiwan (TCR),2003,Other,277
+Taiwan (TCR),2004,Other,321
+Taiwan (TCR),2005,Other,298
+Taiwan (TCR),2006,Other,307
+Taiwan (TCR),2007,Other,349
+Taiwan (TCR),2008,Other,320
+Taiwan (TCR),2009,Other,360
+Taiwan (TCR),2010,Other,327
+Taiwan (TCR),2011,Other,327
+Taiwan (TCR),2012,Other,315
+Taiwan (TCR),2013,Other,432
+Taiwan (TCR),2014,Other,374
+Taiwan (TCR),2015,Other,398
+Taiwan (TCR),2016,Other,397
+Taiwan (TCR),2017,Other,410
+Taiwan (TCR),2018,Other,414
+Taiwan (TCR),2019,Other,484
+Taiwan (TCR),2020,Other,391
+South Korea (KCCR),1994,Lung,126
+South Korea (KCCR),1995,Lung,136
+South Korea (KCCR),1996,Lung,136
+South Korea (KCCR),1997,Lung,166
+South Korea (KCCR),1998,Lung,171
+South Korea (KCCR),1999,Lung,152
+South Korea (KCCR),2000,Lung,151
+South Korea (KCCR),2001,Lung,169
+South Korea (KCCR),2002,Lung,198
+South Korea (KCCR),2003,Lung,141
+South Korea (KCCR),2004,Lung,195
+South Korea (KCCR),2005,Lung,175
+South Korea (KCCR),2006,Lung,212
+South Korea (KCCR),2007,Lung,182
+South Korea (KCCR),2008,Lung,199
+South Korea (KCCR),2009,Lung,183
+South Korea (KCCR),2010,Lung,196
+South Korea (KCCR),2011,Lung,241
+South Korea (KCCR),2012,Lung,236
+South Korea (KCCR),2013,Lung,218
+South Korea (KCCR),2014,Lung,214
+South Korea (KCCR),2015,Lung,199
+South Korea (KCCR),2016,Lung,231
+South Korea (KCCR),2017,Lung,242
+South Korea (KCCR),2018,Lung,246
+South Korea (KCCR),2019,Lung,250
+South Korea (KCCR),2020,Lung,233
+South Korea (KCCR),1994,Breast,214
+South Korea (KCCR),1995,Breast,221
+South Korea (KCCR),1996,Breast,252
+South Korea (KCCR),1997,Breast,270
+South Korea (KCCR),1998,Breast,239
+South Korea (KCCR),1999,Breast,233
+South Korea (KCCR),2000,Breast,253
+South Korea (KCCR),2001,Breast,248
+South Korea (KCCR),2002,Breast,251
+South Korea (KCCR),2003,Breast,273
+South Korea (KCCR),2004,Breast,257
+South Korea (KCCR),2005,Breast,301
+South Korea (KCCR),2006,Breast,291
+South Korea (KCCR),2007,Breast,306
+South Korea (KCCR),2008,Breast,302
+South Korea (KCCR),2009,Breast,294
+South Korea (KCCR),2010,Breast,295
+South Korea (KCCR),2011,Breast,319
+South Korea (KCCR),2012,Breast,318
+South Korea (KCCR),2013,Breast,345
+South Korea (KCCR),2014,Breast,345
+South Korea (KCCR),2015,Breast,313
+South Korea (KCCR),2016,Breast,360
+South Korea (KCCR),2017,Breast,325
+South Korea (KCCR),2018,Breast,353
+South Korea (KCCR),2019,Breast,369
+South Korea (KCCR),2020,Breast,320
+South Korea (KCCR),1994,Colorectal,181
+South Korea (KCCR),1995,Colorectal,187
+South Korea (KCCR),1996,Colorectal,188
+South Korea (KCCR),1997,Colorectal,189
+South Korea (KCCR),1998,Colorectal,195
+South Korea (KCCR),1999,Colorectal,190
+South Korea (KCCR),2000,Colorectal,207
+South Korea (KCCR),2001,Colorectal,208
+South Korea (KCCR),2002,Colorectal,224
+South Korea (KCCR),2003,Colorectal,206
+South Korea (KCCR),2004,Colorectal,238
+South Korea (KCCR),2005,Colorectal,242
+South Korea (KCCR),2006,Colorectal,242
+South Korea (KCCR),2007,Colorectal,241
+South Korea (KCCR),2008,Colorectal,266
+South Korea (KCCR),2009,Colorectal,226
+South Korea (KCCR),2010,Colorectal,276
+South Korea (KCCR),2011,Colorectal,277
+South Korea (KCCR),2012,Colorectal,283
+South Korea (KCCR),2013,Colorectal,291
+South Korea (KCCR),2014,Colorectal,272
+South Korea (KCCR),2015,Colorectal,287
+South Korea (KCCR),2016,Colorectal,314
+South Korea (KCCR),2017,Colorectal,314
+South Korea (KCCR),2018,Colorectal,314
+South Korea (KCCR),2019,Colorectal,276
+South Korea (KCCR),2020,Colorectal,334
+South Korea (KCCR),1994,Leukaemia,78
+South Korea (KCCR),1995,Leukaemia,80
+South Korea (KCCR),1996,Leukaemia,77
+South Korea (KCCR),1997,Leukaemia,68
+South Korea (KCCR),1998,Leukaemia,86
+South Korea (KCCR),1999,Leukaemia,81
+South Korea (KCCR),2000,Leukaemia,67
+South Korea (KCCR),2001,Leukaemia,89
+South Korea (KCCR),2002,Leukaemia,78
+South Korea (KCCR),2003,Leukaemia,81
+South Korea (KCCR),2004,Leukaemia,88
+South Korea (KCCR),2005,Leukaemia,105
+South Korea (KCCR),2006,Leukaemia,95
+South Korea (KCCR),2007,Leukaemia,102
+South Korea (KCCR),2008,Leukaemia,116
+South Korea (KCCR),2009,Leukaemia,117
+South Korea (KCCR),2010,Leukaemia,105
+South Korea (KCCR),2011,Leukaemia,106
+South Korea (KCCR),2012,Leukaemia,99
+South Korea (KCCR),2013,Leukaemia,106
+South Korea (KCCR),2014,Leukaemia,119
+South Korea (KCCR),2015,Leukaemia,121
+South Korea (KCCR),2016,Leukaemia,120
+South Korea (KCCR),2017,Leukaemia,131
+South Korea (KCCR),2018,Leukaemia,116
+South Korea (KCCR),2019,Leukaemia,125
+South Korea (KCCR),2020,Leukaemia,135
+South Korea (KCCR),1994,Brain/CNS,47
+South Korea (KCCR),1995,Brain/CNS,50
+South Korea (KCCR),1996,Brain/CNS,49
+South Korea (KCCR),1997,Brain/CNS,47
+South Korea (KCCR),1998,Brain/CNS,51
+South Korea (KCCR),1999,Brain/CNS,47
+South Korea (KCCR),2000,Brain/CNS,46
+South Korea (KCCR),2001,Brain/CNS,56
+South Korea (KCCR),2002,Brain/CNS,55
+South Korea (KCCR),2003,Brain/CNS,58
+South Korea (KCCR),2004,Brain/CNS,50
+South Korea (KCCR),2005,Brain/CNS,58
+South Korea (KCCR),2006,Brain/CNS,58
+South Korea (KCCR),2007,Brain/CNS,58
+South Korea (KCCR),2008,Brain/CNS,52
+South Korea (KCCR),2009,Brain/CNS,63
+South Korea (KCCR),2010,Brain/CNS,71
+South Korea (KCCR),2011,Brain/CNS,70
+South Korea (KCCR),2012,Brain/CNS,65
+South Korea (KCCR),2013,Brain/CNS,70
+South Korea (KCCR),2014,Brain/CNS,76
+South Korea (KCCR),2015,Brain/CNS,57
+South Korea (KCCR),2016,Brain/CNS,73
+South Korea (KCCR),2017,Brain/CNS,79
+South Korea (KCCR),2018,Brain/CNS,81
+South Korea (KCCR),2019,Brain/CNS,89
+South Korea (KCCR),2020,Brain/CNS,87
+South Korea (KCCR),1994,Other,276
+South Korea (KCCR),1995,Other,284
+South Korea (KCCR),1996,Other,304
+South Korea (KCCR),1997,Other,281
+South Korea (KCCR),1998,Other,301
+South Korea (KCCR),1999,Other,333
+South Korea (KCCR),2000,Other,368
+South Korea (KCCR),2001,Other,322
+South Korea (KCCR),2002,Other,333
+South Korea (KCCR),2003,Other,348
+South Korea (KCCR),2004,Other,388
+South Korea (KCCR),2005,Other,358
+South Korea (KCCR),2006,Other,410
+South Korea (KCCR),2007,Other,346
+South Korea (KCCR),2008,Other,377
+South Korea (KCCR),2009,Other,385
+South Korea (KCCR),2010,Other,424
+South Korea (KCCR),2011,Other,441
+South Korea (KCCR),2012,Other,365
+South Korea (KCCR),2013,Other,392
+South Korea (KCCR),2014,Other,443
+South Korea (KCCR),2015,Other,416
+South Korea (KCCR),2016,Other,393
+South Korea (KCCR),2017,Other,494
+South Korea (KCCR),2018,Other,482
+South Korea (KCCR),2019,Other,491
+South Korea (KCCR),2020,Other,462
